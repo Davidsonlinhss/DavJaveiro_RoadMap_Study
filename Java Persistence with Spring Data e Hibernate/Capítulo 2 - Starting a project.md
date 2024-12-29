@@ -244,3 +244,15 @@ public interface MessageRepository extends CrudRepository<Message, Long> {
 
 Podemos chamar diretamente métodos como save, findAll ou findByID, que são herdados de #CrudRepository, e usá-los sem precisar de informações adicionais para executar operações comuns no banco de dados. O Spring Data JPA criará uma classe proxy que implementará a interface MessageRepository e os métodos dela.
 
+## 2.7 Comparing the approaches of persisting entities
+ Implementamos uma aplicação simples que interage com um banco de dados utilizando, de forma alternada, #JPA, #Hibernate nativo e #Spring_Data_JPA. O objetivo foi analisar cada abordagem e entender as diferenças na configuração e no código. A tabela 2.1 resume as principais caraterísticas de cada uma dessas abordagens.
+
+Para analisar os tempos de execução, realizamos um lote de operações de inserção, atualização, seleção e exclusão utilizando as três abordagens, aumentando progressivamente o número de registros de 1.000 para 50.000. 
+
+Os tempos de execução para inserção usando Hibernate e JPA são muito próximos, no entanto, o tempo de execução do Spring Data JPA aumenta de forma significativamente mais rápida à medida que o número de registros cresce.
+
+As três abordagens apresentem desempenhos distintos. Hibernate e JPA mostram resultados muito próximos, com gráficos de tempos quase sobrepostos para as quatro operações. Apesar de o JPA ter sua própria API sobre o Hibernate, essa **camada adicional** não gera sobrecarga significativa. 
+
+Os tempos de execução para inserções no Spring Data JPA começam cerca de duas vezes mais altos que os do Hibernate e JPA para 1.000 registros, chegando a aproximadamente 3,5 vezes mais para 50.000 registros. **Isso demonstra uma sobrecarga considerável do framework Spring Data JPA**.
+
+O uso do Spring Data JPA é mais justificável em situações específicas, como quando o projeto já utiliza o framework Spring e precisa se basear em seus paradigmas existentes (como inversão de controle ou transações gerenciadas automaticamente), ou quando há uma necessidade significativa de reduzir a quantidade de código e, assim, encurtar o tempo de desenvolvimento (**hoje em dia é mais barato adquirir mais poder computacional do que contratar mais desenvolvedores**).

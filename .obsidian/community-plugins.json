@@ -8,5 +8,6 @@
   "runjs",
   "execute-code",
   "simple-code-formatter",
-  "copilot"
+  "copilot",
+  "obsidian-plantuml"
 ]
