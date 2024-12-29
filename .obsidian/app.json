@@ -1,0 +1,15 @@
+{
+  "readableLineLength": false,
+  "strictLineBreaks": false,
+  "promptDelete": false,
+  "showLineNumber": true,
+  "showInlineTitle": true,
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "focusNewTab": true
+}

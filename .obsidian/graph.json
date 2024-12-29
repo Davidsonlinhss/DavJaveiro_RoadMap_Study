@@ -1,0 +1,51 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "Biologia Molecular",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "Mestrado",
+      "color": {
+        "a": 1,
+        "rgb": 16755200
+      }
+    },
+    {
+      "query": "Calor",
+      "color": {
+        "a": 1,
+        "rgb": 11206400
+      }
+    },
+    {
+      "query": "Introdução",
+      "color": {
+        "a": 1,
+        "rgb": 6684927
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -3,
+  "nodeSizeMultiplier": 2.97785862785863,
+  "lineSizeMultiplier": 0.532952182952183,
+  "collapse-forces": false,
+  "centerStrength": 0.375259875259875,
+  "repelStrength": 9.5010395010395,
+  "linkStrength": 0.861746361746362,
+  "linkDistance": 453,
+  "scale": 0.1264590774491871,
+  "close": true
+}

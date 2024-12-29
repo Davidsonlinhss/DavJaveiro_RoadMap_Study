@@ -1,0 +1,10 @@
+{
+	"id": "simple-code-formatter",
+	"name": "Simple Code Formatter",
+	"version": "1.2.2",
+	"minAppVersion": "0.15.0",
+	"description": "Format the code block where the cursor is.",
+	"author": "SY",
+	"authorUrl": "https://github.com/wiop93256",
+	"isDesktopOnly": false
+}

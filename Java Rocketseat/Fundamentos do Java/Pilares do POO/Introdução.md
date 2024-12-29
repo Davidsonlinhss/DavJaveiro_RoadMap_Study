@@ -1,0 +1,14 @@
+Programação orientada a objetos (POO ou OOP segundo as suas siglas em inglês), é um paradigma de programação baseado no conceito de #objetos que podem conter dados na forma de campos, também conhecidos como #atributos e códigos na forma de #procedimentos também conhecidos como #métodos. Os atributos e os métodos são os #membros de uma classe. 
+
+Precisamos deixar uma coisa bem clara, uma #classe é uma #abstração lógica. O código e os dados que constituem uma classe uma classe são chamados de #membros da classe.
+
+A programação orientada a objetos é muito requisitada no contexto das aplicações mais atuais no mercado devido a possibilidade de **reutilização de código** e a capacidade de representação do sistema ser mais próximo do mundo real. 
+
+Os três pilares da programação orientada a objetos:
+1) #Encapsulamento: nem tudo precisa estar visível, grande parte do nosso algoritmo pode ser distribuído em métodos com finalidades específicas que complementa uma ação global em nossa aplicação; isso mantém o código e os dados seguros contra a interferência e má utilização externa. A unidade básica de encapsulamento em Java é a *classe*. Uma classe define a forma básica de um objeto, ela especifica tanto os dados quanto os métodos que esse objeto poderá executar. Os objetos são instâncias de uma classe. 
+
+2) #Herança: um objeto pode adquirir as propriedades de outro objeto. Grande parte do conhecimento pode ser gerenciada por classificações hierárquicas (isto é, #top-down). Alimento -> fruta -> maçã -> maçã *Red Delicius*. A classe alimento possui certas qualidades (comestível, nutritivo, etc.) que, logicamente, também se aplicam à sua subclasse, *fruta*. Além dessas qualidades, a classe fruta tem características específicas (suculenta, doce, etc.) que a distinguem de outros alimentos. A classe maçã define as qualidades específicas de uma maçã (cresce em árvores, não é tropical, etc). Logo, características e comportamentos comuns, podem ser elevados e compartilhados através de uma hierarquia de objetos. \
+
+3) #Polimorfismo:  são inúmeras maneiras de se realizar uma mesma ação.  O polimorfismo é a qualidade que permite que uma interface acesse uma classe geral de ações. Um exemplo claro é uma #pilha(que é uma lista "primeiro a entrar, último a sair"). Poderíamos precisar de um programa que precisasse de três tipos de pilhas diferentes. Uma pilha é usada para valores inteiros, uma para valores de ponto flutuante e uma para caracteres. Nesse caso, o algoritmo de implementação da pilha é o mesmo, ainda que os dados armazenados sejam diferentes. Em uma linguagem não orientada a objetos, poderíamos ser obrigado a criar três conjuntos de rotinas de pilhas diferentes, com cada conjunto usando um nome. Mas com o uso de polimorfismo, podemos criar um conjunto geral de rotinas de pilhas que funcione em todas as três situações específicas. 
+
+

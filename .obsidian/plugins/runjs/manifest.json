@@ -1,0 +1,11 @@
+{
+	"id": "runjs",
+	"name": "RunJS",
+	"version": "0.6.0",
+	"minAppVersion": "0.15.0",
+	"description": "Run easily JavaScript codes for managing Obsidian and its notes.",
+	"author": "eoureo",
+	"authorUrl": "https://github.com/eoureo",
+	"fundingUrl": "https://buymeacoffee.com/eoureo",
+	"isDesktopOnly": false
+}

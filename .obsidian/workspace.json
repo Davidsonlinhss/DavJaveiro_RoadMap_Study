@@ -1,0 +1,295 @@
+{
+  "main": {
+    "id": "d99b35dc87253dee",
+    "type": "split",
+    "children": [
+      {
+        "id": "850bed69c0e18838",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b97c85c57440e405",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7ac4efa0b32136bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "bffaa3ba0857ca90",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0fe2594975aa5d1c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "2a98d24d53fad366",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          },
+          {
+            "id": "b4296a2534a9eb8d",
+            "type": "leaf",
+            "state": {
+              "type": "runjs-codelist-view",
+              "state": {},
+              "icon": "js-dark-icon",
+              "title": "RunJS Codelist"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 453.5125503540039,
+    "collapsed": true
+  },
+  "right": {
+    "id": "d198f1ff3234b4cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "79b90c793fef7782",
+        "type": "tabs",
+        "dimension": 76.10513739545998,
+        "children": [
+          {
+            "id": "51f448fe5205b43b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "5ed1a005a07f421c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Java Rocketseat/Projeto Gestão de Vagas/Rotas, Autenticação e Autorização.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Rotas, Autenticação e Autorização"
+            }
+          },
+          {
+            "id": "24c7bc2f22af5cb3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "56d586c988ab9e47",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Java Rocketseat/Projeto Gestão de Vagas/Rotas, Autenticação e Autorização.md"
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Rotas, Autenticação e Autorização"
+            }
+          },
+          {
+            "id": "4512664ce40894ce",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "8b0e1e5d76adf322",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#Save",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "d3ab3c5a35da2ecd",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ea9ba6263175b59d",
+        "type": "tabs",
+        "dimension": 23.894862604540023,
+        "children": [
+          {
+            "id": "0f0671d19bb85bce",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 3,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": true,
+                  "showTags": true,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": false,
+                  "colorGroups": [],
+                  "collapse-display": false,
+                  "showArrow": true,
+                  "textFadeMultiplier": -3,
+                  "nodeSizeMultiplier": 0.872097791798107,
+                  "lineSizeMultiplier": 2.40547318611987,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.21713154581238864,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 436.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "audio-recorder:Começar/parar a gravação de áudio": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "float-search:Search Obsidian In Modal": false,
+      "runjs:RunJS": false,
+      "copilot:Open Copilot Chat": false
+    }
+  },
+  "active": "b97c85c57440e405",
+  "lastOpenFiles": [
+    "DavJaveiro_RoadMap_Study/README.md",
+    "DavJaveiro_RoadMap_Study",
+    "RoadMap do DavJaveiro/Covers/Pasted image 20241228195630.png",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Pasted image 20241228221834.png",
+    "Pasted image 20241228221808.png",
+    "Pasted image 20241228215524.png",
+    "Pasted Image 20241207191513_359.png",
+    "Pasted Image 20241207191458_358.png",
+    "Pasted Image 20241207191442_340.png",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 15 - Working with Spring Data JDBC.md",
+    "Pasted image 20241228214725.png",
+    "Pasted image 20241228212931.png",
+    "Pasted image 20241228212350.png",
+    "Errors API.md",
+    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método.md",
+    "Compilação vs Transpilação.md",
+    "2024-12-12.md",
+    "Drawing 2024-12-28 15.33.22.excalidraw.md",
+    "RoadMap do DavJaveiro/Covers",
+    "Git/GitHub Actions In Action/Capítulo 12 - Improving workflow performance and costs.md",
+    "Git/GitHub Actions In Action/Capítulo 11 - Compliance.md",
+    "Git/GitHub Actions In Action/Capítulo 10 - Security.md",
+    "Git/GitHub Actions In Action/Capítulo 9 - Continous Delivery.md",
+    "Git/GitHub Actions In Action/Capítulo 8 - Continuous integration.md",
+    "Git/GitHub Actions In Action/Capítulo 7 - Managing your self-hosted runners.md",
+    "Git/GitHub Actions In Action/Capítulo 6 - Self-hosted runners.md",
+    "Git/GitHub Actions In Action/Capítulo 5 - Runners.md",
+    "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
+    "Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
+    "Git/GitHub Actions In Action/Capítulo 2 - Hands-on My First Actions Workflow.md",
+    "Git/GitHub Actions In Action/Capítulo 1 - Introduction to GitHub Actions.md",
+    "Git/GitHub Actions In Action",
+    "Getting Started with SQL/Chapter 11 - Going Forward.md",
+    "Getting Started with SQL/Chapter 10 - Managing Data.md",
+    "Getting Started with SQL/Chapter 9 - Database Design.md",
+    "Getting Started with SQL/Chapter 8 - JOIN.md",
+    "Getting Started with SQL/Chapter 7 - CASE Statements.md",
+    "Getting Started with SQL/Chapter 6 - GROUP BY and ORDER BY.md",
+    "Java Para Iniciantes/Capítulo 13 - Tipos Genéricos.md",
+    "RoadMap do DavJaveiro",
+    "Java Persistence with Spring Data e Hibernate/Imagens",
+    "Getting Started with SQL/Imagens",
+    "Getting Started with SQL",
+    "Java Persistence with Spring Data e Hibernate",
+    "OCP",
+    "Java Programming/Imagens"
+  ]
+}

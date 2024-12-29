@@ -1,0 +1,7 @@
+Imagine que você tem uma loja online muito popular e pessoas de todo o Brasil acessam o seu site. Sem um CDN, todas as imagens, estilos (CSS) e scripts (JavaScript) do seu site precisariam ser enviadas do servidor onde ele está hospedado. Se o servidor estiver em São Paulo, por exemplo, alguém acessando o site do Acre teria uma lentidão bem chata por causa da distância.
+
+É aí que entra o CDN. Ele funciona como uma rede de servidores distribuídos geograficamente pelo país (ou pelo mundo). Quando alguém acessa a sua loja online, o CDN identifica a localização dessa pessoa e entrega o conteúdo (imagens, CSS, JavaScript) do servidor mais próximo. É como ter várias filiais da sua loja online espalhadas por aí, só que virtuais!
+
+Por isso, o texto diz que o CDN fica entre o navegador do cliente e os servidores frontais (onde o seu site está hospedado). O CDN distribui o conteúdo de forma eficiente para os usuários finais, deixando o servidor principal livre para outras tarefas mais críticas, como processar informações específicas de cada usuário (por exemplo, o que está no carrinho de compras).
+
+Mesmo com o CDN, o servidor principal continua executando tarefas importantes. Ele processa o HTML da página web, que é como o esqueleto do site. Esse HTML, por sua vez, tem referências para os arquivos CSS, JavaScript, imagens e outros conteúdos estáticos. Esses conteúdos estáticos é que são entregues pelo CDN, o que deixa tudo muito mais rápido e eficiente.

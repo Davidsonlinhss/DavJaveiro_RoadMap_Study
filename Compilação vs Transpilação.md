@@ -1,0 +1,4 @@
+A diferença entre os dois termos está no tipo de código que é gerado como resultado do processo:
+1. #Compilação: o compilador recebe código-fonte em linguagem de alto/médio nível (mais próximo dos humanos) como entrada e, como saída, produz código em linguagem de baixo nível (mais próximo da máquina 0/1). Exemplos incluem a compilação de código C para código objeto ou de código Java para bytecode da JVM;
+2. #Transpilação: o transpilador recebe código-fonte em linguagem/médio nível como entrada e, como saída, produz código em outra linguagem de alto/médio nível. Um exemplo disso é o #Typescript sendo transpilado para JavaScript. 
+Portanto, a diferença é que a compilação traduz o código para uma linguagem de nível mais baixo (geralmente uma linguagem de montagem ou código de máquina), enquanto a transpilação traduz o código para outra linguagem de alto nível. 

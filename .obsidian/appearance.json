@@ -1,0 +1,12 @@
+{
+  "accentColor": "",
+  "baseFontSize": 19,
+  "cssTheme": "Things",
+  "nativeMenus": true,
+  "translucency": true,
+  "theme": "obsidian",
+  "textFontFamily": "Comic Sans MS",
+  "baseFontSizeAction": true,
+  "showViewHeader": true,
+  "interfaceFontFamily": "FiraCode Nerd Font Propo"
+}
