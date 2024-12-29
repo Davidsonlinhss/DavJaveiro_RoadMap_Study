@@ -4,17 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "850bed69c0e18838",
+        "id": "15e1539791b03da8",
         "type": "tabs",
         "children": [
           {
-            "id": "b97c85c57440e405",
+            "id": "4e88cc5cd846073b",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "type": "canvas",
+              "state": {
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
+                "viewState": {
+                  "x": -2349.4190381498865,
+                  "y": -4499.548967418511,
+                  "zoom": -2.493333333333334
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "RoadMap"
             }
           }
         ]
@@ -66,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 453.5125503540039,
-    "collapsed": true
+    "width": 453.5125503540039
   },
   "right": {
     "id": "d198f1ff3234b4cb",
@@ -242,22 +248,24 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "b97c85c57440e405",
+  "active": "4e88cc5cd846073b",
   "lastOpenFiles": [
+    "RoadMap do DavJaveiro/Covers/JMeter 3 Book.png",
+    "RoadMap do DavJaveiro/Covers/Quarkus Icon.png",
+    "RoadMap do DavJaveiro/Covers/PlayFramework Icon.png",
+    "RoadMap do DavJaveiro/Covers/JUnit Book.png",
+    "RoadMap do DavJaveiro/Covers/Mock Book.png",
+    "RoadMap do DavJaveiro/Covers/Software Requiriments Book 2.png",
+    "RoadMap do DavJaveiro/Covers/Software Requirements Book1.png",
+    "RoadMap do DavJaveiro/Covers/Java Persistence Icon.png",
+    "RoadMap do DavJaveiro/Covers/Engenharia de Software Icon.png",
+    "RoadMap do DavJaveiro/Covers/Java Logo.png",
+    "RoadMap do DavJaveiro/Covers/Java Code Problems.png",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "README.md",
     "DavJaveiro_RoadMap_Study/README.md",
     "DavJaveiro_RoadMap_Study",
-    "RoadMap do DavJaveiro/Covers/Pasted image 20241228195630.png",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Pasted image 20241228221834.png",
-    "Pasted image 20241228221808.png",
-    "Pasted image 20241228215524.png",
-    "Pasted Image 20241207191513_359.png",
-    "Pasted Image 20241207191458_358.png",
-    "Pasted Image 20241207191442_340.png",
     "Java Persistence with Spring Data e Hibernate/Capítulo 15 - Working with Spring Data JDBC.md",
-    "Pasted image 20241228214725.png",
-    "Pasted image 20241228212931.png",
-    "Pasted image 20241228212350.png",
     "Errors API.md",
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método.md",
     "Compilação vs Transpilação.md",
@@ -282,8 +290,6 @@
     "Getting Started with SQL/Chapter 9 - Database Design.md",
     "Getting Started with SQL/Chapter 8 - JOIN.md",
     "Getting Started with SQL/Chapter 7 - CASE Statements.md",
-    "Getting Started with SQL/Chapter 6 - GROUP BY and ORDER BY.md",
-    "Java Para Iniciantes/Capítulo 13 - Tipos Genéricos.md",
     "RoadMap do DavJaveiro",
     "Java Persistence with Spring Data e Hibernate/Imagens",
     "Getting Started with SQL/Imagens",
