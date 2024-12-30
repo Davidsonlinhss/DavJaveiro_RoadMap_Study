@@ -1,5 +1,4 @@
   ![image](https://github.com/user-attachments/assets/f4f372bc-2876-40cd-9efb-1e0ee66b2b55)
-</h1> 
 
 # DavJaveiro Study RoadMap Obsidian 
 <h1>Fala, Noobs! 🚀</h1>
@@ -41,7 +40,6 @@ Extraia o arquivo ZIP para uma pasta no seu computador.
 Baixe os arquivos manualmente clicando em cada um ou use uma ferramenta como o DownGit para baixar a pasta inteira.
 </p>
 
-
 <h2>
   Abrindo no Obsidian
 </h2>
@@ -54,7 +52,6 @@ Clique em Open Folder as Vault (Abrir pasta como cofre).
 Navegue até a pasta onde extraiu o repositório.
 Selecione-a como seu cofre.
 </p>
-
 <h3>
   Para uma pasta específica:
 </h3>
@@ -68,9 +65,6 @@ Certifique-se de que o conteúdo foi adicionado corretamente ao cofre.
   As anotações foram projetadas para serem amigáveis ao usuário, organizadas e fáceis de navegar.
 Utilize a funcionalidade de links internos, tabelas dinâmicas e outros recursos do Obsidian para aproveitar ao máximo.
 </p>
-
-
-
 
 <p>
   Neste repositório você irá encontrar:

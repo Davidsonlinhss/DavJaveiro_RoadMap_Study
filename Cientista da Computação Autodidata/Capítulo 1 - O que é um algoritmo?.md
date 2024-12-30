@@ -1,0 +1,183 @@
+Um algoritmo é uma #sequência de passos ou **etapas** que usamos para resolver um problema ou para sequenciar uma ação. Por exemplo, um algoritmo de como fazer ovos mexidos seria algo parecido com:
+1. Abrir a geladeira;
+2. Pegar os ovos na geladeira;
+3. Fechar a porta da geladeira;
+4. Colocar os ovos sobre uma bancada;
+5. Abrir o armário;
+6. Pegar uma tigela e uma frigideira;
+7. Colocar a tigela sobre o balcão e a frigideira na boca do fogão;
+8. Quebrar os ovos na tigela;
+9. Separar as casas dos ovos quebrados (gema e clara);
+10. Pegar uma batedeira;
+11. Bater o conteúdo dentro da tigela;
+12. Abir o fornecimento de gás;
+13. Acender a boca do fogão onde a frigideira se encontra;
+14. Pegar a tigela com a gema e a clara batida;
+15. Despejar sobre a frigideira quente;
+16. Mexer com uma espátula os ovos;
+17. Retirar a frigideira do fogão assim que estiverem prontos.
+
+Devemos levar em consideração que as etapas descritas estão completamente abstraídas, ou seja, muitas ações foram omitidas para tornar o exemplo simplório.
+
+Neste capítulo, aprenderemos a comparar dois algoritmos para que isso nos ajude a analisarmos esses algoritmos. É importante sabermos o porque um algoritmo pode ser melhor do que o outro, porque passamos horas escrevendo algoritmos e decidindo que estruturas de dados usar com eles. **Se não soubermos o motivo de escolher um algoritmo em vez de outro, não saremos programadores eficientes**.
+
+Embora os algoritmos sejam um conceito essencial na CIência da Computação, os cientistas da computação ainda não entraram em acordo sobre uma definição formal. A definição de **Donald Knuth** (pensei que fosse Donal Trump, pois li bem rápido, kkk), é uma das melhores definições. Ele descreve um algoritmo como um processo definido, eficaz e finito que recebe entradas e produz saídas de acordo com essas entradas. 
+
+Aqui, o autor define:
+1. #Precisão como etapas claras, concisas e não ambíguas;
+2. #Eficácia significa poder executar com precisão cada operação para resolver o problema;
+3. #Finitude significa o algoritmo parar após um número finito de etapas.
+4. #Exatidão um algoritmo deve sempre produzir a mesma saída para uma entrada específica e essa saída deve ser a resposta correta para o problema que ele resolve.
+
+## Analisando algoritmos
+Podemos utilizar mais de um algoritmo para resolver um problema. Por exemplo, existem diversas maneiras de ordenar uma #lista. Se muitos algoritmos já resolveram o problema, então, como **decidir e saber qual é o melhor**? É o mais simples? O mais rápido? O menor?
+
+Podemos avaliar um algoritmo pelo **seu tempo de execução** (**run time**). O tempo de execução, #run_time é quanto tempo um computador leva para executar um algoritmo escrito em uma linguagem de programação como Python. Exemplo:
+```run-python
+for i in range(1, 6):
+print(i)
+```
+Podemos medir o tempo de execução desse algoritmo usando o módulo interno #time do #Python para rastrear quanto tempo o nosso computador leva para executá-lo:
+```python
+import time
+start = time.time()
+for i in range(1, 6):
+print(i)
+end = time.time()
+print(end - start)
+```
+
+O tempo de execução muda constantemente a cada vez que rodamos o código pelo fato do processamento disponível em nosso computador mudar constantemente a cada momento, o que por sua vez acaba afetando o tempo de execução. (Fico imaginando como seria rodar em uma máquina de escrever)...
+O tempo de execução também seria diferente em outro computador. Bem como, também será afetado se executarmos o mesmo algoritmo em outra linguagem de programação. 
+
+Já que o tempo de execução altera dependendo das variáveis, como poder de processamento, linguagem etc. Não é uma maneira eficaz comparar dois algoritmos pelo tempo de execução, em vez disso, os cientistas da computação comparam algoritmos examinando o **número de etapas** que eles exigem para processar a entrada e exibir o resultado. Podemos inserir o número de etapas envolvidas em um algoritmo, em uma fórmula que compare dois ou mais algoritmos, sem considerar a linguagem de programação ou o computador. 
+
+Se o exemplo anterior leva cinco etapas para ser concluído (percorre um loop cinco vezes e exibe i cada vez). Podemos expressar o número de etapas que o algoritmo requer com a seguinte equação:
+```math
+||{"id":16996501352}||
+
+f(n) = 5
+```
+Se tornarmos o programa mais complexo, a equação mudará. Por exemplo, podemos querer calcular a soma de todos os números que está sendo exibido:
+```python
+count = 0
+for i in range(1, 6)
+print(i)
+count += i
+```
+Agora o algoritmo leva 11 etapas para ser concluído. Primeiro, atribui zero à variável #count. Em seguida, exibe cinco números e incrementa cinco vezes (1 + 5 + 5)
+
+```math
+||{"id":151115420421}||
+
+f(n) = 11
+```
+
+O que acontecerá se alterarmos o 6 do código para uma variável?
+```python
+count = 0
+for i in range(1, n)
+print(i)
+count += i
+```
+A equação mudará para
+```math
+||{"id":602409042456}||
+
+f(n) = 1 +2n
+```
+Agora, o número de etapas que o algoritmo executará vai depender do valor de *n*. O 1 da equação representa a **primeira etapa** : count = 0. Em seguida, existem duas vezes *n* etapas. Por exemplo, se n for 5, f(n) = 1 + 2 * 5. Os cientistas da computação chamam a variável *n* de uma equação que descreve o número de etapas de um algoritmo de **tamanho do problema**. Podemos dizer que o tempo necessário para resolver um problema de tamanho *n* é 1 +2n ou, em notação matemática:
+```math
+||{"id":198861292058}||
+
+T(n) = 1 + 2n
+```
+
+No entanto, uma equação que descreva o número de etapas de um algoritmo não é muito útil porque, entre outras coisas, nem sempre é possível contar confiavelmente o número de etapas. Por exemplo, se um algoritmo tiver muitas instruções condicionais, não teremos como saber de antemão qual delas será executada. A boa notícia é que, como cientista da computação, não precisamos nos preocupar com o número de etapas de um algoritmo. O que é necessário saber é o desempenho do algoritmo quando *n* tende a aumentar.
+
+A maioria dos algoritmos tem bom desempenho com um conjunto de dados ( #dataset) pequeno, mas pode ser um desastre com conjuntos de dados maiores. Até mesmo o algoritmo mais ineficiente terá um bom desempenho com n = 1. Mas no mundo real, n poderá ser centenas, milhares ou milhões.
+
+O que precisamos, então, focar, não é saber o número de etapas que um algoritmo possuí para a sua execução, mas estimar o número de etapas conforme n aumenta. À medida que N aumentar, uma parte da equação ofuscará o restante a ponto de tudo o mais se tornar irrelevante. 
+
+O que acontece quando n aumenta?
+Equação do número de etapas do algoritmo
+```math
+T(n) = n + n^3
+```
+n^3 pelo fato de executar n etapas três vezes.
+
+---
+### Loops e crescimento exponencial
+- Um loop simples (n): um único loop, como:
+```python
+for i in range(n);
+```
+Executa *n* vezes porque cada iteração é realizada uma vez para cada valor de *i* de 0 a *n-1*
+
+- Dois loops aninhados (n²):
+```python
+for i in range(n):
+	for j in range(n):
+```
+Aqui o loop externo executa n vezes, e para cada execução do externo, o interno também executa *n* vezes. No total:
+```math
+n * n = n²
+```
+
+### Por que o n^3 domina a equação?
+Quando n é pequeno (por exemplo, n = 10), o n³ (1.000) é muito maior que n(10), mas ainda não esmagador.
+
+Quando n cresce (por exemplo, n = 1000)
+- n resulta em 1000 etapas;
+- n³ resulta em 1.000.000.000 (i bilhão) de etapas.
+- Isso mostra que o n³ domina o comportamento do algoritmo para valores maiores de n.
+
+Loops aninhados levam ao crescimento exponencial do número de etapas. 
+
+---
+Logo, quando n aumenta, a segunda parte do algoritmo cresce tão rapidamente que a primeira parte torna-se irrelevante. Por exemplo, se precisarmos que o programa trabalhasse com 100.000.000 de registros de banco de dados, não nos preocuparíamos com quantas etapas a primeira parte da equação executa, pois a segunda parte vai executar exponencialmente mais etapas. Com 100.000.000 de registros, a segunda parte do algoritmo executaria mais de um septilhão de etapas, o que seria 1 seguido de 24 zeros, logo não se trata de um algoritmo razoável para ser utilizado. As primeiras 100.000.000 etapas não serão relevantes para a nossa decisão.
+
+Já que a parte importante é a que cresce com a rapidez que *n* aumenta, os cientistas da computação usam a notação big O para expressar a eficiência do algoritmo em vez de uma equação T(n). A notação #big_O é uma notação matemática que descreve como os requisitos de tempo ou espaço de um algoritmo crescem conforme o tamanho de *n* cresce. 
+
+Logo, os cientistas da computação usam a notação Big O para criar uma função de ordem de grandeza a partir de T(n). A **ordem de grandeza** é uma classe em um sistema de classificação no qual cada classe é muitas vezes maior ou menor do que a classe anterior. Em uma função de ordem de grandeza, usamos a parte de T(n) predominante na equação e ignoramos o restante. A parte de T(n) predominante na equação é a ordem de grandeza de um algoritmo. 
+
+---
+A notação Big O é uma forma de medir a **eficiência de um algoritmo** em termos de:
+- **Tempo de execução** (quantas etapas ele precisa para terminar).
+- **Uso de memória** (quanto espaço ele consome).
+
+Ela foca em como o algoritmo se comporta **quando o tamanho da entrada (n) cresce muito.**
+
+**Como funciona a Big O**
+Imagine que temos a equação citada anteriormente, T(n), que representa o número de etapas que o algoritmo precisa executar, dependendo de *n*. Por exemplo:
+```math
+T(n) = n + n^3
+```
+1. **Identificar o termo predonominante**
+- Quando *n* é pequeno (n = 2, n = 3), os dois termos (n e n³) são mais ou menos do mesmo tamanho.
+- Mas quando n cresce (n = 1.000, n = 1.000.000), o n^3 é muito maior que o n.
+- Exemplo:
+- n = 1.000: n = 1.000 e n³ = 1.000.000.000
+
+2. **Ignorar os termos menores**
+- Na notação Big O, só nos <span style="background:#d4b106">preocupamos com o termo predominante</span> porque ele é o que realmente afeta o tempo de execução quando *n* é grande.
+- NO caso de T(n) = n + n³, o termo predominante é n³.
+- Logo, a complexidade do algoritmo é O(n³).
+
+**O que o Big O mede, na prática?**
+Big O mede a taxa de crescimento do **número de etapas** à medida que o tamanho da entrada (n) aumenta. Aí existem diversos exemplos de Big O. Constante, linear, quadrático, cúbico, exponencial
+
+---
+Logo, a parte T(n) predominante na equação é a ordem de grandeza de um algoritmo. Estas são as classificações mais usadas para a ordem de grandeza na notação big O, ordenadas da melhor (mais eficiente) para a pior (menos eficiente):
+- Tempo constante;
+- Tempo logarítmico
+- Tempo linear
+- Tempo log-linear
+- Tempo quadrático
+- Tempo cúbico
+- Tempo exponencial
+
+Cada ordem de grandeza descreve a complexidade de tempo de um algoritmo. A **complexidade de tempo** é o número máximo de etapas que um algoritmo executa para ser concluído quando n aumenta.
+
+## Tempo constante
+É a ordem de grandeza mais eficiente.
