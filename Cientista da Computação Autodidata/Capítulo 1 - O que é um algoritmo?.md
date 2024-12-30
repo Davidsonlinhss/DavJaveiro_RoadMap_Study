@@ -180,4 +180,23 @@ Logo, a parte T(n) predominante na equação é a ordem de grandeza de um algori
 Cada ordem de grandeza descreve a complexidade de tempo de um algoritmo. A **complexidade de tempo** é o número máximo de etapas que um algoritmo executa para ser concluído quando n aumenta.
 
 ## Tempo constante
-É a ordem de grandeza mais eficiente.
+É a ordem de grandeza mais eficiente, um algoritmo é executado em **tempo constante** quando requer o mesmo número de etapas independente do tamanho do problema. A notação big O para a complexidade constante é O(1).
+
+Suponhamos que tivéssemos uma livraria online e todo dia desse um livro grátis para o nosso primeiro cliente. Nós armazenamos os nossos clientes em uma lista chamada **customers**, nosso algoritmo teria a seguinte aparência:
+```python
+free_books = customers[0]
+```
+A equação T(n) seria:
+```math
+T(n) = 1
+```
+O nosso algoritmo possuí uma única etapa, não importando quantos clientes tivermos. Se tivermos 1.000 clientes, o algoritmo executará apenas uma etapa. Se tiver 10.000 clientes, também executará uma única etapa...
+Se representarmos graficamente a complexidade de tempo constante com o número de entradas no eixo x e o número de etapas no eixo y, o gráfico será plano:
+![[Capítulo 1 - O que é um algoritmo?.png]]
+
+## Tempo logarítmico
+O tempo logarítmico é a segunda complexidade de tempo mais eficiente. Um algoritmo é executado em **tempo logarítmico** quando seu tempo de execução cresce de acordo com o logaritmo do tamanho da entrada. 
+Vemos essa complexidade de tempo em algoritmos como o de busca binária que pode descartar muitos valores a cada iteração. O algoritmo logarítmico é expresso na notação big O como O(log n).
+
+![[Capítulo 1 - O que é um algoritmo?-1.png]]
+O número de etapas cresce mais lentamente em um algoritmo logarítmico quando o conjunto de dados aumenta.

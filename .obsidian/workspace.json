@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9bc1142a59f47e7b",
+        "id": "099c67d81bb2f0ff",
         "type": "tabs",
         "children": [
           {
-            "id": "465f2c167778f229",
+            "id": "684c39bb25d177ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 1 - O que é um algoritmo?"
+              "title": "README"
             }
           }
         ]
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 453.5125503540039,
-    "collapsed": true
+    "width": 453.5125503540039
   },
   "right": {
     "id": "d198f1ff3234b4cb",
@@ -246,25 +245,29 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "465f2c167778f229",
+  "active": "684c39bb25d177ca",
   "lastOpenFiles": [
-    "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
-    "Cientista da Computação Autodidata",
-    "README.md",
+    "Errors API.md",
+    "Diagram.png",
+    "Compilação vs Transpilação.md",
+    "CND.md",
     "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Pasted image 20241230104306.png",
-    "RoadMap do DavJaveiro/RoadMap.md",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata.md",
-    "Pasted image 20241229153505.png",
-    "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
     "Pasted image 20241229152620.png",
-    "Pasted image 20241229141957.png",
-    "Capítulo 10 - Layered Architecture Style-1.png",
-    "Pasted image 20241229141027.png",
+    "Pasted Image 20241207191513_359.png",
+    "Pasted Image 20241207191458_358.png",
+    "Pasted Image 20241207191442_340.png",
     "Capítulo 10 - Layered Architecture Style.png",
     "Pasted image 20241229125322.png",
-    "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
-    "RoadMap do DavJaveiro/Arquitetura de Software Book.png",
+    "Pasted image 20241229141957.png",
+    "Spring Start Here/Capítulo 1 - Getting started with Spring.png",
+    "Pasted image 20241221135340.png",
+    "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
+    "Cientista da Computação Autodidata/Imagens",
+    "Cientista da Computação Autodidata",
+    "README.md",
+    "RoadMap do DavJaveiro/RoadMap.md",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata.md",
+    "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
     "Fundamentals of Software Architecture/Capítulo 11 -",
     "Fundamentals of Software Architecture",
     "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
@@ -273,9 +276,7 @@
     "DavJaveiro_RoadMap_Study/README.md",
     "DavJaveiro_RoadMap_Study",
     "Java Persistence with Spring Data e Hibernate/Capítulo 15 - Working with Spring Data JDBC.md",
-    "Errors API.md",
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método.md",
-    "Compilação vs Transpilação.md",
     "2024-12-12.md",
     "Drawing 2024-12-28 15.33.22.excalidraw.md",
     "RoadMap do DavJaveiro/Covers",
@@ -290,10 +291,7 @@
     "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
     "Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
     "Git/GitHub Actions In Action/Capítulo 2 - Hands-on My First Actions Workflow.md",
-    "Git/GitHub Actions In Action/Capítulo 1 - Introduction to GitHub Actions.md",
     "Git/GitHub Actions In Action",
-    "Getting Started with SQL/Chapter 11 - Going Forward.md",
-    "RoadMap do DavJaveiro",
-    "Java Persistence with Spring Data e Hibernate/Imagens"
+    "RoadMap do DavJaveiro"
   ]
 }
