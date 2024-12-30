@@ -15,9 +15,9 @@
               "state": {
                 "file": "RoadMap do DavJaveiro/RoadMap.canvas",
                 "viewState": {
-                  "x": 545.9713834665272,
-                  "y": -7591.329323476457,
-                  "zoom": -4
+                  "x": -3905.9717635359043,
+                  "y": 8287.907955324494,
+                  "zoom": -2.4000000000000004
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -264,6 +264,7 @@
   },
   "active": "69ed8a1847f768ca",
   "lastOpenFiles": [
+    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
     "Excalidraw/Drawing 2024-12-30 13.57.24.excalidraw.md",
     "Excalidraw/Drawing 2024-12-30 13.57.25.excalidraw.md",
@@ -274,7 +275,6 @@
     "Errors API.md",
     "Compilação vs Transpilação.md",
     "CND.md",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Pasted image 20241229152620.png",
     "Pasted Image 20241207191513_359.png",
     "Pasted Image 20241207191458_358.png",
@@ -308,7 +308,6 @@
     "Git/GitHub Actions In Action/Capítulo 6 - Self-hosted runners.md",
     "Git/GitHub Actions In Action/Capítulo 5 - Runners.md",
     "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
-    "Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
     "Git/GitHub Actions In Action",
     "RoadMap do DavJaveiro"
   ]
