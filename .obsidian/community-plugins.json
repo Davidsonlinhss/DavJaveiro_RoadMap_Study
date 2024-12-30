@@ -9,5 +9,10 @@
   "execute-code",
   "simple-code-formatter",
   "copilot",
-  "obsidian-plantuml"
+  "obsidian-plantuml",
+  "obsidian-image-toolkit",
+  "highlightr-plugin",
+  "obsidian-icon-folder",
+  "meld-calc",
+  "obsidian-git"
 ]

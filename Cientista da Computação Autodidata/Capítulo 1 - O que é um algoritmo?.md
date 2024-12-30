@@ -200,3 +200,26 @@ Vemos essa complexidade de tempo em algoritmos como o de busca binária que pode
 
 ![[Capítulo 1 - O que é um algoritmo?-1.png]]
 O número de etapas cresce mais lentamente em um algoritmo logarítmico quando o conjunto de dados aumenta.
+
+## Tempo linear
+Um algoritmo executado em **tempo linear** cresce com a mesma proporção do tamanho do problema. O algoritmo linear é expresso na notação big O como O(n).
+Suponhamos que precise modificar o nosso programa de livros gratuitos para, em vez de dar um livro grátis para o primeiro cliente do dia, iterasse pela lista de clientes e desse a eles um livro grátis se seus nomes começassem com a letra B. Dessa vez, entretanto, a lista de clientes não está ordenada alfabeticamente. Agora, estamos forçado a percorrer cada item da lista para encontrar os nomes que começam com B. 
+```python
+free_book = False
+customers = ["Lexi", "Britney", "Danny", "Bobbi", "Chris"]
+for customer in customers:
+if customer[0] == ´B´:
+print(customer)
+```
+Quando a nossa lista tiver cinco itens, o programa levará cinco etapas para ser concluído. Para uma lista de 10 clientes, o nosso programa demandará 10 etapas; para 20 clientes, 20 etapas; e assim por diante...
+Esta é a equação da complexidade de tempo desse programa:
+```math
+f(n) = 1 + 1 + n
+```
+
+Na notação big O, podemos ignorar as constantes e nos concentrarmos na parte predominante da equação:
+```math
+O(n) = n
+```
+Quando *n* cresce, o número de etapas que ele executa aumenta de acordo com o aumento de *n*.
+![[Pasted image 20241230134444.png]]
