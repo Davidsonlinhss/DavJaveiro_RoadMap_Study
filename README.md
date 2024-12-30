@@ -1,7 +1,7 @@
   ![image](https://github.com/user-attachments/assets/f4f372bc-2876-40cd-9efb-1e0ee66b2b55)
 </h1> 
 
-# DavJaveiro Study RoadMap
+# DavJaveiro Study RoadMap Obsidian 
 <h1>Fala, Noobs! 🚀</h1>
 <p>
   Este repositório reúne minhas anotações de estudo e meu <strong>Roadmap</strong> para me tornar um <strong>Software Engineer</strong>. 
@@ -17,8 +17,7 @@
 <p>A ideia é compartilhar conhecimento e ajudar outros devs que estão nessa jornada! 🤓</p>
 
 <h2>  
-  Utilize o Obsidian para uma melhor experiência.
-  <p><img src="https://obsidian.md/images/2023-06-logo-reductions.png" width="300"></p>
+  Utilize o Obsidian <img src="https://github.com/user-attachments/assets/bd483372-1f97-499e-861d-0ca77c3ad475" width="30"> para uma melhor experiência. 
 </h2> 
 
 <h2>Como Usar Minhas Anotações no Obsidian</h2>
@@ -76,21 +75,22 @@ Utilize a funcionalidade de links internos, tabelas dinâmicas e outros recursos
 <p>
   Neste repositório você irá encontrar:
   </p>
-  <h2>My RoadMap
+  
+  <h2 align="center">My RoadMap
   <p>
-  <img src="https://github.com/user-attachments/assets/5e95250f-81a9-4688-9b6a-6de50aa6d778" width="600">
+  <img src="https://github.com/user-attachments/assets/5e95250f-81a9-4688-9b6a-6de50aa6d778" width="1200">
   </p>
+    </h2>
     
-</h2>
-<h2>My Notes
+<h2 align="center">My Notes
   <p>
-  <img src="https://github.com/user-attachments/assets/8e24481a-dee4-4869-8690-4ecee05cc756" width="300">
+  <img src="https://github.com/user-attachments/assets/8e24481a-dee4-4869-8690-4ecee05cc756" width="400">
  </p>
 </h2>
 
-<h2>My Tree Graph
+<h2 align="center">My Tree Graph
   <p>
-  <img src="https://github.com/user-attachments/assets/6ddde681-281c-437c-8fd0-b57c4f0b19dc" width="300">
+  <img src="https://github.com/user-attachments/assets/6ddde681-281c-437c-8fd0-b57c4f0b19dc" width="1200">
  </p>
 </h2>
 
