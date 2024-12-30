@@ -16,9 +16,9 @@
               "state": {
                 "file": "RoadMap do DavJaveiro/RoadMap.canvas",
                 "viewState": {
-                  "x": -4295.535240485453,
-                  "y": 153.08532258338573,
-                  "zoom": -3.3899999999999992
+                  "x": -4812.230742781886,
+                  "y": -1912.3121844269745,
+                  "zoom": -2.4000000000000004
                 }
               },
               "pinned": true,
@@ -40,8 +40,7 @@
               "title": "Capítulo 3 - Domain Models and Metadata"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +81,8 @@
             "state": {
               "type": "runjs-codelist-view",
               "state": {},
-              "icon": "js-dark-icon",
-              "title": "RunJS Codelist"
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
             }
           }
         ]
@@ -196,8 +195,8 @@
             "state": {
               "type": "copilot-chat-view",
               "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
             }
           }
         ]
@@ -266,8 +265,9 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "3464182e8eb40014",
+  "active": "4e88cc5cd846073b",
   "lastOpenFiles": [
+    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata.md",
     "Pasted image 20241229153505.png",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
@@ -277,13 +277,11 @@
     "Pasted image 20241229141027.png",
     "Capítulo 10 - Layered Architecture Style.png",
     "Pasted image 20241229125322.png",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata.md",
     "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
     "RoadMap do DavJaveiro/Arquitetura de Software Book.png",
     "Arquitetura de Software Book.png",
     "Fundamentals of Software Architecture/Capítulo 11 -",
     "Fundamentals of Software Architecture",
-    "Pasted image 20241229114136.png",
     "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
     "Java Persistence with Spring Data e Hibernate/Canvas",
     "Novo(a) Documento de Texto.txt",
