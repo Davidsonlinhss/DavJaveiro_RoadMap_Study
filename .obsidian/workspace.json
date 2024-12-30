@@ -4,24 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "811e931a1aa9a6b8",
+        "id": "4bba3975b7e3d187",
         "type": "tabs",
         "children": [
           {
-            "id": "69ed8a1847f768ca",
+            "id": "a4b0b182bce1f3f5",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
-                "viewState": {
-                  "x": -3905.9717635359043,
-                  "y": 8287.907955324494,
-                  "zoom": -2.4000000000000004
-                }
+                "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "RoadMap"
+              "icon": "lucide-file",
+              "title": "Capítulo 1 - O que é um algoritmo?"
             }
           }
         ]
@@ -262,10 +259,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "69ed8a1847f768ca",
+  "active": "a4b0b182bce1f3f5",
   "lastOpenFiles": [
+    "Capítulo 1 - O que é um algoritmo?-3.png",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
+    "Capítulo 1 - O que é um algoritmo?-2.png",
+    "Capítulo 1 - O que é um algoritmo?-1.png",
+    "Capítulo 1 - O que é um algoritmo?.png",
     "Excalidraw/Drawing 2024-12-30 13.57.24.excalidraw.md",
     "Excalidraw/Drawing 2024-12-30 13.57.25.excalidraw.md",
     "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.png",
@@ -279,9 +280,6 @@
     "Pasted Image 20241207191513_359.png",
     "Pasted Image 20241207191458_358.png",
     "Pasted Image 20241207191442_340.png",
-    "Capítulo 10 - Layered Architecture Style.png",
-    "Pasted image 20241229125322.png",
-    "Pasted image 20241229141957.png",
     "Cientista da Computação Autodidata/Imagens",
     "Cientista da Computação Autodidata",
     "RoadMap do DavJaveiro/RoadMap.md",

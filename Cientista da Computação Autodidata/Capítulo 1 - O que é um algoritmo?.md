@@ -192,13 +192,13 @@ T(n) = 1
 ```
 O nosso algoritmo possuí uma única etapa, não importando quantos clientes tivermos. Se tivermos 1.000 clientes, o algoritmo executará apenas uma etapa. Se tiver 10.000 clientes, também executará uma única etapa...
 Se representarmos graficamente a complexidade de tempo constante com o número de entradas no eixo x e o número de etapas no eixo y, o gráfico será plano:
-![[Capítulo 1 - O que é um algoritmo?.png]]
+![[Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.png]]
 
 ## Tempo logarítmico
 O tempo logarítmico é a segunda complexidade de tempo mais eficiente. Um algoritmo é executado em **tempo logarítmico** quando seu tempo de execução cresce de acordo com o logaritmo do tamanho da entrada. 
 Vemos essa complexidade de tempo em algoritmos como o de busca binária que pode descartar muitos valores a cada iteração. O algoritmo logarítmico é expresso na notação big O como O(log n).
 
-![[Capítulo 1 - O que é um algoritmo?-1.png]]
+![[Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?-1.png]]
 O número de etapas cresce mais lentamente em um algoritmo logarítmico quando o conjunto de dados aumenta.
 
 ## Tempo linear
@@ -222,4 +222,70 @@ Na notação big O, podemos ignorar as constantes e nos concentrarmos na parte p
 O(n) = n
 ```
 Quando *n* cresce, o número de etapas que ele executa aumenta de acordo com o aumento de *n*.
-![[Pasted image 20241230134444.png]]
+![[Capítulo 1 - O que é um algoritmo?.png]]
+
+## Tempo log-linear
+Um algoritmo executado em **tempo log-linear** cresce de acordo com uma combinação (multiplicação) das complexidades de tempo logarítmica e linear. Por exemplo, um algoritmo log-linear pode calcular uma operação O(log n) n vezes. Na notação big O, o algoritmo log-lineares dividem um conjunto de dados em partes menores e processam cada parte independentemente. Muitos algoritmos de #ordenação mais eficientes que conheceremos, como a #classificação por #interpolação (merge sort), são log-lineares.
+
+![[Capítulo 1 - O que é um algoritmo?-2.png]]
+A complexidade log-linear não é tão eficiente quanto a de tempo linear. No entanto, a complexidade não cresce com a mesma rapidez que a quadrática.
+
+## Tempo quadrático
+Após o tempo log-linear, a próxima complexidade de tempo mais eficiente é a de tempo quadrático. Um algoritmo é executado em **tempo quadrático** quando seu desempenho é diretamente proporcional ao tamanho do problema ao quadrado. Na notação big O, podemos expressar um algoritmo quadrático como O(n^2)
+```python
+number = [1, 2, 3, 4, 5]
+for i in numbers:
+for j in numbers:
+x = i * j
+print(x)
+```
+
+Esse algoritmo multiplica cada número de uma lista de números por todos os outros números, armazena o resultado em uma variável e exibe-o.
+
+Nesse caso, *n* é o tamanho da lista de **numbers**. A equação da complexidade de tempo desse algoritmo é a seguinte:
+```math
+f(n) = 1 + n * n * (1 + 1)
+
+```
+A parte (1 + 1) da equação vem da instrução de multiplicação e exibição. Estamos repetindo a instrução de multiplicação n * n vezes com os dois loops **for** aninhados. 
+Podemos simplificar a equação:
+```math
+f(n) = 1 + (1 + 1) * n^2
+```
+que é o mesmo que a linha a seguir:
+```math
+f(n) = 1 + 2 * n²
+```
+Como podemos perceber, a parte n² da equação ofusca o restante, logo, na notação big O, a equação é:
+```math
+O(n) = n²
+```
+Quando representamos um algoritmo com complexidade quadrática em um gráfico, o número de etapas aumenta nitidamente à medida que o tamanho do problema aumenta.
+
+![[Capítulo 1 - O que é um algoritmo?-3.png]]
+Como regra geral, se o nosso algoritmo tiver dois loops aninhados indo de 1 a n (ou de 0 a n -1), sua complexidade de tempo será no mínimo O(n²). Muitos algoritmos de ordenação como o de ordenação por inserção e por bolha seguem o tempo quadrático.
+
+## Tempo cúbico
+Após a complexidade quadrática, vem a complexidade de tempo cúbico. Um algoritmo de tempo cúbico é executado em **tempo cúbico** quando seu desempenho é diretamente proporcional ao tamanho do problema ao cubo. Na notação big O, um algoritmo cúbico é expresso como O(n³). Um algoritmo com complexidade cúbica é semelhante ao quadrático, exceto por *n* ser elevado à terceira potência em vez de à segunda.
+
+Exemplo de algoritmo com complexidade de tempo cúbico:
+```python
+number = [1, 2, 3, 4, 5]
+for i in numbers:
+for j in numbers:
+for k in numbers:
+x = i + j + h
+print(x)
+```
+
+A equação desse algoritmo é a seguinte:
+```math
+f(n) = 1 + 2 * n³
+```
+Da mesma forma que em um algoritmo com complexidade quadrática, a parte mais crítica dessa equação é n³, que cresce tão rapidamente que torna o restante da equação, mesmo se incluísse n², irrelevante. Logo, na notação big O, a complexidade cúbica é expressa assim:
+```math
+O(n) = n³
+```
+Enquanto dois loops aninhados são sinal de complexidade de tempo quadrático, três loops aninhados indo de 0 a n significa que o algoritmo seguirá o tempo cúbico. Encontraremos a complexidade de tempo cúbico se o nosso trabalho envolver ciência de dados ou estatística.
+
+As complexidades de tempo tanto quadrático quanto cúbico são casos especiais de uma família maior de complexidades de tempo polinomial. Um algoritmo executado em **tempo polinomial** aumenta de escala seguindo o padrão O(n^a), onde a = 2 para o tempo quadrático e a = 3 para o tempo cúbico. Ao projetar algoritmos, devemos evitar o aumento em escala polinomial, quando possível, por que os algoritmos podem ficar muito lentos à medida que *n* aumenta. Pode ser difícil evitar o aumento em escala #polinomial, mas talvez sirva de consolo o fato de que certamente a complexidade polinomial não é o pior dos casos.
