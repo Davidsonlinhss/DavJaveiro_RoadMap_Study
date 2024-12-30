@@ -4,21 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "078f4238883c2daa",
+        "id": "811e931a1aa9a6b8",
         "type": "tabs",
         "children": [
           {
-            "id": "e74b25a4a4a67a76",
+            "id": "69ed8a1847f768ca",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
-                "mode": "source",
-                "source": false
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
+                "viewState": {
+                  "x": -6445.853920504206,
+                  "y": -9072.581061655465,
+                  "zoom": -3.6
+                }
               },
-              "icon": "lucide-file",
-              "title": "Capítulo 1 - O que é um algoritmo?"
+              "icon": "lucide-layout-dashboard",
+              "title": "RoadMap"
             }
           }
         ]
@@ -70,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 453.5125503540039
+    "width": 453.5125503540039,
+    "collapsed": true
   },
   "right": {
     "id": "d198f1ff3234b4cb",
@@ -203,7 +207,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -227,18 +231,19 @@
                   "linkStrength": 1,
                   "linkDistance": 250,
                   "scale": 0.21713154581238864,
-                  "close": false
+                  "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Gráfico de Capítulo 1 - O que é um algoritmo?"
+              "title": "Gráfico de RoadMap"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 436.5
+    "width": 436.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -257,11 +262,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0f0671d19bb85bce",
+  "active": "69ed8a1847f768ca",
   "lastOpenFiles": [
+    "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
+    "Excalidraw/Drawing 2024-12-30 13.57.24.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-30 13.57.25.excalidraw.md",
     "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.png",
     "Diagram.png",
-    "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
     "Pasted image 20241230134444.png",
     "README.md",
     "Errors API.md",
@@ -275,7 +282,6 @@
     "Capítulo 10 - Layered Architecture Style.png",
     "Pasted image 20241229125322.png",
     "Pasted image 20241229141957.png",
-    "Spring Start Here/Capítulo 1 - Getting started with Spring.png",
     "Cientista da Computação Autodidata/Imagens",
     "Cientista da Computação Autodidata",
     "RoadMap do DavJaveiro/RoadMap.md",
@@ -303,7 +309,6 @@
     "Git/GitHub Actions In Action/Capítulo 5 - Runners.md",
     "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
     "Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
-    "Git/GitHub Actions In Action/Capítulo 2 - Hands-on My First Actions Workflow.md",
     "Git/GitHub Actions In Action",
     "RoadMap do DavJaveiro"
   ]
