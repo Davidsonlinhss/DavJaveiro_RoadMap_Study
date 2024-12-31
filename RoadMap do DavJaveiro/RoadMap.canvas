@@ -292,111 +292,6 @@
       "height": 935
     },
     {
-      "id": "073fe3b7f695f592",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 2 - Databases.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -2958,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "3106eabb0810de86",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 3 - SQLite.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -2634,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "93bf4a097a16d89d",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 4 - Select.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -2310,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "ea441d0b5874f62f",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 1 - Why Learn SQL.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -3282,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "a3066809d86ee1b4",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 8 - JOIN.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1014,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "2280c6d2c7c640fe",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 9 - Database Design.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -690,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "6b426409874df3b4",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/SQL Book.png",
-      "styleAttributes": {},
-      "x": -13209,
-      "y": -1857,
-      "width": 462,
-      "height": 608
-    },
-    {
-      "id": "40604f3ea361fbac",
-      "type": "text",
-      "text": "# 3° Semestre: **Modelagem de Dados**",
-      "styleAttributes": {},
-      "x": -13248,
-      "y": -2881,
-      "width": 540,
-      "height": 102
-    },
-    {
-      "id": "02002d11fd49e380",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 5 - Where.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1986,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "68cbfb3dc71aaa9d",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 7 - CASE Statements.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1338,
-      "width": 266,
-      "height": 219
-    },
-    {
       "id": "f5627e789defe17d",
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/Java Logo.png",
@@ -405,102 +300,6 @@
       "y": -4220,
       "width": 1241,
       "height": 695
-    },
-    {
-      "id": "6588a7d0a1456b92",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
-      "styleAttributes": {},
-      "x": -7748,
-      "y": -2664,
-      "width": 466,
-      "height": 745
-    },
-    {
-      "id": "52fb6750a549dbdf",
-      "type": "text",
-      "text": "# 3° Semestre: **Engenharia de Software**",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -7748,
-      "y": -3733,
-      "width": 660,
-      "height": 80
-    },
-    {
-      "id": "66d87044445b6b5c",
-      "type": "file",
-      "file": "Pasted image 20241229141027.png",
-      "styleAttributes": {},
-      "x": -4956,
-      "y": -2669,
-      "width": 471,
-      "height": 745
-    },
-    {
-      "id": "9210d1586af270fc",
-      "type": "text",
-      "text": "#DDD - # Domain-driven design",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -4925,
-      "y": -1429,
-      "width": 410,
-      "height": 50
-    },
-    {
-      "id": "be7df8e39c9fd111",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
-      "styleAttributes": {},
-      "x": -6325,
-      "y": -2664,
-      "width": 580,
-      "height": 745
-    },
-    {
-      "id": "e6896536d3e83f67",
-      "type": "link",
-      "url": "https://www.atlassian.com/br/agile/project-management/project-management-intro",
-      "styleAttributes": {},
-      "x": -6204,
-      "y": -3862,
-      "width": 338,
-      "height": 337,
-      "color": "1"
-    },
-    {
-      "id": "6e2a0c973ae0d4b7",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 10 - Managing Data.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -366,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "e3b05d45e802e326",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 11 - Going Forward.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -41,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "fcba07270c5a20c6",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 6 - GROUP BY and ORDER BY.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1662,
-      "width": 266,
-      "height": 219,
-      "color": "1"
     },
     {
       "id": "ae98440bae032737",
@@ -886,16 +685,6 @@
       "color": "1"
     },
     {
-      "id": "7e78edfcba17e71c",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Data Icon.png",
-      "styleAttributes": {},
-      "x": -13330,
-      "y": 211,
-      "width": 705,
-      "height": 705
-    },
-    {
       "id": "5b6623f6f24f8853",
       "type": "link",
       "url": "https://www.baeldung.com/java-logging-intro",
@@ -1024,13 +813,235 @@
       "color": "6"
     },
     {
+      "id": "3106eabb0810de86",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 3 - SQLite.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -2634,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "93bf4a097a16d89d",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 4 - Select.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -2310,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "6e2a0c973ae0d4b7",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 10 - Managing Data.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -366,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "e3b05d45e802e326",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 11 - Going Forward.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -41,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "7e78edfcba17e71c",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Data Icon.png",
+      "styleAttributes": {},
+      "x": -13330,
+      "y": 211,
+      "width": 705,
+      "height": 705
+    },
+    {
+      "id": "073fe3b7f695f592",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 2 - Databases.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -2958,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "ea441d0b5874f62f",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 1 - Why Learn SQL.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -3282,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "6588a7d0a1456b92",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
+      "styleAttributes": {},
+      "x": -7748,
+      "y": -2664,
+      "width": 466,
+      "height": 745
+    },
+    {
+      "id": "52fb6750a549dbdf",
+      "type": "text",
+      "text": "# 3° Semestre: **Engenharia de Software**",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -7748,
+      "y": -3733,
+      "width": 660,
+      "height": 80
+    },
+    {
+      "id": "be7df8e39c9fd111",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
+      "styleAttributes": {},
+      "x": -6325,
+      "y": -2664,
+      "width": 580,
+      "height": 745
+    },
+    {
+      "id": "a3066809d86ee1b4",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 8 - JOIN.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -1014,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "6b426409874df3b4",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/SQL Book.png",
+      "styleAttributes": {},
+      "x": -13209,
+      "y": -1857,
+      "width": 462,
+      "height": 608
+    },
+    {
+      "id": "02002d11fd49e380",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 5 - Where.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -1986,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "68cbfb3dc71aaa9d",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 7 - CASE Statements.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -1338,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "fcba07270c5a20c6",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 6 - GROUP BY and ORDER BY.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -1662,
+      "width": 266,
+      "height": 219,
+      "color": "1"
+    },
+    {
+      "id": "2280c6d2c7c640fe",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 9 - Database Design.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -690,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "66d87044445b6b5c",
+      "type": "file",
+      "file": "Pasted image 20241229141027.png",
+      "styleAttributes": {},
+      "x": -4956,
+      "y": -2669,
+      "width": 471,
+      "height": 745
+    },
+    {
+      "id": "9210d1586af270fc",
+      "type": "text",
+      "text": "#DDD - # Domain-driven design",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -4925,
+      "y": -1429,
+      "width": 410,
+      "height": 50
+    },
+    {
+      "id": "e6896536d3e83f67",
+      "type": "link",
+      "url": "https://www.atlassian.com/br/agile/project-management/project-management-intro",
+      "styleAttributes": {},
+      "x": -6204,
+      "y": -3862,
+      "width": 338,
+      "height": 337,
+      "color": "1"
+    },
+    {
       "id": "de90cc622ffca84a",
       "type": "file",
       "file": "Engenharia de Software Moderna/Capítulo 1 - Introdução.md",
+      "styleAttributes": {},
       "x": -9060,
       "y": -2440,
       "width": 400,
       "height": 400
+    },
+    {
+      "id": "40604f3ea361fbac",
+      "type": "text",
+      "text": "# 3° Semestre: **Modelagem de Dados**",
+      "styleAttributes": {},
+      "x": -13248,
+      "y": -2881,
+      "width": 540,
+      "height": 102
+    },
+    {
+      "id": "a58aa160a03aad5b",
+      "type": "text",
+      "text": "TEste\n",
+      "styleAttributes": {},
+      "x": -9540,
+      "y": -1560,
+      "width": 260,
+      "height": 60
     }
   ],
   "edges": [
@@ -2091,6 +2102,14 @@
       "fromNode": "6588a7d0a1456b92",
       "fromSide": "left",
       "toNode": "de90cc622ffca84a",
+      "toSide": "right"
+    },
+    {
+      "id": "7c779498dfe399f3",
+      "styleAttributes": {},
+      "fromNode": "de90cc622ffca84a",
+      "fromSide": "left",
+      "toNode": "a58aa160a03aad5b",
       "toSide": "right"
     }
   ],
