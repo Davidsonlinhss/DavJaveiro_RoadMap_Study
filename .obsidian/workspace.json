@@ -1,29 +1,24 @@
 {
   "main": {
-    "id": "d99b35dc87253dee",
+    "id": "ea39655dba518c09",
     "type": "split",
     "children": [
       {
-        "id": "4bba3975b7e3d187",
+        "id": "b43fd28d059ebf6e",
         "type": "tabs",
         "children": [
           {
-            "id": "a4b0b182bce1f3f5",
+            "id": "3c2ebe836c36ec59",
             "type": "leaf",
-            "pinned": true,
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
-                "viewState": {
-                  "x": -9285.450004988888,
-                  "y": -2022.3249801983427,
-                  "zoom": 0
-                }
+                "file": "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+                "mode": "source",
+                "source": false
               },
-              "pinned": true,
-              "icon": "lucide-layout-dashboard",
-              "title": "RoadMap"
+              "icon": "lucide-file",
+              "title": "Capítulo 12 - Enumerações, autoboxing, importação estática e anotações"
             }
           }
         ]
@@ -32,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "7ac4efa0b32136bb",
+    "id": "3aacad01f20fb2e4",
     "type": "split",
     "children": [
       {
-        "id": "bffaa3ba0857ca90",
+        "id": "cbf14d8a43a24dc2",
         "type": "tabs",
         "children": [
           {
-            "id": "0fe2594975aa5d1c",
+            "id": "684ca19aa36bda2a",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -52,7 +47,24 @@
             }
           },
           {
-            "id": "2a98d24d53fad366",
+            "id": "b2ccde7573ed4dde",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "1cfd66d3be7767f0",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -62,37 +74,37 @@
             }
           },
           {
-            "id": "b4296a2534a9eb8d",
+            "id": "992f159114aaae50",
             "type": "leaf",
             "state": {
               "type": "runjs-codelist-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
+              "icon": "js-dark-icon",
+              "title": "RunJS Codelist"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 453.5125503540039,
+    "width": 300,
     "collapsed": true
   },
   "right": {
-    "id": "d198f1ff3234b4cb",
+    "id": "5ec10822b2a3b721",
     "type": "split",
     "children": [
       {
-        "id": "79b90c793fef7782",
+        "id": "acb82f89b08359b3",
         "type": "tabs",
-        "dimension": 76.10513739545998,
         "children": [
           {
-            "id": "51f448fe5205b43b",
+            "id": "fad9acea718a71f5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,25 +114,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Links inversos para RoadMap"
             }
           },
           {
-            "id": "5ed1a005a07f421c",
+            "id": "3c7b7acec2ecf1b9",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java Rocketseat/Projeto Gestão de Vagas/Rotas, Autenticação e Autorização.md",
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Rotas, Autenticação e Autorização"
+              "title": "Links de saída para RoadMap"
             }
           },
           {
-            "id": "24c7bc2f22af5cb3",
+            "id": "66929df74a5bdc65",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,19 +145,7 @@
             }
           },
           {
-            "id": "56d586c988ab9e47",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Java Rocketseat/Projeto Gestão de Vagas/Rotas, Autenticação e Autorização.md"
-              },
-              "icon": "lucide-list",
-              "title": "Sumário de Rotas, Autenticação e Autorização"
-            }
-          },
-          {
-            "id": "4512664ce40894ce",
+            "id": "54212fbce9d2d0f1",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -159,92 +159,22 @@
             }
           },
           {
-            "id": "8b0e1e5d76adf322",
+            "id": "fe37c441238a179d",
             "type": "leaf",
             "state": {
-              "type": "search",
+              "type": "outline",
               "state": {
-                "query": "tag:#Save",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas"
               },
-              "icon": "lucide-search",
-              "title": "Procurar"
-            }
-          },
-          {
-            "id": "d3ab3c5a35da2ecd",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
-            }
-          },
-          {
-            "id": "031329a582f68371",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
-            }
-          }
-        ],
-        "currentTab": 7
-      },
-      {
-        "id": "ea9ba6263175b59d",
-        "type": "tabs",
-        "dimension": 23.894862604540023,
-        "children": [
-          {
-            "id": "0f0671d19bb85bce",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
-                "options": {
-                  "collapse-filter": false,
-                  "search": "",
-                  "localJumps": 3,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": true,
-                  "showTags": true,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": false,
-                  "colorGroups": [],
-                  "collapse-display": false,
-                  "showArrow": true,
-                  "textFadeMultiplier": -3,
-                  "nodeSizeMultiplier": 0.872097791798107,
-                  "lineSizeMultiplier": 2.40547318611987,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.21713154581238864,
-                  "close": true
-                }
-              },
-              "icon": "lucide-git-fork",
-              "title": "Gráfico de RoadMap"
+              "icon": "lucide-list",
+              "title": "Sumário de RoadMap"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 436.5,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
@@ -264,54 +194,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a4b0b182bce1f3f5",
+  "active": "3c2ebe836c36ec59",
   "lastOpenFiles": [
-    "RoadMap do DavJaveiro/Covers/Java Logo.png",
-    "RoadMap do DavJaveiro/Covers/Java Code Problems.png",
-    "RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
-    "RoadMap do DavJaveiro/Covers/Engenharia de Software Icon.png",
-    "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
-    "RoadMap do DavJaveiro/Covers/Desenvolvimento Real de Software.png",
-    "RoadMap do DavJaveiro/Covers/Data Icon.png",
-    "RoadMap do DavJaveiro/Covers/Cientista da Computação Book.png",
-    "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
     "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Cientista da Computação Autodidata/Capítulo 2 - Recursão.md",
-    "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo.md",
-    "Capítulo 1 - O que é um algoritmo-4.png",
-    "Sem título.md",
-    "Cientista da Computação Autodidata/Imagens",
-    "Capítulo 1 - O que é um algoritmo?-3.png",
-    "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
-    "Excalidraw/Drawing 2024-12-30 13.57.24.excalidraw.md",
-    "Excalidraw/Drawing 2024-12-30 13.57.25.excalidraw.md",
-    "README.md",
-    "Errors API.md",
-    "Compilação vs Transpilação.md",
-    "CND.md",
-    "Cientista da Computação Autodidata/Imagens",
-    "Cientista da Computação Autodidata",
-    "RoadMap do DavJaveiro/RoadMap.md",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata.md",
-    "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
-    "Fundamentals of Software Architecture/Capítulo 11 -",
-    "Fundamentals of Software Architecture",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
-    "Java Persistence with Spring Data e Hibernate/Canvas",
-    "Novo(a) Documento de Texto.txt",
-    "DavJaveiro_RoadMap_Study/README.md",
-    "DavJaveiro_RoadMap_Study",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 15 - Working with Spring Data JDBC.md",
-    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método.md",
-    "2024-12-12.md",
-    "Drawing 2024-12-28 15.33.22.excalidraw.md",
-    "RoadMap do DavJaveiro/Covers",
-    "Git/GitHub Actions In Action/Capítulo 12 - Improving workflow performance and costs.md",
-    "Git/GitHub Actions In Action/Capítulo 11 - Compliance.md",
-    "Git/GitHub Actions In Action/Capítulo 10 - Security.md",
-    "Git/GitHub Actions In Action/Capítulo 9 - Continous Delivery.md",
-    "Git/GitHub Actions In Action/Capítulo 8 - Continuous integration.md",
-    "Git/GitHub Actions In Action/Capítulo 7 - Managing your self-hosted runners.md",
-    "Git/GitHub Actions In Action"
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+    "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
+    "Pasted image 20241231152828.png",
+    "Pasted image 20241231152723.png",
+    "Pasted image 20241231152517.png",
+    "Pasted image 20241231152359.png",
+    "Desenvolvimento Real de Software/Capítulo 2 - Análise de Extratos Bancários.md",
+    "Banco de Dados - Projetos e Imeplementação/Capítulo 1 - O que é Projeto de Banco de Dados.md"
   ]
 }
