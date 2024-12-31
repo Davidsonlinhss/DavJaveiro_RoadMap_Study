@@ -251,6 +251,142 @@
       "height": 448
     },
     {
+      "id": "fb611372981b73bb",
+      "type": "link",
+      "url": "https://www.devmedia.com.br/orm-object-relational-mapper/19056",
+      "styleAttributes": {},
+      "x": -4119,
+      "y": 3941,
+      "width": 428,
+      "height": 492
+    },
+    {
+      "id": "07a4556d22e271d6",
+      "type": "file",
+      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 1 - Entendendo o object-relational persistence.md",
+      "styleAttributes": {},
+      "x": -6139,
+      "y": 4210,
+      "width": 723,
+      "height": 824,
+      "color": "4"
+    },
+    {
+      "id": "338ca1dfc705367b",
+      "type": "link",
+      "url": "https://www.altexsoft.com/blog/object-relational-mapping/",
+      "styleAttributes": {},
+      "x": -4124,
+      "y": 4813,
+      "width": 437,
+      "height": 442
+    },
+    {
+      "id": "8981b4d411b5d42c",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/TDD Icon.png",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": 5311,
+      "width": 1544,
+      "height": 1025
+    },
+    {
+      "id": "3c8a097bd1cf703b",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Persistence Icon.png",
+      "styleAttributes": {
+        "border": null
+      },
+      "x": -13411,
+      "y": 2859,
+      "width": 866,
+      "height": 1090
+    },
+    {
+      "id": "73f1ee48b47f50e6",
+      "type": "link",
+      "url": "https://ieeexplore.ieee.org/document/9481049",
+      "styleAttributes": {},
+      "x": -4248,
+      "y": 5690,
+      "width": 685,
+      "height": 678,
+      "color": "6"
+    },
+    {
+      "id": "db3f48da5d3afc96",
+      "type": "file",
+      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
+      "styleAttributes": {},
+      "x": -6139,
+      "y": 6271,
+      "width": 614,
+      "height": 769,
+      "color": "4"
+    },
+    {
+      "id": "2296532c7a97dbbb",
+      "type": "text",
+      "text": " **Lentidão do SpringData JPA**\n O Spring Data JPA pode ser mais lento em compração com JPA puro ou Hibernate Nativo devido a alguns fatores, como:\n 1. **Camada Adicional de Abstração** - O Spring Data JPA é construído sobre o JPA e o Hibernate, adicionando funcionalidades que simplificam o desenvolvimento, como repositórios automáticos, métodos personalizados e gerenciamento de transações. Essa abstração introduz sobrecarga em termos de processamento, pois o framework precisa interpretar e processas instruções adicionais antes de delegar as operações ao Hibernate;\n 2. **Geração Dinâmica de Consultas** - O Spring Data gera dinamicamente consultadas baseadas nos métodos dos repositórios (por exemoplo, #findById ou #Save), o que pode consumir mais tempo em comparação com consultas diretamente escritas no JPA ou no Hibernate nativo. Essa geração automática de queries exige análise e processamento extra durante a execução.\n 3. **Gerenciamento Automático de Transações** - O Spring Data configura e gerencia automaticamente. Embora isso torne o desenvolvimento mais simples, pode aumentar os tempos de execução, especialmente em cenários com muitas operações simultâneas.\n 4. **Repositórios com Operações Genéricas** - Repositórios no Spring Data fornecem suporte genérico para várias operações CRUD. Esse comportamento genérico, embora prático, pode ser menos eficiente do que implementações personalizadas diretamente no Hibernate ou JPA.\n 5. **Dependência de Proxies e Reflection** - O Spring Data JPA utiliza proxies dinâmicos e reflection para implementar seus recursos, como a injeção de dependências e a criação de beans. \n  \n**Cenários Ideal para uso do Spring Data JPA** \nApesar de ser mais lento, projetos que priorizam facilidade de desenvolvimento e manutenção, especialmente onde o desempenho absoluto não é um requisito crítico, pode ser uma boa alternativa.\nSe o desempenho for um fator-chave, é possível combinar o uso do Spring Data JPA com consultas personalizadas e otimizações manuais para reduzir a sobrecarga.",
+      "styleAttributes": {},
+      "x": -4248,
+      "y": 6677,
+      "width": 685,
+      "height": 793,
+      "color": "6"
+    },
+    {
+      "id": "c7a83b04f4941094",
+      "type": "link",
+      "url": "https://app.daily.dev/tags/java?ref=roadmapsh",
+      "styleAttributes": {},
+      "x": -4026,
+      "y": 8070,
+      "width": 241,
+      "height": 266
+    },
+    {
+      "id": "95401fe4a9c1abe1",
+      "type": "file",
+      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 15 - Working with Spring Data JDBC.md",
+      "styleAttributes": {},
+      "x": -6139,
+      "y": 8115,
+      "width": 614,
+      "height": 966
+    },
+    {
+      "id": "47f0d559d9475031",
+      "type": "link",
+      "url": "https://www.baeldung.com/jdbi",
+      "styleAttributes": {},
+      "x": -4030,
+      "y": 8470,
+      "width": 250,
+      "height": 303
+    },
+    {
+      "id": "294af57c0b48dda8",
+      "type": "link",
+      "url": "https://www.ibm.com/docs/en/informix-servers/12.10?topic=started-what-is-jdbc",
+      "styleAttributes": {},
+      "x": -4030,
+      "y": 8854,
+      "width": 249,
+      "height": 241
+    },
+    {
+      "id": "c69287bebb666e3c",
+      "type": "link",
+      "url": "https://www.baeldung.com/spring-jdbc-jdbctemplate",
+      "styleAttributes": {},
+      "x": -4030,
+      "y": 9267,
+      "width": 249,
+      "height": 321
+    },
+    {
       "id": "66d87044445b6b5c",
       "type": "file",
       "file": "Pasted image 20241229141027.png",
@@ -273,17 +409,6 @@
       "height": 50
     },
     {
-      "id": "e6896536d3e83f67",
-      "type": "link",
-      "url": "https://www.atlassian.com/br/agile/project-management/project-management-intro",
-      "styleAttributes": {},
-      "x": -4675,
-      "y": -3990,
-      "width": 338,
-      "height": 337,
-      "color": "1"
-    },
-    {
       "id": "3e51aec221ffee62",
       "type": "file",
       "file": "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
@@ -293,26 +418,6 @@
       "width": 1141,
       "height": 1280,
       "color": "4"
-    },
-    {
-      "id": "c39c78c3df1c3ace",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
-      "styleAttributes": {},
-      "x": -1116,
-      "y": -2992,
-      "width": 814,
-      "height": 1069
-    },
-    {
-      "id": "f5627e789defe17d",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Logo.png",
-      "styleAttributes": {},
-      "x": 1672,
-      "y": -4220,
-      "width": 1241,
-      "height": 695
     },
     {
       "id": "c5e0f3b8888bc1ed",
@@ -346,6 +451,69 @@
       "color": "1"
     },
     {
+      "id": "52fb6750a549dbdf",
+      "type": "text",
+      "text": "# 3° Semestre: **Engenharia de Software**",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -7748,
+      "y": -3861,
+      "width": 660,
+      "height": 80
+    },
+    {
+      "id": "be7df8e39c9fd111",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
+      "styleAttributes": {},
+      "x": -7349,
+      "y": -2955,
+      "width": 775,
+      "height": 995
+    },
+    {
+      "id": "be4aa4674f848f33",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Spring in Action Book.png",
+      "styleAttributes": {},
+      "x": -7386,
+      "y": 201,
+      "width": 850,
+      "height": 1066
+    },
+    {
+      "id": "e6896536d3e83f67",
+      "type": "link",
+      "url": "https://www.atlassian.com/br/agile/project-management/project-management-intro",
+      "styleAttributes": {},
+      "x": -4675,
+      "y": -3990,
+      "width": 338,
+      "height": 337,
+      "color": "1"
+    },
+    {
+      "id": "c39c78c3df1c3ace",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
+      "styleAttributes": {},
+      "x": -1116,
+      "y": -2992,
+      "width": 814,
+      "height": 1069
+    },
+    {
+      "id": "f5627e789defe17d",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Logo.png",
+      "styleAttributes": {},
+      "x": 1672,
+      "y": -4220,
+      "width": 1241,
+      "height": 695
+    },
+    {
       "id": "eedf3f261de1f486",
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/Software Requiriments Book 2.png",
@@ -354,16 +522,6 @@
       "y": -8452,
       "width": 950,
       "height": 1322
-    },
-    {
-      "id": "b8ec00a111066ee9",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Software Requirements Book1.png",
-      "styleAttributes": {},
-      "x": -3767,
-      "y": -6894,
-      "width": 960,
-      "height": 1259
     },
     {
       "id": "f6cee17867fd0cab",
@@ -432,6 +590,16 @@
       "color": "4"
     },
     {
+      "id": "b8ec00a111066ee9",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Software Requirements Book1.png",
+      "styleAttributes": {},
+      "x": -3767,
+      "y": -6894,
+      "width": 960,
+      "height": 1259
+    },
+    {
       "id": "ea1c45dcc9c0b891",
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/Java Para Iniciantes Book.png",
@@ -452,38 +620,6 @@
       "y": -8523,
       "width": 215,
       "height": 102
-    },
-    {
-      "id": "52fb6750a549dbdf",
-      "type": "text",
-      "text": "# 3° Semestre: **Engenharia de Software**",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -7748,
-      "y": -3861,
-      "width": 660,
-      "height": 80
-    },
-    {
-      "id": "be7df8e39c9fd111",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
-      "styleAttributes": {},
-      "x": -7349,
-      "y": -2955,
-      "width": 775,
-      "height": 995
-    },
-    {
-      "id": "be4aa4674f848f33",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Spring in Action Book.png",
-      "styleAttributes": {},
-      "x": -7386,
-      "y": 201,
-      "width": 850,
-      "height": 1066
     },
     {
       "id": "3274e48f71bf4167",
@@ -610,38 +746,6 @@
       "color": "4"
     },
     {
-      "id": "03bb7707f5c1f1cc",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 9 - Tratamento de Exceções.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -10351,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "69e567e4932269a3",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 8 - Pacotes e interfaces.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -10678,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "da5f8260f20d0c57",
-      "type": "file",
-      "file": "Pasted image 20241231152517.png",
-      "styleAttributes": {},
-      "x": -11200,
-      "y": -10883,
-      "width": 1060,
-      "height": 1523
-    },
-    {
       "id": "93bf4a097a16d89d",
       "type": "file",
       "file": "Getting Started with SQL/Chapter 4 - Select.md",
@@ -715,38 +819,6 @@
       "height": 219
     },
     {
-      "id": "e3b05d45e802e326",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 11 - Going Forward.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -41,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "48eeaeb6594f4d17",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 7 - Heranças.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11005,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "7ad9b858444d00d8",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11332,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
       "id": "3106eabb0810de86",
       "type": "file",
       "file": "Getting Started with SQL/Chapter 3 - SQLite.md",
@@ -780,6 +852,60 @@
       "color": "4"
     },
     {
+      "id": "03bb7707f5c1f1cc",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 9 - Tratamento de Exceções.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -10351,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "69e567e4932269a3",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 8 - Pacotes e interfaces.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -10678,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "e3b05d45e802e326",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 11 - Going Forward.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -41,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "48eeaeb6594f4d17",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 7 - Heranças.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -11005,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "7ad9b858444d00d8",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -11332,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
       "id": "6b426409874df3b4",
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/SQL Book.png",
@@ -788,16 +914,6 @@
       "y": -2467,
       "width": 1065,
       "height": 1401
-    },
-    {
-      "id": "9debe4abf3e87081",
-      "type": "file",
-      "file": "Pasted image 20241231152359.png",
-      "styleAttributes": {},
-      "x": -13548,
-      "y": -10880,
-      "width": 1141,
-      "height": 1520
     },
     {
       "id": "d8218e1451a358e2",
@@ -822,6 +938,26 @@
       "color": "4"
     },
     {
+      "id": "40604f3ea361fbac",
+      "type": "text",
+      "text": "# 3° Semestre: **Modelagem de Dados**",
+      "styleAttributes": {},
+      "x": -13248,
+      "y": -2881,
+      "width": 540,
+      "height": 102
+    },
+    {
+      "id": "7e78edfcba17e71c",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Data Icon.png",
+      "styleAttributes": {},
+      "x": -13330,
+      "y": 211,
+      "width": 705,
+      "height": 705
+    },
+    {
       "id": "892aa1e68ed8ecfe",
       "type": "file",
       "file": "Pasted image 20241231152723.png",
@@ -844,24 +980,14 @@
       "height": 2722
     },
     {
-      "id": "40604f3ea361fbac",
-      "type": "text",
-      "text": "# 3° Semestre: **Modelagem de Dados**",
-      "styleAttributes": {},
-      "x": -13248,
-      "y": -2881,
-      "width": 540,
-      "height": 102
-    },
-    {
-      "id": "7e78edfcba17e71c",
+      "id": "18b464d4f586b6d5",
       "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Data Icon.png",
+      "file": "Pasted image 20241231152828.png",
       "styleAttributes": {},
-      "x": -13330,
-      "y": 211,
-      "width": 705,
-      "height": 705
+      "x": -8606,
+      "y": -15120,
+      "width": 880,
+      "height": 1245
     },
     {
       "id": "385990dd1ac65068",
@@ -870,11 +996,71 @@
       "styleAttributes": {
         "border": "dotted"
       },
-      "x": -12696,
-      "y": -14141,
+      "x": -13458,
+      "y": -14151,
       "width": 959,
       "height": 1243,
       "color": "1"
+    },
+    {
+      "id": "36d662b6046d03f4",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
+      "styleAttributes": {},
+      "x": -16929,
+      "y": -14151,
+      "width": 911,
+      "height": 1243
+    },
+    {
+      "id": "43a6e2ac03044b0c",
+      "type": "link",
+      "url": "https://www.youtube.com/watch?si=pJMU61kc69v1twHg&v=Qmt0QwzEmh0&feature=youtu.be",
+      "styleAttributes": {},
+      "x": -18560,
+      "y": -18240,
+      "width": 2983,
+      "height": 2366
+    },
+    {
+      "id": "da5f8260f20d0c57",
+      "type": "file",
+      "file": "Pasted image 20241231152517.png",
+      "styleAttributes": {},
+      "x": -11200,
+      "y": -17819,
+      "width": 1060,
+      "height": 1523
+    },
+    {
+      "id": "9debe4abf3e87081",
+      "type": "file",
+      "file": "Pasted image 20241231152359.png",
+      "styleAttributes": {},
+      "x": -13549,
+      "y": -17816,
+      "width": 1141,
+      "height": 1520
+    },
+    {
+      "id": "46c6c551cec4eb41",
+      "type": "file",
+      "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo.md",
+      "styleAttributes": {},
+      "x": -14640,
+      "y": -12476,
+      "width": 400,
+      "height": 400,
+      "color": "1"
+    },
+    {
+      "id": "ec1701dc4e5a6548",
+      "type": "file",
+      "file": "Pasted image 20241231162244.png",
+      "x": -13492,
+      "y": -11280,
+      "width": 1028,
+      "height": 1433
     },
     {
       "id": "68699022818f36df",
@@ -887,16 +1073,6 @@
       "height": 1342
     },
     {
-      "id": "18b464d4f586b6d5",
-      "type": "file",
-      "file": "Pasted image 20241231152828.png",
-      "styleAttributes": {},
-      "x": -8606,
-      "y": -15120,
-      "width": 880,
-      "height": 1245
-    },
-    {
       "id": "46c4f896a99bb160",
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/Java Code Problems.png",
@@ -907,133 +1083,6 @@
       "height": 1351
     },
     {
-      "id": "46c6c551cec4eb41",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo.md",
-      "styleAttributes": {},
-      "x": -12417,
-      "y": -15665,
-      "width": 400,
-      "height": 400,
-      "color": "1"
-    },
-    {
-      "id": "36d662b6046d03f4",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
-      "styleAttributes": {},
-      "x": -14185,
-      "y": -14141,
-      "width": 911,
-      "height": 1243
-    },
-    {
-      "id": "43a6e2ac03044b0c",
-      "type": "link",
-      "url": "https://www.youtube.com/watch?si=pJMU61kc69v1twHg&v=Qmt0QwzEmh0&feature=youtu.be",
-      "styleAttributes": {},
-      "x": -18560,
-      "y": -11304,
-      "width": 2983,
-      "height": 2366
-    },
-    {
-      "id": "fb611372981b73bb",
-      "type": "link",
-      "url": "https://www.devmedia.com.br/orm-object-relational-mapper/19056",
-      "styleAttributes": {},
-      "x": -4119,
-      "y": 3941,
-      "width": 428,
-      "height": 492
-    },
-    {
-      "id": "07a4556d22e271d6",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 1 - Entendendo o object-relational persistence.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 4210,
-      "width": 723,
-      "height": 824,
-      "color": "4"
-    },
-    {
-      "id": "338ca1dfc705367b",
-      "type": "link",
-      "url": "https://www.altexsoft.com/blog/object-relational-mapping/",
-      "styleAttributes": {},
-      "x": -4124,
-      "y": 4813,
-      "width": 437,
-      "height": 442
-    },
-    {
-      "id": "8981b4d411b5d42c",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/TDD Icon.png",
-      "styleAttributes": {},
-      "x": 1520,
-      "y": 5311,
-      "width": 1544,
-      "height": 1025
-    },
-    {
-      "id": "3c8a097bd1cf703b",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Persistence Icon.png",
-      "styleAttributes": {
-        "border": null
-      },
-      "x": -13411,
-      "y": 2859,
-      "width": 866,
-      "height": 1090
-    },
-    {
-      "id": "73f1ee48b47f50e6",
-      "type": "link",
-      "url": "https://ieeexplore.ieee.org/document/9481049",
-      "styleAttributes": {},
-      "x": -4248,
-      "y": 5690,
-      "width": 685,
-      "height": 678,
-      "color": "6"
-    },
-    {
-      "id": "db3f48da5d3afc96",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 6271,
-      "width": 614,
-      "height": 769,
-      "color": "4"
-    },
-    {
-      "id": "2296532c7a97dbbb",
-      "type": "text",
-      "text": " **Lentidão do SpringData JPA**\n O Spring Data JPA pode ser mais lento em compração com JPA puro ou Hibernate Nativo devido a alguns fatores, como:\n 1. **Camada Adicional de Abstração** - O Spring Data JPA é construído sobre o JPA e o Hibernate, adicionando funcionalidades que simplificam o desenvolvimento, como repositórios automáticos, métodos personalizados e gerenciamento de transações. Essa abstração introduz sobrecarga em termos de processamento, pois o framework precisa interpretar e processas instruções adicionais antes de delegar as operações ao Hibernate;\n 2. **Geração Dinâmica de Consultas** - O Spring Data gera dinamicamente consultadas baseadas nos métodos dos repositórios (por exemoplo, #findById ou #Save), o que pode consumir mais tempo em comparação com consultas diretamente escritas no JPA ou no Hibernate nativo. Essa geração automática de queries exige análise e processamento extra durante a execução.\n 3. **Gerenciamento Automático de Transações** - O Spring Data configura e gerencia automaticamente. Embora isso torne o desenvolvimento mais simples, pode aumentar os tempos de execução, especialmente em cenários com muitas operações simultâneas.\n 4. **Repositórios com Operações Genéricas** - Repositórios no Spring Data fornecem suporte genérico para várias operações CRUD. Esse comportamento genérico, embora prático, pode ser menos eficiente do que implementações personalizadas diretamente no Hibernate ou JPA.\n 5. **Dependência de Proxies e Reflection** - O Spring Data JPA utiliza proxies dinâmicos e reflection para implementar seus recursos, como a injeção de dependências e a criação de beans. \n  \n**Cenários Ideal para uso do Spring Data JPA** \nApesar de ser mais lento, projetos que priorizam facilidade de desenvolvimento e manutenção, especialmente onde o desempenho absoluto não é um requisito crítico, pode ser uma boa alternativa.\nSe o desempenho for um fator-chave, é possível combinar o uso do Spring Data JPA com consultas personalizadas e otimizações manuais para reduzir a sobrecarga.",
-      "styleAttributes": {},
-      "x": -4248,
-      "y": 6677,
-      "width": 685,
-      "height": 793,
-      "color": "6"
-    },
-    {
-      "id": "c7a83b04f4941094",
-      "type": "link",
-      "url": "https://app.daily.dev/tags/java?ref=roadmapsh",
-      "styleAttributes": {},
-      "x": -4026,
-      "y": 8070,
-      "width": 241,
-      "height": 266
-    },
-    {
       "id": "5b6623f6f24f8853",
       "type": "link",
       "url": "https://www.baeldung.com/java-logging-intro",
@@ -1042,46 +1091,6 @@
       "y": 414,
       "width": 315,
       "height": 334
-    },
-    {
-      "id": "95401fe4a9c1abe1",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 15 - Working with Spring Data JDBC.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 8115,
-      "width": 614,
-      "height": 966
-    },
-    {
-      "id": "47f0d559d9475031",
-      "type": "link",
-      "url": "https://www.baeldung.com/jdbi",
-      "styleAttributes": {},
-      "x": -4030,
-      "y": 8470,
-      "width": 250,
-      "height": 303
-    },
-    {
-      "id": "294af57c0b48dda8",
-      "type": "link",
-      "url": "https://www.ibm.com/docs/en/informix-servers/12.10?topic=started-what-is-jdbc",
-      "styleAttributes": {},
-      "x": -4030,
-      "y": 8854,
-      "width": 249,
-      "height": 241
-    },
-    {
-      "id": "c69287bebb666e3c",
-      "type": "link",
-      "url": "https://www.baeldung.com/spring-jdbc-jdbctemplate",
-      "styleAttributes": {},
-      "x": -4030,
-      "y": 9267,
-      "width": 249,
-      "height": 321
     }
   ],
   "edges": [
@@ -2115,37 +2124,6 @@
       "toSide": "right"
     },
     {
-      "id": "abff4e8ab467290a",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9200994cba03cc4e",
-      "fromSide": "top",
-      "toNode": "9debe4abf3e87081",
-      "toSide": "bottom"
-    },
-    {
-      "id": "f622aa7448cd153e",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9debe4abf3e87081",
-      "fromSide": "top",
-      "toNode": "36d662b6046d03f4",
-      "toSide": "bottom"
-    },
-    {
-      "id": "b6fa596d8d872571",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9debe4abf3e87081",
-      "fromSide": "top",
-      "toNode": "385990dd1ac65068",
-      "toSide": "bottom",
-      "color": "1"
-    },
-    {
       "id": "1b7f9f9ce2da7631",
       "styleAttributes": {
         "path": "long-dashed",
@@ -2213,6 +2191,34 @@
       "toNode": "43a6e2ac03044b0c",
       "toSide": "right",
       "color": "3"
+    },
+    {
+      "id": "1d252d42ffc4c2ff",
+      "styleAttributes": {
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "9200994cba03cc4e",
+      "fromSide": "top",
+      "toNode": "ec1701dc4e5a6548",
+      "toSide": "bottom"
+    },
+    {
+      "id": "a6be478cc9f954d6",
+      "styleAttributes": {
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "ec1701dc4e5a6548",
+      "fromSide": "top",
+      "toNode": "385990dd1ac65068",
+      "toSide": "bottom"
+    },
+    {
+      "id": "73811cc252e8332e",
+      "styleAttributes": {},
+      "fromNode": "385990dd1ac65068",
+      "fromSide": "top",
+      "toNode": "9debe4abf3e87081",
+      "toSide": "bottom"
     }
   ],
   "metadata": {}

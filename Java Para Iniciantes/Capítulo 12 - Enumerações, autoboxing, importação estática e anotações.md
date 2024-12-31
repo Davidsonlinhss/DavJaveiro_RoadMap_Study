@@ -182,3 +182,6 @@ Quando usamos o método #compareTo, estamos comparando o valor ordinal de duas c
 A partir do JDK5, Java incluiu dois recursos úteis: #autoboxing e #autounboxing. Esses recursos visam simplificar e otimizar códigos que precisam converter tipos #Primitivos em #objetos e vice-versa. Já que essas situações são encontradas com frequência em código Java, os benefícios do autoboxing/unboxing, afetam quase todos os programadores Java. 
 
 Eles estão diretamente relacionados aos encapsuladores de tipos Java e à maneira como os valores são movidos para dentro e para fora da instância de um encapsulador. 
+
+## Encapsuladores de tipos
+Java usa tipos primitivos como #int ou #double, para armazenar os tipos de dados básicos suportados pela linguagem. 
