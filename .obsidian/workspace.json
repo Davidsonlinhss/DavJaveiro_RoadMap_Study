@@ -10,15 +10,20 @@
           {
             "id": "a4b0b182bce1f3f5",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
-                "mode": "source",
-                "source": false
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
+                "viewState": {
+                  "x": -5284.364855577423,
+                  "y": -6554.32428410283,
+                  "zoom": -4
+                }
               },
-              "icon": "lucide-file",
-              "title": "Capítulo 1 - O que é um algoritmo?"
+              "pinned": true,
+              "icon": "lucide-layout-dashboard",
+              "title": "RoadMap"
             }
           }
         ]
@@ -186,8 +191,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
             }
           }
         ],
@@ -261,25 +266,29 @@
   },
   "active": "a4b0b182bce1f3f5",
   "lastOpenFiles": [
-    "Capítulo 1 - O que é um algoritmo?-3.png",
+    "RoadMap do DavJaveiro/Covers/Java Logo.png",
+    "RoadMap do DavJaveiro/Covers/Java Code Problems.png",
+    "RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
+    "RoadMap do DavJaveiro/Covers/Engenharia de Software Icon.png",
+    "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
+    "RoadMap do DavJaveiro/Covers/Desenvolvimento Real de Software.png",
+    "RoadMap do DavJaveiro/Covers/Data Icon.png",
+    "RoadMap do DavJaveiro/Covers/Cientista da Computação Book.png",
+    "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
     "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Cientista da Computação Autodidata/Capítulo 2 - Recursão.md",
+    "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo.md",
+    "Capítulo 1 - O que é um algoritmo-4.png",
+    "Sem título.md",
+    "Cientista da Computação Autodidata/Imagens",
+    "Capítulo 1 - O que é um algoritmo?-3.png",
     "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.md",
-    "Capítulo 1 - O que é um algoritmo?-2.png",
-    "Capítulo 1 - O que é um algoritmo?-1.png",
-    "Capítulo 1 - O que é um algoritmo?.png",
     "Excalidraw/Drawing 2024-12-30 13.57.24.excalidraw.md",
     "Excalidraw/Drawing 2024-12-30 13.57.25.excalidraw.md",
-    "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo?.png",
-    "Diagram.png",
-    "Pasted image 20241230134444.png",
     "README.md",
     "Errors API.md",
     "Compilação vs Transpilação.md",
     "CND.md",
-    "Pasted image 20241229152620.png",
-    "Pasted Image 20241207191513_359.png",
-    "Pasted Image 20241207191458_358.png",
-    "Pasted Image 20241207191442_340.png",
     "Cientista da Computação Autodidata/Imagens",
     "Cientista da Computação Autodidata",
     "RoadMap do DavJaveiro/RoadMap.md",
@@ -303,10 +312,6 @@
     "Git/GitHub Actions In Action/Capítulo 9 - Continous Delivery.md",
     "Git/GitHub Actions In Action/Capítulo 8 - Continuous integration.md",
     "Git/GitHub Actions In Action/Capítulo 7 - Managing your self-hosted runners.md",
-    "Git/GitHub Actions In Action/Capítulo 6 - Self-hosted runners.md",
-    "Git/GitHub Actions In Action/Capítulo 5 - Runners.md",
-    "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
-    "Git/GitHub Actions In Action",
-    "RoadMap do DavJaveiro"
+    "Git/GitHub Actions In Action"
   ]
 }

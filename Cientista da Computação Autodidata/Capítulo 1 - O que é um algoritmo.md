@@ -1,4 +1,4 @@
-Um algoritmo é uma #sequência de passos ou **etapas** que usamos para resolver um problema ou para sequenciar uma ação. Por exemplo, um algoritmo de como fazer ovos mexidos seria algo parecido com:
+ Um algoritmo é uma #sequência de passos ou **etapas** que usamos para resolver um problema ou para sequenciar uma ação. Por exemplo, um algoritmo de como fazer ovos mexidos seria algo parecido com:
 1. Abrir a geladeira;
 2. Pegar os ovos na geladeira;
 3. Fechar a porta da geladeira;
@@ -289,3 +289,40 @@ O(n) = n³
 Enquanto dois loops aninhados são sinal de complexidade de tempo quadrático, três loops aninhados indo de 0 a n significa que o algoritmo seguirá o tempo cúbico. Encontraremos a complexidade de tempo cúbico se o nosso trabalho envolver ciência de dados ou estatística.
 
 As complexidades de tempo tanto quadrático quanto cúbico são casos especiais de uma família maior de complexidades de tempo polinomial. Um algoritmo executado em **tempo polinomial** aumenta de escala seguindo o padrão O(n^a), onde a = 2 para o tempo quadrático e a = 3 para o tempo cúbico. Ao projetar algoritmos, devemos evitar o aumento em escala polinomial, quando possível, por que os algoritmos podem ficar muito lentos à medida que *n* aumenta. Pode ser difícil evitar o aumento em escala #polinomial, mas talvez sirva de consolo o fato de que certamente a complexidade polinomial não é o pior dos casos.
+
+## Tempo Exponencial
+O prêmio de pior complexidade de tempo vai para a complexidade exponencial. Um algoritmo executado em **tempo exponencial** contém uma constante elevada ao tamanho do problema. Em outras palavras, um algoritmo com complexidade de tempo exponencial leva *c* elevado à enésima potência em etapas para ser concluído. A notação big O da complexidade exponencial é O(C^n), onde C é uma constante. O valor da constante não importa. O que importa é que n está no expoente.
+
+Felizmente não encontraremos a complexidade exponencial com frequência. Um exemplo de complexidade exponencial envolvendo a tentativa de adivinhar uma senha numérica composta de *n* dígitos decimais com a verificação de cada combinação possível teria complexidade O(10^n).
+
+No exemplo de adivinhar a senha, o algoritmo cresce rapidamente à medida que *n* aumenta. Quando *n* = 1, o algoritmo executa 10 etapas. Quando n = 2, 100 etapas. Quando n = 3, o algoritmo irá executar 1.000 etapas. Adivinhar uma senha com 8 dígitos decimais leva 100 milhões de etapas e adivinhar uma senha com 10 dígitos decimais leva mais de 10 bilhões de etapas. Quanto maior a senha, melhor. 
+
+Essa solução para adivinhar uma senha é um exemplo de **algoritmo de força bruta**. Um algoritmo de força bruta testa todas as opções possíveis. Em geral, não é eficiente e deve ser o nosso último recurso.
+
+![[Capítulo 1 - O que é um algoritmo-4.png]]
+
+## Complexidade de melhor caso versus de pior caso
+O desempenho de um algoritmo pode mudar de acordo com diferentes fatores, como o tipo de dados com o qual estamos trabalhando. Portanto, avaliar o desempenho de um algoritmo, é preciso considerar suas complexidades de melhor caso, pior caso e caso médio.
+
+**Complexidade de melhor caso** de um algoritmo indica como é seu desempenho com entradas ideais;
+**Complexidade de pior caso** é como ele se sai no pior cenário possível;
+**Complexidade de caso médio** de um algoritmo representa como é seu desempenho na média.
+
+Por exemplo, se tivermos que pesquisar item em uma lista, podemos ter a sorte de encontrar o que estamos procurando após verificar o primeiro item. Essa seria a complexidade de melhor caso. No entanto, se o item que estamos procurando não estiver na lista, será preciso pesquisar a lista inteira e teremos a complexidade de pior caso.
+
+Se tivermos de pesquisar item a item em uma lista cem vezes, em média encontraremos o que estamos procurando no tempo O(n/2), que é o mesmo que o tempo O(n) na notação big O. 
+
+## Complexidade de Espaço
+Os computadores possuem recursos finitos como a memória, logo, além de pensar na complexidade de tempo de um algoritmo, devemos considerar o uso de seus recursos. A **complexidade de espaço** é a quantidade de espaço na memória que o algoritmo demanda e inclui o espaço fixo, o espaço de estruturas de dados e o espaço temporário. 
+
+**Espaço fixo** é a quantidade de memória que o programa precisa para armazenar o conjunto de dados, por exemplo, o tamanho de uma lista que estivermos pesquisando. 
+
+**Espaço temporário** é a quantidade de memória que o algoritmo precisa para o processamento intermediário, por exemplo, se o algoritmo precisar copiar temporariamente uma lista para transferir dados.
+
+Como na complexidade de tempo, o nível aceitável de complexidade de espaço de um algoritmo depende da situação. No entanto, quanto menor é o espaço que o algoritmo demanda, melhor ele é.
+
+## Por que isso é importante?
+Como cientista da computação, precisamos conhecer as diferentes ordens de grandeza para otimizar nossos algoritmos. Quando estivermos tentando melhor um algoritmo, devemos nos concentrar em alterar sua ordem de grandeza em vez de melhorá-lo de outras maneiras. Por exemplo, suponhamos que tenhamos um algoritmo O(n^2) que use dois loops for, em vez de otimizar o que ocorre dentro dos loops, é muito mais importante determinar se podemos rescrever o algoritmo para não ter dois loops for aninhados, portanto uma ordem de grandeza menor. 
+
+As decisões que tomarmos referentes aos algoritmos podem ter consequências importantes no mundo real. Por exemplo, suponhamos que estamos desenvolvendo um site responsável por escrever um algoritmo que responda à solicitação web de um cliente. Sua decisão de escrever um algoritmo constante ou quadrático poderá resultar na diferença entre o site ser carregado em menos de um segundo, deixando o nosso cliente satisfeito, e o carregamento levar mais de um minuto, o que poderá fazê-lo perder clientes antes de a solicitação ser carregada. 
+
