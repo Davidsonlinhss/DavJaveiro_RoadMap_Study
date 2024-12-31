@@ -11,6 +11,46 @@
       "label": "Spring Spring Boot"
     },
     {
+      "id": "04e361316fd5c484",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 1 - Introduction to GitHub Actions.md",
+      "styleAttributes": {},
+      "x": 10270,
+      "y": -4622,
+      "width": 365,
+      "height": 448
+    },
+    {
+      "id": "4850de9048b2e607",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 2 - Hands-on My First Actions Workflow.md",
+      "styleAttributes": {},
+      "x": 10735,
+      "y": -4622,
+      "width": 365,
+      "height": 448
+    },
+    {
+      "id": "58b975886faa43bf",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
+      "styleAttributes": {},
+      "x": 11200,
+      "y": -4622,
+      "width": 365,
+      "height": 448
+    },
+    {
+      "id": "5a3c2410923111df",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
+      "styleAttributes": {},
+      "x": 11665,
+      "y": -4622,
+      "width": 365,
+      "height": 448
+    },
+    {
       "id": "380c683e58fcc7bc",
       "type": "file",
       "file": "Git/GitHub Actions In Action/Capítulo 5 - Runners.md",
@@ -49,6 +89,16 @@
       "y": -4622,
       "width": 365,
       "height": 448
+    },
+    {
+      "id": "02383c611ce857f1",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Mock Book.png",
+      "styleAttributes": {},
+      "x": 10366,
+      "y": 1542,
+      "width": 532,
+      "height": 630
     },
     {
       "id": "709b33ea77359ec9",
@@ -202,6 +252,16 @@
       "height": 442
     },
     {
+      "id": "25558a7543ed6c7a",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/GitHub in Action.png",
+      "styleAttributes": {},
+      "x": 9684,
+      "y": -3767,
+      "width": 533,
+      "height": 668
+    },
+    {
       "id": "4c6a7273c23bd912",
       "type": "link",
       "url": "https://vitorhpribeiro.medium.com/test-driven-develop-tdd-todos-deveriam-saber-d06a3244b187",
@@ -230,66 +290,6 @@
       "y": -14757,
       "width": 720,
       "height": 935
-    },
-    {
-      "id": "25558a7543ed6c7a",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/GitHub in Action.png",
-      "styleAttributes": {},
-      "x": 9684,
-      "y": -3767,
-      "width": 533,
-      "height": 668
-    },
-    {
-      "id": "04e361316fd5c484",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 1 - Introduction to GitHub Actions.md",
-      "styleAttributes": {},
-      "x": 10270,
-      "y": -4622,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "4850de9048b2e607",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 2 - Hands-on My First Actions Workflow.md",
-      "styleAttributes": {},
-      "x": 10735,
-      "y": -4622,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "58b975886faa43bf",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
-      "styleAttributes": {},
-      "x": 11200,
-      "y": -4622,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "5a3c2410923111df",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
-      "styleAttributes": {},
-      "x": 11665,
-      "y": -4622,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "02383c611ce857f1",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Mock Book.png",
-      "styleAttributes": {},
-      "x": 10366,
-      "y": 1542,
-      "width": 532,
-      "height": 630
     },
     {
       "id": "f5627e789defe17d",
@@ -1032,26 +1032,6 @@
       "y": -2881,
       "width": 540,
       "height": 102
-    },
-    {
-      "id": "a58aa160a03aad5b",
-      "type": "text",
-      "text": "TEste\n",
-      "styleAttributes": {},
-      "x": -9540,
-      "y": -1560,
-      "width": 260,
-      "height": 60
-    },
-    {
-      "id": "81b152eb938cb9dc",
-      "type": "text",
-      "text": "teste 2",
-      "styleAttributes": {},
-      "x": -9920,
-      "y": -2220,
-      "width": 260,
-      "height": 60
     }
   ],
   "edges": [
@@ -2113,22 +2093,6 @@
       "fromSide": "left",
       "toNode": "de90cc622ffca84a",
       "toSide": "right"
-    },
-    {
-      "id": "7c779498dfe399f3",
-      "styleAttributes": {},
-      "fromNode": "de90cc622ffca84a",
-      "fromSide": "left",
-      "toNode": "a58aa160a03aad5b",
-      "toSide": "right"
-    },
-    {
-      "id": "1d4a4bbaa340aaab",
-      "styleAttributes": {},
-      "fromNode": "a58aa160a03aad5b",
-      "fromSide": "top",
-      "toNode": "81b152eb938cb9dc",
-      "toSide": "bottom"
     }
   ],
   "metadata": {}
