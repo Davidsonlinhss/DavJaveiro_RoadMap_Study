@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b43fd28d059ebf6e",
+        "id": "eb127b70ade492d0",
         "type": "tabs",
         "children": [
           {
-            "id": "3c2ebe836c36ec59",
+            "id": "1ed2db43cedc07c4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Capítulo 12 - Enumerações, autoboxing, importação estática e anotações"
+              "title": "Nova aba"
             }
           }
         ]
@@ -87,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5ec10822b2a3b721",
@@ -194,16 +189,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3c2ebe836c36ec59",
+  "active": "1ed2db43cedc07c4",
   "lastOpenFiles": [
+    "README.md",
     "RoadMap do DavJaveiro/RoadMap.canvas",
+    "RoadMap do DavJaveiro/Covers/Lógica e Estrutura.png",
+    "RoadMap do DavJaveiro/Covers/Think Java.png",
+    "RoadMap do DavJaveiro/Covers/Fundamentos Matemáticos.png",
+    "RoadMap do DavJaveiro/Covers/Entendendo Algoritmos.png",
+    "RoadMap do DavJaveiro/Covers/Desmistificando.png",
+    "RoadMap do DavJaveiro/Covers/Algoritmos.png",
+    "Sem título.md",
+    "Pasted image 20250101204818.png",
     "Pasted image 20241231162244.png",
-    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
-    "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
     "Pasted image 20241231152828.png",
     "Pasted image 20241231152723.png",
-    "Pasted image 20241231152517.png",
-    "Pasted image 20241231152359.png",
+    "Errors API.md",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+    "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
     "Desenvolvimento Real de Software/Capítulo 2 - Análise de Extratos Bancários.md",
     "Banco de Dados - Projetos e Imeplementação/Capítulo 1 - O que é Projeto de Banco de Dados.md"
   ]
