@@ -53,3 +53,23 @@ A classificação se baseia em dois laços #for. O laço interno verifica os ele
 
 3. Código #Bubble:
 [[Bubble.java | Classificando um Array Unidimensional]]
+4. Embora a classificação por bolha seja boa para arrays pequenos, ela não é eficiente quando usada em arrays maiores.O melhor algoritmo de classificação de uso geral é a classificação rápida ( #Quicksort). Quicksort será visto apenas no capítulo 6. [[Capítulo 6 - Verificação minuciosa dos métodos e classes]].
+
+## Arrays multidimensionais
+Embora o array unidimensional seja o mais usado em programação, os arrays multidimensionais (arrays de duas ou mais dimensões) certamente não são raros. Em Java, o array #multidimensional é um **array composto por arrays**.
+
+## Arrays bidimensionais
+O array #bidimensional é o array multidimensional mais simples. Um array bidimensional, é uma lista de arrays unidimensionais. Para declarar um array bidimensional de tipo inteiro e tamanho 10, 20 chamado **table** escrevemos:
+#declaração
+```java
+int table[][] = new int[10] [20]; // 10 linhas e 20 colunas
+int table2[][] = new int[3] [4]; // 3 linhas e 4 colunas
+```
+Java insere cada dimensão em seu próprio conjunto de colchetes. 
+
+Exemplo de um array bidimensional carregado com os números de 1 a 12:
+[[Twod.java | Array Bidimensional]]
+No exemplo, teremos algo semelhante a imagem abaixo:
+![[Capítulo 5 - Mais tipos de dados e operadores.png]]
+
+## Arrays irregulares
