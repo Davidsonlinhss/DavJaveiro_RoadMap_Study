@@ -73,3 +73,15 @@ No exemplo, teremos algo semelhante a imagem abaixo:
 ![[Capítulo 5 - Mais tipos de dados e operadores.png]]
 
 ## Arrays irregulares
+Quando alocamos #memória para um #array multidimensional, só temos de especificar a memória da primeira dimensão (a da extrema esquerda, linha?). As outras dimensões podem ser alocadas separadamente. Por exemplo, o código a seguir aloca memória para a primeira dimensão do array #table quando este é declarado. A segunda dimensão é alocada manutalmente.
+```java
+int table[] [] = new int[3] [];
+table[0] = new int[4];
+table[1] = new int[4];
+table[2] = new int[4];
+```
+Embora não haja vantagens em alocar individualmente os conjuntos da segunda dimensão nessa situação, pode haver outras. Quando alocamos as dimensões separadamente, não precisamos alocar o mesmo número de elementos para índice. Uma vez que os arrays multidimensionais são implementados como #arrays compostos por arrays, temos o controle do tamanho de cada array. Suponhamos que estivéssemos escrevendo um programa para armazenar o número de passageiros que pegam um ônibus do aeroporto. Se o ônibus faz o transporte 10 vezes ao dia durante a semana e duas vezes ao dia no sábado e domingo, poderíamos usar o array #riders mostrado no programa abaixo para armazenar as informações.
+
+[[Ragged.java | Código Passageiros por viagem]]
+
+## Arrays de três ou mais dimensões
