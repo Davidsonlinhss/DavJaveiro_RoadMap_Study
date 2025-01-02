@@ -4,6 +4,7 @@
       "id": "d9096033400d32d3",
       "type": "file",
       "file": "Pasted image 20250101233716.png",
+      "styleAttributes": {},
       "x": -2000,
       "y": -765,
       "width": 540,
@@ -33,28 +34,6 @@
       "x": -640,
       "y": -1910,
       "width": 520,
-      "height": 60,
-      "color": "4"
-    },
-    {
-      "id": "7944f7b13eb179b5",
-      "type": "text",
-      "text": "2 - Seja Indistraível",
-      "styleAttributes": {},
-      "x": 640,
-      "y": -1880,
-      "width": 400,
-      "height": 60,
-      "color": "4"
-    },
-    {
-      "id": "c1d87478a3156f57",
-      "type": "text",
-      "text": "1 - Qual o seu Superpoder?",
-      "styleAttributes": {},
-      "x": 640,
-      "y": -2000,
-      "width": 400,
       "height": 60,
       "color": "4"
     },
@@ -102,6 +81,146 @@
       "y": -895,
       "width": 860,
       "height": 350,
+      "color": "#ffffff"
+    },
+    {
+      "id": "c1d87478a3156f57",
+      "type": "text",
+      "text": "1 - Qual o seu Superpoder?",
+      "styleAttributes": {},
+      "x": 640,
+      "y": -2345,
+      "width": 400,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "822e25a75d2ab48c",
+      "type": "text",
+      "text": "5 - Lide com as Distrações de Dentro para Fora",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 640,
+      "y": -240,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "37e0abcb1e67a399",
+      "type": "text",
+      "text": "6 - Reimagine o Gatilho",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 640,
+      "y": 360,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "fb4e8383b9daf65c",
+      "type": "text",
+      "text": "Resumo:\n1. **Se não usarmos técnicas para desarmar a tentação, a abistinência mental pode sair pela culatra:** Resistir a um impulso pode acionar a ruminação e intensificar o desejo.\n2. **Podemos administrar as distrações que nascem dentro de nós mudando a forma como pensamos sobre elas.** Podemos reimaginar o gatilho, a tarefa e o nosso temperamento.\n\n\n",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": -385,
+      "width": 860,
+      "height": 350,
+      "color": "#ffffff"
+    },
+    {
+      "id": "574649713f4d0a47",
+      "type": "text",
+      "text": "Resumo:\n1. **Ao reimaginar um gatilho interno incômodo, somos capazes de desarmá-lo.**\n- **Passo 1:** procure a emoção que precede a distração.\n- **Passo 2:** anote o gatilho interno.\n- **Passo 3**: observe a sensação negativa com curiosidade, e não com desdém.\n- **Passo 4:** seja cauteloso durante os momentos liminares\n\n\n",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": 215,
+      "width": 860,
+      "height": 350,
+      "color": "#ffffff"
+    },
+    {
+      "id": "aaf40bd96f546881",
+      "type": "text",
+      "text": "7 - Reimagine a Tarefa",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 640,
+      "y": 865,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "31ff9db70b18a3bf",
+      "type": "text",
+      "text": "Resumo:\n1. **Podemos dominar os gatilhos internos reinventando uma tarefa chata.** A diversão pode ser usada como ferramenta para nos manter focados.\n2. **A diversão não precisa ser prazerosa:** só precisa prender nossa atenção.\n3. **O senso de propósito e a novidade podem ser incluídos em qualquer tarefa para torná-la divertida.**\n\n\n\n",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": 720,
+      "width": 860,
+      "height": 350,
+      "color": "#ffffff"
+    },
+    {
+      "id": "7ad887ff059367f8",
+      "type": "text",
+      "text": "Resumo:\n1. **As distrações o impedem de atingir seus objetivos:** uma distração é qualquer ação que o afasta do que realmente queremos.\n2. **A tração o ajuda a atingir nossos objetivos:** a tração é qualquer ação que nos aproxima do que nós realmente queremos.\n3. **Os gatilhos podem acionar a tração ou a distração:** os gatilhos externos são \"deixas\" *ao nosso redor* que o incitam à ação. Os gatilhos internos são \"deixas\" *dentro de nós mesmos* que nos incitam a ação.\n\n\n",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": -1850,
+      "width": 860,
+      "height": 350,
+      "color": "#ffffff"
+    },
+    {
+      "id": "7944f7b13eb179b5",
+      "type": "text",
+      "text": "2 - Seja Indistraível",
+      "styleAttributes": {},
+      "x": 640,
+      "y": -1735,
+      "width": 400,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "1866b0fb135749fd",
+      "type": "text",
+      "text": "Resumo:\n1. **Precisamos aprender a evitar as distrações:** Viver a vida que desejamos não só requer fazer as coisas certas, mas também requer não fazer as coisas das quais nos arrependeremos depois.\n2. **O problema é mais grave do que apenas a tecnologia:** ser indistraível não requer virar um eremita enfiado em uma caverna. A solução é identificar as verdadeiras razões que nos levam a fazer coisas que não resultam em uma vida melhor.\n3. **EIs o que você precisa fazer:** você poderá se transformar em uma pessoa indistraível apenas dando e aplicando as quatro estratégias que apresentarei em seguida.\n\n\n",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": -2490,
+      "width": 860,
+      "height": 350,
+      "color": "#ffffff"
+    },
+    {
+      "id": "9df58f43a75b4671",
+      "type": "text",
+      "text": "8 - Reimagine o seu Temperamento",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 640,
+      "y": 1345,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "63f6702df6abb424",
+      "type": "text",
+      "text": "## Resumo\n1. **Reimaginar nosso temperamento pode nos ajudar a administrar nossos gatilhos internos.** Nossa força de vontade pode se exaurir quando nos forçamos demais. Os psicólogos deram um nome para esse fenômeno: esgotamento do ego. Os sinais de esgotamento do ego só foram observados nos participantes que acreditavam que a força de vontade era um recurso limitado. Não foi o açúcar da limonada que fez ele recuperar-se, mas a crença em seus efeitos que deu aos participantes um gás a mais.\n2. **Nossa força de vontade nunca se esgota.** Acreditar que nossa força de vontade é limitada reduz nossas chances de atingir nossos objetivos, dando nos uma justificativa para desistir, mesmo tendo condições de persistir.\n3. Assim, quando precisamos realizar uma tarefa difícil, é mais produtivo e saudável acreditar que a falta de motivação é temporária do que pensar que estamos esgotados e que precisamos fazer uma pausa (e quem sabe, um pouco mais de sorvete, daí vem os gatilhos para hábitos indesejáveis)\n4. **O que dizemos a nós mesmos faz uma enorme diferença.** Achar que você não tem muito autocontrole é um caminho certo para o fracasso. A atitude mental faz tanta diferença quanto à dependência física.\n5. **Pratique a autocompaixão.** Fale consigo mesmo como falaria com um amigo. As pessoas mais autocompassivas são mais resilientes. Não precisamos acreditar em tudo que pensamos. Só somos impotentes se acharmos que somos.\n6. ",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": 1200,
+      "width": 860,
+      "height": 820,
       "color": "#ffffff"
     }
   ],
@@ -181,6 +300,108 @@
       "toNode": "d88ee923d62ce941",
       "toSide": "left",
       "color": "#ffffff"
+    },
+    {
+      "id": "ab2207bdb611eb43",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "c1d87478a3156f57",
+      "fromSide": "right",
+      "toNode": "1866b0fb135749fd",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "6ae2ef95a2572b5f",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "7944f7b13eb179b5",
+      "fromSide": "right",
+      "toNode": "7ad887ff059367f8",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "3cb25e2ab75a1cd2",
+      "styleAttributes": {},
+      "fromNode": "a1e6bf9afaee943b",
+      "fromSide": "right",
+      "toNode": "822e25a75d2ab48c",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "c43d86f8c5428181",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "822e25a75d2ab48c",
+      "fromSide": "right",
+      "toNode": "fb4e8383b9daf65c",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "cb4788a55f14d8c3",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "37e0abcb1e67a399",
+      "fromSide": "right",
+      "toNode": "574649713f4d0a47",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "00b2dc8f11951d8c",
+      "styleAttributes": {},
+      "fromNode": "a1e6bf9afaee943b",
+      "fromSide": "right",
+      "toNode": "37e0abcb1e67a399",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "a5059e6e7255e979",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "aaf40bd96f546881",
+      "fromSide": "right",
+      "toNode": "31ff9db70b18a3bf",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "b6204dbf1779d54c",
+      "styleAttributes": {},
+      "fromNode": "a1e6bf9afaee943b",
+      "fromSide": "right",
+      "toNode": "aaf40bd96f546881",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "e200412144e25e7f",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "9df58f43a75b4671",
+      "fromSide": "right",
+      "toNode": "63f6702df6abb424",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "0a6f37fcbfe6e8ce",
+      "styleAttributes": {},
+      "fromNode": "a1e6bf9afaee943b",
+      "fromSide": "right",
+      "toNode": "9df58f43a75b4671",
+      "toSide": "left",
+      "color": "4"
     }
   ],
   "metadata": {}
