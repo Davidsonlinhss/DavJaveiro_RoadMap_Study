@@ -11,10 +11,17 @@
             "id": "1ed2db43cedc07c4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nova aba"
+              "type": "canvas",
+              "state": {
+                "file": "Indistraível - Nir Eyal/Resumo.canvas",
+                "viewState": {
+                  "x": -16.66976501857505,
+                  "y": -1084.0906015305313,
+                  "zoom": -1.1299999999999997
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Resumo"
             }
           }
         ]
@@ -83,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 567.501106262207,
+    "collapsed": true
   },
   "right": {
     "id": "5ec10822b2a3b721",
@@ -191,8 +199,15 @@
   },
   "active": "1ed2db43cedc07c4",
   "lastOpenFiles": [
-    "README.md",
+    "Pasted image 20250101233716.png",
     "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Indistraível - Nir Eyal/Resumo.canvas",
+    "Indistraível - Nir Eyal",
+    "Pasted image 20250101232753.png",
+    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores.md",
+    "Java Para Iniciantes/Capítulo 7 - Heranças.md",
+    "Java Para Iniciantes/Capítulo 7 - Herança.md",
+    "README.md",
     "RoadMap do DavJaveiro/Covers/Lógica e Estrutura.png",
     "RoadMap do DavJaveiro/Covers/Think Java.png",
     "RoadMap do DavJaveiro/Covers/Fundamentos Matemáticos.png",
@@ -203,7 +218,6 @@
     "Pasted image 20250101204818.png",
     "Pasted image 20241231162244.png",
     "Pasted image 20241231152828.png",
-    "Pasted image 20241231152723.png",
     "Errors API.md",
     "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
     "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",

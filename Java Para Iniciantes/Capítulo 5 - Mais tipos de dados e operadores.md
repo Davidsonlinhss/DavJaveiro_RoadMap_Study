@@ -1,27 +1,25 @@
-## <span style="background:#d4b106">Usando o membro length</span>
-Como os arrays são implementados como objetos, cada array tem uma variável de instância #length associada que contém o número de elementos que ele pode conter. (Em outras palavraas, #length contém o tamanho do array). 
+## Arrays
+Um #array é um conjunto de variáveis do mesmo tipo, referenciadas por um nome comum. Em Java, os arrays podem ter uma ou mais dimensões, embora os arrays #unidimensionais sejam os mais comuns. Podemos usar os arrays para armazenar um registro de temperatura máxima diária durante um mês, uma lista de médias de preços de ações ou uma lista de sua coleção de livros de programação.
 
-A forma que o #length interage com o array bidimensional é especificamente diferenciada, quando usamos a expressão `table.length`, ela obtém o número de arrays armazenado em **table** que, no caso do exemplo anterior, é 3. Para obter o tamanho de qualquer array individual de table, usamos a expressão `table[0]. length`., que aqui obtém o tamanho do primeiro array de table. 
+A principal vantagem é que o array organiza os dados de tal forma que é fácil tratá-los. Se tivermos um array contendo a renda de um determinado grupo de família, é fácil calcular a renda média percorrendo-o. Os arrays também organizam os dados de uma maneira que fica fácil classificar os seus dados.
 
-Uma outra coisa a ser notada é a forma como list.length é usado pelos lações #for para controlar o número de iterações. Uma vez que cada array carrega com ele seu tamanho, podemos usar essa informação em vez de controlar manualmente o tamanho de um array. Length não tem a ver com o número de elementos que estão sendo usados, ele **contém o número de elementos que o array pode conter**. 
+Os #arrays **são implementados como objetos** em Java. Como os arrays são implementados como objetos, logo, eles participam da coleta de lixo.
 
-A inclusão do membro #length simplifica os algoritmos tornando mais fácil – e seguro – executar certos tipos de operação com arrays. Por exemplo, o programa abaixo usa #length para copiar um array para outro ao mesmo tempo em que impede exceder o limite do array e a geração de exceção durante a execução.
+## Arrays unidimensionais
+Um array unidimensional é uma lista de variáveis relacionadas. Essas listas são comuns em programação. Podemos utilizar um array unidimensional para armazenar os números de conta dos usuários ativos em uma rede. Outro array poderia ser usado para armazenar as médias de rebatidas anual de um time de baseball.
+Para declarar uma array, utilizamos a seguinte forma:
+```java
+tipo nome-array[] = new tipo[tamanho];
+```
+ Aqui, *tipo* declara o tipo de elemento do #array. (Normalmente, o tipo de elemento também é chamado de tipo base). O tipo de elemento determina o tipo de dado de cada elemento contido no #array. O número de elementos que o array conterá é determinado pelo tamanho do array. 
+Em Java, todos os arrays têm zero como o índice de seu primeiro elemento. Já que a variável **sample** tem 10 elementos, ela tem valores de índice que vão de 0 a 9. 
 
-## Tente Isto 5-2: Uma classe Queue
-Como já sabemos, uma estrutura de dados é um meio de organizar os dados. A estrutura de dados mais simples é o array, uma lista linear que permite o acesso aleatório aos seus elementos. Com frequência, os arrays são usados como base para estruturas de dados mais sofisticados, como as #pilhas e #filas. 
+Os #arrays são comuns em programação, pois nos permitem lidar com grandes quantidades de variáveis relacionadas. 
 
-#Pilha: é uma lista em que os elementos só podem ser acessados na ordem primeiro a entrar, último a sair (FILO, first-in, last-out).
-#Fila: é uma lista em que os elementos só podem ser acessados na ordem primeiro a entrar, primeiro a sair (FIFO, first-in, last-out). 
+Outra maneira de declararmos arrays é passando o seu valor entre chaves, por exemplo, inicializando os arrays no momento de sua criação:
+```java
+tipo array-name[] = {val1, val2, val3, ..., valN};
+```
+Java aloca automaticamente um array grande o suficiente para conter os inicializadores especificados. 
 
-Logo, uma pilha é como uma pilha de pratos em uma mesa - o primeiro de baixo para cima é o último a ser usado;
-Uma fila é como uma fila em um banco - primeiro da fila é o primeiro a ser atendido;
-
- O que torna estruturas de dados como as pilhas e filas interessantes é que elas combinam o armazenamento de informações com os métodos que as acessam. Portanto, as pilhas e filas são *máquinas de dados* em que o armazenamento e a recuperação são fornecidos pela própria estrutura de dados e não **manualmente** pelo programa.
-
-Em geral, as filas dão suporte a duas operações básicas: #put e #get. Cada operação put insere um novo elemento no fim da fila. Cada operação get, recupera o próximo elemento do início da fila. As operações de fila têm natureza consumidora: quando um elemento é retirado, não pode ser recuperado novamente. A fila também pode ficar cheia, se não houver espaço disponível para armazenar um item, e vazia, se todos os elementos tiverem sido removidos. 
-
-Existem dois tipos básicos de filas – circular e não circular. 
-**Circular:** reutiliza os locais do array subjacente quando elementos são removidos. 
-**Não circular:** não reutiliza os locais e acaba se exaurindo. 
-Para simplificar, esse exemplo cria uma fila não circular, mas com um pouco de raciocínio e esforço, podemos facilmente transformá-lo em uma fila circular. 
-
+Os limites do array são impostos rigorosamente em Java; é um erro de tempo de execução estar abaixo ou acima da extremidade de um array. 

@@ -1,0 +1,187 @@
+{
+  "nodes": [
+    {
+      "id": "d9096033400d32d3",
+      "type": "file",
+      "file": "Pasted image 20250101233716.png",
+      "x": -2000,
+      "y": -765,
+      "width": 540,
+      "height": 810,
+      "color": "1"
+    },
+    {
+      "id": "a1e6bf9afaee943b",
+      "type": "text",
+      "text": "**Parte 1** Domine os seus gatilhos internos",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -640,
+      "y": -910,
+      "width": 520,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "64cc792594ebc4ad",
+      "type": "text",
+      "text": "**Introdução**: De Hooked (Engajado) a (In)distraível",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -640,
+      "y": -1910,
+      "width": 520,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "7944f7b13eb179b5",
+      "type": "text",
+      "text": "2 - Seja Indistraível",
+      "styleAttributes": {},
+      "x": 640,
+      "y": -1880,
+      "width": 400,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c1d87478a3156f57",
+      "type": "text",
+      "text": "1 - Qual o seu Superpoder?",
+      "styleAttributes": {},
+      "x": 640,
+      "y": -2000,
+      "width": 400,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "2df9b1b6cb9fe8d6",
+      "type": "text",
+      "text": "3 - O que realmente nos motiva?",
+      "styleAttributes": {},
+      "x": 640,
+      "y": -1215,
+      "width": 400,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "1b823365f77f6e29",
+      "type": "text",
+      "text": "Resumo:\n1. **Identifique a causa fundamental da distração**: A distração envolve mais do que os seus aparelhos. Separe as causas imediatas da causa fundamental.\n2. **Toda motivação é um desejo de fugir do desconforto**: Se um comportamento levar alguma forma de alívio, é provável que continuemos a usá-lo como uma maneira de fugir do desconforto.\n3. **Qualquer coisa que nos afasta do desconforto é potencialmente viciante, mas todos nós temos a capacidade de resistir.** Se identificarmos os fatores que motivam o nosso comportamento, podemos tomar medidas para administrá-los.\n\n\n",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": -1360,
+      "width": 860,
+      "height": 350,
+      "color": "#ffffff"
+    },
+    {
+      "id": "1e2b6d57e7037054",
+      "type": "text",
+      "text": "4 - Administrar o Tempo na Verdade é Administrar a Dor",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 640,
+      "y": -750,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "d88ee923d62ce941",
+      "type": "text",
+      "text": "Resumo:\n1. **Administrar o tempo, na verdade, é administrar a dor**: as distrações nos custam tempo e, como todas as ações, são instigadas pelo nosso desejo de fugir do desconforto.\n2. **A evolução favoreceu a insatisfação à satisfação**: nossas tendências ao tédio, ao viés da negatividade, à ruminação e à adaptação hedônica conspiram para garantir que nunca ficaremos muito tempo satisfeitos.\n3. **A insatisfação é responsável tanto pelos avanços quanto pelos defeitos da nossa espécie.** A insatisfação é uma força inata que pode ser mobilizada para nos ajudar a melhorar a situação.\n4. **Se quisermos dominar a distração, devemos aprender a lidar com o desconforto.**\n\n\n",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": -895,
+      "width": 860,
+      "height": 350,
+      "color": "#ffffff"
+    }
+  ],
+  "edges": [
+    {
+      "id": "a5019ed6d65addb4",
+      "styleAttributes": {},
+      "fromNode": "a1e6bf9afaee943b",
+      "fromSide": "right",
+      "toNode": "2df9b1b6cb9fe8d6",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "36bcaa0a2842b55b",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "2df9b1b6cb9fe8d6",
+      "fromSide": "right",
+      "toNode": "1b823365f77f6e29",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "cd5d154917553833",
+      "styleAttributes": {},
+      "fromNode": "d9096033400d32d3",
+      "fromSide": "right",
+      "toNode": "a1e6bf9afaee943b",
+      "toSide": "left",
+      "color": "1"
+    },
+    {
+      "id": "22b285eb217db3d5",
+      "styleAttributes": {},
+      "fromNode": "d9096033400d32d3",
+      "fromSide": "right",
+      "toNode": "64cc792594ebc4ad",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "427ba86b2b9cb714",
+      "styleAttributes": {},
+      "fromNode": "64cc792594ebc4ad",
+      "fromSide": "right",
+      "toNode": "c1d87478a3156f57",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "369d8374f3517cca",
+      "styleAttributes": {},
+      "fromNode": "64cc792594ebc4ad",
+      "fromSide": "right",
+      "toNode": "7944f7b13eb179b5",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "73318e2e8293ec04",
+      "styleAttributes": {},
+      "fromNode": "a1e6bf9afaee943b",
+      "fromSide": "right",
+      "toNode": "1e2b6d57e7037054",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "6cf72228f52bae41",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "1e2b6d57e7037054",
+      "fromSide": "right",
+      "toNode": "d88ee923d62ce941",
+      "toSide": "left",
+      "color": "#ffffff"
+    }
+  ],
+  "metadata": {}
+}
