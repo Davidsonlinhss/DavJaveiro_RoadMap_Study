@@ -70,22 +70,31 @@ Utilize a funcionalidade de links internos, tabelas dinâmicas e outros recursos
   Neste repositório você irá encontrar:
   </p>
   
-  <h2 align="center">My RoadMap
+  <h2 align="left">My RoadMap </h2>
+    <p>Você pode criar um RoadMap pessoal, a medida que for obtendo recursos e indicações de materiais para estudo, a ideia é que você crie o seu própio RoadMap para que possar se guiar.</p>
   <p>
   <img src="https://github.com/user-attachments/assets/5e95250f-81a9-4688-9b6a-6de50aa6d778" width="1200">
   </p>
-    </h2>
+  
     
-<h2 align="center">My Notes
-  <p>
+<h2 align="left">My Notes</h2
+  <p>O Obsidian é uma ferramenta para criar e organizar notas interligadas em Markdown, permitindo conectar ideias, usar tags para categorizar e acessar um gráfico visual das conexões. Com suporte a plugins, personalização e armazenamento local, é ideal para construir uma base de conhecimento eficiente e segura.</p>
+  <p align="left"> 
   <img src="https://github.com/user-attachments/assets/8e24481a-dee4-4869-8690-4ecee05cc756" width="400">
  </p>
-</h2>
 
-<h2 align="center">My Tree Graph
+<h2 align="left">My Codes</h2>
+  <p align="left">Cada repositório conterá os códigos com os exercícios propostos nos livros, seja um exercício em código ou questões discursivas e mutipla escolha.</p>
   <p>
+  <img src="https://github.com/user-attachments/assets/39cafff2-3889-45c4-884e-e957e87d66a1" width="600">
+    <p>Exemplo do código acima:</p>
+  <img src="https://github.com/user-attachments/assets/e1455e3a-3994-4c49-9d88-21ea454e9426" width="700">
+ </p>
+
+<h2 align="left">My Tree Graph</h2>
+  <p>Exemplo da árvore de links quando você começar a alimentar o seu "cofre" e criar os seus links entre as notas e arquivos:</p>
+  <p align="left">
   <img src="https://github.com/user-attachments/assets/6ddde681-281c-437c-8fd0-b57c4f0b19dc" width="1200">
  </p>
-</h2>
 
 
