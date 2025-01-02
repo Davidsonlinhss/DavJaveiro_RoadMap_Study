@@ -4,36 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "72eb4e761790d26d",
+        "id": "ccbb2678bf768bc5",
         "type": "tabs",
         "children": [
           {
-            "id": "b219a15df9c0d570",
+            "id": "62c2967c7f9defef",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
-                "viewState": {
-                  "x": -2989.212796844901,
-                  "y": -9933.943224834517,
-                  "zoom": -1
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "RoadMap"
-            }
-          },
-          {
-            "id": "20ceff2a6bc545fc",
-            "type": "leaf",
-            "state": {
-              "type": "vscode-editor",
-              "state": {
-                "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java"
+                "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Bubble"
+              "title": "Capítulo 5 - Mais tipos de dados e operadores"
             }
           }
         ]
@@ -210,20 +195,20 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "b219a15df9c0d570",
+  "active": "62c2967c7f9defef",
   "lastOpenFiles": [
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
+    "README.md",
     "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Indistraível - Nir Eyal/Resumo.canvas",
+    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java.java",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores",
-    "Indistraível - Nir Eyal/Resumo.canvas",
     "Pasted image 20250101233716.png",
     "Indistraível - Nir Eyal",
     "Pasted image 20250101232753.png",
     "Java Para Iniciantes/Capítulo 7 - Heranças.md",
     "Java Para Iniciantes/Capítulo 7 - Herança.md",
-    "README.md",
     "RoadMap do DavJaveiro/Covers/Lógica e Estrutura.png",
     "RoadMap do DavJaveiro/Covers/Think Java.png",
     "RoadMap do DavJaveiro/Covers/Fundamentos Matemáticos.png",

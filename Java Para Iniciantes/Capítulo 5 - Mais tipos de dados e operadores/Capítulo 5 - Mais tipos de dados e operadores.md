@@ -24,6 +24,32 @@ Java aloca automaticamente um array grande o suficiente para conter os inicializ
 
 Os limites do array são impostos rigorosamente em Java; é um erro de tempo de execução estar abaixo ou acima da extremidade de um array. 
 
-**Código:**
-[[Bubble.java | Classificando um Array Unidimensional]]
+---
+**Tente Isto 5-1 Classifique um array**
+Já que um #array #unidimensional organiza os dados em uma lista linear que pode ser #indexada, é a estrutura de dados perfeita para classificações. Neste projeto, vamos aprender uma maneira simples de classificar um array. Existem vários #algoritmos de #classificação. Exemplos:
+- Classificação #short
+- Classificação Troca #bubble-sort (classificação por #bolha)
+- #Shell-sort
+A classificação mais simples e fácil de entender é a classificação por bolha. Embora a classificação por bolha não seja muito eficiente - na verdade, seu desempenho ẽ inaceitável para classificação de #arrays grandes - ela pode ser utilizada de forma eficaz na classificação de #arrays pequenos.
 
+**Passos**:
+1. Crie um arquivo chamado Bubble.java
+
+2. A classificação por bolha tem esse nome devido a forma como executa a operação de classificação. Ela usa a comparação repetida e, se necessário, **a troca de elementos adjacentes do array**. Neste processo, valores pequenos se movem em direção a uma extremidade e os maiores em direção à outra. O processo é conceitualmente semelhante a bolhas encontrando seu nível em um tanque de água. A classificação por bolha funciona percorrendo várias vezes o array e trocando os elementos que estiverem fora do lugar quando preciso. O número de passagens necessárias para assegurar que o array esteja classificado é igual a um menos o número de elementos do #array.
+Código base para a classificação por bolha:
+```java
+// Esta é a classificação por bolha
+for(a=1; a < size; a++)
+	for(b=size-1; b >= a; b--) {
+		if(nums[b-1] > nums[b]) { // se fora de ordem, troca elementos
+		t = nums[b-1];
+		nums[b-1] = nums[b];
+		nums[b] = t;
+		
+		}
+	}
+```
+A classificação se baseia em dois laços #for. O laço interno verifica os elementos adjacentes do array, procurando elementos fora de ordem. Quando um par de elementos fora de ordem é encontrado, os dois elementos são trocados. A cada passagem, o menor dos elementos restantes se move para o local apropriado. O laço externo faz esse processo se repetir até o array inteiro ser classificado.
+
+3. Código #Bubble:
+[[Bubble.java | Classificando um Array Unidimensional]]
