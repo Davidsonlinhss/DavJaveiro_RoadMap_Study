@@ -77,3 +77,18 @@ Uma busca binária demanda tempo O(log n). É mais eficiente do que a busca line
 O que significa dizer que um algoritmo é #logarítmico. A #exponenciação é uma operação matemática escrita como b^n, na qual multiplicamos um número b por si mesmo n vezes. Nessa equação, o número *b* chama-se **base** e o número *n* é o expoente. O processo de exponenciação significa elevar **b** à potência n. 
 
 Um #logaritmo é a potência à qual devemos elevar o número para produzir outro número. É o inverso da exponenciação. Por exemplo, um logaritmo pode mostrar quantas vezes teríamos de multiplicar 2 por si mesmo para obter 8. Em notação matemática, essa questão seria representada por log<sub>2</sub>(8). A solução é 3, porque temos de multiplicar 2 por si mesmo 3 vezes para obter 8. 
+
+Em uma busca binária, na primeira vez que dividirmos nossa lista em 2, sobrarão n/2 itens nela. Após a segunda iteração, sobrarão n/2/2 itens e, após a terceira, n/2/2/2 itens. 
+
+Podemos usar um logaritmo para determinar quantas iterações uma busca binária demandará para encontrar um número em uma lista no cenário de pior caso. Por exemplo, suponhamos que tivéssemos uma lista de 100 números e quisesse saber quantas iterações uma busca binária demandará para descobrir se um número está nela ou não. Para saber isso, precisamos encontrar n em 2** n = 100, que é o mesmo que log2(100). Poderíamos começar com um palpite de que n é 5, mas 2** 5 = 32, que é muito baixo. Continuamos, então, tentando advinhar: 2^6 = 64, que também é muito baixo, e 2 ^ 7 que é 128, sendo maior do que 100 e, portanto, é a nossa resposta. Basicamente, precisamos de 7 etapas para encontrar, log de 100 na base 2 = 6.644,  mas o número de passos necessários são 7, pois arredondamos para o próximo inteiro.
+
+Quando executamos uma busca binária, estamos dividindo a nossa lista pela metade a cada iteração, o que significa que o logaritmo que está descrevendo seu tempo de execução é de base 2. No entanto, na notação big O, a base de um logaritmo não importa porque podemos alterá-la multiplicando o logaritmo por uma constante. Os detalhes matemáticos não fazem parte do escopo do livro, mas o que é importante saber é que a base do logaritmo não importa na notação bi O. O importante é se um algoritmo é logarítmico, o que costuma ocorrer quando reduz a quantidade de cálculos pela metade ou por uma quantia significativa a cada iteração. 
+
+Pela eficiência da busca binária, se tivermos dados ordenados que precisamos pesquisar, será melhor utilizá-la. Contudo, mesmo se tiver dados não ordenados, talvez valerá a pena classificá-los para se beneficiar dela. 
+
+Resolvendo algoritmo de busca binária para palavras...
+
+## Procurando caracteres
+Sabemos como procurar caracteres em uma lista usando ferramentas de busca linear e binária internas. No entanto, se precisasse escrever uma busca linear ou binária a partir do zero para procurar caracteres em vez de números? Para saber como procurar caracteres, precisamos conhecer melhor como um computador os armazena.
+
+
