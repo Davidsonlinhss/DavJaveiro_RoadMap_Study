@@ -4,24 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "ccbb2678bf768bc5",
+        "id": "99b77f731bca0f79",
         "type": "tabs",
         "children": [
           {
-            "id": "62c2967c7f9defef",
+            "id": "40d296598a5de89e",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
+                "file": "Indistraível - Nir Eyal/Resumo.canvas",
                 "viewState": {
-                  "x": -13928.27518369923,
-                  "y": -13038.23690593584,
-                  "zoom": -2
+                  "x": 1924.489119246776,
+                  "y": 302.2874402282358,
+                  "zoom": -0.48053044982833243
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "RoadMap"
+              "title": "Resumo"
             }
           }
         ]
@@ -198,8 +198,9 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "62c2967c7f9defef",
+  "active": "40d296598a5de89e",
   "lastOpenFiles": [
+    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
     "Cientista da Computação Autodidata/Capítulo 2 - Recursão/NumberOneToTen.java",
     "Cientista da Computação Autodidata/Capítulo 2 - Recursão/TrueRecursivo.java",
@@ -217,7 +218,6 @@
     "Capítulo 5 - Mais tipos de dados e operadores.png",
     "Pasted image 20250101233716.png",
     "RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
     "README.md",
     "Indistraível - Nir Eyal/Resumo.canvas",
