@@ -91,4 +91,37 @@ Resolvendo algoritmo de busca binária para palavras...
 ## Procurando caracteres
 Sabemos como procurar caracteres em uma lista usando ferramentas de busca linear e binária internas. No entanto, se precisasse escrever uma busca linear ou binária a partir do zero para procurar caracteres em vez de números? Para saber como procurar caracteres, precisamos conhecer melhor como um computador os armazena.
 
+Um **conjunto de caracteres** é um mapeamento entre caracteres e números binários. Os cientistas da computação usam a codificação de caracteres para implementar diferentes conjuntos de caracteres. No #ASCII (American Standard Code for Information Interchange), o computador mapeia cada letra do alfabeto para um número de sete bits. A figura 3.7 mostra o relacionamento entre números binários e os diferentes caracteres no idioma inglês.
 
+Por exemplo, o valor de ASCII de A é 1000001 em binário e 65 na base 10 (o sistema numérico que usamos diariamente). O dígito binário para b é 01100010. Letras maiúsculas, letras minúsculas, símbolos de pontuação, numerais e vários caracteres de controle que indicam ações, como quebra de páginas e nova linha, todos esses elementos têm códigos ASCII. Existem códigos ASCII para o intervalo de 0 a 9 porque os números de 0 a 9 na tabela ASCII não são valores numéricos. São caracteres para fins não matemáticos, como para expressar os numerais do endereço de uma residência. A maioria dos computados estende o ASCII para 8 bits para que possa representar 256 caracteres.
+
+Embora possamos representar os 256 caracteres do alfabeto latino com o ASCII, este não suporta caracteres suficientes para lidar com o texto de outros sistemas de escrita, como o japonês ou o mandarim. Para resolver esse problema, cientistas da computação desenvolveram um conjunto de caracteres Unicode. Codificar caracteres significa atribuir um número aos caracteres para representação digital. O UTF-8 é um dos métodos de codificação de caracteres que os cientistas da computação usam para implementar o conjunto de caracteres Unicode. 
+
+Ao invés de usar 7 ou 8 bits como o ASCII, o UTF-8 usa até 32 bits para codificar cada caractere, o que permite representar mais de um milhão de caracteres. 
+
+Podemos obter o valor ASCII de um caractere:
+```run-java
+public class UTF8ValueExemple {
+	public static void main(String[] args) {
+		char character = 'a';
+	int utf8Value = character;
+	System.out.println(utf8Value);
+	}
+	
+	}
+```
+
+
+Revisamos como a busca linear e a busca binária funcionam e quando as usar se estivermos procurando dados. Embora a busca binária seja eficiente, não é a maneira mais rápida de procurar dados. Na Parte II, aprenderemos a como procurar dados usando uma tabela #hash e saberemos <span style="background:#d4b106">por que é o tipo de busca mais eficiente</span>.
+
+## Palavras Chaves
+**Algoritmo de busca**: algoritmo que procura dados em um conjunto de dados;
+**ASCII**: conjunto de caracteres do American Standard Code for Information Interchange.
+**base**: o *b* da equação de exponenciação (b^n);
+**busca binária**: outro algoritmo para a busca de um número em uma lista, mais rápido do que uma busca linear.
+**busca linear**: algoritmo de busca que percorre cada elemento de um conjunto de dados e o compara com o número-alvo.
+**codificação de caracteres**: atribuir um número a caracteres para representação digital.
+**conjunto de caracteres**: mapeamento entre caracteres e números binários.
+**conjunto de dados**: uma coleção de dados.
+**dados ordenados:** dados organizados de maneira significativa.
+**expoente**: o *n* da equação de exponenciação b^n
