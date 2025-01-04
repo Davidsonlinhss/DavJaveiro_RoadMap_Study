@@ -1,2383 +1,2103 @@
 {
-  "nodes": [
-    {
-      "id": "126f953bf8d9bbb3",
-      "type": "group",
-      "styleAttributes": {},
-      "x": 1733,
-      "y": 563,
-      "width": 1120,
-      "height": 378,
-      "label": "Spring Spring Boot"
-    },
-    {
-      "id": "f23b53bef875144c",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 8 - Continuous integration.md",
-      "styleAttributes": {},
-      "x": 14661,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "9f81200ac7bf87b9",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 7 - Managing your self-hosted runners.md",
-      "styleAttributes": {},
-      "x": 14196,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "709b33ea77359ec9",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 9 - Continous Delivery.md",
-      "styleAttributes": {},
-      "x": 15126,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "1bd1865a60389ec5",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 10 - Security.md",
-      "styleAttributes": {},
-      "x": 15591,
-      "y": -4443,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "d5e664a160b21124",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 11 - Compliance.md",
-      "styleAttributes": {},
-      "x": 16056,
-      "y": -4443,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "412b142d6e43f3f7",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 12 - Improving workflow performance and costs.md",
-      "styleAttributes": {},
-      "x": 16521,
-      "y": -4443,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "03bb7707f5c1f1cc",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 9 - Tratamento de Exceções.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -10351,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "69e567e4932269a3",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 8 - Pacotes e interfaces.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -10678,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "a4ccf6139a71624b",
-      "type": "link",
-      "url": "https://mkyong.com/java/java-how-to-read-a-file/",
-      "styleAttributes": {},
-      "x": -3600,
-      "y": -10205,
-      "width": 583,
-      "height": 589
-    },
-    {
-      "id": "a7f6f90e285ce4b2",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 10 - Usando IO.md",
-      "styleAttributes": {},
-      "x": -2210,
-      "y": -10024,
-      "width": 260,
-      "height": 226,
-      "color": "4"
-    },
-    {
-      "id": "ae98440bae032737",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
-      "styleAttributes": {},
-      "x": -2224,
-      "y": -9362,
-      "width": 274,
-      "height": 339,
-      "color": "1"
-    },
-    {
-      "id": "51e79e37835a9bbc",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 13 - Tipos Genéricos.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -8914,
-      "width": 274,
-      "height": 273
-    },
-    {
-      "id": "2a3e4399b2c8ac4a",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -9689,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "3e51aec221ffee62",
-      "type": "file",
-      "file": "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
-      "styleAttributes": {},
-      "x": -1280,
-      "y": -1044,
-      "width": 1141,
-      "height": 1280,
-      "color": "4"
-    },
-    {
-      "id": "c39c78c3df1c3ace",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
-      "styleAttributes": {},
-      "x": -1116,
-      "y": -2992,
-      "width": 814,
-      "height": 1069
-    },
-    {
-      "id": "0b6dc78bdd212b7d",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -8531,
-      "width": 274,
-      "height": 315
-    },
-    {
-      "id": "be4aa4674f848f33",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Spring in Action Book.png",
-      "styleAttributes": {},
-      "x": -7386,
-      "y": 201,
-      "width": 850,
-      "height": 1066
-    },
-    {
-      "id": "be7df8e39c9fd111",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
-      "styleAttributes": {},
-      "x": -7349,
-      "y": -2955,
-      "width": 775,
-      "height": 995
-    },
-    {
-      "id": "52fb6750a549dbdf",
-      "type": "text",
-      "text": "# 3° Semestre: **Engenharia de Software**",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -7748,
-      "y": -3861,
-      "width": 660,
-      "height": 80
-    },
-    {
-      "id": "e989720d96dbaf87",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 2442,
-      "width": 723,
-      "height": 800,
-      "color": "1"
-    },
-    {
-      "id": "66d87044445b6b5c",
-      "type": "file",
-      "file": "Pasted image 20241229141027.png",
-      "styleAttributes": {},
-      "x": -4820,
-      "y": -2955,
-      "width": 629,
-      "height": 996
-    },
-    {
-      "id": "9210d1586af270fc",
-      "type": "text",
-      "text": "#DDD - # Domain-driven design",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -4711,
-      "y": -2482,
-      "width": 410,
-      "height": 50
-    },
-    {
-      "id": "b8ec00a111066ee9",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Software Requirements Book1.png",
-      "styleAttributes": {},
-      "x": -3767,
-      "y": -7003,
-      "width": 960,
-      "height": 1259
-    },
-    {
-      "id": "f6cee17867fd0cab",
-      "type": "text",
-      "text": "# 3° Semestre: **Engenharia de Requisitos**",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -4870,
-      "y": -7319,
-      "width": 730,
-      "height": 80
-    },
-    {
-      "id": "eedf3f261de1f486",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Software Requiriments Book 2.png",
-      "styleAttributes": {},
-      "x": -3767,
-      "y": -8561,
-      "width": 950,
-      "height": 1322
-    },
-    {
-      "id": "2e1aecf8f9c46069",
-      "type": "text",
-      "text": "# 3° Sem estre: **Análise Orientada a Objetos**",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -6399,
-      "y": -8413,
-      "width": 780,
-      "height": 80
-    },
-    {
-      "id": "e6896536d3e83f67",
-      "type": "link",
-      "url": "https://www.atlassian.com/br/agile/project-management/project-management-intro",
-      "styleAttributes": {},
-      "x": -4675,
-      "y": -3990,
-      "width": 338,
-      "height": 337,
-      "color": "1"
-    },
-    {
-      "id": "525c490a5717694e",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/SpringBoot Icon.png",
-      "styleAttributes": {},
-      "x": 2400,
-      "y": 594,
-      "width": 280,
-      "height": 280
-    },
-    {
-      "id": "ea1c45dcc9c0b891",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Para Iniciantes Book.png",
-      "styleAttributes": {},
-      "x": 1895,
-      "y": -10648,
-      "width": 796,
-      "height": 1151
-    },
-    {
-      "id": "c5e0f3b8888bc1ed",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Spring Icon.png",
-      "styleAttributes": {},
-      "x": 1890,
-      "y": 612,
-      "width": 262,
-      "height": 262
-    },
-    {
-      "id": "de90cc622ffca84a",
-      "type": "file",
-      "file": "Engenharia de Software Moderna/Capítulo 1 - Introdução.md",
-      "styleAttributes": {},
-      "x": -9035,
-      "y": -2657,
-      "width": 400,
-      "height": 400
-    },
-    {
-      "id": "6588a7d0a1456b92",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
-      "styleAttributes": {},
-      "x": -9250,
-      "y": -2955,
-      "width": 623,
-      "height": 996
-    },
-    {
-      "id": "36be36802905817b",
-      "type": "text",
-      "text": "# Curiosidades Java",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": 4560,
-      "y": -8523,
-      "width": 215,
-      "height": 102
-    },
-    {
-      "id": "2280c6d2c7c640fe",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 9 - Database Design.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -690,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "a3066809d86ee1b4",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 8 - JOIN.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1014,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "ea441d0b5874f62f",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 1 - Why Learn SQL.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -3282,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "073fe3b7f695f592",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 2 - Databases.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -2958,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "3106eabb0810de86",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 3 - SQLite.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -2634,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "93bf4a097a16d89d",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 4 - Select.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -2310,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "02002d11fd49e380",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 5 - Where.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1986,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "6e2a0c973ae0d4b7",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 10 - Managing Data.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -366,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "e3b05d45e802e326",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 11 - Going Forward.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -41,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "fcba07270c5a20c6",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 6 - GROUP BY and ORDER BY.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1662,
-      "width": 266,
-      "height": 219,
-      "color": "1"
-    },
-    {
-      "id": "68cbfb3dc71aaa9d",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 7 - CASE Statements.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1338,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "9200994cba03cc4e",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Icon.png",
-      "styleAttributes": {
-        "border": null
-      },
-      "x": -14659,
-      "y": -8640,
-      "width": 3361,
-      "height": 2722
-    },
-    {
-      "id": "c2748d99e16462f2",
-      "type": "file",
-      "file": "Spring in Action/Capítulo 2 - Desenvolvendo aplicações web.md",
-      "styleAttributes": {},
-      "x": -8978,
-      "y": 861,
-      "width": 314,
-      "height": 203,
-      "color": "4"
-    },
-    {
-      "id": "ece63584c4ca91c7",
-      "type": "file",
-      "file": "Spring in Action/Capítulo 1 - Getting started with Spring.md",
-      "styleAttributes": {},
-      "x": -8975,
-      "y": 1212,
-      "width": 308,
-      "height": 210,
-      "color": "4"
-    },
-    {
-      "id": "48eeaeb6594f4d17",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 7 - Heranças.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11005,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "40604f3ea361fbac",
-      "type": "text",
-      "text": "# 3° Semestre: **Modelagem de Dados**",
-      "styleAttributes": {},
-      "x": -13248,
-      "y": -2881,
-      "width": 540,
-      "height": 102
-    },
-    {
-      "id": "6b426409874df3b4",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/SQL Book.png",
-      "styleAttributes": {},
-      "x": -13510,
-      "y": -2467,
-      "width": 1065,
-      "height": 1401
-    },
-    {
-      "id": "7e78edfcba17e71c",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Data Icon.png",
-      "styleAttributes": {},
-      "x": -13330,
-      "y": 211,
-      "width": 705,
-      "height": 705
-    },
-    {
-      "id": "7ad9b858444d00d8",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11332,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "d8218e1451a358e2",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11659,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "a2595995daec73e6",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
-      "styleAttributes": {},
-      "x": -3160,
-      "y": -11768,
-      "width": 260,
-      "height": 210,
-      "color": "#ffffff"
-    },
-    {
-      "id": "892aa1e68ed8ecfe",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Lógica e Estrutura.png",
-      "styleAttributes": {},
-      "x": -8606,
-      "y": -12898,
-      "width": 878,
-      "height": 1242
-    },
-    {
-      "id": "f35686000e0cddf7",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11986,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "18b464d4f586b6d5",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Think Java.png",
-      "styleAttributes": {},
-      "x": -8606,
-      "y": -15120,
-      "width": 880,
-      "height": 1155
-    },
-    {
-      "id": "43a6e2ac03044b0c",
-      "type": "link",
-      "url": "https://www.youtube.com/watch?si=pJMU61kc69v1twHg&v=Qmt0QwzEmh0&feature=youtu.be",
-      "styleAttributes": {},
-      "x": -18560,
-      "y": -18240,
-      "width": 2983,
-      "height": 2366
-    },
-    {
-      "id": "e7c0df36c6290493",
-      "type": "file",
-      "file": "Pasted image 20250101232753.png",
-      "styleAttributes": {},
-      "x": -23520,
-      "y": -8215,
-      "width": 1427,
-      "height": 1873
-    },
-    {
-      "id": "da5f8260f20d0c57",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Desmistificando.png",
-      "styleAttributes": {},
-      "x": -11200,
-      "y": -17819,
-      "width": 1060,
-      "height": 1523
-    },
-    {
-      "id": "9debe4abf3e87081",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Algoritmos.png",
-      "styleAttributes": {},
-      "x": -13549,
-      "y": -17816,
-      "width": 1141,
-      "height": 1520
-    },
-    {
-      "id": "68699022818f36df",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Desenvolvimento Real de Software.png",
-      "styleAttributes": {},
-      "x": 4001,
-      "y": -13863,
-      "width": 1035,
-      "height": 1342
-    },
-    {
-      "id": "73a1ac41de3700a7",
-      "type": "link",
-      "url": "https://www.youtube.com/watch?v=iTrMnkQimKw&list=PL1lueKDtZ3DeXSaGwucTDD7iH1AcjTJAe",
-      "styleAttributes": {},
-      "x": 5476,
-      "y": -10365,
-      "width": 1362,
-      "height": 880
-    },
-    {
-      "id": "3274e48f71bf4167",
-      "type": "link",
-      "url": "https://www.youtube.com/watch?v=Y26srCFC6BQ",
-      "styleAttributes": {},
-      "x": 5476,
-      "y": -9254,
-      "width": 1362,
-      "height": 849
-    },
-    {
-      "id": "9b02da3dd9318f2f",
-      "type": "link",
-      "url": "https://www.youtube.com/watch?v=utANrHfAh28",
-      "styleAttributes": {},
-      "x": 5476,
-      "y": -8174,
-      "width": 1362,
-      "height": 1089
-    },
-    {
-      "id": "a505a7e8df6e0b21",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Pasted image 20241228175230.png",
-      "styleAttributes": {},
-      "x": 8266,
-      "y": -3673,
-      "width": 855,
-      "height": 480
-    },
-    {
-      "id": "01af3d4df987f7ce",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Quarkus Icon.png",
-      "styleAttributes": {},
-      "x": 8266,
-      "y": -6652,
-      "width": 463,
-      "height": 463
-    },
-    {
-      "id": "09195bf816903377",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/PlayFramework Icon.png",
-      "styleAttributes": {},
-      "x": 8266,
-      "y": -5853,
-      "width": 854,
-      "height": 447
-    },
-    {
-      "id": "690845c59a92c570",
-      "type": "link",
-      "url": "https://quarkus.io/",
-      "styleAttributes": {},
-      "x": 9361,
-      "y": -6596,
-      "width": 329,
-      "height": 351
-    },
-    {
-      "id": "5e45f1f1f873f902",
-      "type": "link",
-      "url": "https://www.playframework.com/",
-      "styleAttributes": {},
-      "x": 9361,
-      "y": -5850,
-      "width": 323,
-      "height": 442
-    },
-    {
-      "id": "c5e1c8ff56cae39b",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/JMeter 3 Book.png",
-      "styleAttributes": {},
-      "x": 6880,
-      "y": 164,
-      "width": 869,
-      "height": 1076
-    },
-    {
-      "id": "25558a7543ed6c7a",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/GitHub in Action.png",
-      "styleAttributes": {},
-      "x": 10536,
-      "y": -3945,
-      "width": 817,
-      "height": 1024
-    },
-    {
-      "id": "04e361316fd5c484",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 1 - Introduction to GitHub Actions.md",
-      "styleAttributes": {},
-      "x": 11406,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "477e31911125fada",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/JUnit Book.png",
-      "styleAttributes": {},
-      "x": 6905,
-      "y": 2238,
-      "width": 821,
-      "height": 1028
-    },
-    {
-      "id": "4042faad3634a1c3",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/TDD Book.png",
-      "styleAttributes": {},
-      "x": 8960,
-      "y": 967,
-      "width": 979,
-      "height": 1388
-    },
-    {
-      "id": "f5627e789defe17d",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Logo.png",
-      "styleAttributes": {},
-      "x": 1369,
-      "y": -4560,
-      "width": 1849,
-      "height": 1035
-    },
-    {
-      "id": "46c4f896a99bb160",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Code Problems.png",
-      "styleAttributes": {},
-      "x": 4000,
-      "y": -15751,
-      "width": 1040,
-      "height": 1351
-    },
-    {
-      "id": "4850de9048b2e607",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 2 - Hands-on My First Actions Workflow.md",
-      "styleAttributes": {},
-      "x": 11871,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "5a3c2410923111df",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
-      "styleAttributes": {},
-      "x": 12801,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "380c683e58fcc7bc",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 5 - Runners.md",
-      "styleAttributes": {},
-      "x": 13266,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "58b975886faa43bf",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
-      "styleAttributes": {},
-      "x": 12336,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "02383c611ce857f1",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Mock Book.png",
-      "styleAttributes": {},
-      "x": 12188,
-      "y": 1081,
-      "width": 978,
-      "height": 1158
-    },
-    {
-      "id": "7c0bbb443580c3c3",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 6 - Self-hosted runners.md",
-      "styleAttributes": {},
-      "x": 13731,
-      "y": -4443,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "4c6a7273c23bd912",
-      "type": "link",
-      "url": "https://vitorhpribeiro.medium.com/test-driven-develop-tdd-todos-deveriam-saber-d06a3244b187",
-      "styleAttributes": {},
-      "x": 9172,
-      "y": 2869,
-      "width": 556,
-      "height": 795
-    },
-    {
-      "id": "fb611372981b73bb",
-      "type": "link",
-      "url": "https://www.devmedia.com.br/orm-object-relational-mapper/19056",
-      "styleAttributes": {},
-      "x": -4119,
-      "y": 3941,
-      "width": 428,
-      "height": 492
-    },
-    {
-      "id": "338ca1dfc705367b",
-      "type": "link",
-      "url": "https://www.altexsoft.com/blog/object-relational-mapping/",
-      "styleAttributes": {},
-      "x": -4124,
-      "y": 4813,
-      "width": 437,
-      "height": 442
-    },
-    {
-      "id": "8981b4d411b5d42c",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/TDD Icon.png",
-      "styleAttributes": {},
-      "x": 1520,
-      "y": 5311,
-      "width": 1544,
-      "height": 1025
-    },
-    {
-      "id": "73f1ee48b47f50e6",
-      "type": "link",
-      "url": "https://ieeexplore.ieee.org/document/9481049",
-      "styleAttributes": {},
-      "x": -4248,
-      "y": 5690,
-      "width": 685,
-      "height": 678,
-      "color": "6"
-    },
-    {
-      "id": "bc911837906ac1f7",
-      "type": "link",
-      "url": "https://www.guru99.com/software-testing-introduction-importance.html",
-      "styleAttributes": {},
-      "x": 9159,
-      "y": 5396,
-      "width": 581,
-      "height": 857
-    },
-    {
-      "id": "694147cc759faf50",
-      "type": "link",
-      "url": "https://www.browserstack.com/guide/testing-pyramid-for-test-automation",
-      "styleAttributes": {},
-      "x": 10843,
-      "y": 5452,
-      "width": 724,
-      "height": 746
-    },
-    {
-      "id": "07a4556d22e271d6",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 1 - Entendendo o object-relational persistence.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 4210,
-      "width": 723,
-      "height": 824,
-      "color": "4"
-    },
-    {
-      "id": "3c8a097bd1cf703b",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Persistence Icon.png",
-      "styleAttributes": {
-        "border": null
-      },
-      "x": -13411,
-      "y": 2859,
-      "width": 866,
-      "height": 1090
-    },
-    {
-      "id": "5b6623f6f24f8853",
-      "type": "link",
-      "url": "https://www.baeldung.com/java-logging-intro",
-      "styleAttributes": {},
-      "x": -14720,
-      "y": 414,
-      "width": 315,
-      "height": 334
-    },
-    {
-      "id": "d4709d6b9b254c09",
-      "type": "file",
-      "file": "Spring in Action/Capítulo 3 - Working with data.md",
-      "styleAttributes": {},
-      "x": -8946,
-      "y": 441,
-      "width": 311,
-      "height": 246,
-      "color": "1"
-    },
-    {
-      "id": "db3f48da5d3afc96",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 6271,
-      "width": 614,
-      "height": 769,
-      "color": "4"
-    },
-    {
-      "id": "2296532c7a97dbbb",
-      "type": "text",
-      "text": " **Lentidão do SpringData JPA**\n O Spring Data JPA pode ser mais lento em compração com JPA puro ou Hibernate Nativo devido a alguns fatores, como:\n 1. **Camada Adicional de Abstração** - O Spring Data JPA é construído sobre o JPA e o Hibernate, adicionando funcionalidades que simplificam o desenvolvimento, como repositórios automáticos, métodos personalizados e gerenciamento de transações. Essa abstração introduz sobrecarga em termos de processamento, pois o framework precisa interpretar e processas instruções adicionais antes de delegar as operações ao Hibernate;\n 2. **Geração Dinâmica de Consultas** - O Spring Data gera dinamicamente consultadas baseadas nos métodos dos repositórios (por exemoplo, #findById ou #Save), o que pode consumir mais tempo em comparação com consultas diretamente escritas no JPA ou no Hibernate nativo. Essa geração automática de queries exige análise e processamento extra durante a execução.\n 3. **Gerenciamento Automático de Transações** - O Spring Data configura e gerencia automaticamente. Embora isso torne o desenvolvimento mais simples, pode aumentar os tempos de execução, especialmente em cenários com muitas operações simultâneas.\n 4. **Repositórios com Operações Genéricas** - Repositórios no Spring Data fornecem suporte genérico para várias operações CRUD. Esse comportamento genérico, embora prático, pode ser menos eficiente do que implementações personalizadas diretamente no Hibernate ou JPA.\n 5. **Dependência de Proxies e Reflection** - O Spring Data JPA utiliza proxies dinâmicos e reflection para implementar seus recursos, como a injeção de dependências e a criação de beans. \n  \n**Cenários Ideal para uso do Spring Data JPA** \nApesar de ser mais lento, projetos que priorizam facilidade de desenvolvimento e manutenção, especialmente onde o desempenho absoluto não é um requisito crítico, pode ser uma boa alternativa.\nSe o desempenho for um fator-chave, é possível combinar o uso do Spring Data JPA com consultas personalizadas e otimizações manuais para reduzir a sobrecarga.",
-      "styleAttributes": {},
-      "x": -4248,
-      "y": 6677,
-      "width": 685,
-      "height": 793,
-      "color": "6"
-    },
-    {
-      "id": "c7a83b04f4941094",
-      "type": "link",
-      "url": "https://app.daily.dev/tags/java?ref=roadmapsh",
-      "styleAttributes": {},
-      "x": -4026,
-      "y": 8070,
-      "width": 241,
-      "height": 266
-    },
-    {
-      "id": "95401fe4a9c1abe1",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 15 - Working with Spring Data JDBC.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 8115,
-      "width": 614,
-      "height": 966
-    },
-    {
-      "id": "47f0d559d9475031",
-      "type": "link",
-      "url": "https://www.baeldung.com/jdbi",
-      "styleAttributes": {},
-      "x": -4030,
-      "y": 8470,
-      "width": 250,
-      "height": 303
-    },
-    {
-      "id": "294af57c0b48dda8",
-      "type": "link",
-      "url": "https://www.ibm.com/docs/en/informix-servers/12.10?topic=started-what-is-jdbc",
-      "styleAttributes": {},
-      "x": -4030,
-      "y": 8854,
-      "width": 249,
-      "height": 241
-    },
-    {
-      "id": "c69287bebb666e3c",
-      "type": "link",
-      "url": "https://www.baeldung.com/spring-jdbc-jdbctemplate",
-      "styleAttributes": {},
-      "x": -4030,
-      "y": 9267,
-      "width": 249,
-      "height": 321
-    },
-    {
-      "id": "d8ad2ad380c0e8a6",
-      "type": "link",
-      "url": "https://jdbi.org/",
-      "styleAttributes": {},
-      "x": -4034,
-      "y": 9707,
-      "width": 257,
-      "height": 363
-    },
-    {
-      "id": "89987e5c06a7dec9",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
-      "styleAttributes": {},
-      "x": -14600,
-      "y": -12920,
-      "width": 400,
-      "height": 400,
-      "color": "4"
-    },
-    {
-      "id": "e788ec8f8c0c18af",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/Capítulo 3 - Algoritmos de Busca.md",
-      "styleAttributes": {},
-      "x": -14600,
-      "y": -12360,
-      "width": 400,
-      "height": 400,
-      "color": "4"
-    },
-    {
-      "id": "46c6c551cec4eb41",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo.md",
-      "styleAttributes": {},
-      "x": -14600,
-      "y": -13400,
-      "width": 400,
-      "height": 400,
-      "color": "4"
-    },
-    {
-      "id": "36d662b6046d03f4",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
-      "styleAttributes": {},
-      "x": -16929,
-      "y": -14151,
-      "width": 911,
-      "height": 1243
-    },
-    {
-      "id": "82d6ae5e769c36f5",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Fundamentos Matemáticos.png",
-      "styleAttributes": {},
-      "x": -16552,
-      "y": -11280,
-      "width": 1069,
-      "height": 1407
-    },
-    {
-      "id": "385990dd1ac65068",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Cientista da Computação Book.png",
-      "styleAttributes": {
-        "border": "dotted"
-      },
-      "x": -13458,
-      "y": -14151,
-      "width": 959,
-      "height": 1243,
-      "color": "1"
-    },
-    {
-      "id": "ec1701dc4e5a6548",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Entendendo Algoritmos.png",
-      "styleAttributes": {},
-      "x": -13492,
-      "y": -11280,
-      "width": 1028,
-      "height": 1433
-    },
-    {
-      "id": "1512e0da4c486713",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/LinearSearch.java",
-      "styleAttributes": {},
-      "x": -15760,
-      "y": -12560,
-      "width": 400,
-      "height": 400,
-      "color": "#ffffff"
-    },
-    {
-      "id": "c2af59b84a65e13a",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/SearchContainsString.java",
-      "x": -15760,
-      "y": -12040,
-      "width": 400,
-      "height": 400,
-      "color": "#ffffff"
-    }
-  ],
-  "edges": [
-    {
-      "id": "6e543b6f785b8653",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "3c8a097bd1cf703b",
-      "fromSide": "right",
-      "toNode": "07a4556d22e271d6",
-      "toSide": "left",
-      "color": "4"
-    },
-    {
-      "id": "7f5424f78b6e8e59",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "3c8a097bd1cf703b",
-      "fromSide": "right",
-      "toNode": "db3f48da5d3afc96",
-      "toSide": "left",
-      "color": "4"
-    },
-    {
-      "id": "ac1e91155b62d7ae",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "ea441d0b5874f62f",
-      "toSide": "left",
-      "color": "4"
-    },
-    {
-      "id": "52a20c360f1dc2f2",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "073fe3b7f695f592",
-      "toSide": "left",
-      "color": "4"
-    },
-    {
-      "id": "b1b3d54a54cfaf60",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "3106eabb0810de86",
-      "toSide": "left",
-      "color": "4"
-    },
-    {
-      "id": "e068be7ee55dbf61",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "93bf4a097a16d89d",
-      "toSide": "left",
-      "color": "4"
-    },
-    {
-      "id": "bd414ac072b7de55",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "02002d11fd49e380",
-      "toSide": "left",
-      "color": "4"
-    },
-    {
-      "id": "b0756d73123456a0",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "fcba07270c5a20c6",
-      "toSide": "left",
-      "color": "1"
-    },
-    {
-      "id": "1d9645a3229b6935",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "68cbfb3dc71aaa9d",
-      "toSide": "left"
-    },
-    {
-      "id": "5bb6be835b3ff98e",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "a3066809d86ee1b4",
-      "toSide": "left"
-    },
-    {
-      "id": "c9dbcdeb6d6fe80c",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "2280c6d2c7c640fe",
-      "toSide": "left"
-    },
-    {
-      "id": "30a1af7312be208e",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "6e2a0c973ae0d4b7",
-      "toSide": "left"
-    },
-    {
-      "id": "114ba4bc1c5d655a",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "right",
-      "toNode": "e3b05d45e802e326",
-      "toSide": "left"
-    },
-    {
-      "id": "210c0ec1b7440e3f",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "f5627e789defe17d",
-      "fromSide": "top",
-      "toNode": "ea1c45dcc9c0b891",
-      "toSide": "bottom",
-      "color": "1"
-    },
-    {
-      "id": "58cc1eb64f7e83fc",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "03bb7707f5c1f1cc",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "215ceed3cf6394ac",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "a7f6f90e285ce4b2",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "c992292c88ff62e9",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "0b6dc78bdd212b7d",
-      "toSide": "right"
-    },
-    {
-      "id": "4fae61180d223fcc",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "51e79e37835a9bbc",
-      "toSide": "right"
-    },
-    {
-      "id": "9af4d1c237594a7b",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "ae98440bae032737",
-      "toSide": "right",
-      "color": "1"
-    },
-    {
-      "id": "d24832a666169169",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "2a3e4399b2c8ac4a",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "0eecb902e50b7921",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "f35686000e0cddf7",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "cb014570e53e9561",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "d8218e1451a358e2",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "48d858e13d517689",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "48eeaeb6594f4d17",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "adfe94408af6861c",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "69e567e4932269a3",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "873330929803ca06",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "right",
-      "toNode": "68699022818f36df",
-      "toSide": "bottom"
-    },
-    {
-      "id": "95770b6aaeb7dc7d",
-      "fromNode": "68699022818f36df",
-      "fromSide": "top",
-      "toNode": "46c4f896a99bb160",
-      "toSide": "bottom"
-    },
-    {
-      "id": "4de41234d9df86d4",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "4042faad3634a1c3",
-      "fromSide": "left",
-      "toNode": "477e31911125fada",
-      "toSide": "right"
-    },
-    {
-      "id": "9e865d7ee1eaa2da",
-      "fromNode": "4c6a7273c23bd912",
-      "fromSide": "top",
-      "toNode": "4042faad3634a1c3",
-      "toSide": "bottom"
-    },
-    {
-      "id": "86a3aefba17f9592",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "f5627e789defe17d",
-      "fromSide": "right",
-      "toNode": "01af3d4df987f7ce",
-      "toSide": "left"
-    },
-    {
-      "id": "d272a7118de3f6c3",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "f5627e789defe17d",
-      "fromSide": "right",
-      "toNode": "09195bf816903377",
-      "toSide": "left"
-    },
-    {
-      "id": "967a6dd734563cbd",
-      "fromNode": "09195bf816903377",
-      "fromSide": "right",
-      "toNode": "5e45f1f1f873f902",
-      "toSide": "left"
-    },
-    {
-      "id": "9faee0cf519b32a6",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "07a4556d22e271d6",
-      "fromSide": "right",
-      "toNode": "338ca1dfc705367b",
-      "toSide": "left",
-      "color": "3"
-    },
-    {
-      "id": "dee8c9efce5353bd",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "95401fe4a9c1abe1",
-      "fromSide": "right",
-      "toNode": "294af57c0b48dda8",
-      "toSide": "left"
-    },
-    {
-      "id": "0def447cd2f4afde",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "3c8a097bd1cf703b",
-      "fromSide": "right",
-      "toNode": "95401fe4a9c1abe1",
-      "toSide": "left"
-    },
-    {
-      "id": "9b82ca07928cc59f",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "95401fe4a9c1abe1",
-      "fromSide": "right",
-      "toNode": "c7a83b04f4941094",
-      "toSide": "left"
-    },
-    {
-      "id": "2c7b856120bf20ef",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "95401fe4a9c1abe1",
-      "fromSide": "right",
-      "toNode": "c69287bebb666e3c",
-      "toSide": "left"
-    },
-    {
-      "id": "b9fa8860e0a29ac3",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "95401fe4a9c1abe1",
-      "fromSide": "right",
-      "toNode": "47f0d559d9475031",
-      "toSide": "left"
-    },
-    {
-      "id": "ca09c69f28efdcec",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "07a4556d22e271d6",
-      "fromSide": "right",
-      "toNode": "fb611372981b73bb",
-      "toSide": "left",
-      "color": "3"
-    },
-    {
-      "id": "96a196b0c85b314c",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "a7f6f90e285ce4b2",
-      "fromSide": "left",
-      "toNode": "a4ccf6139a71624b",
-      "toSide": "right",
-      "color": "3"
-    },
-    {
-      "id": "4d7dd19f78580b3a",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "8981b4d411b5d42c",
-      "fromSide": "right",
-      "toNode": "bc911837906ac1f7",
-      "toSide": "left"
-    },
-    {
-      "id": "8817ba34e8493aaf",
-      "fromNode": "bc911837906ac1f7",
-      "fromSide": "top",
-      "toNode": "4c6a7273c23bd912",
-      "toSide": "bottom"
-    },
-    {
-      "id": "37ab70e934bbe625",
-      "fromNode": "4042faad3634a1c3",
-      "fromSide": "right",
-      "toNode": "02383c611ce857f1",
-      "toSide": "left"
-    },
-    {
-      "id": "03e1ddde8b9de0e0",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "4042faad3634a1c3",
-      "fromSide": "left",
-      "toNode": "c5e1c8ff56cae39b",
-      "toSide": "right"
-    },
-    {
-      "id": "694f4fc28c627eb7",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "01af3d4df987f7ce",
-      "fromSide": "right",
-      "toNode": "690845c59a92c570",
-      "toSide": "left"
-    },
-    {
-      "id": "f5bef03d58f0b485",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "db3f48da5d3afc96",
-      "fromSide": "right",
-      "toNode": "73f1ee48b47f50e6",
-      "toSide": "left",
-      "color": "4"
-    },
-    {
-      "id": "1b27a86967d1abd6",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "36be36802905817b",
-      "fromSide": "right",
-      "toNode": "3274e48f71bf4167",
-      "toSide": "left"
-    },
-    {
-      "id": "da10534879eb5596",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "36be36802905817b",
-      "fromSide": "right",
-      "toNode": "9b02da3dd9318f2f",
-      "toSide": "left"
-    },
-    {
-      "id": "811222e1c3dbbe51",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "e6896536d3e83f67",
-      "fromSide": "bottom",
-      "toNode": "6588a7d0a1456b92",
-      "toSide": "top",
-      "color": "1"
-    },
-    {
-      "id": "ca8ff4afab2c51b7",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "e6896536d3e83f67",
-      "fromSide": "bottom",
-      "toNode": "be7df8e39c9fd111",
-      "toSide": "top"
-    },
-    {
-      "id": "dee8c79366c36c05",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9200994cba03cc4e",
-      "fromSide": "right",
-      "toNode": "52fb6750a549dbdf",
-      "toSide": "left",
-      "color": "1"
-    },
-    {
-      "id": "238103b0d278f51d",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "52fb6750a549dbdf",
-      "fromSide": "right",
-      "toNode": "e6896536d3e83f67",
-      "toSide": "left",
-      "color": "1"
-    },
-    {
-      "id": "18c8f26796fddbc8",
-      "styleAttributes": {
-        "arrow": "thin-triangle",
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9200994cba03cc4e",
-      "fromSide": "bottom",
-      "toNode": "40604f3ea361fbac",
-      "toSide": "top",
-      "color": "3"
-    },
-    {
-      "id": "a5736ab8c3dfca91",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9200994cba03cc4e",
-      "fromSide": "right",
-      "toNode": "2e1aecf8f9c46069",
-      "toSide": "left"
-    },
-    {
-      "id": "a1dfae61d50e8577",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "2e1aecf8f9c46069",
-      "fromSide": "top",
-      "toNode": "f35686000e0cddf7",
-      "toSide": "left",
-      "color": "3"
-    },
-    {
-      "id": "02fee3129e8771e2",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "f5627e789defe17d",
-      "fromSide": "right",
-      "toNode": "a505a7e8df6e0b21",
-      "toSide": "left"
-    },
-    {
-      "id": "bc1c205629c317ea",
-      "fromNode": "bc911837906ac1f7",
-      "fromSide": "right",
-      "toNode": "694147cc759faf50",
-      "toSide": "left"
-    },
-    {
-      "id": "c19fcc31c0e3cecf",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "f5627e789defe17d",
-      "fromSide": "bottom",
-      "toNode": "126f953bf8d9bbb3",
-      "toSide": "top",
-      "color": "1"
-    },
-    {
-      "id": "fafea046f062419f",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "d4709d6b9b254c09",
-      "fromSide": "left",
-      "toNode": "7e78edfcba17e71c",
-      "toSide": "right",
-      "color": "1"
-    },
-    {
-      "id": "fcf004873b62c4e2",
-      "fromNode": "7e78edfcba17e71c",
-      "fromSide": "left",
-      "toNode": "5b6623f6f24f8853",
-      "toSide": "right"
-    },
-    {
-      "id": "b0dc2df888efb352",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "7e78edfcba17e71c",
-      "fromSide": "bottom",
-      "toNode": "3c8a097bd1cf703b",
-      "toSide": "top",
-      "color": "1"
-    },
-    {
-      "id": "75b186c7a15c9d3a",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "95401fe4a9c1abe1",
-      "fromSide": "right",
-      "toNode": "d8ad2ad380c0e8a6",
-      "toSide": "left"
-    },
-    {
-      "id": "5fcbae98d317035f",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6588a7d0a1456b92",
-      "fromSide": "bottom",
-      "toNode": "be4aa4674f848f33",
-      "toSide": "top",
-      "color": "1"
-    },
-    {
-      "id": "0d814990ba80847a",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "be7df8e39c9fd111",
-      "fromSide": "bottom",
-      "toNode": "be4aa4674f848f33",
-      "toSide": "top"
-    },
-    {
-      "id": "9dcbf638371552ab",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "be4aa4674f848f33",
-      "fromSide": "left",
-      "toNode": "d4709d6b9b254c09",
-      "toSide": "right",
-      "color": "1"
-    },
-    {
-      "id": "002c492bab35fa64",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "126f953bf8d9bbb3",
-      "fromSide": "bottom",
-      "toNode": "8981b4d411b5d42c",
-      "toSide": "top"
-    },
-    {
-      "id": "2e25876521f9fc3e",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9200994cba03cc4e",
-      "fromSide": "right",
-      "toNode": "f6cee17867fd0cab",
-      "toSide": "left"
-    },
-    {
-      "id": "a22494f311d86cec",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "f6cee17867fd0cab",
-      "fromSide": "top",
-      "toNode": "b8ec00a111066ee9",
-      "toSide": "left"
-    },
-    {
-      "id": "a5492f0026bb38eb",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "f6cee17867fd0cab",
-      "fromSide": "top",
-      "toNode": "eedf3f261de1f486",
-      "toSide": "left"
-    },
-    {
-      "id": "36ad498c14de8f3b",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "3c8a097bd1cf703b",
-      "fromSide": "right",
-      "toNode": "e989720d96dbaf87",
-      "toSide": "left",
-      "color": "1"
-    },
-    {
-      "id": "e6aa8b2cb745f0b1",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "db3f48da5d3afc96",
-      "fromSide": "right",
-      "toNode": "2296532c7a97dbbb",
-      "toSide": "left",
-      "color": "4"
-    },
-    {
-      "id": "5af585cb95c6317d",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "73f1ee48b47f50e6",
-      "fromSide": "bottom",
-      "toNode": "2296532c7a97dbbb",
-      "toSide": "top",
-      "color": "4"
-    },
-    {
-      "id": "39e0bb101cee1cd1",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "e6896536d3e83f67",
-      "fromSide": "bottom",
-      "toNode": "c39c78c3df1c3ace",
-      "toSide": "top",
-      "color": "1"
-    },
-    {
-      "id": "0b6913b8c235db0e",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "c39c78c3df1c3ace",
-      "fromSide": "bottom",
-      "toNode": "3e51aec221ffee62",
-      "toSide": "top",
-      "color": "4"
-    },
-    {
-      "id": "926d2422326bcb0b",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "3e51aec221ffee62",
-      "fromSide": "left",
-      "toNode": "9210d1586af270fc",
-      "toSide": "bottom"
-    },
-    {
-      "id": "49ee0cf31a558048",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9210d1586af270fc",
-      "fromSide": "top",
-      "toNode": "66d87044445b6b5c",
-      "toSide": "bottom"
-    },
-    {
-      "id": "c7f4067c5d446c65",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "e6896536d3e83f67",
-      "fromSide": "bottom",
-      "toNode": "66d87044445b6b5c",
-      "toSide": "top"
-    },
-    {
-      "id": "327cd36a99c92849",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "top",
-      "toNode": "892aa1e68ed8ecfe",
-      "toSide": "right"
-    },
-    {
-      "id": "62f801c7982587c8",
-      "fromNode": "36d662b6046d03f4",
-      "fromSide": "right",
-      "toNode": "385990dd1ac65068",
-      "toSide": "left"
-    },
-    {
-      "id": "1d7352a0e397271b",
-      "fromNode": "385990dd1ac65068",
-      "fromSide": "left",
-      "toNode": "36d662b6046d03f4",
-      "toSide": "right"
-    },
-    {
-      "id": "ffb43dc46e89c68a",
-      "styleAttributes": {
-        "path": "short-dashed",
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "e989720d96dbaf87",
-      "fromSide": "right",
-      "toNode": "3e51aec221ffee62",
-      "toSide": "bottom",
-      "color": "4"
-    },
-    {
-      "id": "9ccfde8413c8899e",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "be4aa4674f848f33",
-      "fromSide": "left",
-      "toNode": "ece63584c4ca91c7",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "89d2c0be18ab84b3",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "be4aa4674f848f33",
-      "fromSide": "left",
-      "toNode": "c2748d99e16462f2",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "e59ac50fa39502c9",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "40604f3ea361fbac",
-      "fromSide": "bottom",
-      "toNode": "6b426409874df3b4",
-      "toSide": "top"
-    },
-    {
-      "id": "df99b7e064d2cfca",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "6b426409874df3b4",
-      "fromSide": "bottom",
-      "toNode": "7e78edfcba17e71c",
-      "toSide": "top",
-      "color": "1"
-    },
-    {
-      "id": "6011a4e2d34e17d0",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "a505a7e8df6e0b21",
-      "fromSide": "right",
-      "toNode": "25558a7543ed6c7a",
-      "toSide": "left"
-    },
-    {
-      "id": "5058f55b3da09c3f",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "04e361316fd5c484",
-      "toSide": "bottom"
-    },
-    {
-      "id": "23b44efd752d7587",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "4850de9048b2e607",
-      "toSide": "bottom"
-    },
-    {
-      "id": "ad8187c08e250a33",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "58b975886faa43bf",
-      "toSide": "bottom"
-    },
-    {
-      "id": "05a6c0b917bb6e63",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "5a3c2410923111df",
-      "toSide": "bottom"
-    },
-    {
-      "id": "d9e090307b7e3b79",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "380c683e58fcc7bc",
-      "toSide": "bottom"
-    },
-    {
-      "id": "edcf0eb68e4a3e22",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "7c0bbb443580c3c3",
-      "toSide": "bottom"
-    },
-    {
-      "id": "5dd2024584074424",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "9f81200ac7bf87b9",
-      "toSide": "bottom"
-    },
-    {
-      "id": "603576a39ba4140e",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "f23b53bef875144c",
-      "toSide": "bottom"
-    },
-    {
-      "id": "60aaab051dd4d6bf",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "709b33ea77359ec9",
-      "toSide": "bottom"
-    },
-    {
-      "id": "44e3c2724bb8db7c",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "1bd1865a60389ec5",
-      "toSide": "bottom"
-    },
-    {
-      "id": "95d1b5a3d4d611c8",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "d5e664a160b21124",
-      "toSide": "bottom"
-    },
-    {
-      "id": "6e89bd73f836e532",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "25558a7543ed6c7a",
-      "fromSide": "right",
-      "toNode": "412b142d6e43f3f7",
-      "toSide": "bottom"
-    },
-    {
-      "id": "4b94df13ddbb1e08",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "f6cee17867fd0cab",
-      "fromSide": "bottom",
-      "toNode": "e6896536d3e83f67",
-      "toSide": "top"
-    },
-    {
-      "id": "caaa6256c05bb813",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "f5627e789defe17d",
-      "fromSide": "right",
-      "toNode": "36be36802905817b",
-      "toSide": "bottom"
-    },
-    {
-      "id": "0e52a49ce14bdd5e",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "36be36802905817b",
-      "fromSide": "top",
-      "toNode": "73a1ac41de3700a7",
-      "toSide": "left"
-    },
-    {
-      "id": "b8cf066cd2f5190c",
-      "styleAttributes": {},
-      "fromNode": "6588a7d0a1456b92",
-      "fromSide": "left",
-      "toNode": "de90cc622ffca84a",
-      "toSide": "right"
-    },
-    {
-      "id": "1b7f9f9ce2da7631",
-      "styleAttributes": {
-        "path": "long-dashed",
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9debe4abf3e87081",
-      "fromSide": "right",
-      "toNode": "da5f8260f20d0c57",
-      "toSide": "left",
-      "color": "3"
-    },
-    {
-      "id": "4a197f2ec3718a45",
-      "styleAttributes": {
-        "path": "short-dashed",
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "892aa1e68ed8ecfe",
-      "fromSide": "left",
-      "toNode": "385990dd1ac65068",
-      "toSide": "right",
-      "color": "3"
-    },
-    {
-      "id": "d578416457a794f2",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "top",
-      "toNode": "18b464d4f586b6d5",
-      "toSide": "right"
-    },
-    {
-      "id": "5264309e48475ad2",
-      "styleAttributes": {
-        "pathfindingMethod": "square",
-        "path": "short-dashed"
-      },
-      "fromNode": "18b464d4f586b6d5",
-      "fromSide": "left",
-      "toNode": "385990dd1ac65068",
-      "toSide": "right",
-      "color": "3"
-    },
-    {
-      "id": "e352a14bd71c5f44",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "126f953bf8d9bbb3",
-      "fromSide": "left",
-      "toNode": "be4aa4674f848f33",
-      "toSide": "right",
-      "color": "1"
-    },
-    {
-      "id": "f3927309b78b642f",
-      "styleAttributes": {
-        "pathfindingMethod": "square",
-        "path": "short-dashed"
-      },
-      "fromNode": "9debe4abf3e87081",
-      "fromSide": "left",
-      "toNode": "43a6e2ac03044b0c",
-      "toSide": "right",
-      "color": "3"
-    },
-    {
-      "id": "1d252d42ffc4c2ff",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9200994cba03cc4e",
-      "fromSide": "top",
-      "toNode": "ec1701dc4e5a6548",
-      "toSide": "bottom"
-    },
-    {
-      "id": "a6be478cc9f954d6",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ec1701dc4e5a6548",
-      "fromSide": "top",
-      "toNode": "385990dd1ac65068",
-      "toSide": "bottom"
-    },
-    {
-      "id": "73811cc252e8332e",
-      "styleAttributes": {},
-      "fromNode": "385990dd1ac65068",
-      "fromSide": "top",
-      "toNode": "9debe4abf3e87081",
-      "toSide": "bottom"
-    },
-    {
-      "id": "0881c6e4c27b09a1",
-      "styleAttributes": {},
-      "fromNode": "9200994cba03cc4e",
-      "fromSide": "top",
-      "toNode": "82d6ae5e769c36f5",
-      "toSide": "right"
-    },
-    {
-      "id": "a8415dfea1f421d8",
-      "styleAttributes": {
-        "path": "short-dashed",
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9200994cba03cc4e",
-      "fromSide": "left",
-      "toNode": "e7c0df36c6290493",
-      "toSide": "right",
-      "color": "2"
-    },
-    {
-      "id": "883094736bb439b4",
-      "styleAttributes": {
-        "path": "short-dashed"
-      },
-      "fromNode": "d8218e1451a358e2",
-      "fromSide": "left",
-      "toNode": "a2595995daec73e6",
-      "toSide": "right",
-      "color": "#ffffff",
-      "label": "Código Classificação por Bolha"
-    },
-    {
-      "id": "a907bd29a0f6e61e",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "385990dd1ac65068",
-      "fromSide": "left",
-      "toNode": "89987e5c06a7dec9",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "4e25b3b97d487072",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "385990dd1ac65068",
-      "fromSide": "left",
-      "toNode": "46c6c551cec4eb41",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "3f7438ffddae679c",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "385990dd1ac65068",
-      "fromSide": "left",
-      "toNode": "e788ec8f8c0c18af",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "9a168ee16cb80e03",
-      "styleAttributes": {
-        "path": "short-dashed"
-      },
-      "fromNode": "e788ec8f8c0c18af",
-      "fromSide": "left",
-      "toNode": "1512e0da4c486713",
-      "toSide": "right",
-      "color": "#ffffff",
-      "label": "Algoritmo de Busca Linear"
-    },
-    {
-      "id": "a026a3c26acf465c",
-      "styleAttributes": {
-        "path": "short-dashed"
-      },
-      "fromNode": "e788ec8f8c0c18af",
-      "fromSide": "left",
-      "toNode": "c2af59b84a65e13a",
-      "toSide": "right",
-      "color": "#ffffff",
-      "label": "Algoritmo de Busca Binário"
-    }
-  ],
-  "metadata": {}
+	"nodes":[
+		{
+			"id":"126f953bf8d9bbb3",
+			"type":"group",
+			"styleAttributes":{},
+			"x":1733,
+			"y":563,
+			"width":1120,
+			"height":378,
+			"label":"Spring Spring Boot"
+		},
+		{
+			"id":"f23b53bef875144c",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 8 - Continuous integration.md",
+			"styleAttributes":{},
+			"x":14661,
+			"y":-4444,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"9f81200ac7bf87b9",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 7 - Managing your self-hosted runners.md",
+			"styleAttributes":{},
+			"x":14196,
+			"y":-4444,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"709b33ea77359ec9",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 9 - Continous Delivery.md",
+			"styleAttributes":{},
+			"x":15126,
+			"y":-4444,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"1bd1865a60389ec5",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 10 - Security.md",
+			"styleAttributes":{},
+			"x":15591,
+			"y":-4443,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"d5e664a160b21124",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 11 - Compliance.md",
+			"styleAttributes":{},
+			"x":16056,
+			"y":-4443,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"412b142d6e43f3f7",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 12 - Improving workflow performance and costs.md",
+			"styleAttributes":{},
+			"x":16521,
+			"y":-4443,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"380c683e58fcc7bc",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 5 - Runners.md",
+			"styleAttributes":{},
+			"x":13266,
+			"y":-4444,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"7c0bbb443580c3c3",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 6 - Self-hosted runners.md",
+			"styleAttributes":{},
+			"x":13731,
+			"y":-4443,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"e989720d96dbaf87",
+			"type":"file",
+			"file":"Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata.md",
+			"styleAttributes":{},
+			"x":-6139,
+			"y":2442,
+			"width":723,
+			"height":800,
+			"color":"1"
+		},
+		{
+			"id":"3e51aec221ffee62",
+			"type":"file",
+			"file":"Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
+			"styleAttributes":{},
+			"x":-1280,
+			"y":-1044,
+			"width":1141,
+			"height":1280,
+			"color":"4"
+		},
+		{
+			"id":"c39c78c3df1c3ace",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
+			"styleAttributes":{},
+			"x":-1116,
+			"y":-2992,
+			"width":814,
+			"height":1069
+		},
+		{
+			"id":"66d87044445b6b5c",
+			"type":"file",
+			"file":"Pasted image 20241229141027.png",
+			"styleAttributes":{},
+			"x":-4820,
+			"y":-2955,
+			"width":629,
+			"height":996
+		},
+		{
+			"id":"9210d1586af270fc",
+			"type":"text",
+			"text":"#DDD - # Domain-driven design",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-4711,
+			"y":-2482,
+			"width":410,
+			"height":50
+		},
+		{
+			"id":"e6896536d3e83f67",
+			"type":"link",
+			"url":"https://www.atlassian.com/br/agile/project-management/project-management-intro",
+			"styleAttributes":{},
+			"x":-4675,
+			"y":-3990,
+			"width":338,
+			"height":337,
+			"color":"1"
+		},
+		{
+			"id":"2e1aecf8f9c46069",
+			"type":"text",
+			"text":"# 3° Sem estre: **Análise Orientada a Objetos**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-6399,
+			"y":-8413,
+			"width":780,
+			"height":80
+		},
+		{
+			"id":"be7df8e39c9fd111",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
+			"styleAttributes":{},
+			"x":-7349,
+			"y":-2955,
+			"width":775,
+			"height":995
+		},
+		{
+			"id":"52fb6750a549dbdf",
+			"type":"text",
+			"text":"# 3° Semestre: **Engenharia de Software**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-7748,
+			"y":-3861,
+			"width":660,
+			"height":80
+		},
+		{
+			"id":"a4ccf6139a71624b",
+			"type":"link",
+			"url":"https://mkyong.com/java/java-how-to-read-a-file/",
+			"styleAttributes":{},
+			"x":-3600,
+			"y":-10205,
+			"width":583,
+			"height":589
+		},
+		{
+			"id":"51e79e37835a9bbc",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 13 - Tipos Genéricos.md",
+			"styleAttributes":{},
+			"x":-2217,
+			"y":-8914,
+			"width":274,
+			"height":273
+		},
+		{
+			"id":"2a3e4399b2c8ac4a",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
+			"styleAttributes":{},
+			"x":-2217,
+			"y":-9689,
+			"width":274,
+			"height":218,
+			"color":"4"
+		},
+		{
+			"id":"0b6dc78bdd212b7d",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método.md",
+			"styleAttributes":{},
+			"x":-2217,
+			"y":-8531,
+			"width":274,
+			"height":315
+		},
+		{
+			"id":"ae98440bae032737",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+			"styleAttributes":{},
+			"x":-2224,
+			"y":-9362,
+			"width":274,
+			"height":339,
+			"color":"1"
+		},
+		{
+			"id":"b8ec00a111066ee9",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Software Requirements Book1.png",
+			"styleAttributes":{},
+			"x":-3767,
+			"y":-7003,
+			"width":960,
+			"height":1259
+		},
+		{
+			"id":"f6cee17867fd0cab",
+			"type":"text",
+			"text":"# 3° Semestre: **Engenharia de Requisitos**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-4870,
+			"y":-7319,
+			"width":730,
+			"height":80
+		},
+		{
+			"id":"eedf3f261de1f486",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Software Requiriments Book 2.png",
+			"styleAttributes":{},
+			"x":-3767,
+			"y":-8561,
+			"width":950,
+			"height":1322
+		},
+		{
+			"id":"03bb7707f5c1f1cc",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 9 - Tratamento de Exceções.md",
+			"styleAttributes":{},
+			"x":-2217,
+			"y":-10351,
+			"width":274,
+			"height":218,
+			"color":"4"
+		},
+		{
+			"id":"69e567e4932269a3",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 8 - Pacotes e interfaces.md",
+			"styleAttributes":{},
+			"x":-2217,
+			"y":-10678,
+			"width":274,
+			"height":218,
+			"color":"4"
+		},
+		{
+			"id":"a7f6f90e285ce4b2",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 10 - Usando IO.md",
+			"styleAttributes":{},
+			"x":-2210,
+			"y":-10024,
+			"width":260,
+			"height":226,
+			"color":"4"
+		},
+		{
+			"id":"ea441d0b5874f62f",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 1 - Why Learn SQL.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-3282,
+			"width":266,
+			"height":219,
+			"color":"4"
+		},
+		{
+			"id":"073fe3b7f695f592",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 2 - Databases.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-2958,
+			"width":266,
+			"height":219,
+			"color":"4"
+		},
+		{
+			"id":"9200994cba03cc4e",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Engenharia de Software Icon.png",
+			"styleAttributes":{
+				"border":null
+			},
+			"x":-14659,
+			"y":-8640,
+			"width":3361,
+			"height":2722
+		},
+		{
+			"id":"c2748d99e16462f2",
+			"type":"file",
+			"file":"Spring in Action/Capítulo 2 - Desenvolvendo aplicações web.md",
+			"styleAttributes":{},
+			"x":-8978,
+			"y":861,
+			"width":314,
+			"height":203,
+			"color":"4"
+		},
+		{
+			"id":"ece63584c4ca91c7",
+			"type":"file",
+			"file":"Spring in Action/Capítulo 1 - Getting started with Spring.md",
+			"styleAttributes":{},
+			"x":-8975,
+			"y":1212,
+			"width":308,
+			"height":210,
+			"color":"4"
+		},
+		{
+			"id":"f5627e789defe17d",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Java Logo.png",
+			"styleAttributes":{},
+			"x":1369,
+			"y":-4560,
+			"width":1849,
+			"height":1035
+		},
+		{
+			"id":"de90cc622ffca84a",
+			"type":"file",
+			"file":"Engenharia de Software Moderna/Capítulo 1 - Introdução.md",
+			"styleAttributes":{},
+			"x":-9035,
+			"y":-2657,
+			"width":400,
+			"height":400
+		},
+		{
+			"id":"6588a7d0a1456b92",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
+			"styleAttributes":{},
+			"x":-9250,
+			"y":-2955,
+			"width":623,
+			"height":996
+		},
+		{
+			"id":"525c490a5717694e",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/SpringBoot Icon.png",
+			"styleAttributes":{},
+			"x":2400,
+			"y":594,
+			"width":280,
+			"height":280
+		},
+		{
+			"id":"c5e0f3b8888bc1ed",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Spring Icon.png",
+			"styleAttributes":{},
+			"x":1890,
+			"y":612,
+			"width":262,
+			"height":262
+		},
+		{
+			"id":"2280c6d2c7c640fe",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 9 - Database Design.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-690,
+			"width":266,
+			"height":219
+		},
+		{
+			"id":"3106eabb0810de86",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 3 - SQLite.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-2634,
+			"width":266,
+			"height":219,
+			"color":"4"
+		},
+		{
+			"id":"93bf4a097a16d89d",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 4 - Select.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-2310,
+			"width":266,
+			"height":219,
+			"color":"4"
+		},
+		{
+			"id":"02002d11fd49e380",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 5 - Where.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-1986,
+			"width":266,
+			"height":219,
+			"color":"4"
+		},
+		{
+			"id":"6e2a0c973ae0d4b7",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 10 - Managing Data.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-366,
+			"width":266,
+			"height":219
+		},
+		{
+			"id":"e3b05d45e802e326",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 11 - Going Forward.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-41,
+			"width":266,
+			"height":219
+		},
+		{
+			"id":"fcba07270c5a20c6",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 6 - GROUP BY and ORDER BY.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-1662,
+			"width":266,
+			"height":219,
+			"color":"1"
+		},
+		{
+			"id":"68cbfb3dc71aaa9d",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 7 - CASE Statements.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-1338,
+			"width":266,
+			"height":219
+		},
+		{
+			"id":"ea1c45dcc9c0b891",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Java Para Iniciantes Book.png",
+			"styleAttributes":{},
+			"x":1895,
+			"y":-10648,
+			"width":796,
+			"height":1151
+		},
+		{
+			"id":"36be36802905817b",
+			"type":"text",
+			"text":"# Curiosidades Java",
+			"styleAttributes":{"textAlign":"center"},
+			"x":4560,
+			"y":-8523,
+			"width":215,
+			"height":102
+		},
+		{
+			"id":"a3066809d86ee1b4",
+			"type":"file",
+			"file":"Getting Started with SQL/Chapter 8 - JOIN.md",
+			"styleAttributes":{},
+			"x":-11600,
+			"y":-1014,
+			"width":266,
+			"height":219
+		},
+		{
+			"id":"48eeaeb6594f4d17",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 7 - Heranças.md",
+			"styleAttributes":{},
+			"x":-2217,
+			"y":-11005,
+			"width":274,
+			"height":218,
+			"color":"4"
+		},
+		{
+			"id":"40604f3ea361fbac",
+			"type":"text",
+			"text":"# 3° Semestre: **Modelagem de Dados**",
+			"styleAttributes":{},
+			"x":-13248,
+			"y":-2881,
+			"width":540,
+			"height":102
+		},
+		{
+			"id":"6b426409874df3b4",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/SQL Book.png",
+			"styleAttributes":{},
+			"x":-13510,
+			"y":-2467,
+			"width":1065,
+			"height":1401
+		},
+		{
+			"id":"7e78edfcba17e71c",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Data Icon.png",
+			"styleAttributes":{},
+			"x":-13330,
+			"y":211,
+			"width":705,
+			"height":705
+		},
+		{
+			"id":"ec1701dc4e5a6548",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Entendendo Algoritmos.png",
+			"styleAttributes":{},
+			"x":-13492,
+			"y":-11280,
+			"width":1028,
+			"height":1433
+		},
+		{
+			"id":"7ad9b858444d00d8",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
+			"styleAttributes":{},
+			"x":-2217,
+			"y":-11332,
+			"width":274,
+			"height":218,
+			"color":"4"
+		},
+		{
+			"id":"5b6623f6f24f8853",
+			"type":"link",
+			"url":"https://www.baeldung.com/java-logging-intro",
+			"styleAttributes":{},
+			"x":-14720,
+			"y":414,
+			"width":315,
+			"height":334
+		},
+		{
+			"id":"e788ec8f8c0c18af",
+			"type":"file",
+			"file":"Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/Capítulo 3 - Algoritmos de Busca.md",
+			"styleAttributes":{},
+			"x":-14600,
+			"y":-12360,
+			"width":400,
+			"height":400,
+			"color":"4"
+		},
+		{
+			"id":"82d6ae5e769c36f5",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Fundamentos Matemáticos.png",
+			"styleAttributes":{},
+			"x":-16552,
+			"y":-11280,
+			"width":1069,
+			"height":1407
+		},
+		{
+			"id":"1512e0da4c486713",
+			"type":"file",
+			"file":"Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/LinearSearch.java",
+			"styleAttributes":{},
+			"x":-15760,
+			"y":-12560,
+			"width":400,
+			"height":400,
+			"color":"#ffffff"
+		},
+		{
+			"id":"c2af59b84a65e13a",
+			"type":"file",
+			"file":"Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/SearchContainsString.java",
+			"styleAttributes":{},
+			"x":-15760,
+			"y":-12040,
+			"width":400,
+			"height":400,
+			"color":"#ffffff"
+		},
+		{
+			"id":"d8218e1451a358e2",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
+			"styleAttributes":{},
+			"x":-2217,
+			"y":-11659,
+			"width":274,
+			"height":218,
+			"color":"4"
+		},
+		{
+			"id":"a2595995daec73e6",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
+			"styleAttributes":{},
+			"x":-3160,
+			"y":-11768,
+			"width":260,
+			"height":210,
+			"color":"#ffffff"
+		},
+		{
+			"id":"f35686000e0cddf7",
+			"type":"file",
+			"file":"Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
+			"styleAttributes":{},
+			"x":-2217,
+			"y":-11986,
+			"width":274,
+			"height":218,
+			"color":"4"
+		},
+		{
+			"id":"892aa1e68ed8ecfe",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Lógica e Estrutura.png",
+			"styleAttributes":{},
+			"x":-8606,
+			"y":-12898,
+			"width":878,
+			"height":1242
+		},
+		{
+			"id":"89987e5c06a7dec9",
+			"type":"file",
+			"file":"Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
+			"styleAttributes":{},
+			"x":-14600,
+			"y":-12920,
+			"width":400,
+			"height":400,
+			"color":"4"
+		},
+		{
+			"id":"46c6c551cec4eb41",
+			"type":"file",
+			"file":"Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo.md",
+			"styleAttributes":{},
+			"x":-14600,
+			"y":-13400,
+			"width":400,
+			"height":400,
+			"color":"4"
+		},
+		{
+			"id":"36d662b6046d03f4",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
+			"styleAttributes":{},
+			"x":-16929,
+			"y":-14151,
+			"width":911,
+			"height":1243
+		},
+		{
+			"id":"385990dd1ac65068",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Cientista da Computação Book.png",
+			"styleAttributes":{"border":"dotted"},
+			"x":-13458,
+			"y":-14151,
+			"width":959,
+			"height":1243,
+			"color":"1"
+		},
+		{
+			"id":"18b464d4f586b6d5",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Think Java.png",
+			"styleAttributes":{},
+			"x":-8606,
+			"y":-15120,
+			"width":880,
+			"height":1155
+		},
+		{
+			"id":"43a6e2ac03044b0c",
+			"type":"link",
+			"url":"https://www.youtube.com/watch?si=pJMU61kc69v1twHg&v=Qmt0QwzEmh0&feature=youtu.be",
+			"styleAttributes":{},
+			"x":-18560,
+			"y":-18240,
+			"width":2983,
+			"height":2366
+		},
+		{
+			"id":"da5f8260f20d0c57",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Desmistificando.png",
+			"styleAttributes":{},
+			"x":-11200,
+			"y":-17819,
+			"width":1060,
+			"height":1523
+		},
+		{
+			"id":"9debe4abf3e87081",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Algoritmos.png",
+			"styleAttributes":{},
+			"x":-13549,
+			"y":-17816,
+			"width":1141,
+			"height":1520
+		},
+		{
+			"id":"3c8a097bd1cf703b",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Java Persistence Icon.png",
+			"styleAttributes":{
+				"border":null
+			},
+			"x":-13411,
+			"y":2859,
+			"width":866,
+			"height":1090
+		},
+		{
+			"id":"fb611372981b73bb",
+			"type":"link",
+			"url":"https://www.devmedia.com.br/orm-object-relational-mapper/19056",
+			"styleAttributes":{},
+			"x":-4119,
+			"y":3941,
+			"width":428,
+			"height":492
+		},
+		{
+			"id":"07a4556d22e271d6",
+			"type":"file",
+			"file":"Java Persistence with Spring Data e Hibernate/Capítulo 1 - Entendendo o object-relational persistence.md",
+			"styleAttributes":{},
+			"x":-6139,
+			"y":4210,
+			"width":723,
+			"height":824,
+			"color":"4"
+		},
+		{
+			"id":"338ca1dfc705367b",
+			"type":"link",
+			"url":"https://www.altexsoft.com/blog/object-relational-mapping/",
+			"styleAttributes":{},
+			"x":-4124,
+			"y":4813,
+			"width":437,
+			"height":442
+		},
+		{
+			"id":"73f1ee48b47f50e6",
+			"type":"link",
+			"url":"https://ieeexplore.ieee.org/document/9481049",
+			"styleAttributes":{},
+			"x":-4248,
+			"y":5690,
+			"width":685,
+			"height":678,
+			"color":"6"
+		},
+		{
+			"id":"68699022818f36df",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Desenvolvimento Real de Software.png",
+			"styleAttributes":{},
+			"x":4001,
+			"y":-13863,
+			"width":1035,
+			"height":1342
+		},
+		{
+			"id":"46c4f896a99bb160",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Java Code Problems.png",
+			"styleAttributes":{},
+			"x":4000,
+			"y":-15751,
+			"width":1040,
+			"height":1351
+		},
+		{
+			"id":"e7c0df36c6290493",
+			"type":"file",
+			"file":"Pasted image 20250101232753.png",
+			"styleAttributes":{},
+			"x":-23520,
+			"y":-8215,
+			"width":1427,
+			"height":1873
+		},
+		{
+			"id":"73a1ac41de3700a7",
+			"type":"link",
+			"url":"https://www.youtube.com/watch?v=iTrMnkQimKw&list=PL1lueKDtZ3DeXSaGwucTDD7iH1AcjTJAe",
+			"styleAttributes":{},
+			"x":5476,
+			"y":-10365,
+			"width":1362,
+			"height":880
+		},
+		{
+			"id":"3274e48f71bf4167",
+			"type":"link",
+			"url":"https://www.youtube.com/watch?v=Y26srCFC6BQ",
+			"styleAttributes":{},
+			"x":5476,
+			"y":-9254,
+			"width":1362,
+			"height":849
+		},
+		{
+			"id":"9b02da3dd9318f2f",
+			"type":"link",
+			"url":"https://www.youtube.com/watch?v=utANrHfAh28",
+			"styleAttributes":{},
+			"x":5476,
+			"y":-8174,
+			"width":1362,
+			"height":1089
+		},
+		{
+			"id":"a505a7e8df6e0b21",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Pasted image 20241228175230.png",
+			"styleAttributes":{},
+			"x":8266,
+			"y":-3673,
+			"width":855,
+			"height":480
+		},
+		{
+			"id":"01af3d4df987f7ce",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Quarkus Icon.png",
+			"styleAttributes":{},
+			"x":8266,
+			"y":-6652,
+			"width":463,
+			"height":463
+		},
+		{
+			"id":"09195bf816903377",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/PlayFramework Icon.png",
+			"styleAttributes":{},
+			"x":8266,
+			"y":-5853,
+			"width":854,
+			"height":447
+		},
+		{
+			"id":"690845c59a92c570",
+			"type":"link",
+			"url":"https://quarkus.io/",
+			"styleAttributes":{},
+			"x":9361,
+			"y":-6596,
+			"width":329,
+			"height":351
+		},
+		{
+			"id":"5e45f1f1f873f902",
+			"type":"link",
+			"url":"https://www.playframework.com/",
+			"styleAttributes":{},
+			"x":9361,
+			"y":-5850,
+			"width":323,
+			"height":442
+		},
+		{
+			"id":"c5e1c8ff56cae39b",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/JMeter 3 Book.png",
+			"styleAttributes":{},
+			"x":6880,
+			"y":164,
+			"width":869,
+			"height":1076
+		},
+		{
+			"id":"477e31911125fada",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/JUnit Book.png",
+			"styleAttributes":{},
+			"x":6905,
+			"y":2238,
+			"width":821,
+			"height":1028
+		},
+		{
+			"id":"4042faad3634a1c3",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/TDD Book.png",
+			"styleAttributes":{},
+			"x":8960,
+			"y":967,
+			"width":979,
+			"height":1388
+		},
+		{
+			"id":"4c6a7273c23bd912",
+			"type":"link",
+			"url":"https://vitorhpribeiro.medium.com/test-driven-develop-tdd-todos-deveriam-saber-d06a3244b187",
+			"styleAttributes":{},
+			"x":9172,
+			"y":2869,
+			"width":556,
+			"height":795
+		},
+		{
+			"id":"25558a7543ed6c7a",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/GitHub in Action.png",
+			"styleAttributes":{},
+			"x":10536,
+			"y":-3945,
+			"width":817,
+			"height":1024
+		},
+		{
+			"id":"04e361316fd5c484",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 1 - Introduction to GitHub Actions.md",
+			"styleAttributes":{},
+			"x":11406,
+			"y":-4444,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"8981b4d411b5d42c",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/TDD Icon.png",
+			"styleAttributes":{},
+			"x":1520,
+			"y":5311,
+			"width":1544,
+			"height":1025
+		},
+		{
+			"id":"bc911837906ac1f7",
+			"type":"link",
+			"url":"https://www.guru99.com/software-testing-introduction-importance.html",
+			"styleAttributes":{},
+			"x":9159,
+			"y":5396,
+			"width":581,
+			"height":857
+		},
+		{
+			"id":"694147cc759faf50",
+			"type":"link",
+			"url":"https://www.browserstack.com/guide/testing-pyramid-for-test-automation",
+			"styleAttributes":{},
+			"x":10843,
+			"y":5452,
+			"width":724,
+			"height":746
+		},
+		{
+			"id":"d4709d6b9b254c09",
+			"type":"file",
+			"file":"Spring in Action/Capítulo 3 - Working with data.md",
+			"styleAttributes":{},
+			"x":-8975,
+			"y":441,
+			"width":311,
+			"height":246,
+			"color":"1"
+		},
+		{
+			"id":"db3f48da5d3afc96",
+			"type":"file",
+			"file":"Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
+			"styleAttributes":{},
+			"x":-6139,
+			"y":6271,
+			"width":614,
+			"height":769,
+			"color":"4"
+		},
+		{
+			"id":"2296532c7a97dbbb",
+			"type":"text",
+			"text":" **Lentidão do SpringData JPA**\n O Spring Data JPA pode ser mais lento em compração com JPA puro ou Hibernate Nativo devido a alguns fatores, como:\n 1. **Camada Adicional de Abstração** - O Spring Data JPA é construído sobre o JPA e o Hibernate, adicionando funcionalidades que simplificam o desenvolvimento, como repositórios automáticos, métodos personalizados e gerenciamento de transações. Essa abstração introduz sobrecarga em termos de processamento, pois o framework precisa interpretar e processas instruções adicionais antes de delegar as operações ao Hibernate;\n 2. **Geração Dinâmica de Consultas** - O Spring Data gera dinamicamente consultadas baseadas nos métodos dos repositórios (por exemoplo, #findById ou #Save), o que pode consumir mais tempo em comparação com consultas diretamente escritas no JPA ou no Hibernate nativo. Essa geração automática de queries exige análise e processamento extra durante a execução.\n 3. **Gerenciamento Automático de Transações** - O Spring Data configura e gerencia automaticamente. Embora isso torne o desenvolvimento mais simples, pode aumentar os tempos de execução, especialmente em cenários com muitas operações simultâneas.\n 4. **Repositórios com Operações Genéricas** - Repositórios no Spring Data fornecem suporte genérico para várias operações CRUD. Esse comportamento genérico, embora prático, pode ser menos eficiente do que implementações personalizadas diretamente no Hibernate ou JPA.\n 5. **Dependência de Proxies e Reflection** - O Spring Data JPA utiliza proxies dinâmicos e reflection para implementar seus recursos, como a injeção de dependências e a criação de beans. \n  \n**Cenários Ideal para uso do Spring Data JPA** \nApesar de ser mais lento, projetos que priorizam facilidade de desenvolvimento e manutenção, especialmente onde o desempenho absoluto não é um requisito crítico, pode ser uma boa alternativa.\nSe o desempenho for um fator-chave, é possível combinar o uso do Spring Data JPA com consultas personalizadas e otimizações manuais para reduzir a sobrecarga.",
+			"styleAttributes":{},
+			"x":-4248,
+			"y":6677,
+			"width":685,
+			"height":793,
+			"color":"6"
+		},
+		{
+			"id":"c7a83b04f4941094",
+			"type":"link",
+			"url":"https://app.daily.dev/tags/java?ref=roadmapsh",
+			"styleAttributes":{},
+			"x":-4026,
+			"y":8070,
+			"width":241,
+			"height":266
+		},
+		{
+			"id":"95401fe4a9c1abe1",
+			"type":"file",
+			"file":"Java Persistence with Spring Data e Hibernate/Capítulo 15 - Working with Spring Data JDBC.md",
+			"styleAttributes":{},
+			"x":-6139,
+			"y":8115,
+			"width":614,
+			"height":966
+		},
+		{
+			"id":"47f0d559d9475031",
+			"type":"link",
+			"url":"https://www.baeldung.com/jdbi",
+			"styleAttributes":{},
+			"x":-4030,
+			"y":8470,
+			"width":250,
+			"height":303
+		},
+		{
+			"id":"294af57c0b48dda8",
+			"type":"link",
+			"url":"https://www.ibm.com/docs/en/informix-servers/12.10?topic=started-what-is-jdbc",
+			"styleAttributes":{},
+			"x":-4030,
+			"y":8854,
+			"width":249,
+			"height":241
+		},
+		{
+			"id":"c69287bebb666e3c",
+			"type":"link",
+			"url":"https://www.baeldung.com/spring-jdbc-jdbctemplate",
+			"styleAttributes":{},
+			"x":-4030,
+			"y":9267,
+			"width":249,
+			"height":321
+		},
+		{
+			"id":"d8ad2ad380c0e8a6",
+			"type":"link",
+			"url":"https://jdbi.org/",
+			"styleAttributes":{},
+			"x":-4034,
+			"y":9707,
+			"width":257,
+			"height":363
+		},
+		{
+			"id":"be4aa4674f848f33",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Spring in Action Book.png",
+			"styleAttributes":{},
+			"x":-7418,
+			"y":-276,
+			"width":1626,
+			"height":2039
+		},
+		{
+			"id":"4850de9048b2e607",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 2 - Hands-on My First Actions Workflow.md",
+			"styleAttributes":{},
+			"x":11871,
+			"y":-4444,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"58b975886faa43bf",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
+			"styleAttributes":{},
+			"x":12336,
+			"y":-4444,
+			"width":365,
+			"height":448
+		},
+		{
+			"id":"02383c611ce857f1",
+			"type":"file",
+			"file":"RoadMap do DavJaveiro/Covers/Mock Book.png",
+			"styleAttributes":{},
+			"x":12188,
+			"y":1081,
+			"width":978,
+			"height":1158
+		},
+		{
+			"id":"5a3c2410923111df",
+			"type":"file",
+			"file":"Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
+			"styleAttributes":{},
+			"x":12801,
+			"y":-4444,
+			"width":365,
+			"height":448
+		}
+	],
+	"edges":[
+		{
+			"id":"6e543b6f785b8653",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"3c8a097bd1cf703b",
+			"fromSide":"right",
+			"toNode":"07a4556d22e271d6",
+			"toSide":"left",
+			"color":"4"
+		},
+		{
+			"id":"7f5424f78b6e8e59",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"3c8a097bd1cf703b",
+			"fromSide":"right",
+			"toNode":"db3f48da5d3afc96",
+			"toSide":"left",
+			"color":"4"
+		},
+		{
+			"id":"ac1e91155b62d7ae",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"ea441d0b5874f62f",
+			"toSide":"left",
+			"color":"4"
+		},
+		{
+			"id":"52a20c360f1dc2f2",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"073fe3b7f695f592",
+			"toSide":"left",
+			"color":"4"
+		},
+		{
+			"id":"b1b3d54a54cfaf60",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"3106eabb0810de86",
+			"toSide":"left",
+			"color":"4"
+		},
+		{
+			"id":"e068be7ee55dbf61",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"93bf4a097a16d89d",
+			"toSide":"left",
+			"color":"4"
+		},
+		{
+			"id":"bd414ac072b7de55",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"02002d11fd49e380",
+			"toSide":"left",
+			"color":"4"
+		},
+		{
+			"id":"b0756d73123456a0",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"fcba07270c5a20c6",
+			"toSide":"left",
+			"color":"1"
+		},
+		{
+			"id":"1d9645a3229b6935",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"68cbfb3dc71aaa9d",
+			"toSide":"left"
+		},
+		{
+			"id":"5bb6be835b3ff98e",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"a3066809d86ee1b4",
+			"toSide":"left"
+		},
+		{
+			"id":"c9dbcdeb6d6fe80c",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"2280c6d2c7c640fe",
+			"toSide":"left"
+		},
+		{
+			"id":"30a1af7312be208e",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"6e2a0c973ae0d4b7",
+			"toSide":"left"
+		},
+		{
+			"id":"114ba4bc1c5d655a",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"right",
+			"toNode":"e3b05d45e802e326",
+			"toSide":"left"
+		},
+		{
+			"id":"210c0ec1b7440e3f",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"f5627e789defe17d",
+			"fromSide":"top",
+			"toNode":"ea1c45dcc9c0b891",
+			"toSide":"bottom",
+			"color":"1"
+		},
+		{
+			"id":"58cc1eb64f7e83fc",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"03bb7707f5c1f1cc",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"215ceed3cf6394ac",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"a7f6f90e285ce4b2",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"c992292c88ff62e9",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"0b6dc78bdd212b7d",
+			"toSide":"right"
+		},
+		{
+			"id":"4fae61180d223fcc",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"51e79e37835a9bbc",
+			"toSide":"right"
+		},
+		{
+			"id":"9af4d1c237594a7b",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"ae98440bae032737",
+			"toSide":"right",
+			"color":"1"
+		},
+		{
+			"id":"d24832a666169169",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"2a3e4399b2c8ac4a",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"0eecb902e50b7921",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"f35686000e0cddf7",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"cb014570e53e9561",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"d8218e1451a358e2",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"48d858e13d517689",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"48eeaeb6594f4d17",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"adfe94408af6861c",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"left",
+			"toNode":"69e567e4932269a3",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"873330929803ca06",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"right",
+			"toNode":"68699022818f36df",
+			"toSide":"bottom"
+		},
+		{"id":"95770b6aaeb7dc7d","fromNode":"68699022818f36df","fromSide":"top","toNode":"46c4f896a99bb160","toSide":"bottom"},
+		{
+			"id":"4de41234d9df86d4",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"4042faad3634a1c3",
+			"fromSide":"left",
+			"toNode":"477e31911125fada",
+			"toSide":"right"
+		},
+		{"id":"9e865d7ee1eaa2da","fromNode":"4c6a7273c23bd912","fromSide":"top","toNode":"4042faad3634a1c3","toSide":"bottom"},
+		{
+			"id":"86a3aefba17f9592",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"f5627e789defe17d",
+			"fromSide":"right",
+			"toNode":"01af3d4df987f7ce",
+			"toSide":"left"
+		},
+		{
+			"id":"d272a7118de3f6c3",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"f5627e789defe17d",
+			"fromSide":"right",
+			"toNode":"09195bf816903377",
+			"toSide":"left"
+		},
+		{"id":"967a6dd734563cbd","fromNode":"09195bf816903377","fromSide":"right","toNode":"5e45f1f1f873f902","toSide":"left"},
+		{
+			"id":"9faee0cf519b32a6",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"07a4556d22e271d6",
+			"fromSide":"right",
+			"toNode":"338ca1dfc705367b",
+			"toSide":"left",
+			"color":"3"
+		},
+		{
+			"id":"dee8c9efce5353bd",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"95401fe4a9c1abe1",
+			"fromSide":"right",
+			"toNode":"294af57c0b48dda8",
+			"toSide":"left"
+		},
+		{
+			"id":"0def447cd2f4afde",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"3c8a097bd1cf703b",
+			"fromSide":"right",
+			"toNode":"95401fe4a9c1abe1",
+			"toSide":"left"
+		},
+		{
+			"id":"9b82ca07928cc59f",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"95401fe4a9c1abe1",
+			"fromSide":"right",
+			"toNode":"c7a83b04f4941094",
+			"toSide":"left"
+		},
+		{
+			"id":"2c7b856120bf20ef",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"95401fe4a9c1abe1",
+			"fromSide":"right",
+			"toNode":"c69287bebb666e3c",
+			"toSide":"left"
+		},
+		{
+			"id":"b9fa8860e0a29ac3",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"95401fe4a9c1abe1",
+			"fromSide":"right",
+			"toNode":"47f0d559d9475031",
+			"toSide":"left"
+		},
+		{
+			"id":"ca09c69f28efdcec",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"07a4556d22e271d6",
+			"fromSide":"right",
+			"toNode":"fb611372981b73bb",
+			"toSide":"left",
+			"color":"3"
+		},
+		{
+			"id":"96a196b0c85b314c",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"a7f6f90e285ce4b2",
+			"fromSide":"left",
+			"toNode":"a4ccf6139a71624b",
+			"toSide":"right",
+			"color":"3"
+		},
+		{
+			"id":"4d7dd19f78580b3a",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"8981b4d411b5d42c",
+			"fromSide":"right",
+			"toNode":"bc911837906ac1f7",
+			"toSide":"left"
+		},
+		{"id":"8817ba34e8493aaf","fromNode":"bc911837906ac1f7","fromSide":"top","toNode":"4c6a7273c23bd912","toSide":"bottom"},
+		{"id":"37ab70e934bbe625","fromNode":"4042faad3634a1c3","fromSide":"right","toNode":"02383c611ce857f1","toSide":"left"},
+		{
+			"id":"03e1ddde8b9de0e0",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"4042faad3634a1c3",
+			"fromSide":"left",
+			"toNode":"c5e1c8ff56cae39b",
+			"toSide":"right"
+		},
+		{
+			"id":"694f4fc28c627eb7",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"01af3d4df987f7ce",
+			"fromSide":"right",
+			"toNode":"690845c59a92c570",
+			"toSide":"left"
+		},
+		{
+			"id":"f5bef03d58f0b485",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"db3f48da5d3afc96",
+			"fromSide":"right",
+			"toNode":"73f1ee48b47f50e6",
+			"toSide":"left",
+			"color":"4"
+		},
+		{
+			"id":"1b27a86967d1abd6",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"36be36802905817b",
+			"fromSide":"right",
+			"toNode":"3274e48f71bf4167",
+			"toSide":"left"
+		},
+		{
+			"id":"da10534879eb5596",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"36be36802905817b",
+			"fromSide":"right",
+			"toNode":"9b02da3dd9318f2f",
+			"toSide":"left"
+		},
+		{
+			"id":"811222e1c3dbbe51",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"e6896536d3e83f67",
+			"fromSide":"bottom",
+			"toNode":"6588a7d0a1456b92",
+			"toSide":"top",
+			"color":"1"
+		},
+		{
+			"id":"ca8ff4afab2c51b7",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"e6896536d3e83f67",
+			"fromSide":"bottom",
+			"toNode":"be7df8e39c9fd111",
+			"toSide":"top"
+		},
+		{
+			"id":"dee8c79366c36c05",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"9200994cba03cc4e",
+			"fromSide":"right",
+			"toNode":"52fb6750a549dbdf",
+			"toSide":"left",
+			"color":"1"
+		},
+		{
+			"id":"238103b0d278f51d",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"52fb6750a549dbdf",
+			"fromSide":"right",
+			"toNode":"e6896536d3e83f67",
+			"toSide":"left",
+			"color":"1"
+		},
+		{
+			"id":"18c8f26796fddbc8",
+			"styleAttributes":{"arrow":"thin-triangle","pathfindingMethod":"square"},
+			"fromNode":"9200994cba03cc4e",
+			"fromSide":"bottom",
+			"toNode":"40604f3ea361fbac",
+			"toSide":"top",
+			"color":"3"
+		},
+		{
+			"id":"a5736ab8c3dfca91",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"9200994cba03cc4e",
+			"fromSide":"right",
+			"toNode":"2e1aecf8f9c46069",
+			"toSide":"left"
+		},
+		{
+			"id":"a1dfae61d50e8577",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"2e1aecf8f9c46069",
+			"fromSide":"top",
+			"toNode":"f35686000e0cddf7",
+			"toSide":"left",
+			"color":"3"
+		},
+		{
+			"id":"02fee3129e8771e2",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"f5627e789defe17d",
+			"fromSide":"right",
+			"toNode":"a505a7e8df6e0b21",
+			"toSide":"left"
+		},
+		{"id":"bc1c205629c317ea","fromNode":"bc911837906ac1f7","fromSide":"right","toNode":"694147cc759faf50","toSide":"left"},
+		{
+			"id":"c19fcc31c0e3cecf",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"f5627e789defe17d",
+			"fromSide":"bottom",
+			"toNode":"126f953bf8d9bbb3",
+			"toSide":"top",
+			"color":"1"
+		},
+		{
+			"id":"fafea046f062419f",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"d4709d6b9b254c09",
+			"fromSide":"left",
+			"toNode":"7e78edfcba17e71c",
+			"toSide":"right",
+			"color":"1"
+		},
+		{"id":"fcf004873b62c4e2","fromNode":"7e78edfcba17e71c","fromSide":"left","toNode":"5b6623f6f24f8853","toSide":"right"},
+		{
+			"id":"b0dc2df888efb352",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"7e78edfcba17e71c",
+			"fromSide":"bottom",
+			"toNode":"3c8a097bd1cf703b",
+			"toSide":"top",
+			"color":"1"
+		},
+		{
+			"id":"75b186c7a15c9d3a",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"95401fe4a9c1abe1",
+			"fromSide":"right",
+			"toNode":"d8ad2ad380c0e8a6",
+			"toSide":"left"
+		},
+		{
+			"id":"5fcbae98d317035f",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6588a7d0a1456b92",
+			"fromSide":"bottom",
+			"toNode":"be4aa4674f848f33",
+			"toSide":"top",
+			"color":"1"
+		},
+		{
+			"id":"0d814990ba80847a",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"be7df8e39c9fd111",
+			"fromSide":"bottom",
+			"toNode":"be4aa4674f848f33",
+			"toSide":"top"
+		},
+		{
+			"id":"002c492bab35fa64",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"126f953bf8d9bbb3",
+			"fromSide":"bottom",
+			"toNode":"8981b4d411b5d42c",
+			"toSide":"top"
+		},
+		{
+			"id":"2e25876521f9fc3e",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"9200994cba03cc4e",
+			"fromSide":"right",
+			"toNode":"f6cee17867fd0cab",
+			"toSide":"left"
+		},
+		{
+			"id":"a22494f311d86cec",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"f6cee17867fd0cab",
+			"fromSide":"top",
+			"toNode":"b8ec00a111066ee9",
+			"toSide":"left"
+		},
+		{
+			"id":"a5492f0026bb38eb",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"f6cee17867fd0cab",
+			"fromSide":"top",
+			"toNode":"eedf3f261de1f486",
+			"toSide":"left"
+		},
+		{
+			"id":"36ad498c14de8f3b",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"3c8a097bd1cf703b",
+			"fromSide":"right",
+			"toNode":"e989720d96dbaf87",
+			"toSide":"left",
+			"color":"1"
+		},
+		{
+			"id":"e6aa8b2cb745f0b1",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"db3f48da5d3afc96",
+			"fromSide":"right",
+			"toNode":"2296532c7a97dbbb",
+			"toSide":"left",
+			"color":"4"
+		},
+		{
+			"id":"5af585cb95c6317d",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"73f1ee48b47f50e6",
+			"fromSide":"bottom",
+			"toNode":"2296532c7a97dbbb",
+			"toSide":"top",
+			"color":"4"
+		},
+		{
+			"id":"39e0bb101cee1cd1",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"e6896536d3e83f67",
+			"fromSide":"bottom",
+			"toNode":"c39c78c3df1c3ace",
+			"toSide":"top",
+			"color":"1"
+		},
+		{
+			"id":"0b6913b8c235db0e",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"c39c78c3df1c3ace",
+			"fromSide":"bottom",
+			"toNode":"3e51aec221ffee62",
+			"toSide":"top",
+			"color":"4"
+		},
+		{
+			"id":"926d2422326bcb0b",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"3e51aec221ffee62",
+			"fromSide":"left",
+			"toNode":"9210d1586af270fc",
+			"toSide":"bottom"
+		},
+		{
+			"id":"49ee0cf31a558048",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"9210d1586af270fc",
+			"fromSide":"top",
+			"toNode":"66d87044445b6b5c",
+			"toSide":"bottom"
+		},
+		{
+			"id":"c7f4067c5d446c65",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"e6896536d3e83f67",
+			"fromSide":"bottom",
+			"toNode":"66d87044445b6b5c",
+			"toSide":"top"
+		},
+		{
+			"id":"327cd36a99c92849",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"top",
+			"toNode":"892aa1e68ed8ecfe",
+			"toSide":"right"
+		},
+		{"id":"62f801c7982587c8","fromNode":"36d662b6046d03f4","fromSide":"right","toNode":"385990dd1ac65068","toSide":"left"},
+		{"id":"1d7352a0e397271b","fromNode":"385990dd1ac65068","fromSide":"left","toNode":"36d662b6046d03f4","toSide":"right"},
+		{
+			"id":"ffb43dc46e89c68a",
+			"styleAttributes":{"path":"short-dashed","pathfindingMethod":"square"},
+			"fromNode":"e989720d96dbaf87",
+			"fromSide":"right",
+			"toNode":"3e51aec221ffee62",
+			"toSide":"bottom",
+			"color":"4"
+		},
+		{
+			"id":"9ccfde8413c8899e",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"be4aa4674f848f33",
+			"fromSide":"left",
+			"toNode":"ece63584c4ca91c7",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"89d2c0be18ab84b3",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"be4aa4674f848f33",
+			"fromSide":"left",
+			"toNode":"c2748d99e16462f2",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"e59ac50fa39502c9",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"40604f3ea361fbac",
+			"fromSide":"bottom",
+			"toNode":"6b426409874df3b4",
+			"toSide":"top"
+		},
+		{
+			"id":"df99b7e064d2cfca",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"6b426409874df3b4",
+			"fromSide":"bottom",
+			"toNode":"7e78edfcba17e71c",
+			"toSide":"top",
+			"color":"1"
+		},
+		{
+			"id":"6011a4e2d34e17d0",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"a505a7e8df6e0b21",
+			"fromSide":"right",
+			"toNode":"25558a7543ed6c7a",
+			"toSide":"left"
+		},
+		{
+			"id":"5058f55b3da09c3f",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"04e361316fd5c484",
+			"toSide":"bottom"
+		},
+		{
+			"id":"23b44efd752d7587",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"4850de9048b2e607",
+			"toSide":"bottom"
+		},
+		{
+			"id":"ad8187c08e250a33",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"58b975886faa43bf",
+			"toSide":"bottom"
+		},
+		{
+			"id":"05a6c0b917bb6e63",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"5a3c2410923111df",
+			"toSide":"bottom"
+		},
+		{
+			"id":"d9e090307b7e3b79",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"380c683e58fcc7bc",
+			"toSide":"bottom"
+		},
+		{
+			"id":"edcf0eb68e4a3e22",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"7c0bbb443580c3c3",
+			"toSide":"bottom"
+		},
+		{
+			"id":"5dd2024584074424",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"9f81200ac7bf87b9",
+			"toSide":"bottom"
+		},
+		{
+			"id":"603576a39ba4140e",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"f23b53bef875144c",
+			"toSide":"bottom"
+		},
+		{
+			"id":"60aaab051dd4d6bf",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"709b33ea77359ec9",
+			"toSide":"bottom"
+		},
+		{
+			"id":"44e3c2724bb8db7c",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"1bd1865a60389ec5",
+			"toSide":"bottom"
+		},
+		{
+			"id":"95d1b5a3d4d611c8",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"d5e664a160b21124",
+			"toSide":"bottom"
+		},
+		{
+			"id":"6e89bd73f836e532",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"25558a7543ed6c7a",
+			"fromSide":"right",
+			"toNode":"412b142d6e43f3f7",
+			"toSide":"bottom"
+		},
+		{
+			"id":"4b94df13ddbb1e08",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"f6cee17867fd0cab",
+			"fromSide":"bottom",
+			"toNode":"e6896536d3e83f67",
+			"toSide":"top"
+		},
+		{
+			"id":"caaa6256c05bb813",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"f5627e789defe17d",
+			"fromSide":"right",
+			"toNode":"36be36802905817b",
+			"toSide":"bottom"
+		},
+		{
+			"id":"0e52a49ce14bdd5e",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"36be36802905817b",
+			"fromSide":"top",
+			"toNode":"73a1ac41de3700a7",
+			"toSide":"left"
+		},
+		{
+			"id":"b8cf066cd2f5190c",
+			"styleAttributes":{},
+			"fromNode":"6588a7d0a1456b92",
+			"fromSide":"left",
+			"toNode":"de90cc622ffca84a",
+			"toSide":"right"
+		},
+		{
+			"id":"1b7f9f9ce2da7631",
+			"styleAttributes":{"path":"long-dashed","pathfindingMethod":"square"},
+			"fromNode":"9debe4abf3e87081",
+			"fromSide":"right",
+			"toNode":"da5f8260f20d0c57",
+			"toSide":"left",
+			"color":"3"
+		},
+		{
+			"id":"4a197f2ec3718a45",
+			"styleAttributes":{"path":"short-dashed","pathfindingMethod":"square"},
+			"fromNode":"892aa1e68ed8ecfe",
+			"fromSide":"left",
+			"toNode":"385990dd1ac65068",
+			"toSide":"right",
+			"color":"3"
+		},
+		{
+			"id":"d578416457a794f2",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ea1c45dcc9c0b891",
+			"fromSide":"top",
+			"toNode":"18b464d4f586b6d5",
+			"toSide":"right"
+		},
+		{
+			"id":"5264309e48475ad2",
+			"styleAttributes":{"pathfindingMethod":"square","path":"short-dashed"},
+			"fromNode":"18b464d4f586b6d5",
+			"fromSide":"left",
+			"toNode":"385990dd1ac65068",
+			"toSide":"right",
+			"color":"3"
+		},
+		{
+			"id":"e352a14bd71c5f44",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"126f953bf8d9bbb3",
+			"fromSide":"left",
+			"toNode":"be4aa4674f848f33",
+			"toSide":"right",
+			"color":"1"
+		},
+		{
+			"id":"f3927309b78b642f",
+			"styleAttributes":{"pathfindingMethod":"square","path":"short-dashed"},
+			"fromNode":"9debe4abf3e87081",
+			"fromSide":"left",
+			"toNode":"43a6e2ac03044b0c",
+			"toSide":"right",
+			"color":"3"
+		},
+		{
+			"id":"1d252d42ffc4c2ff",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"9200994cba03cc4e",
+			"fromSide":"top",
+			"toNode":"ec1701dc4e5a6548",
+			"toSide":"bottom"
+		},
+		{
+			"id":"a6be478cc9f954d6",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"ec1701dc4e5a6548",
+			"fromSide":"top",
+			"toNode":"385990dd1ac65068",
+			"toSide":"bottom"
+		},
+		{
+			"id":"73811cc252e8332e",
+			"styleAttributes":{},
+			"fromNode":"385990dd1ac65068",
+			"fromSide":"top",
+			"toNode":"9debe4abf3e87081",
+			"toSide":"bottom"
+		},
+		{
+			"id":"0881c6e4c27b09a1",
+			"styleAttributes":{
+				"arrow":null,
+				"path":"short-dashed",
+				"pathfindingMethod":"square"
+			},
+			"fromNode":"9200994cba03cc4e",
+			"fromSide":"top",
+			"toNode":"82d6ae5e769c36f5",
+			"toSide":"right"
+		},
+		{
+			"id":"a8415dfea1f421d8",
+			"styleAttributes":{"path":"short-dashed","pathfindingMethod":"square"},
+			"fromNode":"9200994cba03cc4e",
+			"fromSide":"left",
+			"toNode":"e7c0df36c6290493",
+			"toSide":"right",
+			"color":"2"
+		},
+		{
+			"id":"883094736bb439b4",
+			"styleAttributes":{"path":"short-dashed"},
+			"fromNode":"d8218e1451a358e2",
+			"fromSide":"left",
+			"toNode":"a2595995daec73e6",
+			"toSide":"right",
+			"color":"#ffffff",
+			"label":"Código Classificação por Bolha"
+		},
+		{
+			"id":"a907bd29a0f6e61e",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"385990dd1ac65068",
+			"fromSide":"left",
+			"toNode":"89987e5c06a7dec9",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"4e25b3b97d487072",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"385990dd1ac65068",
+			"fromSide":"left",
+			"toNode":"46c6c551cec4eb41",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"3f7438ffddae679c",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"385990dd1ac65068",
+			"fromSide":"left",
+			"toNode":"e788ec8f8c0c18af",
+			"toSide":"right",
+			"color":"4"
+		},
+		{
+			"id":"9a168ee16cb80e03",
+			"styleAttributes":{"path":"short-dashed"},
+			"fromNode":"e788ec8f8c0c18af",
+			"fromSide":"left",
+			"toNode":"1512e0da4c486713",
+			"toSide":"right",
+			"color":"#ffffff",
+			"label":"Algoritmo de Busca Linear"
+		},
+		{
+			"id":"a026a3c26acf465c",
+			"styleAttributes":{"path":"short-dashed"},
+			"fromNode":"e788ec8f8c0c18af",
+			"fromSide":"left",
+			"toNode":"c2af59b84a65e13a",
+			"toSide":"right",
+			"color":"#ffffff",
+			"label":"Algoritmo de Busca Binário"
+		},
+		{
+			"id":"9dcbf638371552ab",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"fromNode":"be4aa4674f848f33",
+			"fromSide":"left",
+			"toNode":"d4709d6b9b254c09",
+			"toSide":"right",
+			"color":"1"
+		}
+	],
+	"metadata":{}
 }

@@ -179,9 +179,128 @@ class EnumDemo4 {
 Quando usamos o método #compareTo, estamos comparando o valor ordinal de duas constantes de enumerações. 
 
 ## Autoboxing
-A partir do JDK5, Java incluiu dois recursos úteis: #autoboxing e #autounboxing. Esses recursos visam simplificar e otimizar códigos que precisam converter tipos #Primitivos em #objetos e vice-versa. Já que essas situações são encontradas com frequência em código Java, os benefícios do autoboxing/unboxing, afetam quase todos os programadores Java. 
+A partir do JDK5, Java incluiu dois recursos úteis: #autoboxing e #autounboxing. Esses recursos<span style="background:#d4b106"> visam simplificar e otimizar códigos que precisam converter tipos</span> #Primitivos em #objetos e vice-versa. Já que essas situações são encontradas com frequência em código Java, os benefícios do autoboxing/unboxing, afetam quase todos os programadores Java. 
 
 Eles estão diretamente relacionados aos encapsuladores de tipos Java e à maneira como os valores são movidos para dentro e para fora da instância de um encapsulador. 
 
 ## Encapsuladores de tipos
-Java usa tipos primitivos como #int ou #double, para armazenar os tipos de dados básicos suportados pela linguagem. 
+Java usa tipos primitivos como #int ou #double, para armazenar os tipos de dados básicos suportados pela linguagem. Tipos #primitivos, em vez de #objetos, são usados para representar esses valores por questões de desempenho. O uso de objetos para esses tipos básicos adicionaria uma sobrecarga inaceitável até mesmo ao cálculo mais simples. Logo, **os tipos primitivos não fazem parte da hierarquia de objetos e não herdam** #Object.
+
+Apesar dos benefícios oferecidos ao desempenho pelos tipos primitivos, podemos precisar de uma representação na forma de objeto. **Por exemplo, não podemos passar um tipo primitivo por referência para um método.**  Não podemos alterar o valor de um número do tipo primitivo dentro do método, por exemplo. Quando passamos para um método, o método recebe uma **cópia** do valor e não o valor original. Muitas das estruturas de dados padrão implementadas por Java operam em objetos, ou seja, não podemos usar essas estruturas de dados para armazenar tipos primitivos. Para tratar deste problema, Java fornece *encapsuladores de tipos*, que são classes que encapsulam um <span style="background:#d4b106">tipo primitivo dentro de um objeto</span>. 
+
+Os #encapsuladores-de-tipos são #Double, #Float, #Long, #Integer, #Short, #Byte, #Character e #Boolean, que ficam no pacote java.lang. Essas classes oferecerem um amplo conjunto de métodos que nos permite integrar totalmente os tipos primitivos à hierarquia de objetos Java. 
+
+Os encapsuladores mais utilizados são os que representam valores numéricos. #Byte, #Short, #Integer, #Long,  #Float e #Double. Todos herdam da classe #abstract #Number. Number declara métodos que retornam o valor de um objeto em cada um dos tipos numéricos diferentes:
+
+```java
+byte byteValue()
+
+double doubleValue()
+
+float floatValue()
+
+int intValue()
+
+long longValue()
+
+short shortValue()
+```
+
+Cada um dos encapsuladores de tipos numéricos define construtores que permitem que um objeto seja construído a partir de um valor dado, ou a partir da representação desse valor na forma de string.:
+```java
+Integer(int num)
+
+Inter(String str) throws NumberFormatException
+```
+Se *str* não tiver um valor numérico válido, uma #NumberFormatException será lançada. 
+
+Todos os encapsuladores sobrepõem o método #toString.  Ele retorna a forma legível por humanos do valor contido dentro do encapsulador. Isso nos permite exibir o valor passando um objeto encapsulador de tipo para #println sem precisar convertê-lo em seu tipo primitivo.
+
+O processo de encapsular um valor dentro de um objeto chama-se #boxing. Antes do JDK5, o boxing era feito manualmente, com o programador construindo de maneira explícita a instância de um encapsulador com o valor desejado. Por exemplo, a linha seguinte encapsula manualmente um valor 100 em um #Integer:
+```java
+Integer iOb = new Integer(100);
+```
+Neste exemplo, um novo objeto Integer, com valor 100, é criado #explicitamente e uma #referência (a #referência é o endereço dessa posição de memória, ou seja, um ponteiro para onde o objeto está armazenado na memória, geralmente #heap) a ele é atribuída a iOb.
+
+O processo de extrair o valor de um encapsulador de tipo se chama #unboxing. Novamente, antes de JDK5, o #unboxing também era feito de forma manual, como programador chamando de maneira explícita um método no encapsulador para obter o seu valor. Por exemplo:
+```java
+int i = iOb.intValue();
+```
+Aqui, #intValue retorna o valor encapsulado dentro de iOb como um #int, ou seja, como um tipo primitivo. 
+
+Programa mostrando os conceitos:
+[[Wrap.java | Código Encapsulador Manual]]
+
+O código acima possuí um recurso que foi #depreciado, depreciação é um aviso para evitar o uso de recursos que podem:
+- Ter comportamento imprevisível ou pouco eficiente;
+- Ser removido ou já ter sido removido em versões futuras, o que pode quebrar o código.
+Logo, new Integer(int) não deve mais ser usado porque foi marcado como obsoleto.
+
+O procedimento geral utilizado pelo exemplo anterior no boxing e unboxing manual de valores era requerido por versões de códigos Java anteriores a JDK 5 e ainda pode ser encontrado em código #legado. Felizmente, o autoboxing/unboxing melhora muito esses procedimentos essenciais. 
+
+## Fundamentos do autoboxing
+Autoboxing é o processo pelo qual um tipo primitivo é encapsulado (embalado) automaticamente no encapsulador de tipo equivalente sempre que um objeto desse tipo é necessário. Não há necessidade de construir explicitamente um objeto. O autounboxing é o processo pelo qual o valor de um objeto embalado é extraído (desembalado) automaticamente de um encapsulador de tipo quando seu valor é necessário. Não há necessidade de chamar um método como #intValue ou #doubleValue.
+
+Maneira moderna de construir um objeto #Integer com o valor 100:
+```java
+Integer iOb = 100; // faz o autobox de um int
+```
+Observamos que o objeto não é criado explicitamente com o uso de #new. Java trata isso automaticamente. 
+
+Para fazer o #unbox, apenas atribuímos a referência desse objeto a uma variável de tipo primitivo. Por exemplo, para fazer o unbox de iOb, podemos usar a seguinte linha:
+```java
+int i = iOb;
+```
+
+Exemplo de código que implementa as instruções:
+```run-java
+class AutoBox{
+	public static void main(String args[]) {
+		Integer iOb = 100;
+		int i = iOb;
+		System.out.println(i + " " + iOb); // exibe 100 100
+	}
+}
+```
+
+## Autoboxing e os métodos
+Além do simples caso de atribuições, o autoboxing ocorre automaticamente sempre que um tipo primitivo deve ser convertido em um objeto, e o autounboxing ocorre sempre que um objeto deve ser convertido em um tipo primitivo. Logo, o autoboxing/unboxing pode ocorrer quando um argumento é passado para um método ou quando um valor é retornado por um método. Por exemplo:
+[[AutoBox2.java | Código Boxing Automático]]
+No programa, m() especifica um parâmetro Integer. Dentro de main(), m() recebe o valor int 199. Já que m() está esperando um **Integer**, esse valor sofre boxing automático. Em seguida, m2() é chamado. Ele retorna o valor int 10. Esse valor int é atribuiído a iOb em main(). Como iOb é um #Integer, o valor retornado por m2() sofre autoboxing. Agora, m3() é chamado. Ele retorna um Integer que é extraído automaticamente para um int. Para concluir, Math.sqrt() é chamado com iOb como argumento. Nesse caso, iOb sofre autounboxing e seu valor é promovido a #double, já que esse é o tipo esperado por #Math-sqrt.
+
+## Autoboxing/unboxing ocorre em expressões
+Em geral, o autoboxing e o unboxing ocorrem sempre que uma conversão para um objeto ou a partir de um objeto é necessária; isso se aplica a expressões. Dentro de uma expressão, um objeto numérico sofre unboxing automático. O resultado da expressão é encapsulado novamente, se preciso. Por exemplo:
+[[AutoBoxTres.java]]
+Prestemos a atenção na seguinte linha:
+++iOb -> Ela faz o valor de iOb ser incrementado. Funciona do seguinte modo: iOb sofre #unboxing, o valor é incrementado e o resultado é encapsulado novamente, ou seja, sofre autoboxing.
+
+## Advertência
+Uma vez que temos o autoboxing e autounboxing, podemos ficar tentados a utilizar apenas objetos como Integer ou Double, abandonando totalmente os tipos primitivos. Mas não podemos utilizar em todos os casos, é menos eficiente do que o código escrito com o uso de tipos primitivos double ou int. Isso ocorre porque cada operação de autoboxing e autounboxing adiciona uma sobrecarga que não existe quando o tipo primitivo é usado. 
+
+Em geral, devemos restringir o uso de encapsuladores de tipos apenas aos casos em que a representação de um tipo primitivo na forma de objetos seja requirida. O autoboxing/autounboxing não foi adicionado a Java como uma maneira "sorrateira" de eliminar os tipos primitivos. 
+
+## Importação estática
+Java dá suporte a um uso expandido da palava-chave #import. Se colocarmos a palavra-chave #static depois de #import, uma instrução import poderá ser usada para importar os membros estáticos de uma classe ou interface. Isso se chama importação estática. 
+Para entender a utilidade da importação estática vejamos, o programa a seguir calcula as soluções de uma equação quadrática que tem esta forma:
+```math
+ax^2+bx+c=0
+```
+O programa usa dois métodos estáticos da classe interna Java Math de cálculos matemáticos, que faz parte de java.lang. O primeiro é Math.pow() e o segundo é Math.sqrt. 
+[[Quadratic.java]]
+
+Já que #pow e #sqrt são métodos estáticos, devem ser chamados com o uso do nome de sua classe, Math, o que por si, resulta em uma expressão um pouco confusa. Além disso, pode ser tedioso ter de especificar o nome da classe sempre que pow() ou outros métodos matemáticos forem necessários.
+
+Podemos eliminar o incômodo de especificar o nome da classe usando a importação estática:
+[[Quadratic2.java]]
+Nesta versão do código, os nomes sqrt e pow ganham visibilidade por intermédio das isntruções de importação estática:
+```java
+import static java.lang.Math.sqrt;
+import static java.lang.Math.pow;
+```
+
+A importação estática pode ser conveniente, mas é importante não utilizá-la de maneira abusiva. 
+
+---
+**Pergunte ao especialista**
+**Usando a importação estática, posso importar os membros estáticos das classes que eu criar?**
+Sim, podemos. Isso será particularmente conveniente quando definir vários membros estáticos usados com frequência em todo programa grande. 

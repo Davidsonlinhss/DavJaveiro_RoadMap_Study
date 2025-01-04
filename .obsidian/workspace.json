@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bb8f9cb50f62bc6e",
+        "id": "dd3d97f3bd34b7c0",
         "type": "tabs",
         "children": [
           {
-            "id": "d699c79c1e89acc6",
+            "id": "47a4ba6154948393",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Capítulo 3 - Domain Models and Metadata"
             }
           }
         ]
@@ -48,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#busca",
+                "query": "tag:#doubleValue",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -191,22 +195,25 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "d699c79c1e89acc6",
+  "active": "47a4ba6154948393",
   "lastOpenFiles": [
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Quadratic2.class",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Quadratic2.java",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Quadratic.java",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/AutoBoxTres.class",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/AutoBoxTres.java",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/AutoBox3.java",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Autobox3.java",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/AutoBox3.class",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/AutoBox2.class",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/AutoBox2.java",
+    "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "n.md",
     "Indistraível - Nir Eyal/Resumo.canvas",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Search.class",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Search.java",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/LengthDemo.class",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/LengthDemo.java",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/AssignARef.class",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/AssignARef.java",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Squares.class",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Squares.java",
     "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/Capítulo 3 - Algoritmos de Busca.md",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/LinearSearch.java",
     "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
     "Pasted image 20250101232753.png",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/imagens/Capítulo 5 - Mais tipos de dados e operadores.png",
@@ -224,7 +231,6 @@
     "RoadMap do DavJaveiro/Covers/Desmistificando.png",
     "Sem título.md",
     "Errors API.md",
-    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
     "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
     "Desenvolvimento Real de Software/Capítulo 2 - Análise de Extratos Bancários.md",
     "Banco de Dados - Projetos e Imeplementação/Capítulo 1 - O que é Projeto de Banco de Dados.md"
