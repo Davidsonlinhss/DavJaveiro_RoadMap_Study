@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "badca804fece05eb",
+        "id": "bb8f9cb50f62bc6e",
         "type": "tabs",
         "children": [
           {
-            "id": "a447603de02bbeeb",
+            "id": "d699c79c1e89acc6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Capítulo 5 - Mais tipos de dados e operadores"
+              "title": "Nova aba"
             }
           }
         ]
@@ -83,8 +79,7 @@
               "title": "RunJS Codelist"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -196,10 +191,11 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "a447603de02bbeeb",
+  "active": "d699c79c1e89acc6",
   "lastOpenFiles": [
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
+    "Indistraível - Nir Eyal/Resumo.canvas",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
+    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Search.class",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Search.java",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/LengthDemo.class",
@@ -211,7 +207,6 @@
     "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/Capítulo 3 - Algoritmos de Busca.md",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/LinearSearch.java",
-    "Indistraível - Nir Eyal/Resumo.canvas",
     "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
     "Pasted image 20250101232753.png",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/imagens/Capítulo 5 - Mais tipos de dados e operadores.png",

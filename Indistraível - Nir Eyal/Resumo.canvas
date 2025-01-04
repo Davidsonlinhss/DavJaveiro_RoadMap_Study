@@ -237,19 +237,6 @@
       "color": "4"
     },
     {
-      "id": "aae84251a1002aa7",
-      "type": "text",
-      "text": "**Parte 2** Arranje um Tempo para a Tração",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -129,
-      "y": -675,
-      "width": 520,
-      "height": 60,
-      "color": "1"
-    },
-    {
       "id": "39f55cf93f76bc28",
       "type": "text",
       "text": "## Resumo\n1. **Você só tem como identificar uma distração se souber do que você está se distraindo.** É só com o planejamento que temos como saber a diferença entre #tração e #distração.\n2. **A sua agenda reflete os seus valores?** Para ser a pessoa que você quer ser, você tem de arranjar tempo para viver de acordo com seus valores.\n3. **Use a técnica do timeboxing para programar seu dia.** Use as três áreas da sua vida (você, seus relacionamentos e seu trabalho) como uma referência para planejar seu tempo.\n4. **Pondere e ajuste.** Reveja a sua agenda de tempos em tempos, mas não deixe de fazer o que planejou fazer. ",
@@ -258,6 +245,43 @@
       "y": 177,
       "width": 860,
       "height": 820,
+      "color": "#ffffff"
+    },
+    {
+      "id": "be13f6eb4902c98e",
+      "type": "text",
+      "text": "10 - Controle o que Entra, não o que Sai",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 1265,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "aae84251a1002aa7",
+      "type": "text",
+      "text": "**Parte 2** Arranje um Tempo para a Tração",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -280,
+      "y": -360,
+      "width": 520,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "9dad74535039a2a2",
+      "type": "text",
+      "text": "## Resumo\n1. **Comece programando um tempo para si mesmo.** Você ocupa o centro das três áreas da sua vida. Se não tirar um tempo para você, as outras duas áreas sairão prejudicadas. \n2. **Siga a sua programação à risca.** Nem sempre será possível controlar os resultados do tempo passando em alguma tarefa, mas você tem como controlar quanto tempo dedica à tarefa.\n3. **O que entra é mais garantido do que o que sai.** Para ter a vida que quer, a única coisa que você pode garantir é alocar o tempo necessário para viver de acordo com os seus valores.\n",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 1110,
+      "width": 860,
+      "height": 380,
       "color": "#ffffff"
     }
   ],
@@ -466,6 +490,26 @@
       "fromNode": "aae84251a1002aa7",
       "fromSide": "right",
       "toNode": "a10004720f478294",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "743d5e5728908290",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "be13f6eb4902c98e",
+      "fromSide": "right",
+      "toNode": "9dad74535039a2a2",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "74272f3e9d46343c",
+      "styleAttributes": {},
+      "fromNode": "aae84251a1002aa7",
+      "fromSide": "right",
+      "toNode": "be13f6eb4902c98e",
       "toSide": "left",
       "color": "4"
     }
