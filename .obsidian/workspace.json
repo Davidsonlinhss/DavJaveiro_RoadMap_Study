@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+                "file": "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 12 - Enumerações, autoboxing, importação estática e anotações"
+              "title": "Capítulo 13 - Tipos Genéricos"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Entity",
+                "query": "tag:#transparente",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,8 +83,7 @@
               "title": "RunJS Codelist"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -197,8 +196,13 @@
   },
   "active": "32e1f8cf1e5df15b",
   "lastOpenFiles": [
-    "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenGemo.class",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Gen.class",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenGemo.java",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Gen.java",
     "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Indistraível - Nir Eyal/Resumo.canvas",
@@ -214,10 +218,6 @@
     "Capítulo 3 - Domain Models and Metadata-2.png",
     "Capítulo 3 - Domain Models and Metadata.png",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex01/User.java",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/domainmodel.iml",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03/validation",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence/ch03/validation",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03",
     "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
     "n.md",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
