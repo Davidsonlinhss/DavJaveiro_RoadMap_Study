@@ -297,6 +297,7 @@ Exemplo de uma declaração de consulta nomeada global:
 
 A menos que já tenhamos utilizado anotações a nível de pacote antes, a sintaxe deste arquivo, com as declarações de pacote e importações no final, é nova, realmente eu não vi ainda.
 
+As #anotações de #metadados globais podem ser lidas em tempo de exxecução, desde que sejam configuradas corretamente. Isso depende do valor do elemento associada à anotação, logo o #Retention associado á anotação determina o momento em que a anotação estará disponĩvel (em tempo de #compilação,no #Bytecode ou em #run_time )
 ### 3.3.2 Applying constraints to Java objects
 A maioria das aplicações contém uma série de verificações de integridade de dados. Quando violamos uma das restrições mais simples de integridade de dados, podemos receber uma #exception #NullPointerException, pois um valor não está disponível. Da mesma forma, pode ocorrer essa exceção. 
 

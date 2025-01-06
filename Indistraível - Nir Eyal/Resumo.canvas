@@ -307,6 +307,30 @@
       "width": 580,
       "height": 60,
       "color": "4"
+    },
+    {
+      "id": "feae86af506e26a2",
+      "type": "text",
+      "text": "## Resumo\n1. **São quatro etapas para aplicar no modelo indistraível:** 1) Dominar os gatilhos internos é a primeira etapa; arranjar tempo para a tração é o segundo passo.\n3. **É imprescindível alinhar sua agenda com as expectativas dos colegas e chefes no trabalho para conseguir um tempo para a tração:** Se não souberem como você passa o seu tempo, colegas e chefes têm mais chances de distraí-lo com tarefas desnecessárias.\n4. **Ajuste sua agenda de acordo com as circunstâncias.** Se a sua agenda mudar de um dia para a o outro, tenha uma conversa rápida com seu chefe ou colega todos os dias para alinhar e validar a sua programação a eles. Todavia, para a maioria das pessoas, basta fazer um alinhamento semanal.\n",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 1880,
+      "width": 860,
+      "height": 640,
+      "color": "#ffffff"
+    },
+    {
+      "id": "0e224e5e9c102185",
+      "type": "text",
+      "text": "12 - Alinhe a sua Agenda com os Interesses Profissionais das Pessoas no Trabalho",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 2035,
+      "width": 580,
+      "height": 60,
+      "color": "4"
     }
   ],
   "edges": [
@@ -554,6 +578,26 @@
       "fromNode": "aae84251a1002aa7",
       "fromSide": "right",
       "toNode": "21fb35004a7037ff",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "2acb01261ed6da89",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "0e224e5e9c102185",
+      "fromSide": "right",
+      "toNode": "feae86af506e26a2",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "bb70d0cf704312c4",
+      "styleAttributes": {},
+      "fromNode": "aae84251a1002aa7",
+      "fromSide": "right",
+      "toNode": "0e224e5e9c102185",
       "toSide": "left",
       "color": "4"
     }

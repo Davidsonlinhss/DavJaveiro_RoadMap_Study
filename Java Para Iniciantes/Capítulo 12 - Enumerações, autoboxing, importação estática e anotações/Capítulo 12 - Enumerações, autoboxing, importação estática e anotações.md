@@ -9,7 +9,7 @@ herdam de Enum
 • Usar os encapsuladores de tipos Java
 • Saber os aspectos básicos do autoboxing e autounboxing
 • Usar autoboxing com métodos
-• Entender como autoboxing funciona com expressões
+• Entender como autoboxing [[Capítulo 12 - Enumerações, autoboxing, importação estática e anotações]]funciona com expressões
 • Aplicar a importação estática
 • Ter uma visão geral das anotações
 
@@ -304,3 +304,42 @@ A importação estática pode ser conveniente, mas é importante não utilizá-l
 **Pergunte ao especialista**
 **Usando a importação estática, posso importar os membros estáticos das classes que eu criar?**
 Sim, podemos. Isso será particularmente conveniente quando definir vários membros estáticos usados com frequência em todo programa grande. 
+
+## Anotações (metadados)
+Java fornece um recurso que nos permite embutir informações complementares em um arquivo-fonte. Essas informações, chamadas de #anotação [[Capítulo 3 - Domain Models and Metadata | Metadados]], não alteram as ações de um programa. No entanto, podem ser usadas por várias ferramentas durante o desenvolvimento e a implantação, por exemplo, uma anotação pode ser **processada** por um gerador de código-fonte, pelo compilador ou por uma ferramenta de implantação . O termo #metadados também é usado para fazer referência a esse recurso, mas o termo anotação #anotation é o termo mais descritivo e normalmente mais usado.
+
+A anotação é um tópico grande e sofisticado e não faz parte do escopo deste livro. 
+
+Uma #anotação é criada com um mecanismo baseado na #interface. Exemplo simples:
+```java
+@interface MyAnno {
+	String str();
+	int val();
+}
+```
+Esse exemplo declara uma anotação chamada **MyAnno**. Observamos o símbolo @ que precede a palavra-chave #interface. Ele informa ao compilador que um tipo de anotação está sendo declarado. Em seguida, temos dois #membros declarados dentro da interface str e val. Todas as anotações são compostas somente por declarações de #métodos. No entanto, não fornecemos corpos para esses métodos. Em vez disso, Java implementa os métodos. Além do mais, os métodos agem como campos.
+
+Todos os tipos de anotações estendem automaticamente a interface #Annotation. Logo, Annotation é uma #superinterface de todas as anotações ela é declarada dentro do pacote #java-lang-annotation.
+Originalmente, as anotações eram usadas para comentar apenas declarações. Quando usadas dessa forma, qualquer tipo de declaração pode ter uma anotação associada. Por exemplo, classes, métodos, campos, parâmetros e constantes enum podem ter anotações. Até mesmo a anotação pode ter uma anotação.
+
+Quando aplicamos uma anotação, fornecemos valores aos seus membros. Por exemplo, aqui está um exemplo de MyAnno sendo aplicada a um método:
+```java
+// Anotação de um método
+@MyAnno (str = "Annotation Example", val = 100)
+public static void myMech() {
+// ...
+}
+```
+Essa anotação está vinculada ao método myMeth. Observamos com atenção a sua sintaxe. O nome da anotação, precedido por um @, é seguido por uma lista entre parênteses com **inicializações** de #membros. Para um membro receber um valor, ele é atribuído ao seu nome. Logo, no exemplo, o #string "Annotation Example" é atribuído ao membro str de MyAnno. Quando o membro de uma anotação recebe um valor, só seu nome é usado. Portanto, os membros da anotação parecem campos nesse contexto. 
+
+As anotações que não têm parâmetros são chamadas de anotações marcadoras. Elas são especificadas sem a passagem de nenhum argumento e sem o uso de parênteses. Sua única função é a de marcar um item com algum atributo. #Entity é um exemplo @Entity.
+
+Java define muitas anotações internas. A maioria é especializada, mas nove são de uso geral. Quatro são importadas de #java-lang-annotation: #Retention, #Documented, #Target e #Inherited. Cinco, #Override, #Deprecated, #SafeVarargs, #FunctionalInterface e #SupressWarnings, estão incluídas em #java-lan. 
+
+#Override - um método com a anotação deve sobrepor o método de uma superclasse. Se não o fizer, isso resultará em um erro de tempo de compilação. É usada para assegurar que um método da superclasse seja realmente sobreposto e não apenas sobrecarregado. É uma anotação marcadora. 
+
+---
+## NOTA
+JDK8 adicionou #Repeatable e #NAtive a #java-lang-annotation. #Repeatable dá suporte a anotações repetíveis, que são anotações que podem ser aplicadas mais de uma vez ao mesmo item. #Native é usada para comentar o campo de uma constante acessado por código executável (isto é, nativo). As duas são anotações de uso especial que não fazem parte do escopo deste livro. 
+Exemplo que usa #Deprecated para marcar a classe **MyClass** e o método **getMesg()**. Quando tentar compilar esse programa, avisos relatarão o uso dos elementos substituídos.
+

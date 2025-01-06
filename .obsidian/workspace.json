@@ -11,17 +11,14 @@
             "id": "32e1f8cf1e5df15b",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
-                "viewState": {
-                  "x": -20820.7408830734,
-                  "y": -7762.1805395721485,
-                  "zoom": -3.2466666666666666
-                }
+                "file": "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "RoadMap"
+              "icon": "lucide-file",
+              "title": "Capítulo 12 - Enumerações, autoboxing, importação estática e anotações"
             }
           }
         ]
@@ -55,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#VARCHAR",
+                "query": "tag:#Entity",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +83,8 @@
               "title": "RunJS Codelist"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -199,8 +197,12 @@
   },
   "active": "32e1f8cf1e5df15b",
   "lastOpenFiles": [
-    "Pasted image 20250105205605.png",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Indistraível - Nir Eyal/Resumo.canvas",
+    "Pasted image 20250105205605.png",
     "Capítulo 3 - Domain Models and Metadata-3.png",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03/validation/ModelValidation.java",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence/ch03/validation/Item.java",
@@ -211,14 +213,11 @@
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex03/Item.java",
     "Capítulo 3 - Domain Models and Metadata-2.png",
     "Capítulo 3 - Domain Models and Metadata.png",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Indistraível - Nir Eyal/Resumo.canvas",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex01/User.java",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/domainmodel.iml",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03/validation",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence/ch03/validation",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03",
-    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
     "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
     "n.md",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
@@ -228,7 +227,6 @@
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/imagens/Capítulo 5 - Mais tipos de dados e operadores.png",
     "Capítulo 5 - Mais tipos de dados e operadores.png",
     "Pasted image 20250101233716.png",
-    "RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
     "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
     "README.md",
     "Java Para Iniciantes/Capítulo 7 - Heranças.md",
