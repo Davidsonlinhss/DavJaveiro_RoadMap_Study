@@ -179,4 +179,171 @@ O Hibernate não exige métodos de acesso. Podemos escolher como o estado de uma
 
 Embora os métodos de acesso triviais sejam comuns, um dos motivos pelos quais gostamos de usar o estilo JavaBeans é que eles proporcionam encapsulamento: podemos alterar a implementação interna oculta de um atributo sem modificar a interface pública.
 
-Se configurarmos o Hibernate para acessar atributos por meio de métodos, isso abstrai a estrutura interna de dados da classe - as variáveis de instância - do design do banco de dados. 
+Se configurarmos o Hibernate para acessar atributos por meio de #métodos, isso abstrai a estrutura interna de dados da classe - as variáveis de instância - do design do banco de dados. 
+
+Por exemplo, se o nosso banco de dados armazena o nome de um usuário em uma única coluna NAME, mas a nossa classe User possui os campos, variáveis de instância, firstname e lastname, podemos adicionar a seguinte propriedade persistente de nome à classe:
+[[Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex02/User.java|User combinando First + Lastname]]
+
+Portanto, um #POJO pode ser manipulado para adaptar atributos de banco de dados, como um campo NAME, para atributos separados como "firstname" e "lastname". Logo, no código acima, utilizamos exemplos de um método getter e setter para dividir ou juntar um nome.  
+
+Ao persistir coleço~es, temos que ter cuidados com a criação de setters para coleções inteiras, como Set< Bid >, pois isso pode causar atualizações SQL desnecessárias no Hibernate. O Hibernate possui implementações próprias para coleções e, ao usar setters de coleções inteiras, pode levar a uma atualização redundante. 
+
+### 3.2.4 Implementing POJO associations
+Agora, vamos ver como podemos associar e criar diferentes tipos de relacionamentos entre objetos: um-para-muitos, muitos-para-um e relacionamentos bidirecionais. 
+1. **Tipos de Relacionamentos**: 
+	1. um-para-muitos ( #one-to-many): um objeto de uma classe pode estar relacionado a vários objetos de outra classe. Por exemplo, um item pode ter várias Bids (ofertas);
+	2. muitos-para-um ( #many-to-one): vários objetos de uma classe podem estar relacionados a um único objeto de outra classe. Por exemplo, muitas ofertas podem estar associadas a um único Iteml;
+	3. bidirecionais: a associação pode ser feito em ambas as direções. Um item pode acessar suas ofertas e uma oferta pode acessar o item ao qual pertence.
+
+Utilizar essas associações facilita o gerenciamento de relacionamentos entre objetos, permitindo que o Hibernate cuide da persistência e do rastreamento das entidades relacionadas.
+
+![[Capítulo 3 - Domain Models and Metadata-2.png]]
+
+[[Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex03/Bid.java|Bid]] esse código é parte do que é necessário para mapear a relação entre as entidades Bid e Item. No contexto do JPA ou Hibernate, esse código pode ser complementado com anotações como #ManyToOne para definir a associação entre as duas entidades, indicando que várias ofertas podem estar associadas a um único item.
+
+
+[[Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex03/Item.java|Item]] A inicialização do atributo Bids é feita com uma nova instância de HashSet< bid >, que é uma implementação de conjunto que não mantém a ordem dos elementos. 
+
+Logo, a relação entre Item e Bid é do tipo muitos-para-um, onde um item pode ter várias ofertas. Essa associação é refletida na classe Item, onde um item tem um conjunto de ofertas (Set< Bid >), e cada Bid (oferta) está associado a um único item.
+
+Essa associação entre as duas classes permite uma navegação bidirecional: o many-to-one é, sob essa perspectiva, uma multiplicidade one-to-many. Um item pode ter várias ofertas (bids) - elas são do mesmo tipo, mas foram geradas durante o leilão por diferentes usuários e com valores diferentes. 
+
+Quando temos um relacionamento muitos-para-um, como no caso de Bid para Item, podemos acessar o Item de uma oferta, mas também podemos acessar todas as ofertas associadas a um item.
+
+O JPA exige que as propriedades de coleção sejam definidas utilizando interfaces como #Set, #List ou #Collection, em vez de usar uma implementação como #HashSet ou #ArrayList.
+
+A recomendação de programar com interfaces ao invés de implementações concretas não se limita ao JPA. Essa abordagem traz benefícios como:
+- **Flexibilidade**: podemos mudar a implementação da coleção sem alterar a interface ou a lógica que a usa;
+- **Desacoplamento:** facilita a manutenção do código, pois reduz a dependência de classes específicas.
+
+Para criar um vínculo bidirecional entre duas entidades, como Item e Bid, são necessárias duas etapas:
+- Adicionar a Bid à coleção de Bids do Item: isso envolve atualizar a coleção de ofertas associada ao item;
+- Definir a propriedade item da Bid: isso envolve associar um item à oferta.
+
+O autor sugere a criação de métodos convenientes para encapsular a lógica de manipulação das associações entre objetos, como no caso entre Item e Bid. Isso facilita o uso da associação, permitindo que o código seja reutilizado de forma mais eficiente e consistente.
+
+Utilizar métodos convenientes não apenas melhora a legibilidade e a reutilização do código, mas também reduz o risco de erros ao manipular a lógica das associações. Isso é uma boa prática de programação, especialmente ao lidar com frameworks como JPA e Hibernate, onde a gestão de relacionamentos entre entidades pode ser complexa.
+
+No desenvolvimento de aplicações com JPA e Hibernate, a gestão de relacionamentos entre entidades (como *Item* e *Bid* ) envolve várias considerações para garantir a integridade dos dados. 
+1. **Relacionamento Bidirecional**: 
+	- Para associar duas entidades, como *Item* e *Bid*, é necessário que ambas as extremidades da associação sejam devidamente gerenciadas. No caso do relacionamento #many-to-one , cada Bid deve ter um *Item* associado, e um *Item* pode ter muitos *Bids* associados. Essa relação bidirecional exige cuidados, pois as alterações em uma entidade precisam ser refletidas na outra.
+2. **Scaffolding Code**
+	- O #Scaffolding code refere-se ao código necessário para criar essas associações, incluindo os métodos getter e setter para acessar as propriedades. Além disso, é importante adicionar métodos convenientes, como addBid(), para garantir que as ações da manipulação de associações (adicionar um Bid a um item e associar um Item a uma Bid) sejam feitas de maneira consistente e sem erros.
+3. **Coleções Imutáveis**
+	- É recomendado retornar coleções imutáveis dos métodos *getter*, como Collections.unmodifiabletSet(), para evitar que clientes alterem diretamente a coleção de Bids de um Item. Isso força as modificações a passarem por métodos de gerenciamento de relacionamento, garantindo que a integridade dos dados seja mantida.
+4. **Instâncias Imutáveis**
+	- Outra estratégias para garantir a integridade é tornar as entidades imutáveis, exigindo que o relacionamento entre as entidades seja estabelecido no momento da criação do objeto, como no exemplo de exigir que um item seja passado no construtor de uma Bid.
+
+Uma estratégia alternativa é usar instâncias imutáveis. Por exemplo, podemos garantir a integridade exigindo um argumento *Item* no construtor de *Bid*, como mostrando no exemplo de código abaixo:
+[[Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex04/Bid.java|Bid]] 
+Neste novo exemplo:
+**A classe Bid** tem um atributo item do tipo Item, que representa a associação com a classe Item. 
+
+O #construtor da classe Bid, recebe um objeto Item como parâmetro e o associa ao lance (Bid).
+
+O importante é que, dentro do construtor de Bid, a referência para o item é passada e também a adição do lance this à coleção bids do Item. Isso mantém o relacionamento bidirecional. 
+
+## 3.3 Domain Model Metadata
+A metadata é informação sobre os dados, ou seja, a metadata do modelo de domínio é a informação que descreve seu modelo de domínio. Por exemplo, quando usamos a API de reflexão do Java Java Reflection API para descobrir os nomes das classes no seu modelo de domínio ou os nomes de seus atributos, estamos acessando metadata do modelo de domínio.
+
+Logo, a metadata do modelo de domínio, refere-se à descrição das entidades (ou classes) e suas propriedades (ou atributos), relações entre elas e outras características relevantes que definem o modelo de dados de uma aplicação. 
+
+As ferramentas ORM também requerem metadata para especificar o mapeamento entre classes e tabelas, propriedades e colunas, associações e chaves estrangeiras, tipos Java e tipos SQL, e assim por diante. Essa metadata de mapeamento objeto-relacional rege a transformação entre os diferentes sistemas de tipos e representações de relacionamentos nos sistemas orientados a objetos e SQL. 
+
+O JPA possui uma API de metadata que podemos chamar para obter detalhes sobre os aspectos de persistência do modelo de domínio, como os nomes das entidades e atributos persistentes. É nossa responsabilidade, como engenheiro, criar e manter essas informações.
+
+O JPA padroniza duas opções de metadata: anotações no código Java e arquivos de descritores XML externalizados. O Hibernate possui algumas extensões para funcionalidades nativas, também disponíveis como anotações ou descritores XML, normalmente, preferimos as anotações como a principal fonte de metadata de mapeamento. Um exemplo de anotação é o @Id que, no contexto do JPA, ela indica o atributo de uma classe é a chave primária da entidade mapeada, ou seja, é o identificador único para cada instância. Essa metadata, representada por anotações como @Id, ajuda o JPA e outras ferramentas ORM (como Hibernate) a entender como os objetos devem ser persistidos no banco de dados, incluindo a definição das chaves primárias e a relação entre a classe e a tabela. 
+
+O JPA padroniza duas opções de metada: annotations no código Java e arquivos descritores XML externalizados. A maioria dos engenheiros hoje preferem anotações Java como o principal mecanismo para declarar metadata. 
+
+### 3.3.1 Annotation-based metadata
+
+```java
+import javax.persistence.Entity;
+
+@Entity
+public class Item { ...
+}
+```
+A grande vantagem das anotações é que elas colocam a metadata, como @Entity, próxima da informação que ela descreve, em vez de separá-la em um arquivo deiferente. No exemplo acima, a anotação @Entity é usada diretamente na classem Item, indicando que esta classe é uma entidade persistente, sem a necessidade de um arquivo externo para essa configuração. Isso torna o código mais compacto e fácil de entender. 
+
+Podemos encontrar as anotações de mapeamento padrão do JPA no pacote javax.persistence. Quando definimos a classe Item com o uma entidade persistente, todos os seus atributos são tornados automaticamente persistentes com uma estratégia padrão. Logo, podemos carregar e armazenar instâncias (objeto concreto criado a partir da classe) de Item, e todas as propriedades da claasse fazem parte do estado gerenciado. 
+
+As anotações são seguras em termos de tipo, e a metadata do JPA é incluída nos arquivos de classe compilados. As anotações ainda são acessíveis em tempo de execução. A IDE também pode facilmente validadr e destacar as anotações - afinal, elas são tipos regulares do Java.
+
+Nossa classe depende do JPA para ser compilada, pois precisamos das bibliotecas do JPA no nosso classpath quando criamos uma instância da classe, como em um aplicativo cliente que não executa nenhum código do JPA. Apenas quando acessamos as anotações por meio de reflexão em tempo de execução (como o Hibernate faz) é que será necessário ter os pacotes no classpath.
+
+**Using Vendor Extensions**
+Embora possamos usar as anotações padrão do JPA, como #Entity, para mapear nossa classe, também podemos usar anotações específicas do fornecedor (como o Hibernate) para opções adicionais que não estão no padrão do JPA. Logo, prefixamos as anotações do Hibernate com org.Hibernate.annotations visa tornar claro qual parte do código usa funcionalidades padrão do JPA e qual parte usa recursos específicos do Hibernate. Isso ajuda na manutenção do código, pois fica mais fácil identificar e pesquisar por anotações que não fazem parte do JPA, permitindo uma visão geral e rápida sobre o uso de funcionalidades específicas do Hibernate na aplicação.
+```java
+import javax.persistence.Entity;
+@Entity
+@org.hibernate.annotations.Cache(
+	usage = org.hibernate.annotations.CacheConcurrencyStrategy.READ_WRITE
+)
+public class Item {
+}
+```
+Se mudarmos o fornecedor do Jarkarta Persistence, precisaremos apenas substituir as extensões específicas do fornecedor, e poderemos esperar que um conjunto de recursos semelhante esteja disponível na maioria das implementações maduras de JPA. 
+
+Anotações em classes cobrem apenas metadados que se aplicam a essa classe específica. Muitas vezes, também precisaremos de metadados em um nível mais alto, para todo o pacote ou até mesmo para toda a aplicação. 
+
+**Global Annotation Metadata**
+A anotação @Entity mapeia uma classe específica. O JPA e o Hibernate também possuem anotações para metadados #globais. Por exemplo, uma @NamedQuery tem um escopo global; não aplicamos a uma classe específica. Então, onde colocamos essa anotação?
+
+Mantemos os metadados globais em um arquivo separado. Anotações a nível de pacote são uma boa escolha; elas ficam em arquivo chamado package-info.java no diretório de um pacote específico. Podemos procurará-las em um único lugar, em vez de navegar por vários arquivos. 
+Exemplo de uma declaração de consulta nomeada global:
+[[package-info.java]] 
+
+A menos que já tenhamos utilizado anotações a nível de pacote antes, a sintaxe deste arquivo, com as declarações de pacote e importações no final, é nova, realmente eu não vi ainda.
+
+### 3.3.2 Applying constraints to Java objects
+A maioria das aplicações contém uma série de verificações de integridade de dados. Quando violamos uma das restrições mais simples de integridade de dados, podemos receber uma #exception #NullPointerException, pois um valor não está disponível. Da mesma forma, pode ocorrer essa exceção. 
+
+Essas regras de negócios afetam todas as camadas de uma aplicação: o código da interface do usuário precisa exibir mensagens de erros detalhadas e localizadas. As camadas de negócios e persistência devem verificar os valores de entrada recebidos do cliente antes de passá-los para o banco de dados. <span style="background:#d4b106">O banco de dados SQL deve ser o validador final, garantindo a integridade dos dados duráveis</span>. 
+
+A ideia por trás da Bean Validadtion é que declarar regras como "<span style="background:#fdbfff">Essa propriedade não pode ser nula</span>" ou "<span style="background:#fdbfff">Esse número precisar estar dentro do intervalo dedeterminao</span>" é muito mais fácil e menos propenso a erros do que escrever repetidamente procedimentos if-then-else. Além disso, declarar essas regras no componente central da aplicação, a implementação do modelo de domínio, permite realizar verificações de integridade em todas as camadas do sistema. As regras ficam então disponíveis para as camadas de apresentação e persistência. E, se considerarmos como as restrições de integridade de dados afetam não apenas o código Java da aplicação, mas também o esquema do banco de dados SQL - que é uma coleção de regras de integridade - podemos pensar nas restrições da Bean Validation como metadados adicionais do ORM. 
+
+Veja a seguinte classe de modelo de domínio Item estendida:
+[[Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence/ch03/validation/Item.java|Item Com Bean Validation]]
+
+Adicionamos dois #atributos quando um leilão é concluído: o nome de um Item e a data de término.
+
+#NotNull e #Size- queremos garantir que o nome **esteja sempre presente** e seja **legível para humanos** (nomes de itens com apenas um caractere não fazem sentido), mas não muito longo. Nosso banco de dados SQL será mais eficiente com strings de comprimento variável de até 255 caracteres. Em segundo lugar, o horário de término de um leilão obviamente deve estar no futuro. Se não forneceremos uma mensagem de erro para uma restrição, será usada uma mensagem padrão. 
+
+O mecanismo de validação acessará os campos diretamente se anotamos os campos. Se preferir usar chamadas através dos métodos acessores, anote o método getter com as restrições de validação, e não o setter. 
+
+- Se anotarmos diretamente os campos (atributos), o mecanismo de validação (como o Hibernate Validator) acessará esses campos diretamente para aplicar as regras.
+- Se preferir utilizar métodos acessores getters, devemos colocar as anotações nos getters. Isso significa que as validações serão realizadas sempre que o método getter for chamador, e as anotações também ficarão visíveis como parte da API pública da classe. 
+
+A Bean Validation não se limta às anotações integradas; podemos criar nossas próprias restrições e anotações. 
+Código que verifica manualmente a integridade de uma instância da classe Item:
+[[ModelValidation.java]] o código apresentado é um exemplo de teste de validação usando o Bean Validation em uma classe Item. Ele demonstra como verificar se uma instância de Item segue as restrições definidas para seus atributos. 
+
+O código simula uma situação em que os dados não atendem aos requisitos e verifica se as violações são identificadas corretamente.
+
+Raramente escreveremos esse tipo de código de validação manual; geralmente, essa validação é tratada automaticamente pela nossa interface de usuário e pelo framework de persistência. Portanto, é importante procurar por integração com Bean Validation ao escolher um framework de UI.
+
+O conjunto de ferramentas do Hibernate para geração automática de esquemas SQL entende muitas restrições e gera restrições equivalentes no #DDL SQL. Por exemplo:
+- Uma anotação @NotNull é traduzida para uma restrição SQL NotNull;
+- Uma regra @Size, define o número de caracteres em uma coluna do tipo #VARCHAR.
+
+Portanto, quando usamos o Hibernate, ele detecta automaticamente anotações como @NotNull ou @Size na classe de domínio e valida os dados antes de realizar operações como salvar ou atualizar no banco de dados. Isso <span style="background:#d4b106">elimina a necessidade de escrever código de validação manual para cada operação</span>. 
+
+Podemos controlar esse comportamento do Hibernate com o elemento validation-mode no arquivo de configuração persistence.xml. O modo padrão é auto, o que significa que o Hibernate só realizará a validação se encontrar um provedor de Bean Validation (como o Hibernate Validator) no classpath da aplicação em execução.
+
+Com o modo #Callback, a validação sempre ocorrerá, e receberemos um erro de implantação caso esqueça de incluir um provedor de Bean Validation no pacote de aplicação. 
+
+[[https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/ | Hibernate Validator]] - Validar dados é uma tarefa comum que ocorre em todas as camadas do aplicativo, da apresentação à camada de persistência. Frequentemente, a mesma lógica de validação  é implementada em cada camada, o que consome tempo e é propenso a erros. Para evitar a duplicação dessas validações, os desenvolvedores frequentemente agrupam a lógica de validação diretamente no modelo de domínio, desorganizando as classes de domínio com código de validação que é, na verdade, metadados sobre a própria classe. 
+![[Capítulo 3 - Domain Models and Metadata-3.png | Validação No modelo de Domínio]]
+
+### 3.3.3 Externalizing metadada with XML files
+Podemos substituir ou sobrescrever todas as anotações do JPA com elementos em um descritor XML. Isso significa que não é obrigatório usar anotações, especialmente se for vantajoso para o design do sistema manter os metadados de mapeamento separados do código-fonte.
+**Vantagens** - os **metadados ficam fora do código**, evitando que as classes Java fiquem sobrecarregadas; **reutilização de classes**, tornando as classes Java mais genéricas e reutilizáveis em diferentes contextos; **flexibilidade**, permite modificar o mapeamento sem alterar o código-fonte.
+
+**Desvantagens** - menor segurança de tipo - com XML, erros de configuração só serão detectados em tempo de execução, enquanto as anotações oferecerem validação em tempo de compilação.
+**Complexidade adicional** - a configuração em XML pode ser mais verboso e difícil de manter.
+
+Embora esta abordagem esteja em desuso, ainda é relevante entender seu funcionamento, pois podemos encontrá-la em sistemas legados ou optar usá-la em projetos específicos.
+
+Quando utilizamos arquivos XML para mapear a persistência em vez de anotações, o comportamento é similar em termos de execução. O JPA e os provedores de persistência como o Hibernate carregam e processam os metadados do XML em tempo de execução, da mesma forma que as anotações são processadas por reflexão. 

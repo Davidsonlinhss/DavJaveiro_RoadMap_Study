@@ -4,24 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "dd3d97f3bd34b7c0",
+        "id": "a472cce828292659",
         "type": "tabs",
         "children": [
           {
-            "id": "47a4ba6154948393",
+            "id": "32e1f8cf1e5df15b",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Indistraível - Nir Eyal/Resumo.canvas",
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
                 "viewState": {
-                  "x": 1963.2200000000007,
-                  "y": 499.87000000000006,
-                  "zoom": 0
+                  "x": -20820.7408830734,
+                  "y": -7762.1805395721485,
+                  "zoom": -3.2466666666666666
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "Resumo"
+              "title": "RoadMap"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#VARCHAR",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
+                "file": "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para RoadMap"
+              "title": "Links inversos para Capítulo 3 - Domain Models and Metadata"
             }
           },
           {
@@ -193,28 +193,31 @@
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "float-search:Search Obsidian In Modal": false,
       "runjs:RunJS": false,
-      "copilot:Open Copilot Chat": false,
       "obsidian-git:Open Git source control": false,
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "47a4ba6154948393",
+  "active": "32e1f8cf1e5df15b",
   "lastOpenFiles": [
-    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Pasted image 20250105205605.png",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
+    "Capítulo 3 - Domain Models and Metadata-3.png",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03/validation/ModelValidation.java",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence/ch03/validation/Item.java",
+    "Java Persistence with Spring Data e Hibernate/Imagens/Pasted image 20241229153505.png",
+    "Capítulo 3 - Domain Models and Metadata-1.png",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex05/package-info.java",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex04/Bid.java",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex03/Item.java",
+    "Capítulo 3 - Domain Models and Metadata-2.png",
+    "Capítulo 3 - Domain Models and Metadata.png",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Indistraível - Nir Eyal/Resumo.canvas",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex01/User.java",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/domainmodel.iml",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03/validation/ModelValidation.java",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence/ch03/validation/Item.java",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03/validation",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence/ch03/validation",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence/ch03",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence",
-    "Capítulo 3 - Domain Models and Metadata-1.png",
-    "Capítulo 3 - Domain Models and Metadata.png",
     "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
     "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
     "n.md",
@@ -230,9 +233,6 @@
     "README.md",
     "Java Para Iniciantes/Capítulo 7 - Heranças.md",
     "Java Para Iniciantes/Capítulo 7 - Herança.md",
-    "RoadMap do DavJaveiro/Covers/Lógica e Estrutura.png",
-    "RoadMap do DavJaveiro/Covers/Think Java.png",
-    "RoadMap do DavJaveiro/Covers/Fundamentos Matemáticos.png",
     "Sem título.md",
     "Errors API.md",
     "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
