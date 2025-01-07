@@ -247,7 +247,7 @@
       "y": 840,
       "width": 520,
       "height": 60,
-      "color": "1"
+      "color": "4"
     },
     {
       "id": "39f55cf93f76bc28",
@@ -331,6 +331,43 @@
       "width": 580,
       "height": 60,
       "color": "4"
+    },
+    {
+      "id": "8a6a2128a789dbba",
+      "type": "text",
+      "text": "13- Façca a Pergunta Crucial",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 2852,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "668c2eeb82c7da88",
+      "type": "text",
+      "text": "**Parte 3** Defenda-se do Hacking dos seus Gatilhos Externos",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -480,
+      "y": 3370,
+      "width": 520,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "8ceb78b1a8d906fe",
+      "type": "text",
+      "text": "## Resumo\n1. **Os gatilhos externos muitas vezes nos levam à distração.** É fácil nos deixar distrair pelas notificações, toques e alertas dos nossos dispositivos, bem como pelas interrupções de outras pessoas.\n2. **Os gatilhos externos nem sempre são um problema.** Se um gatilho externo nos levar à tração, ele está trabalhando para nós.\n3. **Faça a pergunta crucial: o gatilho está trabalhando para mim ou eu estou trabalhando para o gatilho?** Munidos da resposta a essa pergunta, podemos nos defender do *hacking* dos gatilhos externos que só nos ",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 2640,
+      "width": 860,
+      "height": 483,
+      "color": "#ffffff"
     }
   ],
   "edges": [
@@ -600,6 +637,35 @@
       "toNode": "0e224e5e9c102185",
       "toSide": "left",
       "color": "4"
+    },
+    {
+      "id": "665721a4e4ada9b4",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "8a6a2128a789dbba",
+      "fromSide": "right",
+      "toNode": "8ceb78b1a8d906fe",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "58a0db6eea6e0d6a",
+      "styleAttributes": {},
+      "fromNode": "668c2eeb82c7da88",
+      "fromSide": "right",
+      "toNode": "8a6a2128a789dbba",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "b464775ad0ee0250",
+      "styleAttributes": {},
+      "fromNode": "d9096033400d32d3",
+      "fromSide": "right",
+      "toNode": "668c2eeb82c7da88",
+      "toSide": "left",
+      "color": "1"
     }
   ],
   "metadata": {}

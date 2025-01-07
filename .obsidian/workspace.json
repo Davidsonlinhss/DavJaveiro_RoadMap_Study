@@ -4,24 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a934bed28adae286",
+        "id": "77e9ade9939891d0",
         "type": "tabs",
         "children": [
           {
-            "id": "219343644dd150bc",
+            "id": "719cd6594a8b6c25",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
-                "viewState": {
-                  "x": -13059.928190657352,
-                  "y": -13997.961154240395,
-                  "zoom": -3.246666666666667
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "RoadMap"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nova aba"
             }
           }
         ]
@@ -55,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#curinga",
+                "query": "tag:#lazy_loading",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -194,12 +187,32 @@
       "float-search:Search Obsidian In Modal": false,
       "runjs:RunJS": false,
       "obsidian-git:Open Git source control": false,
-      "vscode-editor:Create Code File": false
+      "vscode-editor:Create Code File": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "219343644dd150bc",
+  "active": "719cd6594a8b6c25",
   "lastOpenFiles": [
-    "Pasted image 20250106224801.png",
+    "Paradigmas de Programação Artigos/Análise Comparativa de programação funcional e programação orientada a objeto.md",
+    "Análise Comparativa de programação funcional e programação orientada a objeto-7.png",
+    "Análise Comparativa de programação funcional e programação orientada a objeto-6.png",
+    "Análise Comparativa de programação funcional e programação orientada a objeto-5.png",
+    "Análise Comparativa de programação funcional e programação orientada a objeto-4.png",
+    "Análise Comparativa de programação funcional e programação orientada a objeto-3.png",
+    "Análise Comparativa de programação funcional e programação orientada a objeto-2.png",
+    "Análise Comparativa de programação funcional e programação orientada a objeto-1.png",
+    "Análise Comparativa de programação funcional e programação orientada a objeto.png",
+    "Paradigmas de Programação Artigos/Comparative_analysis_of_functional_and_object-oriented_programming.pdf",
+    "Paradigmas de Programação Artigos/Pasted image 20250107133807.png",
+    "Errors API.md",
+    "Pasted image 20250101232753.png",
+    "Java Persistence with Spring Data e Hibernate/Capítulo 1 - Entendendo o object-relational persistence.md",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Java Articles/Comparative_analysis_of_functional_and_object-oriented_programming.pdf.crdownload",
+    "Paradigmas de Programação Artigos",
+    "Indistraível - Nir Eyal/Resumo.canvas",
     "Java Para Iniciantes/Capítulo 7 - Herança.md",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/teste.java",
@@ -210,33 +223,17 @@
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/NumericFns.java",
     "m.md",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/SimpGen.class",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/TwoGen.class",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/SimpGen.java",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/TwoGen.java",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
-    "Indistraível - Nir Eyal/Resumo.canvas",
-    "Pasted image 20250105205605.png",
-    "Capítulo 3 - Domain Models and Metadata-3.png",
-    "Java Persistence with Spring Data e Hibernate/Imagens/Pasted image 20241229153505.png",
-    "Capítulo 3 - Domain Models and Metadata-1.png",
-    "Capítulo 3 - Domain Models and Metadata-2.png",
-    "Capítulo 3 - Domain Models and Metadata.png",
     "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
     "n.md",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
     "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/Capítulo 3 - Algoritmos de Busca.md",
     "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
-    "Pasted image 20250101232753.png",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/imagens/Capítulo 5 - Mais tipos de dados e operadores.png",
-    "Capítulo 5 - Mais tipos de dados e operadores.png",
-    "Pasted image 20250101233716.png",
     "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
     "README.md",
     "Java Para Iniciantes/Capítulo 7 - Heranças.md",
-    "Errors API.md",
     "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
     "Desenvolvimento Real de Software/Capítulo 2 - Análise de Extratos Bancários.md",
     "Banco de Dados - Projetos e Imeplementação/Capítulo 1 - O que é Projeto de Banco de Dados.md"
