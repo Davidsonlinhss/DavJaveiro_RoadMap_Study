@@ -111,4 +111,237 @@ iOb = strOb; // Errado!
 Ainda que tanto iOb quanto strOb sejam de tipo Gen< T >, são referências a tipos diferentes porque seus argumentos de tipo diferem. Isso faz parte da maneira como os genéricos adicionam segurança de tipos e evitam erros.
 
 ## Classe genérica com dois parâmetros de tipo
+Podemos declarar mais de um parâmetro de tipo em um tipo genérico. Para especificar dois ou mais parâmetros de tipo, precisamos apensar usar uma lista separada por vírgulas. Por exemplo, a classe #TwoGen é uma variação da classe #Gen que criamos acima, possuindo dois parâmetros de tipo:
+[[SimpGen.java | Two Generics Type]]
+Observamos como TwoGen é declarada:
 
+```java
+class TwoGen<T, V> {...}
+```
+Ela especifica dois parâmetros de tipo, T e V, separados por uma vírgula. Já que há dois parâmetros de tipos, dois #argumentos de tipo devem ser passados para TwoGen quando um objeto for criado:
+```java
+TwoGen<Integer, String> tgObj = new TwoGen<Integer, String>(88, "Super-man");
+```
+
+No nosso exemplo, T é substituído por Integer e V é substituído por String. Embora os dois **argumentos de tipo** sejam diferentes, é possível que ambos sejam iguais. Por exemplo, a linha de código a seguir também é válida:
+```java
+TwoGen<String, String> x = new TwoGen<String, String>("A", "B");
+```
+Neste exemplo, tanto T quanto V seriam do tipo String. Uma observação é que, se os argumentos de tipo forem sempre iguais, estes seriam desnecessários.
+
+## A forma geral de uma classe genérica
+A sintaxe dos genéricos mostrada nos exemplos anteriores pode ser generalizada. Esta é a sintaxe de declaração de uma classe genérica:
+```java
+class nome-class<lista-parâm-tipo>{...}
+```
+E esta é a sintaxe completa de declaração de uma referência a uma classe genérica e criação de uma instância genérica:
+```java
+nome-class<lista-arg-tipo> nome-var = new nome-class<lista-arg-tipo>(lista-arg-cons);
+```
+
+
+## Tipos limitados
+Nos exemplos anteriores, os parâmetros de tipo podiam ser substituídos por qualquer tipo de classe. Em muitos casos isso é bom, mas às vezes **é útil limitar os tipos** que podem ser passados para um parâmetro de tipo. (Limitando os tipos...)
+
+Por exemplo, suponhamos que quiséssemos criar uma classe genérica que armazenasse um valor numérico e pudesse executar várias funções matemática, como calcular ou obter o componente fracionário. Também queremos usar a classe para calcular esses valores para qualquer tipo de número, inclusive **Integer**, **Float**, e **Double**. Logo, queremos especificar o tipo dos números genericamente, usando um parâmetro de tipo. Para criar essa classe, podemos fazer algo assim:
+```java
+class NumericFns<T>{
+	T num;
+	// Passa para o construtor uma referência
+	// a um objeto numérico.
+	NumericsFns(T n) {
+		num = n;
+	}
+
+	// Retorna o recíproco.
+	double reciprocal() {
+		return 1 / num.doubleValue(); // Erro!
+	}
+
+	double fraction() {
+		return num.doubleValue() - num.intValue(); // Erro!
+	}
+}
+```
+NumericsFns não será compilada da forma como foi escrita, porque os dois métodos gerarão erros de tempo de compilação. Primeiro, examinemos o método **reciprocal()**, que tenta retornar o recíproco de num. Para fazê-lo, ele deve dividir 1 pelo valor de **num**. O valor de num é obtido com uma chamada a **double Value()**, que obtém a versão **double** do objeto numérico armazenado em **num**. Já que todas as classes numéricas, como Integer e Double, são subclasses de Number, e Number define o método doubleValue(), esse método está disponível para todas as classes de encapsuladores numéricos. Resumindo:
+A classe genérica **NumericFns< T >** tenta realizar operações numéricas com base em um tipo genérico T. No entanto, o compilador não sabe que T será sempre um tipo numérico, como #Integer, #Double, etc.
+
+Por isso, os métodos como **num.doubleValue()** ou **num.intValue()** geram erros de compilação. O compilador não consegue garantir que T terá esses métodos, **pois T pode ser qualquer tipo**. Para resolver esse problema, precisamos de alguma maneira de <span style="background:#d4b106">dizer ao compilador que pretende passar apenas tipos numéricos</span> para **T**. Além disso, precisa de uma maneira de assegurar que só tipos numéricos sejam realmente passados. 
+
+Logo, para tratar este problema, Java fornece os *tipos limitados*. Na especificação de um parâmetro de tipo, podemos criar um limite superior <span style="background:#d4b106">declarando a superclasse da qual todos os argumentos de tipo devem derivar</span>. Isso é feito com o uso de uma cláusula #extends na especificação do parâmetro de tipo:
+```java
+<T extends superclasse>
+```
+
+Essa sintaxe especifica que *T* só pode ser substituído pela superclasse, ou por subclasses da superclasse. Logo, superclasse define um limite superior no qual ela também se inclui.
+
+Podemos usar um limite superior para corrigir a classe **NumericFns** especificando Number como o limite:
+[[BoundsDemo.class | Tipo Limitado como Number]]
+
+```Java
+class NumericFns<T extends Number> {...}
+```
+Como **T** é limitado por #Number, ou seja, #Extends a superclasse #Number, o compilador Java sabe que todos os objetos de tipo **T** podem chamar **doubleValue()**; porque esse é um método declarado por **Number**.
+
+A partir deste momento, não podemos criar um objeto do tipo String... Ocorrerá erro de compilação:
+```Java
+NumericFns<String> strOb = new NumericFns<String>("Error");
+// String não pode ser usado porque não é subclasse de Number
+```
+
+Os tipos limitados são particularmente úteis quando é necessário assegurar que um parâmetro de tipo seja compatível com outro. 
+Por exemplo, consideramos a classe a seguir chamada **Pair**, que armazena dois objetos que devem ser compatíveis:
+```java
+class Pair<T, V extends T> {
+	T first;
+	V second;
+
+	Pair(T a, V b) {
+		first = a;
+		second = b;	
+	}
+}
+```
+
+Pair usa dois parâmetros de tipo, **T** e **V**, e que **V** estende **T**. Ou seja, **V** será igual a **T** ou a uma subclasse de **T**. Isso assegura que os dois argumentos do construtor de **Pair** sejam objetos do mesmo tipo ou de tipos relacionados. Por exemplo, as construções a seguir são válidas:
+```java
+// Isto está certo porque T e V são Integer.
+Pair<Integer, Integer> x = new Pair<Integer, Integer>(1, 2);
+// Isto está certo porque Integer é uma subclasse de Number.
+Pair<Number, Integer> y = new Pair<Number, Integer>(10.4, 12);
+
+//No entanto, a mostrada aqui não é válida:
+// Esta linha causa um erro, porque String não é
+// subclasse de Number
+Pair<Number, String> z = new Pair<Number, String>(10.4, "12");
+```
+Neste último exemplo, String não é subclasse de #Number, o que viola o limite especificado por #Pair.
+
+## Usando argumentos curingas
+Mesmo sendo útil, às vezes a segurança de tipos pode invalidar construções perfeitamente aceitáveis. Dada a classe **NumericFns** mostrada no fim da seção anterior, suponhamos que quiséssemos adicionar um método chamado #absEqual que retornasse verdadeiro se dois objetos NumericFns contivessem números cujos valores absolutos fossem iguais. Além disso, queremos que esse método funcione apropriadamente, não importando o tipo de número que cada objeto contém. Mesmo se um objeto tiver o valor #Double 1.25 e o outro tiver o valor #Float -1.25, #absEqual retornará verdadeiro. Uma maneira de implementar absEqual é passar para ele um argumento **NumericFns** e então comparar o valor absoluto desse argumento com o valor absoluto do objeto chamador, só retornando verdadeiro se os valores forem iguais:
+```java
+NumericFns<Double> dOb = new NumericFns<Double>(1.25);
+NumericFns<Float> fOb = new NumericFns<Float>(-1.25);
+
+if(dOb.absEqual(fOb))
+	System.out.println("Absolute values are the same.");
+else
+	System.out.println("Absolute values differ.");
+```
+
+À primeira vista, criar #absEqual parece uma tarefa fácil. Infelizmente, os problemas começam a surgir assim que tentamos declarar um parâmetro de tipo **NumericFns**. Que tipo devemos especificar como parâmetro de NumericFns? Inicialmente, poderíamos pensar em uma solução dada como a seguir, em que T é usado como parâmetro de tipo:
+```java
+boolean absEqual(NumericFns<T> ob) {
+	if(Math.abs(num.doubleValue())) ==
+		Math.abs(ob.num.doubleValue()) return true;
+	return false;
+}
+```
+
+O problema dessa abordagem é que ela só funcionará com outros objetos NumericFns cujo tipo for igual ao do objeto chamador. Por exemplo, se o objeto chamador for de tipo **NumericFns< Integer >**, o parâmetro ob também deve ser de tipo **NumericFns< Integer >**. Ele não pode ser usado para comparar um objeto de tipo NumericFns< Double >. 
+
+Para criar um método absEqual genérico, devemos usar outro recurso dos genéricos Java: o #argumento-curinga. O argumento curinga é especificado pelo símbolo **?** e representa um tipo desconhecido. Com o uso de um curinga, veja uma maneira de criar o método:
+``` java
+boolean absEqual(NumericFns<?> ob) {
+	if(Math.abs(num.doubleValue()) ==
+		Math.abs(ob.num.doubleValue())) return true;
+	return false;
+}
+```
+Aqui, NumericFns< ? > equivale a qualquer tipo de objeto NumericFns, permitindo que dois objetos NumericFns, sejam quais forem, tenham seus valores absolutos comparados. Programa usando curinga:
+[[WildcardDemo.java | Exemplo Utilizando Tipo Curinga]]
+ Resumindo
+ Usamos o tipo #curinga quando não sabemos de antemão qual tipo será usado, mas ainda precisa fazer alguma operação com ele. O curinga permite que criemos métodos genéricos que funcionem com qualquer tipo de objeto, sem especificar um tipo exato.
+
+```JAVA
+boolean compare(Box<?> otherBox) {
+	return this.value.equals(otherBox.getValue());
+}
+```
+**Explicação**
+- Box< ? >: o ? no parâmetro significa que otherBox pode ser de qualquer tipo (Box< Integer >, Box< String> etc).
+
+Logo, o curinga é útil quando queremos permitir que um método aceite qualquer tipo de objeto, sem precisar especificar qual tipo será. Isso dá flexibilidade para o método funcionar bem com diferentes tipos de dados. No exemplo, o curinga permitiu comparar caixas de tipos diferentes, como Box< Integer > e Box< String >
+
+## Curingas limitados
+ Os argumentos curingas podem ser limitados de maneira semelhante a como fizemos com o parâmetro de tipo. Um curinga limitado é particularmente importante quando estamos criando um método projetado para operar somente com objetos que sejam subclasses de uma superclasse específica.
+```java
+class A {
+	// ...
+}
+
+class B extends A {
+	// ...
+}
+
+class C extends A {
+	// ...
+}
+// D não estende A
+clas D {
+	// ...
+}
+ 
+```
+Aqui, a classe A é estendida pelas classes B e C, mas não por D.
+
+Em seguida, consideramos a classe genérica simples mostrada abaixo:
+```java
+// classse genérica simples
+class Gen<T> {
+	T ob;
+
+	Gen(T o) {
+		ob = o;
+	}
+}
+```
+**Gen** usa um parâmetro de tipo, que especifica o tipo de objeto armazenado em ob. Já que T é ilimitado, seu tipo é irrestrito. Isto é, **T** pode ser qualquer tipo de classe.
+
+Agora, suponhamos que quiséssemos criar um método que recebesse como argumento qualquer tipo de objeto **Gen** contanto que seu parâmetro de tipo seja A ou subclasse de **A**. Em outras palavras, queremos criar um método que opere somente com objetos de **Gen**< tipo >, onde tipo é **A** ou a subclasse de **A**. Para fazê-lo, deve usar um curinga limitado. Por exemplo, vejamos um método chamado **test** que só aceita como argumento objetos **Gen** cujo parâmetro de tipo é **A** ou subclasse de **A**:
+```java
+class UseBoundedWildcard {
+    // Aqui, o símbolo ? equivalerá a A ou a
+    // qualquer tipo de classe que estenda A.
+    static void test(Gen<? extends A> o) {
+        // ...
+    }
+
+    public static void main(String args[]) {
+        A a = new A();
+        B b = new B();
+        C c = new C();
+        D d = new D();
+
+        Gen<A> w = new Gen<A>(a);
+        Gen<B> w2 = new Gen<B>(b);
+        Gen<C> w3 = new Gen<C>(c);
+        Gen<D> w4 = new Gen<D>(d);
+
+        // Estas chamadas a test() estão corretas.
+        test(w);
+        test(w2);
+        test(w3);
+
+        // Não pode chamar test() com w4 porque
+        // ele não é um objeto de uma classe que
+        // herde A.
+	    test(w4); // Error!
+    }
+}
+
+```
+
+Em geral, para estabelecer o limite superior de um curinga, usamos o tipo de expressão abaixo:
+```java
+<? extends superclasse?
+```
+onde *superclasse* é o nome da classe que serve como limite superior. 
+
+Também podemos especificar um limite inferior para um curinga adicionando uma cláusula super à sua declaração:
+```java
+<? super subclasse>
+```
+Nesse caso, só classes que sejam superclasses de subclasse são argumentos aceitáveis. A cláusula é inclusiva.
+
+## Métodos genéricos

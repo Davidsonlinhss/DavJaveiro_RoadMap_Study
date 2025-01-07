@@ -4,21 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "a472cce828292659",
+        "id": "a934bed28adae286",
         "type": "tabs",
         "children": [
           {
-            "id": "32e1f8cf1e5df15b",
+            "id": "219343644dd150bc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
-                "mode": "source",
-                "source": false
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
+                "viewState": {
+                  "x": -13059.928190657352,
+                  "y": -13997.961154240395,
+                  "zoom": -3.246666666666667
+                }
               },
-              "icon": "lucide-file",
-              "title": "Capítulo 13 - Tipos Genéricos"
+              "icon": "lucide-layout-dashboard",
+              "title": "RoadMap"
             }
           }
         ]
@@ -52,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#transparente",
+                "query": "tag:#curinga",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -104,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
+                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Capítulo 3 - Domain Models and Metadata"
+              "title": "Links inversos para RoadMap"
             }
           },
           {
@@ -194,30 +197,33 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "32e1f8cf1e5df15b",
+  "active": "219343644dd150bc",
   "lastOpenFiles": [
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenGemo.class",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Gen.class",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenGemo.java",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Gen.java",
+    "Pasted image 20250106224801.png",
+    "Java Para Iniciantes/Capítulo 7 - Herança.md",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/teste.java",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/WildcardDemo.java",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/BoundsDemo.class",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/NumericFns.class",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/BoundsDemo.java",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/NumericFns.java",
+    "m.md",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/SimpGen.class",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/TwoGen.class",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/SimpGen.java",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/TwoGen.java",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos",
     "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Indistraível - Nir Eyal/Resumo.canvas",
     "Pasted image 20250105205605.png",
     "Capítulo 3 - Domain Models and Metadata-3.png",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/test/java/com/manning/javapersistence/ch03/validation/ModelValidation.java",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/validation/src/main/java/com/manning/javapersistence/ch03/validation/Item.java",
     "Java Persistence with Spring Data e Hibernate/Imagens/Pasted image 20241229153505.png",
     "Capítulo 3 - Domain Models and Metadata-1.png",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex05/package-info.java",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex04/Bid.java",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex03/Item.java",
     "Capítulo 3 - Domain Models and Metadata-2.png",
     "Capítulo 3 - Domain Models and Metadata.png",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Ch03/domainmodel/src/main/java/com/manning/javapersistence/ch03/ex01/User.java",
     "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
     "n.md",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
@@ -230,8 +236,6 @@
     "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
     "README.md",
     "Java Para Iniciantes/Capítulo 7 - Heranças.md",
-    "Java Para Iniciantes/Capítulo 7 - Herança.md",
-    "Sem título.md",
     "Errors API.md",
     "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
     "Desenvolvimento Real de Software/Capítulo 2 - Análise de Extratos Bancários.md",
