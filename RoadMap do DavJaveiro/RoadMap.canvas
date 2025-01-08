@@ -11,12 +11,1029 @@
       "label": "Spring Spring Boot"
     },
     {
-      "id": "f23b53bef875144c",
+      "id": "6b426409874df3b4",
       "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 8 - Continuous integration.md",
+      "file": "RoadMap do DavJaveiro/Covers/SQL Book.png",
       "styleAttributes": {},
-      "x": 14661,
+      "x": -13510,
+      "y": -2467,
+      "width": 1065,
+      "height": 1401
+    },
+    {
+      "id": "f5627e789defe17d",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Logo.png",
+      "styleAttributes": {},
+      "x": 1369,
+      "y": -4560,
+      "width": 1849,
+      "height": 1035
+    },
+    {
+      "id": "3e51aec221ffee62",
+      "type": "file",
+      "file": "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
+      "styleAttributes": {},
+      "x": -1280,
+      "y": -1044,
+      "width": 1141,
+      "height": 1280,
+      "color": "4"
+    },
+    {
+      "id": "c39c78c3df1c3ace",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
+      "styleAttributes": {},
+      "x": -1116,
+      "y": -2992,
+      "width": 814,
+      "height": 1069
+    },
+    {
+      "id": "525c490a5717694e",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/SpringBoot Icon.png",
+      "styleAttributes": {},
+      "x": 2400,
+      "y": 594,
+      "width": 280,
+      "height": 280
+    },
+    {
+      "id": "c5e0f3b8888bc1ed",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Spring Icon.png",
+      "styleAttributes": {},
+      "x": 1890,
+      "y": 612,
+      "width": 262,
+      "height": 262
+    },
+    {
+      "id": "93bf4a097a16d89d",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 4 - Select.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -2310,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "c5e1c8ff56cae39b",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/JMeter 3 Book.png",
+      "styleAttributes": {},
+      "x": 6880,
+      "y": 164,
+      "width": 869,
+      "height": 1076
+    },
+    {
+      "id": "477e31911125fada",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/JUnit Book.png",
+      "styleAttributes": {},
+      "x": 6905,
+      "y": 2238,
+      "width": 821,
+      "height": 1028
+    },
+    {
+      "id": "40604f3ea361fbac",
+      "type": "text",
+      "text": "# 3° Semestre: **Modelagem de Dados**",
+      "styleAttributes": {},
+      "x": -13248,
+      "y": -2881,
+      "width": 540,
+      "height": 102
+    },
+    {
+      "id": "e6896536d3e83f67",
+      "type": "link",
+      "url": "https://www.atlassian.com/br/agile/project-management/project-management-intro",
+      "styleAttributes": {},
+      "x": -4675,
+      "y": -3990,
+      "width": 338,
+      "height": 337,
+      "color": "1"
+    },
+    {
+      "id": "fcba07270c5a20c6",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 6 - GROUP BY and ORDER BY.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -1662,
+      "width": 266,
+      "height": 219,
+      "color": "1"
+    },
+    {
+      "id": "68cbfb3dc71aaa9d",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 7 - CASE Statements.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -1338,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "073fe3b7f695f592",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 2 - Databases.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -2958,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "3106eabb0810de86",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 3 - SQLite.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -2634,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "a3066809d86ee1b4",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 8 - JOIN.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -1014,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "02002d11fd49e380",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 5 - Where.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -1986,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "ea441d0b5874f62f",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 1 - Why Learn SQL.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -3282,
+      "width": 266,
+      "height": 219,
+      "color": "4"
+    },
+    {
+      "id": "de90cc622ffca84a",
+      "type": "file",
+      "file": "Engenharia de Software Moderna/Capítulo 1 - Introdução.md",
+      "styleAttributes": {},
+      "x": -10200,
+      "y": -2657,
+      "width": 400,
+      "height": 400
+    },
+    {
+      "id": "be4aa4674f848f33",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Spring in Action Book.png",
+      "styleAttributes": {},
+      "x": -7418,
+      "y": -276,
+      "width": 1626,
+      "height": 2038
+    },
+    {
+      "id": "52fb6750a549dbdf",
+      "type": "text",
+      "text": "# 3° Semestre: **Engenharia de Software**",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -7748,
+      "y": -3861,
+      "width": 660,
+      "height": 80
+    },
+    {
+      "id": "be7df8e39c9fd111",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
+      "styleAttributes": {},
+      "x": -7349,
+      "y": -2955,
+      "width": 775,
+      "height": 995
+    },
+    {
+      "id": "e989720d96dbaf87",
+      "type": "file",
+      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
+      "styleAttributes": {},
+      "x": -6139,
+      "y": 2442,
+      "width": 723,
+      "height": 800,
+      "color": "1"
+    },
+    {
+      "id": "6588a7d0a1456b92",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
+      "styleAttributes": {},
+      "x": -9250,
+      "y": -2955,
+      "width": 623,
+      "height": 996
+    },
+    {
+      "id": "c2748d99e16462f2",
+      "type": "file",
+      "file": "Spring in Action/Capítulo 2 - Desenvolvendo aplicações web.md",
+      "styleAttributes": {},
+      "x": -8978,
+      "y": 861,
+      "width": 314,
+      "height": 203,
+      "color": "4"
+    },
+    {
+      "id": "ece63584c4ca91c7",
+      "type": "file",
+      "file": "Spring in Action/Capítulo 1 - Getting started with Spring.md",
+      "styleAttributes": {},
+      "x": -8975,
+      "y": 1212,
+      "width": 308,
+      "height": 210,
+      "color": "4"
+    },
+    {
+      "id": "d4709d6b9b254c09",
+      "type": "file",
+      "file": "Spring in Action/Capítulo 3 - Working with data.md",
+      "styleAttributes": {},
+      "x": -8975,
+      "y": 441,
+      "width": 311,
+      "height": 246,
+      "color": "1"
+    },
+    {
+      "id": "7e78edfcba17e71c",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Data Icon.png",
+      "styleAttributes": {},
+      "x": -13330,
+      "y": 211,
+      "width": 705,
+      "height": 705
+    },
+    {
+      "id": "3c8a097bd1cf703b",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Persistence Icon.png",
+      "styleAttributes": {
+        "border": null
+      },
+      "x": -13411,
+      "y": 2859,
+      "width": 866,
+      "height": 1090
+    },
+    {
+      "id": "a4ccf6139a71624b",
+      "type": "link",
+      "url": "https://mkyong.com/java/java-how-to-read-a-file/",
+      "styleAttributes": {},
+      "x": -3600,
+      "y": -10205,
+      "width": 583,
+      "height": 589
+    },
+    {
+      "id": "03bb7707f5c1f1cc",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 9 - Tratamento de Exceções.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -10351,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "ae98440bae032737",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+      "styleAttributes": {},
+      "x": -2224,
+      "y": -9362,
+      "width": 274,
+      "height": 339,
+      "color": "4"
+    },
+    {
+      "id": "2a3e4399b2c8ac4a",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -9689,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "2e1aecf8f9c46069",
+      "type": "text",
+      "text": "# 3° Sem estre: **Análise Orientada a Objetos**",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -6399,
+      "y": -8413,
+      "width": 780,
+      "height": 80
+    },
+    {
+      "id": "2280c6d2c7c640fe",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 9 - Database Design.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -690,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "6e2a0c973ae0d4b7",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 10 - Managing Data.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -366,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "e3b05d45e802e326",
+      "type": "file",
+      "file": "Getting Started with SQL/Chapter 11 - Going Forward.md",
+      "styleAttributes": {},
+      "x": -11600,
+      "y": -41,
+      "width": 266,
+      "height": 219
+    },
+    {
+      "id": "b8ec00a111066ee9",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Software Requirements Book1.png",
+      "styleAttributes": {},
+      "x": -3767,
+      "y": -7003,
+      "width": 960,
+      "height": 1259
+    },
+    {
+      "id": "eedf3f261de1f486",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Software Requiriments Book 2.png",
+      "styleAttributes": {},
+      "x": -3767,
+      "y": -8561,
+      "width": 950,
+      "height": 1322
+    },
+    {
+      "id": "51e79e37835a9bbc",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -8914,
+      "width": 274,
+      "height": 273,
+      "color": "3"
+    },
+    {
+      "id": "0b6dc78bdd212b7d",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -8531,
+      "width": 274,
+      "height": 315
+    },
+    {
+      "id": "a7f6f90e285ce4b2",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 10 - Usando IO.md",
+      "styleAttributes": {},
+      "x": -2210,
+      "y": -10024,
+      "width": 260,
+      "height": 226,
+      "color": "4"
+    },
+    {
+      "id": "f6cee17867fd0cab",
+      "type": "text",
+      "text": "# 3° Semestre: **Engenharia de Requisitos**",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -4870,
+      "y": -7319,
+      "width": 730,
+      "height": 80
+    },
+    {
+      "id": "ea1c45dcc9c0b891",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Para Iniciantes Book.png",
+      "styleAttributes": {},
+      "x": 1895,
+      "y": -10648,
+      "width": 796,
+      "height": 1151
+    },
+    {
+      "id": "36be36802905817b",
+      "type": "text",
+      "text": "# Curiosidades Java",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 4560,
+      "y": -8523,
+      "width": 215,
+      "height": 102
+    },
+    {
+      "id": "73a1ac41de3700a7",
+      "type": "link",
+      "url": "https://www.youtube.com/watch?v=iTrMnkQimKw&list=PL1lueKDtZ3DeXSaGwucTDD7iH1AcjTJAe",
+      "styleAttributes": {},
+      "x": 5476,
+      "y": -10365,
+      "width": 1362,
+      "height": 880
+    },
+    {
+      "id": "3274e48f71bf4167",
+      "type": "link",
+      "url": "https://www.youtube.com/watch?v=Y26srCFC6BQ",
+      "styleAttributes": {},
+      "x": 5476,
+      "y": -9254,
+      "width": 1362,
+      "height": 849
+    },
+    {
+      "id": "ec1701dc4e5a6548",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Entendendo Algoritmos.png",
+      "styleAttributes": {},
+      "x": -13492,
+      "y": -11280,
+      "width": 1028,
+      "height": 1433
+    },
+    {
+      "id": "69e567e4932269a3",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 8 - Pacotes e interfaces.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -10678,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "48eeaeb6594f4d17",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 7 - Heranças.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -11005,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "7ad9b858444d00d8",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -11332,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "3aa396e56593e8ac",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java The Complete Reference.png",
+      "styleAttributes": {},
+      "x": 320,
+      "y": -12080,
+      "width": 899,
+      "height": 1128
+    },
+    {
+      "id": "9200994cba03cc4e",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Icon.png",
+      "styleAttributes": {
+        "border": null
+      },
+      "x": -14659,
+      "y": -8640,
+      "width": 3361,
+      "height": 2722
+    },
+    {
+      "id": "9b02da3dd9318f2f",
+      "type": "link",
+      "url": "https://www.youtube.com/watch?v=utANrHfAh28",
+      "styleAttributes": {},
+      "x": 5476,
+      "y": -8174,
+      "width": 1362,
+      "height": 1089
+    },
+    {
+      "id": "4c6a7273c23bd912",
+      "type": "link",
+      "url": "https://vitorhpribeiro.medium.com/test-driven-develop-tdd-todos-deveriam-saber-d06a3244b187",
+      "styleAttributes": {},
+      "x": 9172,
+      "y": 2869,
+      "width": 556,
+      "height": 795
+    },
+    {
+      "id": "5b6623f6f24f8853",
+      "type": "link",
+      "url": "https://www.baeldung.com/java-logging-intro",
+      "styleAttributes": {},
+      "x": -14720,
+      "y": 414,
+      "width": 315,
+      "height": 334
+    },
+    {
+      "id": "690845c59a92c570",
+      "type": "link",
+      "url": "https://quarkus.io/",
+      "styleAttributes": {},
+      "x": 9361,
+      "y": -6596,
+      "width": 329,
+      "height": 351
+    },
+    {
+      "id": "5e45f1f1f873f902",
+      "type": "link",
+      "url": "https://www.playframework.com/",
+      "styleAttributes": {},
+      "x": 9361,
+      "y": -5850,
+      "width": 323,
+      "height": 442
+    },
+    {
+      "id": "25558a7543ed6c7a",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/GitHub in Action.png",
+      "styleAttributes": {},
+      "x": 10536,
+      "y": -3945,
+      "width": 817,
+      "height": 1024
+    },
+    {
+      "id": "04e361316fd5c484",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 1 - Introduction to GitHub Actions.md",
+      "styleAttributes": {},
+      "x": 11406,
       "y": -4444,
+      "width": 365,
+      "height": 448
+    },
+    {
+      "id": "a505a7e8df6e0b21",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Pasted image 20241228175230.png",
+      "styleAttributes": {},
+      "x": 8266,
+      "y": -3673,
+      "width": 855,
+      "height": 480
+    },
+    {
+      "id": "01af3d4df987f7ce",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Quarkus Icon.png",
+      "styleAttributes": {},
+      "x": 8266,
+      "y": -6652,
+      "width": 463,
+      "height": 463
+    },
+    {
+      "id": "09195bf816903377",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/PlayFramework Icon.png",
+      "styleAttributes": {},
+      "x": 8266,
+      "y": -5853,
+      "width": 854,
+      "height": 447
+    },
+    {
+      "id": "4042faad3634a1c3",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/TDD Book.png",
+      "styleAttributes": {},
+      "x": 8960,
+      "y": 967,
+      "width": 979,
+      "height": 1388
+    },
+    {
+      "id": "82d6ae5e769c36f5",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Fundamentos Matemáticos.png",
+      "styleAttributes": {},
+      "x": -16552,
+      "y": -11280,
+      "width": 1069,
+      "height": 1407
+    },
+    {
+      "id": "fb611372981b73bb",
+      "type": "link",
+      "url": "https://www.devmedia.com.br/orm-object-relational-mapper/19056",
+      "styleAttributes": {},
+      "x": -4119,
+      "y": 3941,
+      "width": 428,
+      "height": 492
+    },
+    {
+      "id": "07a4556d22e271d6",
+      "type": "file",
+      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 1 - Entendendo o object-relational persistence.md",
+      "styleAttributes": {},
+      "x": -6139,
+      "y": 4210,
+      "width": 723,
+      "height": 824,
+      "color": "4"
+    },
+    {
+      "id": "338ca1dfc705367b",
+      "type": "link",
+      "url": "https://www.altexsoft.com/blog/object-relational-mapping/",
+      "styleAttributes": {},
+      "x": -4124,
+      "y": 4813,
+      "width": 437,
+      "height": 442
+    },
+    {
+      "id": "8981b4d411b5d42c",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/TDD Icon.png",
+      "styleAttributes": {},
+      "x": 1520,
+      "y": 5311,
+      "width": 1544,
+      "height": 1025
+    },
+    {
+      "id": "bc911837906ac1f7",
+      "type": "link",
+      "url": "https://www.guru99.com/software-testing-introduction-importance.html",
+      "styleAttributes": {},
+      "x": 9159,
+      "y": 5396,
+      "width": 581,
+      "height": 857
+    },
+    {
+      "id": "694147cc759faf50",
+      "type": "link",
+      "url": "https://www.browserstack.com/guide/testing-pyramid-for-test-automation",
+      "styleAttributes": {},
+      "x": 10843,
+      "y": 5452,
+      "width": 724,
+      "height": 746
+    },
+    {
+      "id": "73f1ee48b47f50e6",
+      "type": "link",
+      "url": "https://ieeexplore.ieee.org/document/9481049",
+      "styleAttributes": {},
+      "x": -4248,
+      "y": 5690,
+      "width": 685,
+      "height": 678,
+      "color": "6"
+    },
+    {
+      "id": "db3f48da5d3afc96",
+      "type": "file",
+      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
+      "styleAttributes": {},
+      "x": -6139,
+      "y": 6271,
+      "width": 614,
+      "height": 769,
+      "color": "4"
+    },
+    {
+      "id": "2296532c7a97dbbb",
+      "type": "text",
+      "text": " **Lentidão do SpringData JPA**\n O Spring Data JPA pode ser mais lento em compração com JPA puro ou Hibernate Nativo devido a alguns fatores, como:\n 1. **Camada Adicional de Abstração** - O Spring Data JPA é construído sobre o JPA e o Hibernate, adicionando funcionalidades que simplificam o desenvolvimento, como repositórios automáticos, métodos personalizados e gerenciamento de transações. Essa abstração introduz sobrecarga em termos de processamento, pois o framework precisa interpretar e processas instruções adicionais antes de delegar as operações ao Hibernate;\n 2. **Geração Dinâmica de Consultas** - O Spring Data gera dinamicamente consultadas baseadas nos métodos dos repositórios (por exemoplo, #findById ou #Save), o que pode consumir mais tempo em comparação com consultas diretamente escritas no JPA ou no Hibernate nativo. Essa geração automática de queries exige análise e processamento extra durante a execução.\n 3. **Gerenciamento Automático de Transações** - O Spring Data configura e gerencia automaticamente. Embora isso torne o desenvolvimento mais simples, pode aumentar os tempos de execução, especialmente em cenários com muitas operações simultâneas.\n 4. **Repositórios com Operações Genéricas** - Repositórios no Spring Data fornecem suporte genérico para várias operações CRUD. Esse comportamento genérico, embora prático, pode ser menos eficiente do que implementações personalizadas diretamente no Hibernate ou JPA.\n 5. **Dependência de Proxies e Reflection** - O Spring Data JPA utiliza proxies dinâmicos e reflection para implementar seus recursos, como a injeção de dependências e a criação de beans. \n  \n**Cenários Ideal para uso do Spring Data JPA** \nApesar de ser mais lento, projetos que priorizam facilidade de desenvolvimento e manutenção, especialmente onde o desempenho absoluto não é um requisito crítico, pode ser uma boa alternativa.\nSe o desempenho for um fator-chave, é possível combinar o uso do Spring Data JPA com consultas personalizadas e otimizações manuais para reduzir a sobrecarga.",
+      "styleAttributes": {},
+      "x": -4248,
+      "y": 6677,
+      "width": 685,
+      "height": 793,
+      "color": "6"
+    },
+    {
+      "id": "c2af59b84a65e13a",
+      "type": "file",
+      "file": "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/SearchContainsString.java",
+      "styleAttributes": {},
+      "x": -15760,
+      "y": -12040,
+      "width": 400,
+      "height": 400,
+      "color": "#ffffff"
+    },
+    {
+      "id": "e788ec8f8c0c18af",
+      "type": "file",
+      "file": "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/Capítulo 3 - Algoritmos de Busca.md",
+      "styleAttributes": {},
+      "x": -14600,
+      "y": -12360,
+      "width": 400,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "1512e0da4c486713",
+      "type": "file",
+      "file": "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/LinearSearch.java",
+      "styleAttributes": {},
+      "x": -15760,
+      "y": -12560,
+      "width": 400,
+      "height": 400,
+      "color": "#ffffff"
+    },
+    {
+      "id": "89987e5c06a7dec9",
+      "type": "file",
+      "file": "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
+      "styleAttributes": {},
+      "x": -14600,
+      "y": -12920,
+      "width": 400,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "a2595995daec73e6",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
+      "styleAttributes": {},
+      "x": -3160,
+      "y": -11768,
+      "width": 260,
+      "height": 210,
+      "color": "#ffffff"
+    },
+    {
+      "id": "d8218e1451a358e2",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -11659,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "f35686000e0cddf7",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
+      "styleAttributes": {},
+      "x": -2217,
+      "y": -11986,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "892aa1e68ed8ecfe",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Lógica e Estrutura.png",
+      "styleAttributes": {},
+      "x": -8606,
+      "y": -12898,
+      "width": 878,
+      "height": 1242
+    },
+    {
+      "id": "68699022818f36df",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Desenvolvimento Real de Software.png",
+      "styleAttributes": {},
+      "x": 4001,
+      "y": -13863,
+      "width": 1035,
+      "height": 1342
+    },
+    {
+      "id": "385990dd1ac65068",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Cientista da Computação Book.png",
+      "styleAttributes": {
+        "border": "dotted"
+      },
+      "x": -13458,
+      "y": -14151,
+      "width": 959,
+      "height": 1243,
+      "color": "1"
+    },
+    {
+      "id": "36d662b6046d03f4",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
+      "styleAttributes": {},
+      "x": -16929,
+      "y": -14151,
+      "width": 911,
+      "height": 1243
+    },
+    {
+      "id": "46c6c551cec4eb41",
+      "type": "file",
+      "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo.md",
+      "styleAttributes": {},
+      "x": -14600,
+      "y": -13400,
+      "width": 400,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "546747b95e8fa5ca",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Data Structures AB.png",
+      "styleAttributes": {},
+      "x": -11200,
+      "y": -14173,
+      "width": 1002,
+      "height": 1253
+    },
+    {
+      "id": "43a6e2ac03044b0c",
+      "type": "link",
+      "url": "https://www.youtube.com/watch?si=pJMU61kc69v1twHg&v=Qmt0QwzEmh0&feature=youtu.be",
+      "styleAttributes": {},
+      "x": -18560,
+      "y": -18240,
+      "width": 2983,
+      "height": 2366
+    },
+    {
+      "id": "18b464d4f586b6d5",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Think Java.png",
+      "styleAttributes": {},
+      "x": -8606,
+      "y": -15120,
+      "width": 880,
+      "height": 1155
+    },
+    {
+      "id": "46c4f896a99bb160",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Code Problems.png",
+      "styleAttributes": {},
+      "x": 4000,
+      "y": -15751,
+      "width": 1040,
+      "height": 1351
+    },
+    {
+      "id": "9debe4abf3e87081",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Algoritmos.png",
+      "styleAttributes": {},
+      "x": -13549,
+      "y": -17816,
+      "width": 1141,
+      "height": 1520
+    },
+    {
+      "id": "da5f8260f20d0c57",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Desmistificando.png",
+      "styleAttributes": {},
+      "x": -11200,
+      "y": -17819,
+      "width": 1060,
+      "height": 1523
+    },
+    {
+      "id": "e7c0df36c6290493",
+      "type": "file",
+      "file": "Pasted image 20250101232753.png",
+      "styleAttributes": {},
+      "x": -23520,
+      "y": -8215,
+      "width": 1427,
+      "height": 1873
+    },
+    {
+      "id": "4850de9048b2e607",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 2 - Hands-on My First Actions Workflow.md",
+      "styleAttributes": {},
+      "x": 11871,
+      "y": -4444,
+      "width": 365,
+      "height": 448
+    },
+    {
+      "id": "58b975886faa43bf",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
+      "styleAttributes": {},
+      "x": 12336,
+      "y": -4444,
+      "width": 365,
+      "height": 448
+    },
+    {
+      "id": "5a3c2410923111df",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
+      "styleAttributes": {},
+      "x": 12801,
+      "y": -4444,
+      "width": 365,
+      "height": 448
+    },
+    {
+      "id": "380c683e58fcc7bc",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 5 - Runners.md",
+      "styleAttributes": {},
+      "x": 13266,
+      "y": -4444,
+      "width": 365,
+      "height": 448
+    },
+    {
+      "id": "7c0bbb443580c3c3",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 6 - Self-hosted runners.md",
+      "styleAttributes": {},
+      "x": 13731,
+      "y": -4443,
       "width": 365,
       "height": 448
     },
@@ -26,6 +1043,16 @@
       "file": "Git/GitHub Actions In Action/Capítulo 7 - Managing your self-hosted runners.md",
       "styleAttributes": {},
       "x": 14196,
+      "y": -4444,
+      "width": 365,
+      "height": 448
+    },
+    {
+      "id": "f23b53bef875144c",
+      "type": "file",
+      "file": "Git/GitHub Actions In Action/Capítulo 8 - Continuous integration.md",
+      "styleAttributes": {},
+      "x": 14661,
       "y": -4444,
       "width": 365,
       "height": 448
@@ -79,517 +1106,6 @@
       "y": 1081,
       "width": 978,
       "height": 1158
-    },
-    {
-      "id": "5a3c2410923111df",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 4 - GitHub Actions.md",
-      "styleAttributes": {},
-      "x": 12801,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "4c6a7273c23bd912",
-      "type": "link",
-      "url": "https://vitorhpribeiro.medium.com/test-driven-develop-tdd-todos-deveriam-saber-d06a3244b187",
-      "styleAttributes": {},
-      "x": 9172,
-      "y": 2869,
-      "width": 556,
-      "height": 795
-    },
-    {
-      "id": "380c683e58fcc7bc",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 5 - Runners.md",
-      "styleAttributes": {},
-      "x": 13266,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "7c0bbb443580c3c3",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 6 - Self-hosted runners.md",
-      "styleAttributes": {},
-      "x": 13731,
-      "y": -4443,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "bc911837906ac1f7",
-      "type": "link",
-      "url": "https://www.guru99.com/software-testing-introduction-importance.html",
-      "styleAttributes": {},
-      "x": 9159,
-      "y": 5396,
-      "width": 581,
-      "height": 857
-    },
-    {
-      "id": "694147cc759faf50",
-      "type": "link",
-      "url": "https://www.browserstack.com/guide/testing-pyramid-for-test-automation",
-      "styleAttributes": {},
-      "x": 10843,
-      "y": 5452,
-      "width": 724,
-      "height": 746
-    },
-    {
-      "id": "e7c0df36c6290493",
-      "type": "file",
-      "file": "Pasted image 20250101232753.png",
-      "styleAttributes": {},
-      "x": -23520,
-      "y": -8215,
-      "width": 1427,
-      "height": 1873
-    },
-    {
-      "id": "6b426409874df3b4",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/SQL Book.png",
-      "styleAttributes": {},
-      "x": -13510,
-      "y": -2467,
-      "width": 1065,
-      "height": 1401
-    },
-    {
-      "id": "7e78edfcba17e71c",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Data Icon.png",
-      "styleAttributes": {},
-      "x": -13330,
-      "y": 211,
-      "width": 705,
-      "height": 705
-    },
-    {
-      "id": "40604f3ea361fbac",
-      "type": "text",
-      "text": "# 3° Semestre: **Modelagem de Dados**",
-      "styleAttributes": {},
-      "x": -13248,
-      "y": -2881,
-      "width": 540,
-      "height": 102
-    },
-    {
-      "id": "5b6623f6f24f8853",
-      "type": "link",
-      "url": "https://www.baeldung.com/java-logging-intro",
-      "styleAttributes": {},
-      "x": -14720,
-      "y": 414,
-      "width": 315,
-      "height": 334
-    },
-    {
-      "id": "3c8a097bd1cf703b",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Persistence Icon.png",
-      "styleAttributes": {
-        "border": null
-      },
-      "x": -13411,
-      "y": 2859,
-      "width": 866,
-      "height": 1090
-    },
-    {
-      "id": "690845c59a92c570",
-      "type": "link",
-      "url": "https://quarkus.io/",
-      "styleAttributes": {},
-      "x": 9361,
-      "y": -6596,
-      "width": 329,
-      "height": 351
-    },
-    {
-      "id": "5e45f1f1f873f902",
-      "type": "link",
-      "url": "https://www.playframework.com/",
-      "styleAttributes": {},
-      "x": 9361,
-      "y": -5850,
-      "width": 323,
-      "height": 442
-    },
-    {
-      "id": "25558a7543ed6c7a",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/GitHub in Action.png",
-      "styleAttributes": {},
-      "x": 10536,
-      "y": -3945,
-      "width": 817,
-      "height": 1024
-    },
-    {
-      "id": "04e361316fd5c484",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 1 - Introduction to GitHub Actions.md",
-      "styleAttributes": {},
-      "x": 11406,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "4850de9048b2e607",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 2 - Hands-on My First Actions Workflow.md",
-      "styleAttributes": {},
-      "x": 11871,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "58b975886faa43bf",
-      "type": "file",
-      "file": "Git/GitHub Actions In Action/Capítulo 3 - Workflows.md",
-      "styleAttributes": {},
-      "x": 12336,
-      "y": -4444,
-      "width": 365,
-      "height": 448
-    },
-    {
-      "id": "ec1701dc4e5a6548",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Entendendo Algoritmos.png",
-      "styleAttributes": {},
-      "x": -13492,
-      "y": -11280,
-      "width": 1028,
-      "height": 1433
-    },
-    {
-      "id": "82d6ae5e769c36f5",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Fundamentos Matemáticos.png",
-      "styleAttributes": {},
-      "x": -16552,
-      "y": -11280,
-      "width": 1069,
-      "height": 1407
-    },
-    {
-      "id": "c2af59b84a65e13a",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/SearchContainsString.java",
-      "styleAttributes": {},
-      "x": -15760,
-      "y": -12040,
-      "width": 400,
-      "height": 400,
-      "color": "#ffffff"
-    },
-    {
-      "id": "e788ec8f8c0c18af",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/Capítulo 3 - Algoritmos de Busca.md",
-      "styleAttributes": {},
-      "x": -14600,
-      "y": -12360,
-      "width": 400,
-      "height": 400,
-      "color": "4"
-    },
-    {
-      "id": "1512e0da4c486713",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/LinearSearch.java",
-      "styleAttributes": {},
-      "x": -15760,
-      "y": -12560,
-      "width": 400,
-      "height": 400,
-      "color": "#ffffff"
-    },
-    {
-      "id": "385990dd1ac65068",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Cientista da Computação Book.png",
-      "styleAttributes": {
-        "border": "dotted"
-      },
-      "x": -13458,
-      "y": -14151,
-      "width": 959,
-      "height": 1243,
-      "color": "1"
-    },
-    {
-      "id": "89987e5c06a7dec9",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
-      "styleAttributes": {},
-      "x": -14600,
-      "y": -12920,
-      "width": 400,
-      "height": 400,
-      "color": "4"
-    },
-    {
-      "id": "36d662b6046d03f4",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
-      "styleAttributes": {},
-      "x": -16929,
-      "y": -14151,
-      "width": 911,
-      "height": 1243
-    },
-    {
-      "id": "46c6c551cec4eb41",
-      "type": "file",
-      "file": "Cientista da Computação Autodidata/Capítulo 1 - O que é um algoritmo.md",
-      "styleAttributes": {},
-      "x": -14600,
-      "y": -13400,
-      "width": 400,
-      "height": 400,
-      "color": "4"
-    },
-    {
-      "id": "43a6e2ac03044b0c",
-      "type": "link",
-      "url": "https://www.youtube.com/watch?si=pJMU61kc69v1twHg&v=Qmt0QwzEmh0&feature=youtu.be",
-      "styleAttributes": {},
-      "x": -18560,
-      "y": -18240,
-      "width": 2983,
-      "height": 2366
-    },
-    {
-      "id": "9debe4abf3e87081",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Algoritmos.png",
-      "styleAttributes": {},
-      "x": -13549,
-      "y": -17816,
-      "width": 1141,
-      "height": 1520
-    },
-    {
-      "id": "b8ec00a111066ee9",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Software Requirements Book1.png",
-      "styleAttributes": {},
-      "x": -3767,
-      "y": -7003,
-      "width": 960,
-      "height": 1259
-    },
-    {
-      "id": "eedf3f261de1f486",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Software Requiriments Book 2.png",
-      "styleAttributes": {},
-      "x": -3767,
-      "y": -8561,
-      "width": 950,
-      "height": 1322
-    },
-    {
-      "id": "a4ccf6139a71624b",
-      "type": "link",
-      "url": "https://mkyong.com/java/java-how-to-read-a-file/",
-      "styleAttributes": {},
-      "x": -3600,
-      "y": -10205,
-      "width": 583,
-      "height": 589
-    },
-    {
-      "id": "51e79e37835a9bbc",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -8914,
-      "width": 274,
-      "height": 273,
-      "color": "3"
-    },
-    {
-      "id": "0b6dc78bdd212b7d",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -8531,
-      "width": 274,
-      "height": 315
-    },
-    {
-      "id": "03bb7707f5c1f1cc",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 9 - Tratamento de Exceções.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -10351,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "a7f6f90e285ce4b2",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 10 - Usando IO.md",
-      "styleAttributes": {},
-      "x": -2210,
-      "y": -10024,
-      "width": 260,
-      "height": 226,
-      "color": "4"
-    },
-    {
-      "id": "f5627e789defe17d",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Logo.png",
-      "styleAttributes": {},
-      "x": 1369,
-      "y": -4560,
-      "width": 1849,
-      "height": 1035
-    },
-    {
-      "id": "fb611372981b73bb",
-      "type": "link",
-      "url": "https://www.devmedia.com.br/orm-object-relational-mapper/19056",
-      "styleAttributes": {},
-      "x": -4119,
-      "y": 3941,
-      "width": 428,
-      "height": 492
-    },
-    {
-      "id": "338ca1dfc705367b",
-      "type": "link",
-      "url": "https://www.altexsoft.com/blog/object-relational-mapping/",
-      "styleAttributes": {},
-      "x": -4124,
-      "y": 4813,
-      "width": 437,
-      "height": 442
-    },
-    {
-      "id": "66d87044445b6b5c",
-      "type": "file",
-      "file": "Pasted image 20241229141027.png",
-      "styleAttributes": {},
-      "x": -4820,
-      "y": -2955,
-      "width": 629,
-      "height": 996
-    },
-    {
-      "id": "ae98440bae032737",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
-      "styleAttributes": {},
-      "x": -2224,
-      "y": -9362,
-      "width": 274,
-      "height": 339,
-      "color": "4"
-    },
-    {
-      "id": "2a3e4399b2c8ac4a",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -9689,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "69e567e4932269a3",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 8 - Pacotes e interfaces.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -10678,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "48eeaeb6594f4d17",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 7 - Heranças.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11005,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "7ad9b858444d00d8",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11332,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "a2595995daec73e6",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
-      "styleAttributes": {},
-      "x": -3160,
-      "y": -11768,
-      "width": 260,
-      "height": 210,
-      "color": "#ffffff"
-    },
-    {
-      "id": "d8218e1451a358e2",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11659,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "f35686000e0cddf7",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
-      "styleAttributes": {},
-      "x": -2217,
-      "y": -11986,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "3aa396e56593e8ac",
-      "type": "file",
-      "file": "Pasted image 20250106224801.png",
-      "styleAttributes": {},
-      "x": 320,
-      "y": -12080,
-      "width": 899,
-      "height": 1128
     },
     {
       "id": "c7a83b04f4941094",
@@ -652,542 +1168,14 @@
       "height": 321
     },
     {
-      "id": "9210d1586af270fc",
-      "type": "text",
-      "text": "#DDD - # Domain-driven design",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -4711,
-      "y": -2482,
-      "width": 410,
-      "height": 50
-    },
-    {
-      "id": "3e51aec221ffee62",
+      "id": "66d87044445b6b5c",
       "type": "file",
-      "file": "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
+      "file": "RoadMap do DavJaveiro/Covers/Learning Domain-Driven Design.png",
       "styleAttributes": {},
-      "x": -1280,
-      "y": -1044,
-      "width": 1141,
-      "height": 1280,
-      "color": "4"
-    },
-    {
-      "id": "c39c78c3df1c3ace",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
-      "styleAttributes": {},
-      "x": -1116,
-      "y": -2992,
-      "width": 814,
-      "height": 1069
-    },
-    {
-      "id": "73f1ee48b47f50e6",
-      "type": "link",
-      "url": "https://ieeexplore.ieee.org/document/9481049",
-      "styleAttributes": {},
-      "x": -4248,
-      "y": 5690,
-      "width": 685,
-      "height": 678,
-      "color": "6"
-    },
-    {
-      "id": "be4aa4674f848f33",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Spring in Action Book.png",
-      "styleAttributes": {},
-      "x": -7418,
-      "y": -276,
-      "width": 1626,
-      "height": 2038
-    },
-    {
-      "id": "52fb6750a549dbdf",
-      "type": "text",
-      "text": "# 3° Semestre: **Engenharia de Software**",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -7748,
-      "y": -3861,
-      "width": 660,
-      "height": 80
-    },
-    {
-      "id": "be7df8e39c9fd111",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
-      "styleAttributes": {},
-      "x": -7349,
-      "y": -2955,
-      "width": 775,
-      "height": 995
-    },
-    {
-      "id": "2e1aecf8f9c46069",
-      "type": "text",
-      "text": "# 3° Sem estre: **Análise Orientada a Objetos**",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -6399,
-      "y": -8413,
-      "width": 780,
-      "height": 80
-    },
-    {
-      "id": "892aa1e68ed8ecfe",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Lógica e Estrutura.png",
-      "styleAttributes": {},
-      "x": -8606,
-      "y": -12898,
-      "width": 878,
-      "height": 1242
-    },
-    {
-      "id": "18b464d4f586b6d5",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Think Java.png",
-      "styleAttributes": {},
-      "x": -8606,
-      "y": -15120,
-      "width": 880,
-      "height": 1155
-    },
-    {
-      "id": "e989720d96dbaf87",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 2442,
-      "width": 723,
-      "height": 800,
-      "color": "1"
-    },
-    {
-      "id": "07a4556d22e271d6",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 1 - Entendendo o object-relational persistence.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 4210,
-      "width": 723,
-      "height": 824,
-      "color": "4"
-    },
-    {
-      "id": "2296532c7a97dbbb",
-      "type": "text",
-      "text": " **Lentidão do SpringData JPA**\n O Spring Data JPA pode ser mais lento em compração com JPA puro ou Hibernate Nativo devido a alguns fatores, como:\n 1. **Camada Adicional de Abstração** - O Spring Data JPA é construído sobre o JPA e o Hibernate, adicionando funcionalidades que simplificam o desenvolvimento, como repositórios automáticos, métodos personalizados e gerenciamento de transações. Essa abstração introduz sobrecarga em termos de processamento, pois o framework precisa interpretar e processas instruções adicionais antes de delegar as operações ao Hibernate;\n 2. **Geração Dinâmica de Consultas** - O Spring Data gera dinamicamente consultadas baseadas nos métodos dos repositórios (por exemoplo, #findById ou #Save), o que pode consumir mais tempo em comparação com consultas diretamente escritas no JPA ou no Hibernate nativo. Essa geração automática de queries exige análise e processamento extra durante a execução.\n 3. **Gerenciamento Automático de Transações** - O Spring Data configura e gerencia automaticamente. Embora isso torne o desenvolvimento mais simples, pode aumentar os tempos de execução, especialmente em cenários com muitas operações simultâneas.\n 4. **Repositórios com Operações Genéricas** - Repositórios no Spring Data fornecem suporte genérico para várias operações CRUD. Esse comportamento genérico, embora prático, pode ser menos eficiente do que implementações personalizadas diretamente no Hibernate ou JPA.\n 5. **Dependência de Proxies e Reflection** - O Spring Data JPA utiliza proxies dinâmicos e reflection para implementar seus recursos, como a injeção de dependências e a criação de beans. \n  \n**Cenários Ideal para uso do Spring Data JPA** \nApesar de ser mais lento, projetos que priorizam facilidade de desenvolvimento e manutenção, especialmente onde o desempenho absoluto não é um requisito crítico, pode ser uma boa alternativa.\nSe o desempenho for um fator-chave, é possível combinar o uso do Spring Data JPA com consultas personalizadas e otimizações manuais para reduzir a sobrecarga.",
-      "styleAttributes": {},
-      "x": -4248,
-      "y": 6677,
-      "width": 685,
-      "height": 793,
-      "color": "6"
-    },
-    {
-      "id": "db3f48da5d3afc96",
-      "type": "file",
-      "file": "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
-      "styleAttributes": {},
-      "x": -6139,
-      "y": 6271,
-      "width": 614,
-      "height": 769,
-      "color": "4"
-    },
-    {
-      "id": "e6896536d3e83f67",
-      "type": "link",
-      "url": "https://www.atlassian.com/br/agile/project-management/project-management-intro",
-      "styleAttributes": {},
-      "x": -4675,
-      "y": -3990,
-      "width": 338,
-      "height": 337,
-      "color": "1"
-    },
-    {
-      "id": "f6cee17867fd0cab",
-      "type": "text",
-      "text": "# 3° Semestre: **Engenharia de Requisitos**",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": -4870,
-      "y": -7319,
-      "width": 730,
-      "height": 80
-    },
-    {
-      "id": "525c490a5717694e",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/SpringBoot Icon.png",
-      "styleAttributes": {},
-      "x": 2400,
-      "y": 594,
-      "width": 280,
-      "height": 280
-    },
-    {
-      "id": "c5e0f3b8888bc1ed",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Spring Icon.png",
-      "styleAttributes": {},
-      "x": 1890,
-      "y": 612,
-      "width": 262,
-      "height": 262
-    },
-    {
-      "id": "ea1c45dcc9c0b891",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Para Iniciantes Book.png",
-      "styleAttributes": {},
-      "x": 1895,
-      "y": -10648,
-      "width": 796,
-      "height": 1151
-    },
-    {
-      "id": "36be36802905817b",
-      "type": "text",
-      "text": "# Curiosidades Java",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": 4560,
-      "y": -8523,
-      "width": 215,
-      "height": 102
-    },
-    {
-      "id": "fcba07270c5a20c6",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 6 - GROUP BY and ORDER BY.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1662,
-      "width": 266,
-      "height": 219,
-      "color": "1"
-    },
-    {
-      "id": "68cbfb3dc71aaa9d",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 7 - CASE Statements.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1338,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "68699022818f36df",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Desenvolvimento Real de Software.png",
-      "styleAttributes": {},
-      "x": 4001,
-      "y": -13863,
-      "width": 1035,
-      "height": 1342
-    },
-    {
-      "id": "46c4f896a99bb160",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Code Problems.png",
-      "styleAttributes": {},
-      "x": 4000,
-      "y": -15751,
-      "width": 1040,
-      "height": 1351
-    },
-    {
-      "id": "8981b4d411b5d42c",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/TDD Icon.png",
-      "styleAttributes": {},
-      "x": 1520,
-      "y": 5311,
-      "width": 1544,
-      "height": 1025
-    },
-    {
-      "id": "6588a7d0a1456b92",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
-      "styleAttributes": {},
-      "x": -9250,
-      "y": -2955,
-      "width": 623,
-      "height": 996
-    },
-    {
-      "id": "073fe3b7f695f592",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 2 - Databases.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -2958,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "3106eabb0810de86",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 3 - SQLite.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -2634,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "2280c6d2c7c640fe",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 9 - Database Design.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -690,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "6e2a0c973ae0d4b7",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 10 - Managing Data.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -366,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "e3b05d45e802e326",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 11 - Going Forward.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -41,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "a3066809d86ee1b4",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 8 - JOIN.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1014,
-      "width": 266,
-      "height": 219
-    },
-    {
-      "id": "02002d11fd49e380",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 5 - Where.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -1986,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "93bf4a097a16d89d",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 4 - Select.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -2310,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "ea441d0b5874f62f",
-      "type": "file",
-      "file": "Getting Started with SQL/Chapter 1 - Why Learn SQL.md",
-      "styleAttributes": {},
-      "x": -11600,
-      "y": -3282,
-      "width": 266,
-      "height": 219,
-      "color": "4"
-    },
-    {
-      "id": "c2748d99e16462f2",
-      "type": "file",
-      "file": "Spring in Action/Capítulo 2 - Desenvolvendo aplicações web.md",
-      "styleAttributes": {},
-      "x": -8978,
-      "y": 861,
-      "width": 314,
-      "height": 203,
-      "color": "4"
-    },
-    {
-      "id": "ece63584c4ca91c7",
-      "type": "file",
-      "file": "Spring in Action/Capítulo 1 - Getting started with Spring.md",
-      "styleAttributes": {},
-      "x": -8975,
-      "y": 1212,
-      "width": 308,
-      "height": 210,
-      "color": "4"
-    },
-    {
-      "id": "d4709d6b9b254c09",
-      "type": "file",
-      "file": "Spring in Action/Capítulo 3 - Working with data.md",
-      "styleAttributes": {},
-      "x": -8975,
-      "y": 441,
-      "width": 311,
-      "height": 246,
-      "color": "1"
-    },
-    {
-      "id": "9200994cba03cc4e",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Icon.png",
-      "styleAttributes": {
-        "border": null
-      },
-      "x": -14659,
-      "y": -8640,
-      "width": 3361,
-      "height": 2722
-    },
-    {
-      "id": "de90cc622ffca84a",
-      "type": "file",
-      "file": "Engenharia de Software Moderna/Capítulo 1 - Introdução.md",
-      "styleAttributes": {},
-      "x": -10200,
-      "y": -2657,
-      "width": 400,
-      "height": 400
-    },
-    {
-      "id": "546747b95e8fa5ca",
-      "type": "file",
-      "file": "Pasted image 20250105205605.png",
-      "styleAttributes": {},
-      "x": -11200,
-      "y": -14173,
-      "width": 1002,
-      "height": 1253
-    },
-    {
-      "id": "da5f8260f20d0c57",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Desmistificando.png",
-      "styleAttributes": {},
-      "x": -11200,
-      "y": -17819,
-      "width": 1060,
-      "height": 1523
-    },
-    {
-      "id": "73a1ac41de3700a7",
-      "type": "link",
-      "url": "https://www.youtube.com/watch?v=iTrMnkQimKw&list=PL1lueKDtZ3DeXSaGwucTDD7iH1AcjTJAe",
-      "styleAttributes": {},
-      "x": 5476,
-      "y": -10365,
-      "width": 1362,
-      "height": 880
-    },
-    {
-      "id": "3274e48f71bf4167",
-      "type": "link",
-      "url": "https://www.youtube.com/watch?v=Y26srCFC6BQ",
-      "styleAttributes": {},
-      "x": 5476,
-      "y": -9254,
-      "width": 1362,
-      "height": 849
-    },
-    {
-      "id": "9b02da3dd9318f2f",
-      "type": "link",
-      "url": "https://www.youtube.com/watch?v=utANrHfAh28",
-      "styleAttributes": {},
-      "x": 5476,
-      "y": -8174,
-      "width": 1362,
-      "height": 1089
-    },
-    {
-      "id": "c5e1c8ff56cae39b",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/JMeter 3 Book.png",
-      "styleAttributes": {},
-      "x": 6880,
-      "y": 164,
-      "width": 869,
-      "height": 1076
-    },
-    {
-      "id": "477e31911125fada",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/JUnit Book.png",
-      "styleAttributes": {},
-      "x": 6905,
-      "y": 2238,
-      "width": 821,
-      "height": 1028
-    },
-    {
-      "id": "a505a7e8df6e0b21",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Pasted image 20241228175230.png",
-      "styleAttributes": {},
-      "x": 8266,
-      "y": -3673,
-      "width": 855,
-      "height": 480
-    },
-    {
-      "id": "01af3d4df987f7ce",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Quarkus Icon.png",
-      "styleAttributes": {},
-      "x": 8266,
-      "y": -6652,
-      "width": 463,
-      "height": 463
-    },
-    {
-      "id": "09195bf816903377",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/PlayFramework Icon.png",
-      "styleAttributes": {},
-      "x": 8266,
-      "y": -5853,
-      "width": 854,
-      "height": 447
-    },
-    {
-      "id": "4042faad3634a1c3",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/TDD Book.png",
-      "styleAttributes": {},
-      "x": 8960,
-      "y": 967,
-      "width": 979,
-      "height": 1388
+      "x": -5032,
+      "y": -2947,
+      "width": 872,
+      "height": 1143
     }
   ],
   "edges": [
@@ -1928,26 +1916,6 @@
       "color": "4"
     },
     {
-      "id": "926d2422326bcb0b",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "3e51aec221ffee62",
-      "fromSide": "left",
-      "toNode": "9210d1586af270fc",
-      "toSide": "bottom"
-    },
-    {
-      "id": "49ee0cf31a558048",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "9210d1586af270fc",
-      "fromSide": "top",
-      "toNode": "66d87044445b6b5c",
-      "toSide": "bottom"
-    },
-    {
       "id": "c7f4067c5d446c65",
       "styleAttributes": {
         "pathfindingMethod": "square"
@@ -2421,6 +2389,26 @@
       "fromSide": "left",
       "toNode": "3aa396e56593e8ac",
       "toSide": "bottom"
+    },
+    {
+      "id": "e10d2d7d290779ea",
+      "styleAttributes": {
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "66d87044445b6b5c",
+      "fromSide": "bottom",
+      "toNode": "3e51aec221ffee62",
+      "toSide": "left"
+    },
+    {
+      "id": "2a9e00f6eba029ae",
+      "styleAttributes": {
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "66d87044445b6b5c",
+      "fromSide": "bottom",
+      "toNode": "be4aa4674f848f33",
+      "toSide": "right"
     }
   ],
   "metadata": {}

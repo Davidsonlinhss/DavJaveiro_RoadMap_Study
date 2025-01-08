@@ -368,6 +368,30 @@
       "width": 860,
       "height": 483,
       "color": "#ffffff"
+    },
+    {
+      "id": "b855b7024cb6d20a",
+      "type": "text",
+      "text": "14- Defenda-se do Hacking das Interrupções no Trabalho",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 3932,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "d08579e10ab62221",
+      "type": "text",
+      "text": "## Resumo\n1. **As interrupções levam a erros.** Você não tem como fazer seu melhor trabalho se for bombardeado por distrações\n2. **Os escritórios de layout aberto aumentam a distração.**\n3. **Defenda o seu foco.** Deixe claro quando você não quiser ser interrompido. Use uma placa no monitor ou outro sinal claro para avisar as pessoas que você está em modo indistraível.",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 3720,
+      "width": 860,
+      "height": 483,
+      "color": "#ffffff"
     }
   ],
   "edges": [
@@ -666,6 +690,26 @@
       "toNode": "668c2eeb82c7da88",
       "toSide": "left",
       "color": "1"
+    },
+    {
+      "id": "22ec1d2acf083e47",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "b855b7024cb6d20a",
+      "fromSide": "right",
+      "toNode": "d08579e10ab62221",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "9a74f16be27f121b",
+      "styleAttributes": {},
+      "fromNode": "668c2eeb82c7da88",
+      "fromSide": "right",
+      "toNode": "b855b7024cb6d20a",
+      "toSide": "left",
+      "color": "4"
     }
   ],
   "metadata": {}

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "036fbe46cf43f32e",
+        "id": "b970a644e6658755",
         "type": "tabs",
         "children": [
           {
-            "id": "dd791cf280b542c4",
+            "id": "f560448008fd554d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Capítulo 13 - Tipos Genéricos"
+              "title": "Nova aba"
             }
           }
         ]
@@ -87,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 444.51002502441406,
+    "width": 573.5,
     "collapsed": true
   },
   "right": {
@@ -191,20 +187,29 @@
       "float-search:Search Obsidian In Modal": false,
       "runjs:RunJS": false,
       "obsidian-git:Open Git source control": false,
-      "vscode-editor:Create Code File": false,
-      "pdf-plus:PDF++: Toggle auto-copy": false,
-      "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "vscode-editor:Create Code File": false
     }
   },
-  "active": "dd791cf280b542c4",
+  "active": "f560448008fd554d",
   "lastOpenFiles": [
+    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "RoadMap do DavJaveiro/Covers/Java The Complete Reference.png",
+    "RoadMap do DavJaveiro/Covers/Data Structures AB.png",
+    "RoadMap do DavJaveiro/Covers/Learning Domain-Driven Design.png",
+    "README.md",
+    "Artigos/Efficient Reading of Papers in Science and Technology.pdf",
+    "Artigos/Papers for Science and Technology for Dummies.md",
+    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
+    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Pasted image 20250107133807.png",
+    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Comparative_analysis_of_functional_and_object-oriented_programming.pdf",
+    "Articles.md",
+    "Indistraível - Nir Eyal/Resumo.canvas",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenConsDemo.class",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Summation.class",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenConsDemo.java",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenericMethodDemo.class",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenericMethodDemo.java",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Imagens/Capítulo 3 - Domain Models and Metadata-3.png",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Imagens/Capítulo 3 - Domain Models and Metadata-2.png",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Imagens/Capítulo 3 - Domain Models and Metadata-1.png",
@@ -213,21 +218,11 @@
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Nova pasta",
     "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Análise Comparativa de programação funcional e programação orientada a objeto-7.png",
     "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Análise Comparativa de programação funcional e programação orientada a objeto-6.png",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Análise Comparativa de programação funcional e programação orientada a objeto-5.png",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Análise Comparativa de programação funcional e programação orientada a objeto-4.png",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Análise Comparativa de programação funcional e programação orientada a objeto-3.png",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Análise Comparativa de programação funcional e programação orientada a objeto-2.png",
     "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Nova pasta",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto",
-    "Artigos/Paradigmas",
     "m.md",
     "Errors API.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 1 - Entendendo o object-relational persistence.md",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Indistraível - Nir Eyal/Resumo.canvas",
     "Java Para Iniciantes/Capítulo 7 - Herança.md",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
     "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
@@ -237,7 +232,6 @@
     "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/Capítulo 3 - Algoritmos de Busca.md",
     "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
     "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
-    "README.md",
     "Java Para Iniciantes/Capítulo 7 - Heranças.md",
     "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
     "Desenvolvimento Real de Software/Capítulo 2 - Análise de Extratos Bancários.md",
