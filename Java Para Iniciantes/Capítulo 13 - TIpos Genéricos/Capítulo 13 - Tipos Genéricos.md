@@ -345,3 +345,35 @@ Também podemos especificar um limite inferior para um curinga adicionando uma c
 Nesse caso, só classes que sejam superclasses de subclasse são argumentos aceitáveis. A cláusula é inclusiva.
 
 ## Métodos genéricos
+Como os exemplos anteriores mostraram, os métodos de uma classe genérica podem fazer uso do parâmetro de tipo da classe e, portanto, são automaticamente genéricos de acordo com o parâmetro de tipo. Entretanto, podemos declarar um método genérico que use um ou mais <span style="background:#d4b106">parâmetros de tipo</span> exclusivamente seus. Além disso, podemos criar um método genérico embutido em uma classe não genérica. 
+
+O programa a seguir declara uma classe não genérica chamada **GenericMethodDemo** e um  método genérico estático dentro dessa classe chamado **arraysEqual**. O método faz a verificação se dois arrays contêm os mesmo elementos, na mesma ordem. Pode ser usado para comparação de dois arrays, sejam eles quais forem, desde que sejam de tipos iguais ou compatíveis e seus elementos sejam comparáveis.
+[[GenericMethodDemo.java]]
+
+Examinando **arraysEqual**, observamos:
+```java
+static <T extends Comparable<T>, V extends T> boolean arraysEqual(T[] x, V[] y)
+```
+Os parâmetros de tipo são declarados *antes* do tipo de retorno do método. Observamos que T estende #Comparable. #Comparable é uma #interface declarada em #java-lang. Uma classe que implementa Comparable define objetos que podem ser ordenados. Logo, usar um limite superior Comparable assegura que **arraysEqual** só possa ser usado com objetos que possam ser comparados. Comparable é genérica e seu parâmetro de tipo especifica o tipo dos objetos que ela compara. Observamos também que **arraysEqual** é estático, o que permite que seja chamado independentemente de qualquer objeto. É bom ressaltar, no entanto, que os métodos genéricos podem ser estáticos ou não estáticos.
+
+Na primeira chamada:
+```java
+if(arraysEqual(nums, nums))
+```
+o tipo de elemento do primeiro argumento é **Integer**, o que faz **T** ser substituído por Integer. O tipo de elemento do segundo argumento também é Integer, o que também o faz substituir V. Logo, a chamada a **arraysEqual()** é válida e os dois arrays podem ser comparados.
+
+A sintaxe usada na criação de **arraysEqual** pode ser generalizada:
+```java
+<lista-parâm-tipo> tipo-ret nome-mét(lista-parâm) {
+	//...
+}
+```
+
+## Construtores genéricos
+Um construtor pode ser genérico, mesmo que sua classe não seja. Por exemplo, no programa a seguir, a classe **Summation** não é genérica, mas seu construtor é.
+[[GenConsDemo.java]]
+A classe Summation calcula e #encapsula (significa que a classe **armazena** e **protege** o valor calculado da soma dentro do objeto) a soma do valor numérico passado para seu construtor. Logo, para conseguir obter o valor, faz-se necessário o uso de métodos acessadores, #get.
+Já que **Summation** especifica um parâmetro de tipo que é limitado por **Number**, um objeto **Summation** pode ser construído com o uso de qualquer tipo numérico.
+
+## Interfaces genéricas
+Uma interface pode ser genérica. 
