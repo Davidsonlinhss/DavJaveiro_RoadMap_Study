@@ -176,7 +176,7 @@ Logo, para tratar este problema, Java fornece os *tipos limitados*. Na especific
 Essa sintaxe especifica que *T* só pode ser substituído pela superclasse, ou por subclasses da superclasse. Logo, superclasse define um limite superior no qual ela também se inclui.
 
 Podemos usar um limite superior para corrigir a classe **NumericFns** especificando Number como o limite:
-[[BoundsDemo.class | Tipo Limitado como Number]]
+[[BoundsDemo.java]]
 
 ```Java
 class NumericFns<T extends Number> {...}
@@ -376,4 +376,60 @@ A classe Summation calcula e #encapsula (significa que a classe **armazena** e *
 Já que **Summation** especifica um parâmetro de tipo que é limitado por **Number**, um objeto **Summation** pode ser construído com o uso de qualquer tipo numérico.
 
 ## Interfaces genéricas
-Uma interface pode ser genérica. 
+Uma interface pode ser genérica, no exemplo, a interface padrão **Comparable< T >** foi usada para sabermos se elementos de dois arrays podem ser comparados. É claro que também podemos definir nossas próprias interfaces genéricas. As interfaces genéricas são especificadas como as classes genéricas. Exemplo, criando uma interface chamada **Containment** que pode ser implementada por classes que armazenem um ou mais valores. Também declaramos um método chamado **contains** que determina se um valor especificado está contido no objeto chamador.
+
+Toda classe que implemente uma interface genérica também deve ser genérica.
+[[GenIFDemo.java]]
+
+Embora a maioria dos aspectos desse programa seja de fácil compreensão, algumas observações importantes devem ser feitas. Primeiro, observamos que **Containment** é declarada assim:
+```java
+interface Containment<T>
+```
+Normalmente, uma interface genérica é declarada da mesma forma que uma classe genérica. No caso em questão, o parâmetro de tipo T especifica o tipo dos objetos contidos.
+
+Em seguida, **Containment** é implementada por MyClass:
+```java
+class myClass<T> implements Containment<T> `{
+
+}
+```
+Em geral, quando uma classe implementa uma interface genérica, essa classe também deve ser genérica, pelo menos ao ponto de usar um parâmetro de tipo passado para a interface. Por exemplo, a tentativa a seguir de declarar **MyClass** está incorreta:
+```java
+class MyClass implements Containment<T> { // ERRADO}
+```
+Essa declaração é errado, porque MyClass não declara um parâmetro de tipo, ou seja, não há como passar um para **Containment**. O identificador T é desconhecido e o compilador relatará erro. Mas uma classe pode implementar um tipo específico de interface genérica, como:
+```java
+class MyClass implements Containment<Double> {
+	// CORRETO!
+}
+```
+neste caso, a classe que está implementando não precisa ser genérica.
+
+Também podemos limitar os tipos de dados passados como parâmetros para uma interface, logo, podemos limitar o tipo de dado para o qual a interface pode ser implementada. Por exemplo, se quiséssemos limitar **Containment** aos tipos numéricos, poderíamos declará-la assim:
+```java
+interface Containment<T extends Number> {
+....
+}
+```
+Neste caso, qualquer classe usuária deve passar para **Containment** um argumento de tipo com o mesmo limite. Por exemplo, agora **MyClass** deve ser declarada como mostrado aqui:
+```java
+class MyClass<T extends Number> implements Containment<T> {
+	...
+}
+```
+
+Como Containment requer um tipo que estenda Number, a classe que a está implementando deve especificar o mesmo limite. Uma vez que esse limite seja estabelecido, não há necessidade de espcificá-lo novamente na cláusula **implements**. Na verdade, seria errado fazê-lo. 
+Uma vez que o parâmetro de tipo tiver sido estabelecido, ele será passado para a interface sem nenhuma modificação.
+
+---
+**Tente Isto 13-1** Crie uma fila genérica
+Uma das vantagens mais arrojadas que os genéricos trazem à programação é a possibilidade de c<span style="background:#d4b106">onstrução de um código confiável e reutilizável</span>. Como mencionado no início deste capítulo, muitos algoritmos são iguais, não importando o tipo de dados em que são usados. Por exemplo, uma fila funciona da mesma forma, seja para inteiros, strings ou objetos File. Em vez de criar uma classe fila separada para cada tipo de objeto, podemos construir uma solução genérica para ser usada com qualquer tipo. Portanto, o ciclo de desenvolvimento composto por projeto, codificação, teste e depuração só ocorrerá uma vez quando criarmos a solução genérica - e não repetidamente, sempre que uma fila for necessária para um novo tipo de dado.
+
+Neste projeto, vamos adaptar o exemplo da fila que vemos desenvolvendo desde a seção Tente isto 5-2 tornando-a genérica. O projeto representa a evolução final da fila. Ele inclui uma interface genérica que define operações da fila, duas classes de exceção e uma implementação da fila: uma fila de tamanho fixo. 
+
+Este projeto organiza o código da fila em um conjunto de arquivos separados: 
+- um para interface;
+- um para cada exceção da fila;
+- um para implementação da fila fixa;
+- um para o programa que a demonstra.
+
