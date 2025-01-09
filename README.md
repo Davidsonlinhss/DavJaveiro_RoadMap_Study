@@ -73,7 +73,7 @@ Utilize a funcionalidade de links internos, tabelas dinâmicas e outros recursos
   <h2 align="left">My RoadMap </h2>
     <p>Você pode criar um RoadMap pessoal, a medida que for obtendo recursos e indicações de materiais para estudo, a ideia é que você crie o seu própio RoadMap para que possar se guiar.</p>
   <p>
-  <img src="https://github.com/user-attachments/assets/5e95250f-81a9-4688-9b6a-6de50aa6d778" width="1200">
+  <img src="https://github.com/user-attachments/assets/ad7fdbc4-8b4f-4cae-9ea5-317f411d8142" width="1200">
   </p>
   
     
@@ -89,6 +89,16 @@ Utilize a funcionalidade de links internos, tabelas dinâmicas e outros recursos
   <img src="https://github.com/user-attachments/assets/39cafff2-3889-45c4-884e-e957e87d66a1" width="600">
     <p>Exemplo do código acima:</p>
   <img src="https://github.com/user-attachments/assets/e1455e3a-3994-4c49-9d88-21ea454e9426" width="700">
+ </p>
+
+ <h2 align="left">Articles Reference</h2>
+  <p align="left">Como material complementar, eu criei uma pasta que conterá dicas e referências para artigos acadêmicos voltados a Ciência da Computação. São mais de 20 tópicos com aproximadamente 100 artigos! </p>
+  <p>
+  <img src="https://github.com/user-attachments/assets/25cd4b50-8819-4b89-8ddf-95917a9d6e18" width="600">
+ </p>
+ <p align="left">A medida em que eu ler os artigos, irei disponibilizar um resumo traduzido, visto que a maioria dos artigos estão em inglês, em uma pasta com cada nome dentro da pasta Artigos. </p>
+ <p>
+   <img src="https://github.com/user-attachments/assets/f91afadc-a220-463f-80d0-2e15d30e906e" width="600">
  </p>
 
 <h2 align="left">My Tree Graph</h2>
