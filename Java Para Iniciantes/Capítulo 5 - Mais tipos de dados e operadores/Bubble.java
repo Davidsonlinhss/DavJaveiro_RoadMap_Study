@@ -15,7 +15,10 @@ public class Bubble{
         // fazendo o Bubble-sort
         for(a=1; a < size; a++) // percorrendo os elementos
 
-            // b = 4, quanto b [começa no último elemento] >= a [começa no primeiro índice 0(primeira varredura); diminua b--
+            // Inicializa 'b' como o índice do último elemento do array (b = size - 1).
+            // Enquanto 'b' for maior ou igual a 'a' (índice inicial da varredura), 
+            // o loop continuará. Após cada iteração, decrementa 'b' (b--), 
+            // movendo-se da direita para a esquerda no array.
             for(b = size-1; b >= a; b--) {
 
                 // se o último elemento for maior, trocamos 

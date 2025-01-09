@@ -272,17 +272,6 @@
       "color": "#ffffff"
     },
     {
-      "id": "ac20f0a0f376a93a",
-      "type": "text",
-      "text": "## Resumo\n1. **As pessoas que você ama merecem mais do que as migalhas do seu tempo.** Se uma pessoa for importante na sua vida, não deixe de reservar um horário regular para ela na sua agenda.\n2. **Não se limite a agendar dias especiais com o seu marido ou mulher.** Inclua as tarefas domésticas na sua agenda para garantir uma divisão justa.\n3. **Se você não tiver bons amigos, pode estar prejudicando a sua saúde.** Cultive seus relacionamentos importantes, reservando um tempo na sua agenda para encontros regulares.\n",
-      "styleAttributes": {},
-      "x": 1900,
-      "y": 1325,
-      "width": 860,
-      "height": 380,
-      "color": "#ffffff"
-    },
-    {
       "id": "be13f6eb4902c98e",
       "type": "text",
       "text": "10 - Controle o que Entra, não o que Sai",
@@ -294,30 +283,6 @@
       "width": 580,
       "height": 60,
       "color": "4"
-    },
-    {
-      "id": "21fb35004a7037ff",
-      "type": "text",
-      "text": "11 - Inclua os Relacionamentos Importantes na sua Agenda",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": 1020,
-      "y": 1480,
-      "width": 580,
-      "height": 60,
-      "color": "4"
-    },
-    {
-      "id": "feae86af506e26a2",
-      "type": "text",
-      "text": "## Resumo\n1. **São quatro etapas para aplicar no modelo indistraível:** 1) Dominar os gatilhos internos é a primeira etapa; arranjar tempo para a tração é o segundo passo.\n3. **É imprescindível alinhar sua agenda com as expectativas dos colegas e chefes no trabalho para conseguir um tempo para a tração:** Se não souberem como você passa o seu tempo, colegas e chefes têm mais chances de distraí-lo com tarefas desnecessárias.\n4. **Ajuste sua agenda de acordo com as circunstâncias.** Se a sua agenda mudar de um dia para a o outro, tenha uma conversa rápida com seu chefe ou colega todos os dias para alinhar e validar a sua programação a eles. Todavia, para a maioria das pessoas, basta fazer um alinhamento semanal.\n",
-      "styleAttributes": {},
-      "x": 1900,
-      "y": 1880,
-      "width": 860,
-      "height": 640,
-      "color": "#ffffff"
     },
     {
       "id": "0e224e5e9c102185",
@@ -377,7 +342,20 @@
         "textAlign": "center"
       },
       "x": 1020,
-      "y": 3932,
+      "y": 3430,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "cc7a293008c9e64b",
+      "type": "text",
+      "text": "15- Defenda-se do *Hacking* dos E-mails",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 4030,
       "width": 580,
       "height": 60,
       "color": "4"
@@ -388,9 +366,55 @@
       "text": "## Resumo\n1. **As interrupções levam a erros.** Você não tem como fazer seu melhor trabalho se for bombardeado por distrações\n2. **Os escritórios de layout aberto aumentam a distração.**\n3. **Defenda o seu foco.** Deixe claro quando você não quiser ser interrompido. Use uma placa no monitor ou outro sinal claro para avisar as pessoas que você está em modo indistraível.",
       "styleAttributes": {},
       "x": 1900,
-      "y": 3720,
+      "y": 3218,
       "width": 860,
       "height": 483,
+      "color": "#ffffff"
+    },
+    {
+      "id": "0c5729eea4e24065",
+      "type": "text",
+      "text": "## Resumo\n1. **Divida o problema em partes menores.** O tempo gasto com os e-mails (T) é uma função do número de mensagens recebidas (n) multiplicado pelo tempo médio (t) gasto por mensagem: T = n x t.\n2. **Reduza o número de mensagens recebidas.** Defina um horário de expediente, postergue o envio das mensagens e reduza o número de mensagens indesejadas.\n3. **Passe menos tempo com cada mensagem.** Marque os e-mails para lembrar-se de quando as mensagens precisarão ser respondidas. Responda aos emais só nos horários que programamos em nossa agenda para a atividade.",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 3818,
+      "width": 860,
+      "height": 483,
+      "color": "#ffffff"
+    },
+    {
+      "id": "21fb35004a7037ff",
+      "type": "text",
+      "text": "11 - Inclua os Relacionamentos Importantes na sua Agenda",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 1360,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "ac20f0a0f376a93a",
+      "type": "text",
+      "text": "## Resumo\n1. **As pessoas que você ama merecem mais do que as migalhas do seu tempo.** Se uma pessoa for importante na sua vida, não deixe de reservar um horário regular para ela na sua agenda.\n2. **Não se limite a agendar dias especiais com o seu marido ou mulher.** Inclua as tarefas domésticas na sua agenda para garantir uma divisão justa.\n3. **Se você não tiver bons amigos, pode estar prejudicando a sua saúde.** Cultive seus relacionamentos importantes, reservando um tempo na sua agenda para encontros regulares.\n",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 1200,
+      "width": 860,
+      "height": 380,
+      "color": "#ffffff"
+    },
+    {
+      "id": "feae86af506e26a2",
+      "type": "text",
+      "text": "## Resumo\n1. **São quatro etapas para aplicar no modelo indistraível:** 1) Dominar os gatilhos internos é a primeira etapa; arranjar tempo para a tração é o segundo passo.\n3. **É imprescindível alinhar sua agenda com as expectativas dos colegas e chefes no trabalho para conseguir um tempo para a tração:** Se não souberem como você passa o seu tempo, colegas e chefes têm mais chances de distraí-lo com tarefas desnecessárias.\n4. **Ajuste sua agenda de acordo com as circunstâncias.** Se a sua agenda mudar de um dia para a o outro, tenha uma conversa rápida com seu chefe ou colega todos os dias para alinhar e validar a sua programação a eles. Todavia, para a maioria das pessoas, basta fazer um alinhamento semanal.\n",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 1745,
+      "width": 860,
+      "height": 640,
       "color": "#ffffff"
     }
   ],
@@ -708,6 +732,26 @@
       "fromNode": "668c2eeb82c7da88",
       "fromSide": "right",
       "toNode": "b855b7024cb6d20a",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "c1acace6ab0eb52b",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "cc7a293008c9e64b",
+      "fromSide": "right",
+      "toNode": "0c5729eea4e24065",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "dd55836141561964",
+      "styleAttributes": {},
+      "fromNode": "668c2eeb82c7da88",
+      "fromSide": "right",
+      "toNode": "cc7a293008c9e64b",
       "toSide": "left",
       "color": "4"
     }

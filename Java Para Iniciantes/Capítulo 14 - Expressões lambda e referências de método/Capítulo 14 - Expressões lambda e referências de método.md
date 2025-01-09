@@ -36,3 +36,4 @@ O exemplo mais simples de uma expressão lambda, produz um valor constante:
 ```
 
 Esta expressão não tem parâmetros, logo, a lista de parâmetros está vazia. O valor retornado será constante, 98.6. 
+
