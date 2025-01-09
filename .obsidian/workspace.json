@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "239e84233d235f2c",
+        "id": "08ad295fa1e799b9",
         "type": "tabs",
         "children": [
           {
-            "id": "612faa5bc016504a",
+            "id": "e7c4daf7613ef860",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
+                "file": "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/Capítulo 14 - Expressões lambda e referências de método.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 13 - Tipos Genéricos"
+              "title": "Capítulo 14 - Expressões lambda e referências de método"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#lazy_loading",
+                "query": "tag:#erasure",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 573.5,
+    "width": 444.51002502441406,
     "collapsed": true
   },
   "right": {
@@ -169,8 +169,19 @@
               "icon": "lucide-list",
               "title": "Sumário de RoadMap"
             }
+          },
+          {
+            "id": "d3010e0df1731859",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -194,43 +205,42 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "612faa5bc016504a",
+  "active": "e7c4daf7613ef860",
   "lastOpenFiles": [
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/QueueEmptyException.class",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/QueueFullException.class",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/IGenQ.class",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/GenQueue.class",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/GenQDemo.class",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/GenQDemo.java",
-    "Fila Genérica.md",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/GenQueue.java",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/QueueEmptyException.java",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/QueuE",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/QueueFullException.java",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/FilaGenérica/IGenQ.java",
-    "Java The Complete Reference/Chapter 19 - Exploring java.lang/Chapter 19 - Exploring the java.lang.md",
+    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenDemo.class",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenDemo.java",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/tiposbruto/RawDemo.class",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/tiposbruto/Gen.class",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/tiposbruto/RawDemo.java",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/tiposbruto",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/TiposBruto/RawDemo.java",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/TiposBruto",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/TiposBrutos",
     "RoadMap do DavJaveiro/RoadMap.canvas",
-    "RoadMap do DavJaveiro/Covers/Java The Complete Reference.png",
-    "RoadMap do DavJaveiro/Covers/Data Structures AB.png",
-    "RoadMap do DavJaveiro/Covers/Learning Domain-Driven Design.png",
-    "README.md",
     "Artigos/Papers for Science and Technology for Dummies.md",
+    "Diagram.png",
     "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Pasted image 20250107133807.png",
-    "Articles.md",
-    "Indistraível - Nir Eyal/Resumo.canvas",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Imagens/Capítulo 3 - Domain Models and Metadata-3.png",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Imagens/Capítulo 3 - Domain Models and Metadata-2.png",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Imagens/Capítulo 3 - Domain Models and Metadata-1.png",
-    "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Imagens/Capítulo 3 - Domain Models and Metadata.png",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Análise Comparativa de programação funcional e programação orientada a objeto-7.png",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Imagens/Análise Comparativa de programação funcional e programação orientada a objeto-6.png",
+    "RoadMap do DavJaveiro/RoadMap.md",
+    "RoadMap do DavJaveiro/Covers/Efficient Linux at the Command Line.png",
+    "RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
+    "RoadMap do DavJaveiro/Covers/Pasted image 20241228204759.png",
+    "RoadMap do DavJaveiro/Covers/Pasted image 20241228204750.png",
+    "RoadMap do DavJaveiro/Covers/Pasted image 20241228204427.png",
+    "RoadMap do DavJaveiro/Covers/Pasted image 20241228195630.png",
+    "RoadMap do DavJaveiro/Covers/Pasted image 20241228175230.png",
+    "RoadMap do DavJaveiro/Covers/Learning Domain-Driven Design.png",
+    "RoadMap do DavJaveiro/Covers/Java The Complete Reference.png",
+    "Java The Complete Reference/Chapter 19 - Exploring java.lang/Chapter 19 - Exploring the java.lang.md",
+    "Fila Genérica.md",
+    "Teste.md",
+    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
     "m.md",
     "Errors API.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 1 - Entendendo o object-relational persistence.md",
+    "Indistraível - Nir Eyal/Resumo.canvas",
     "Java Para Iniciantes/Capítulo 7 - Herança.md",
-    "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 2 - Starting a project.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
     "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
@@ -239,6 +249,7 @@
     "Cientista da Computação Autodidata/Capítulo 3 - Algoritmos de Busca/Capítulo 3 - Algoritmos de Busca.md",
     "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
     "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
+    "README.md",
     "Java Para Iniciantes/Capítulo 7 - Heranças.md",
     "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
     "Desenvolvimento Real de Software/Capítulo 2 - Análise de Extratos Bancários.md",

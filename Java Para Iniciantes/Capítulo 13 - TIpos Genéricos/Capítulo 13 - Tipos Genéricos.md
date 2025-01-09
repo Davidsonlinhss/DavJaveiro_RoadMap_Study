@@ -433,3 +433,192 @@ Este projeto organiza o código da fila em um conjunto de arquivos separados:
 - um para implementação da fila fixa;
 - um para o programa que a demonstra.
 
+[[GenQDemo.java | Código Projeto Tente isto 13-1]]
+
+## Tipos brutos e código legado
+Já que o suporte aos genéricos não existia antes do JDK5, era necessário que Java fornecesse algum meio dos códigos antigos anteriores aos genéricos fazerem a transição. Resumindo, os códigos anteriores aos genéricos tinham que ser ao mesmo tempo funcionais e **compatíveis com os genéricos**. Portanto, os códigos pré-genéricos devem funcionar com os genéricos e os códigos genéricos têm de funcionar com os códigos pré-genéricos.
+
+Para realizar a transição para os genéricos, Java permite que uma classe genérica seja usada sem nenhum argumento de tipo. Isso cria um *tipo bruto* para a classe. <span style="background:#d4b106">Esse tipo bruto é compatível com códigos legados, que não têm conhecimento dos genéricos</span>. A principal desvantagem do uso de tipo bruto é a **segurança de tipos** dos genéricos ser perdida. 
+
+Vejamos um exemplo que mostra um tipo bruto:
+```java
+Gen raw = new Gen(new Double(98.6));
+```
+No exemplo acima, vemos que não fornecemos um *argumento de tipo*, portanto, um tipo bruto é criado.
+[[GenDemo.java]]
+
+Esse programa contém várias coisas. Primeiro, um tipo bruto da classe genérica **Gen** é criado pela declaração:
+```java
+Gen raw = new Gen(new Double(98.6));
+```
+
+Observamos que nenhum argumento de tipo é especificado. Isso cria um objeto Gen cujo tipo **T** é substituído por #Object.
+
+Um tipo bruto não garante a segurança de tipos. Logo, uma variável de tipo bruto pode receber uma referência a qualquer tipo de objeto Gen. O inverso também é permitido, onde uma variável de um tipo **Gen** específico pode receber uma referência a um objeto Gen bruto. No entanto, as duas opções são potencialmente inseguras, porque o mecanismo de verificação de tipos dos genéricos é ignorado.
+
+A falta de segurança de tipos é ilustrada da seguinte maneira:
+```java
+int i = (Integer) raw.getob();
+```
+O valor de ob dentro de raw é obtido e induzido para **Integer**. O problema é que raw foi declarada com Double e não um valor inteiro. Porém, isto não é detectado no tempo de #compilação, pois o tipo de **raw** é desconhecido, Logo, essa instrução falha no tempo de #execução.
+Passa na hora de compilar, falha na hora de executar.
+
+Devido ao risco inerente ao uso dos tipos brutos, #javac exibe *avisos de não verificação* quando um tipo bruto é usado de uma maneira que possa ameaçar a segurança de tipos. 
+
+**ATENÇÃO**
+<span style="background:#ff4d4f">Devemos limitar o uso de tipos brutos aos casos em que tiver de combinar código legado com código genérico mais recente. Os tipos brutos são apenas um recurso de transição e não algo que deva ser usado em código novo.</span>
+
+## Inferência de tipos com o operador losango
+A partir do JKD7, podemos encurtar a sintaxe usada na criação de uma instância de um tipo genérico. Para começar, vamos relembrar da classe **TwoGen** mostrada anteriormente. Observamos que ela utiliza dois tipos genéricos:
+```java
+class TwoGen<T, V> {
+	T ob1;
+	V ob2;
+
+	// Passa para o construtor uma referência
+	// a um objeto de tipo T
+	TwoGen(T o1, v o2) {
+		ob1 = o1;
+		ob2 = o2;
+	}
+	// ...
+}
+```
+Em versões anteriores a #JDK7, para criar uma instância de TwoGen, temos:
+```java
+Twogen<Integer, String> tgOb = new TwoGen<Integer, String>(42, "testing");
+```
+Neste caso, temos os argumentos de tipo sendo especificados duas vezes: 
+1. quando tgOb é declarada;
+2. quando uma instância de TwoGen é criada via **new**. 
+
+Já que os genéricos foram introduzidos por #JDK5, essa é a forma requerida por todas as versões de Java anteriores a #JDK7. Essa forma acaba sendo um pouco mais verbosa do que precisa ser. Logo, o JDK7 adicionou um elemento sintático que nos permite evitar a segunda especificação:
+```java
+TwoGen<Integer, String> tgOb = new TwoGen<>(42, "testing");
+```
+
+Portanto, a parte que **cria a instância** usa simplesmente <>, que é uma lista de argumentos de tipo. Isso se chama #operador-losando. Ele solicita ao compilador que infira os argumentos de tipo requeridos pelo construtor na expressão **new**. Portanto, essa declaração encurta o que às vezes gera instruções de declaração muito longadas. É particularmente útil para tipos **genéricos que especificam limites**.
+Sua forma generalizada:
+```java
+nome-classe<lista-arg-tipo> nome-var = new nome-classe<>(lista-arg-cons);
+```
+
+Embora seja mais usada em instruções de declaração, a inferência de tipos também pode ser aplicada à passagem de parâmetros:
+```java
+boolean isSame(TwoGen<T, V> o) {
+	if(ob1 == o.ob1 && ob2 == o.ob2) return true;
+	else return false;
+}
+```
+Logo, a chamada abaixo também será válida:
+
+```java
+if(tgOb.isSame)(new TwoGen<>(42, "testing"))) System.out.println("Same");
+```
+
+## Erasure
+Geralmente, não é necessário o programador saber os detalhes de como o compilador Java transforma o **código-fonte** em **código-objeto**. No entanto, no caso dos genéricos, algum conhecimento geral do processo é importante, já que ele explica por que os recursos genéricos funcionam como funcionam - e por que às vezes seu comportamento surpreende. 
+
+Uma restrição importante que conduziu a maneira de os genéricos serem adicionados à Java foi a necessidade de compatibilidade com versões anteriores da linguagem. Resumindo: o código genérico tinha que ser compatível com códigos não genéricos preexistentes. Logo, qualquer alteração na sintaxe da linguagem Java, ou em JVM, não poderia invalidar códigos mais antigos.  A forma a qual Java implementa os genéricos é respeitando a restrição e com a técnica #erasure
+
+Em geral, é assim que erasure funciona: Quando o código Java é compilado, todas as informações de tipos genéricos são removidas (em inglês, erased). Ou seja, é feita a substituição dos parâmetros de tipo por seu tipo limiitado, que é o #Object quando nenhum limite explícito é especificado, e aplicação das coerções apropriadas. Essa abordagem dos genéricos não permite que existam parâmetros de tipo no tempo de #execução. Eles são simplesmente mecanismos do código-fonte.
+
+Portanto, os genéricos funcionam em códigos antigos sem mudanças na #JVM. O código é compilado e as informações sobre tipos genéricos desaparecem no processo de compilação. Os parâmetros de tipo são substituídos por #Object (ou outro tipo limitado caso haja) e o Java adiciona conversões automáticas onde necessário. Portanto, os genéricos só existem no código fonte, sendo eliminados em tempo de execução.
+
+## Erros de ambiguidade
+A inclusão dos genéricos fez surgir um novo tipo de erro contra o qual devemos nos proteger: *a ambiguidade*. Erros de ambiguidade ocorrem quando o erasure faz duas declarações genéricas aparentemente distintas produzirem o mesmo tipo, causando um conflito. Exemplo:
+```java
+class MyGenClass<T, V> {
+	T ob1;
+	V ob2;
+
+	void set(T o) {
+		ob1 = o;
+	}
+	
+
+	void set(V o) {
+		ob2 = o;
+	}
+
+}
+```
+T e V parecem ser tipos diferentes, portanto isso aparenta ser correto. No entanto, existem dois problemas de **ambiguidade**
+1. Do modo como foi criada, não é necessário que T e V sejam tipos diferente. Por exemplo, podemos construir:
+```java
+MyGenClass<String, String> obj = new MyGenClass<String, String>();
+```
+Tanto T quanto V serão substituídos por **String**. Isso torna as duas versões de set idênticas, portanto, um erro.
+
+## Algumas restrições dos genéricos
+Existem restrições quanto ao uso dos genéricos. Elas envolvem a criação de objetos de um parâmetro de tipo, membros estáticos, exceções e arrays.
+
+## Parâmetros de tipos não podem ser instanciados
+Não é possível criar uma instância de um parâmetro de tipo. Por exemplo, consideramos a classe a seguir:
+
+```java
+class Gen<T> {
+	T ob;
+	Gen() {
+		ob = new T(); // Inválido
+ 	}
+}
+```
+O compilador não tem como saber que tipo de objeto criar. **T** é simplesmente um espaço reservado. 
+
+## Restrições aos membros estáticos
+Nenhum membro #static pode usar um parâmetro de tipo declarado pela classe externa. Por exemplo, os dois membros #static dessa classe não são válidos:
+```java
+class Wrong<T> {
+	static T ob;
+
+	static T getob() {
+		return ob;
+	}
+}
+```
+
+## Restrições aos arrays genéricos
+Há duas restrições importantes dos genéricos aplicáveis aos arrays. Não podemos instanciar um array cujo tipo do elemento seja um parâmetro de tipo. Em segundo lugar, não pode criar um array de referências genéricas específicas de um tipo:
+```java
+class Gen<T extends Number> {
+	T ob;
+	T vals[]'; // correto
+
+	Gen(T o, T[] nums) {
+		ob = o;
+	}
+
+	// Essa instrução não é válida
+	// vals = new T[10];
+
+class GenArrays {
+	public static void main(String args[]) {
+		Integer n[] = { 1, 2, 3, 4, 5};
+		Gen<Integer> iOb = new Gen<Integer>(50, n);
+
+		Gen<Integer> gens[] = new Gen<Integer>[10]; // ERRADO
+
+		Gen<?> gens[] = new Gen<?>[10]; // correto
+	}
+}
+}
+```
+Como o programa mostra, é válido declarar uma referência a um array de tipo T:
+```java
+T vals[];
+```
+
+Mas não podemos instanciar um array de tipo T:
+```java
+vals = new T[10];
+```
+Não podemos criar um array de tipo T, pois não há como o compilador saber que tipo de array deve seer realmente criado. No entanto, podemos passar para Gen() uma referência a um array de tipo compatível quando um objeto for criado e atribuir essa referência a vals:
+```java
+vals = nums; // CORRETO ATRIBUIR REFERÊNCIA A UM ARRAY EXISTENTE
+```
+
+Isso funciona pelo fato de o array passado para Gen ter um tipo conhecido, que será o mesmo tipo de T no momento da criação do objeto. 
+
+## Restrições a exceções genéricas
+Uma classe genérica não pode estender #Throwable. Ou seja, ñ podemos criar classes de exceção genéricas.
