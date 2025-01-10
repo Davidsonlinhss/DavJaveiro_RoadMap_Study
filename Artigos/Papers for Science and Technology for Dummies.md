@@ -51,7 +51,7 @@ Artigos listados por tópicos
     - Programming as Theory Building. [Naur (1985)](https://pages.cs.wisc.edu/~remzi/Naur.pdf).
     - Towards a Theory of Conceptual Design for Software. [Jackson (2015)](https://groups.csail.mit.edu/sdg/pubs/2015/concept-essay.pdf).
     - 
-6. **Programming Paradigms for Dummies: What Every Programmer Should Know. [Van Roy (2012)](https://webperso.info.ucl.ac.be/~pvr/VanRoyChapter.pdf).**  
+6. **Programming Paradigms for Dummies: What Every Programmer Should Know. [Van Roy (2012)](https://webperso.info.ucl.ac.be/~pvr/VanRoyChapter.pdf).**
     Programming Paradigms
     - Recursive Functions of Symbolic Expressions and Their Computation by Machine. [McCarthy (1960)](http://jmc.stanford.edu/articles/recursive/recursive.pdf).
     - The Semantics of Predicate Logic as a Programming Language. [Van Emden, Kowalski (1976)](https://dl.acm.org/doi/pdf/10.1145/321978.321991).

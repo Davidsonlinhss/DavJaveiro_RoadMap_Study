@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6b7178d700643aec",
+        "id": "0b8efc3e35851c8f",
         "type": "tabs",
         "children": [
           {
-            "id": "33e1b011b029993b",
+            "id": "a3583f931faa9c74",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/Capítulo 14 - Expressões lambda e referências de método.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Capítulo 14 - Expressões lambda e referências de método"
             }
           }
         ]
@@ -48,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#abstrato",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,11 +83,13 @@
               "title": "RunJS Codelist"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 444.51002502441406
+    "width": 444.51002502441406,
+    "collapsed": true
   },
   "right": {
     "id": "5ec10822b2a3b721",
@@ -200,17 +206,23 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "33e1b011b029993b",
+  "active": "a3583f931faa9c74",
   "lastOpenFiles": [
+    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/LambdaDemo.java",
     "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Artigos/Papers for Science and Technology for Dummies.md",
+    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
+    "Artigos/Efficient Reading of Papers in Science and Technology.pdf",
+    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/Capítulo 14 - Expressões lambda e referências de método.md",
+    "Pasted image 20250109190451.png",
+    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
+    "Pasted image 20250109185038.png",
     "Cientista da Computação Autodidata/Capítulo 4 - Algoritmos de ordenação/Capítulo 4 - Algoritmos de ordenação.md",
     "Capítulo 4 - Algoritmos de ordenação.png",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
     "Cientista da Computação Autodidata/Capítulo 4 - Algoritmos de ordenação",
     "Indistraível - Nir Eyal/Resumo.canvas",
-    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/Capítulo 14 - Expressões lambda e referências de método.md",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenDemo.class",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/GenDemo.java",
@@ -218,10 +230,7 @@
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/tiposbruto/Gen.class",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/tiposbruto/RawDemo.java",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/tiposbruto",
-    "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/TiposBruto/RawDemo.java",
-    "Artigos/Papers for Science and Technology for Dummies.md",
     "Diagram.png",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
     "RoadMap do DavJaveiro/RoadMap.md",
     "RoadMap do DavJaveiro/Covers/Efficient Linux at the Command Line.png",
     "RoadMap do DavJaveiro/Covers/Pasted image 20241230130411.png",
@@ -229,8 +238,6 @@
     "RoadMap do DavJaveiro/Covers/Pasted image 20241228204750.png",
     "RoadMap do DavJaveiro/Covers/Pasted image 20241228204427.png",
     "RoadMap do DavJaveiro/Covers/Pasted image 20241228195630.png",
-    "RoadMap do DavJaveiro/Covers/Pasted image 20241228175230.png",
-    "RoadMap do DavJaveiro/Covers/Learning Domain-Driven Design.png",
     "Java The Complete Reference/Chapter 19 - Exploring java.lang/Chapter 19 - Exploring the java.lang.md",
     "Fila Genérica.md",
     "Teste.md",
