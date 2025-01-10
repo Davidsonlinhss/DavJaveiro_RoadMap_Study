@@ -416,6 +416,54 @@
       "width": 860,
       "height": 640,
       "color": "#ffffff"
+    },
+    {
+      "id": "846b089fcf46a1c4",
+      "type": "text",
+      "text": "16- Defenda-se do *Hacking* dos grupos de mensagens",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 4652,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "d38d4e50f98c8ccc",
+      "type": "text",
+      "text": "## Resumo\n1. **Os canais de comunicação em tempo real devem ser usados com moderação.** O tempo gasto com a comunicação não deve sacrificar o tempo gasto no trabalho focado.\n2. **A cultura da empresa faz uma grande diferença.** Mudar as práticas de bate-papo em grupo na sua empresa pode exigir questionar as normas da empresa. Vamos discutir esse tema na Parte 5.\n3. **Diferentes canais de comunicação devem ser utilizados de maneiras diferentes.** Em vez de usar todas as tecnologias como um canal de conectividade constantes, use as melhores ferramentas de acordo com o trabalho em questão.\n4. **Entre e saia:** Os grupos de mensagens são excelentes para substituir reuniões presenciais, mas são terríveis se tomarem o dia inteiro. ",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 4440,
+      "width": 860,
+      "height": 483,
+      "color": "#ffffff"
+    },
+    {
+      "id": "73105ee3870a613d",
+      "type": "text",
+      "text": "17- Defenda-se do *Hacking* das Reuniões",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 5292,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "6e0e32771a90df35",
+      "type": "text",
+      "text": "## Resumo\n1. **Os canais de comunicação em tempo real devem ser usados com moderação.** ",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 5080,
+      "width": 860,
+      "height": 540,
+      "color": "#ffffff"
     }
   ],
   "edges": [
@@ -752,6 +800,46 @@
       "fromNode": "668c2eeb82c7da88",
       "fromSide": "right",
       "toNode": "cc7a293008c9e64b",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "03628ed54f5dc86a",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "846b089fcf46a1c4",
+      "fromSide": "right",
+      "toNode": "d38d4e50f98c8ccc",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "cd10fb02c19d2f3b",
+      "styleAttributes": {},
+      "fromNode": "668c2eeb82c7da88",
+      "fromSide": "right",
+      "toNode": "846b089fcf46a1c4",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "1f672c948a2e85f4",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "73105ee3870a613d",
+      "fromSide": "right",
+      "toNode": "6e0e32771a90df35",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "231a7de3f8cef536",
+      "styleAttributes": {},
+      "fromNode": "668c2eeb82c7da88",
+      "fromSide": "right",
+      "toNode": "73105ee3870a613d",
       "toSide": "left",
       "color": "4"
     }

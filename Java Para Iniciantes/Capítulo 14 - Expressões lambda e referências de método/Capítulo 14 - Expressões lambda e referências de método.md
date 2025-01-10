@@ -135,5 +135,41 @@ Logo, n foi especificado de maneira explícita como double.
 
 Para que uma expressão lambda funcione, ela precisa ser compatível com o <span style="background:#d4b106">método abstrato</span> da **interface funcional**. Isso significa que o número e o tipo de parâmetros, bem como o tipo de retorno, devem corresponder ao que o método abstrato espera. Se o método aceitar dois #int, por exemplo, a lambda deve fornecer dois parâmetros que sejam ou explicitamente int ou que o compilador possa inferir como #int.
 
+---
+**Resuminho**
+Uma interface funcional, em Java, é uma #interface que contém **apenas um único método abstrato**. Isso a torna ideal para expressões lambdas e referências a métodos.
+
+---
 ## As expressões lambda em ação
 Vamos examinar alguns exemplos simples que colocam em prática os conceitos básicos das expressões lambda. O primeiro exemplo reúne em um programa completo os elementos mostrados na última seção:
+
+[[LambdaDemo.java | Código Expressão Lambda + Interface simples]]
+A expressão lambda deve ser compatível com o método abstrato que ela implemente pela interface funcional. Portanto, as linhas desativadas por comentários no fim do programa não são válidas, se tentarmos executar, será lançada um erro em tempo de execução. 
+
+Vamos considerar o programa a seguir que é estruturado como:
+1. **Define uma interface funcional**: chamada **NumericTest** que declara o método abstrato **test()**. 
+2. **O método test()** possuí dois parâmetros #int e retorna um resultado #boolean.
+3. **A nossa função** é determinar se os dois argumentos passados atendem uma condição. Ele retorna o resultado do teste.
+4. **Em main()** três testes diferentes são criados com o uso de expressões lambda. Um verifica se o primeiro argumento pode ser dividido exatamente pelo segundo, o outro determina se o primeiro argumento é menor do que o segundo, e o terceiro retorna **true** se os valores absolutos dos argumentos forem iguais. 
+5. **As expressões lambdas** que implementam esses testes têm dois parâmetros e retornam um resultado #boolean, isso é necessário já que o método abstrato **test()** tem dois parâmetros e retorna um resultado #boolean.
+[[LambdaDemo2.java | Código 1 interface funcional - várias expressões]]
+Como o programa acima demonstra, como todas as três expressões lambda são compatíveis com **test**, todas podem ser executadas por intermédio de uma referência a NumericTest. Não precisamos usar três variáveis de referência NumericTest diferentes pois a mesma variável poderia ser usada nos três testes:
+```java
+NumericTest myTest;
+
+myTest = (n, d) -> (n % d) == 0;
+if(myTest.test(10, 2))
+	System.out.println("2 is less than 10");
+// ...
+
+```
+
+Utilizar variáveis de referência diferentes chamadas **isFactor**, **lessTHan** e **absEqual**, como faz o programa original, deixa claro qual expressão lambda cada variável referencia. 
+
+Há outro ponto interessante no programa anterior. Observamos como os dois parâmetros são especificados para as expressões lambda:
+```java
+(n, d) -> (n % d) == 0;
+```
+Observamos que **n** e **d** estão separados por vírgula. Em geral, sempre que mais de um parâmetro são requeridos, eles são especificados, separados por vírgulas, em uma lista entre parênteses no lado esquerdo do operador lambda. 
+
+Embora utilizamos valos primitivos como tipos dos parâmetros e tipo de retorno do método abstrato definido por uma #interface-funcional, não há restrições quanto isso. Podemos testar algum valor relacionado a String também.
