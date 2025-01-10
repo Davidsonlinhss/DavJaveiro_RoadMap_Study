@@ -172,4 +172,45 @@ Há outro ponto interessante no programa anterior. Observamos como os dois parâ
 ```
 Observamos que **n** e **d** estão separados por vírgula. Em geral, sempre que mais de um parâmetro são requeridos, eles são especificados, separados por vírgulas, em uma lista entre parênteses no lado esquerdo do operador lambda. 
 
-Embora utilizamos valos primitivos como tipos dos parâmetros e tipo de retorno do método abstrato definido por uma #interface-funcional, não há restrições quanto isso. Podemos testar algum valor relacionado a String também.
+Embora utilizamos valos primitivos como tipos dos parâmetros e tipo de retorno do método abstrato definido por uma #interface-funcional, não há restrições quanto isso. Podemos testar algum valor relacionado a String também. Abaixo, foi criado uma expressão lambda que determina se um string está contido em outro:
+[[LambdaDemo3.java | Código Lambda 3]]
+Observamos que a expressão lambda usa o método #indexOf definido pela classe #String para determinar se um string faz parte de outro. Isto funciona porque os parâmetros **a** e **b** são considerados pela inferência de tipos como de tipo **String**. Logo, é permitido chamar um método da classe **String** em **a**. 
+
+---
+**Pergunte ao especialista**
+Podemos declarar explicitamente o tipo de um parâmetro em uma expressão lambda se necessário. Em casos em que a expressão lambda precisar de dois ou mais parâmetros, devo especificar os tipos de todos os parâmetros ou posso deixar que um ou mais usem a inferência de tipos?
+*Em casos em que precisemos declarar explicitamente o tipo de um parâmetro, todos os parâmetros da lista devem ter os tipos declarados. Por exemplo, isto é válido:*
+```java
+(int n, int d) -> (n % d) == 0;
+
+// Isto não é válido
+(int n, d) -> (n % d) == 0;
+
+// E nem isso:
+(n, ind d) -> (n % d) == 0;
+```
+
+---
+## Expressões lambda de bloco
+O corpo das expressões lambda mostradas nos exemplos anteriores eram compostos por uma única expressão. Estes tipos de corpos lambda são chamados de *corpos de expressão* e as expressões lambda que têm corpos de expressão às vezes são chamadas de *lambdas de expressão*. 
+
+Em um corpo de expressão, o código do lado direito do operador (lado bolsonarista) deve ser composto por uma única expressão, que passa a ser o valor da lambda da expressão. Embora as lambdas das expressões sejam muito úteis, a situação **pode demandar mais de uma expressão**. 
+
+Para lidar com esses casos, Java dá suporte a um segundo tipo de expressão lambda em que o código do lado direito do operador #lambda é composto por um bloco de código que pode conter mais de uma instrução. Este tipo de corpo lambda é chamado de *corpo de bloco*. Expressões lambda que têm corpos de bloco também são conhecidas como *lambdas de bloco*. 
+
+Uma lambda de bloco expande os tipos de operações que podem ser efetuadas com uma expressão lambda porque permite que o corpo da expressão contenha várias instruções. Por exemplo, em uma lambda de bloco podemos declarar variáveis, usar laços, especificar instruções #if e #switch, criar bloco aninhados e assim por diante. É fácil criar uma lambda de bloco. Apenas coloque o corpo entre chaves como fazemos com qualquer outro bloco de instruções.
+
+Exceto por permitir a inclusão de várias instruções, as lambdas de bloco são usadas de maneira semelhante às lambdas de expressão. Uma diferença importante, no entanto, é que d**evemos usar explicitamente uma instrução** #return para retornar um valor. Isso é necessário porque o corpo de uma lambda de bloco não representa uma única expressão, são várias expressões, portanto, precisamos definir um retorno.
+
+Vejamos um exemplo que usa uma lambda de bloco para encontrar o <span style="background:#d4b106">menor fator positivo</span> (logo, o menor fator positivo é o menor número inteiro positivo que divide esse número exatamente, ou seja, sem deixar resto n % m == 0) de um valor #int. Ele usa uma interface chamada #NumericFune que tem um método de nome func(); o método recebe um argumento #int e retorna um resultado #int. Logo, **NumericFunc** dá suporte a uma função numérica de valores de tipo **int**. 
+
+[[BlockLambdaDemo.java]]
+No programa, observamos que a lambda de bloco declara uma variável chamada **result**, usa um laço **for** e tem uma instrução **return**. Esses elementos são válidos dentro do corpo de uma lambda de bloco. Na verdade, o corpo de bloco de uma expressão lambda é semelhante ao corpo de um método. Outra coisa: quando uma instrução **return** ocorre dentro de uma expressão lambda, elas apenas causa o retorno da expressão, não faz o método externo retornar. 
+
+**Entendendo o Retorno em Expressões Lambda**
+O #return dentro de uma expressão lambda tem um comportamento diferente do #return dentro de um método tradicional. **Ele retorna apenas do contexto da lambda, não do método que a contém**.
+Isso ocorre, pelo fato de termos escopos diferentes, **lambdas de bloco** possuem return dentro desse escopo que só afeta esse escopo específico.
+
+Lambdas são como funções anônimas, com um propósito específico dentro de um contexto maior. O #return delas serve para finalizar a execução daquela pequena "função" e retornar um valor para o código que a chamou.
+
+## Interfaces funcionais genéricas
