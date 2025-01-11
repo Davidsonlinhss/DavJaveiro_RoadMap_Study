@@ -11,10 +11,17 @@
             "id": "c789b6284bcae2b9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nova aba"
+              "type": "canvas",
+              "state": {
+                "file": "Indistraível - Nir Eyal/Resumo.canvas",
+                "viewState": {
+                  "x": 2397.831896998131,
+                  "y": 5282.519509743084,
+                  "zoom": 0.1727089314448727
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Resumo"
             }
           }
         ]
@@ -48,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#boolean",
+                "query": "tag:#generic",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -203,8 +210,16 @@
   },
   "active": "c789b6284bcae2b9",
   "lastOpenFiles": [
-    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/Capítulo 14 - Expressões lambda e referências de método.md",
+    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/GenericFunctionalInterfaceDemo.class",
+    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/SomeTest.class",
+    "Java The Complete Reference/Chapter 19 - Exploring java.lang/Chapter 19 - Exploring the java.lang.md",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Artigos/Papers for Science and Technology for Dummies.md",
+    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/GenericFunctionalInterfaceDemo.java",
+    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
+    "Nota Análise Comparativa de programação funcional e programação orientada a objeto.md",
+    "Pasted image 20250110193424.png",
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/BlockLambdaDemo.class",
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/NumericFunc.class",
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/BlockLambdaDemo.java",
@@ -212,12 +227,7 @@
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/LambdaDemo2.java",
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/tempCodeRunnerFile.java",
     "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/LambdaDemo.class",
-    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/MyParamValue.class",
-    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/MyValue.class",
     "Indistraível - Nir Eyal/Resumo.canvas",
-    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/LambdaDemo.java",
-    "Artigos/Papers for Science and Technology for Dummies.md",
-    "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
     "Pasted image 20250109190451.png",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
     "Pasted image 20250109185038.png",
@@ -231,8 +241,6 @@
     "RoadMap do DavJaveiro/Covers/Pasted image 20241228204759.png",
     "RoadMap do DavJaveiro/Covers/Pasted image 20241228204750.png",
     "RoadMap do DavJaveiro/Covers/Pasted image 20241228204427.png",
-    "RoadMap do DavJaveiro/Covers/Pasted image 20241228195630.png",
-    "Java The Complete Reference/Chapter 19 - Exploring java.lang/Chapter 19 - Exploring the java.lang.md",
     "Fila Genérica.md",
     "Teste.md",
     "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
@@ -248,7 +256,6 @@
     "Cientista da Computação Autodidata/Capítulo 2 - Recursão/Capítulo 2 - Recursão.md",
     "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
     "README.md",
-    "Java Para Iniciantes/Capítulo 7 - Heranças.md",
-    "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md"
+    "Java Para Iniciantes/Capítulo 7 - Heranças.md"
   ]
 }

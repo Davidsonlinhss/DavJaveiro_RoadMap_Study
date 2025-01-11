@@ -65,7 +65,9 @@ Artigos listados por tópicos
     - The essence of functional programming. [Wadler (1992)](https://dl.acm.org/doi/pdf/10.1145/143165.143169).
     - QuickCheck: A Lightweight Tool for Random Testing of Haskell Programs. [Claessen, Hughes (2000)](https://dl.acm.org/doi/pdf/10.1145/351240.351266).
     - Church's Thesis and Functional Programming. [Turner (2006)](https://kar.kent.ac.uk/88944/1/ctfp.pdf_nocoversheet).
-    - <span style="background:#ff4d4f">Comparative analysis of functional and object-oriented programming.</span> [[https://ieeexplore.ieee.org/document/7522224 | Alic Dino (2016)]]. [[Análise Comparativa de programação funcional e programação orientada a objeto]]
+    
+    - <span style="background:#ff4d4f">Comparative analysis of functional and object-oriented programming.</span> [[https://ieeexplore.ieee.org/document/7522224 | Alic Dino (2016)]].
+    - [[Análise Comparativa de programação funcional e programação orientada a objeto | Minha Nota sobre o Paper]]
     - 
 7. **An Incremental Approach to Compiler Construction. [Ghuloum (2006)](http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf).**  
     Language Design; Compilers

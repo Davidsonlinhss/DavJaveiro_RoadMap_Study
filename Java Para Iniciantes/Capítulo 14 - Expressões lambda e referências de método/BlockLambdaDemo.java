@@ -21,7 +21,7 @@ public class BlockLambdaDemo {
                 }
             return result;
         };
-        System.out.println("Smallest factor of 12 is " + smallestF.func(12));
+        System.out.println("Smallest factor of 4 is " + smallestF.func(4));
 
     }
 }

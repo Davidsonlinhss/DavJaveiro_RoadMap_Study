@@ -214,3 +214,36 @@ Isso ocorre, pelo fato de termos escopos diferentes, **lambdas de bloco** possue
 Lambdas são como funções anônimas, com um propósito específico dentro de um contexto maior. O #return delas serve para finalizar a execução daquela pequena "função" e retornar um valor para o código que a chamou.
 
 ## Interfaces funcionais genéricas
+A expressão lambda não pode especificar parâmetros de tipo. Logo, ela não pode ser genérica. No entanto, a interface funcional associada a uma expressão lambda pode ser genérica. Nesse caso, o tipo de destino da expressão lambda é determinado, em parte, pelo argumento ou argumentos de tipo especificados quando uma referência de interface funcional é declarada.
+
+Para entender o valor das interfaces funcionais genéricas, consideramos: anteriormente, duas **interfaces funcionais** diferentes foram criadas, uma chamada #NumericTest e a outra chamada #StringTest. Elas foram usadas para determinar se dois valores atendiam uma condição. Para fazê-lo, ambas definiam um método chamado **test()** que usava dois parâmetros e retornava um resultado #boolean. No caso de **NumericTest**, os valores testados eram inteiros. Em **StringTest**, os valores eram de tipo #String. Logo, **a única diferença entre os dois métodos era o tipo de dado com o qual operavam**.
+
+Essa situação é perfeita para os genéricos #generic. Em vez de termos duas interfaces funcionais cujos métodos só diferem em seus tipos de dados, podemos declarar uma interface genérica para tratar as duas circunstâncias. O programa a seguir mostra essa abordagem:
+[[GenericFunctionalInterfaceDemo.java]]
+
+No programa acima, a interface funcional genérica **SomeTest** é declarada da seguinte maneira:
+```java
+interface SomeTest<T> {
+	boolean test(T n, T m);
+}
+```
+
+Aqui, **T** especifica o tipo dos dois parâmetros de **test()**. Ou seja, ele é compatível com qualquer expressão lambda que use dois parâmetros do mesmo tipo e retorno um resultado **boolean**.
+
+A interface SomeTest é usada para fornecer uma referência a três tipos de lambdas diferentes. A primeira usa o tipo #Integert, a segunda #Double e a terceira #String. Logo, a mesma interface funcional pode ser usada para referenciar as três expressões lambdas. Só o tipo de argumento passado para SomeTest é diferente durante a referenciação da interface funcional.
+
+---
+**Tesnte Isto 14-1** Passe uma expressão lambda como argumento
+Uma expressão lambda pode ser usada em qualquer contexto que forneça um tipo de destino. Os contextos de destino usados pelos exemplos anteriores foram de atribuição e inicialização. Outro seria quando uma expressão é passada como argumento. **Passar uma expressão lambdaa como argumento é comum no uso de lambdas**. Além disso, é uma aplicação poderosa, pois fornece uma maneira de passarmos código executável como argumento de um método, o que aumenta bastante o poder de expressão de Java.
+
+
+
+
+
+
+
+
+
+
+
+
