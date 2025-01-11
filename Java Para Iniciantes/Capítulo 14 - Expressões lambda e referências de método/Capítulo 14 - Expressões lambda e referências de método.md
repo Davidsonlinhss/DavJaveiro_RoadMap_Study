@@ -236,14 +236,128 @@ A interface SomeTest é usada para fornecer uma referência a três tipos de lam
 **Tesnte Isto 14-1** Passe uma expressão lambda como argumento
 Uma expressão lambda pode ser usada em qualquer contexto que forneça um tipo de destino. Os contextos de destino usados pelos exemplos anteriores foram de atribuição e inicialização. Outro seria quando uma expressão é passada como argumento. **Passar uma expressão lambdaa como argumento é comum no uso de lambdas**. Além disso, é uma aplicação poderosa, pois fornece uma maneira de passarmos código executável como argumento de um método, o que aumenta bastante o poder de expressão de Java.
 
+Para ilustrarmos o processo, vamos criar três funções de strings que executam as operações a seguir:
+1. Invertem um string;
+2. Invertem a caixa das letras do string;
+3. Substituem espaços por hifens.
+
+Essas funções são implementadas como **expressões lambda** da interface funcional **StringFunc**. Elas são então passadas como o primeiro argumento de um método chamado **changeStr()**. Esse método funcional aplica a função à string passada como seu argumento e retorna o resultado. Logo, **changeStr()** pode ser usado na aplicação de várias funções de string diferentes.
+O passo a passo está no material.
+[[LambdaArgumentDemo.java | Código Tente Isto 14-1 ]]
+
+Como podemos observar no código exemplo acima, é tecnicamente correto passar uma lambda de bloco como argumento, como o exemplo mostra.
+
+A expressão lambda de inversão da caixa das letras usa os métodos #static #isUpperCase, #toUpperCase, #toLowerCase definidos por #Character. Character é uma classe #encapsuladora de tipos #char (portanto, ela encapsula o tipo primitivo char em um objeto, permitindo que o tipo primitivo tenha comportamentos associados a objetos e suporte algumas funcionalidades adicionais). 
+
+O método #isUpperCase retorna #true caso o seu argumento for uma letra maiúscula, caso contrário retorna #false. 
+
+---
+**Pergunte ao especialista**
+**Além da inicialização de variáveis, da atribuição e da passagem de argumentos, que outras situações constituem um contexto de tipo de destino para uma expressão lambda?**
+#coerções, o operador ?, inicializadores de arrays, instruções de #return e as próprias expressões lambdas também podem servir como contextos de tipo de destino.
 
 
+## Expressões lambda e a captura de variáveis
+As variáveis definidas pelo #escopo que contém uma expressão lambda podem ser acessadas dentro da própria expressão. Por exemplo, uma expressão lambda pode usar uma variável de instância ou uma variável static definida pela própria classe que a contém. **A expressão lambda também tem acesso a this** (explícita e implicitamente), que referencia a instância chamadora da classe que contém a expressão. Logo, uma expressão lambda **pode acessar e configurar o valor de uma variável de instância** ou #static **e chamar um método definido pela classe externa**. 
 
+Quando uma expressão lambda usa uma variável local do escopo em que se encontra, é criado uma situação chamada *captura de variável*. Neste caso, a expressão lambda só pode usar variáveis locais que sejam *efetivamente finais*. Uma variável #final é aquela cujo **valor não muda após ser atribuído**. Esse tipo de variável não precisa ser declarado explicitamente como final, mas não é errado fazê-lo. 
 
+É importante saber que uma variável local do escopo externo não pode ser modificada pela expressão lambda, isso removeria seu status #final, tornando a sua captura inválida. 
 
+Demonstrando a diferença entre variáveis efetivamente finais e variáveis locais mutáveis:
+[[VarCapture.java]]
+Num é efetivamente final e pode ser capturada e utilizada dentro do bloco da expressão lambda. O código funciona pelo fato de não alterarmos o valor da variável final dentro do escopo, apenas capturamos e executamos a lógica de somar com o valor passado como argumento da expressão lambda. Porém, se tentássemos modificar o valor da variável dentro ou fora do bloco da expressão lambda, ela perderia o seu status de efetivamente #final. 
+A expressão lambda pode usar e modificar uma variável de instância da classe chamadora. Ela só não pode usar uma variável local do escopo que a contém, a não ser que essas variável seja efetivamente final.
 
+## Lance uma exceção de dentro de uma expressão lambda
+Se a expressão lambda lançar uma exceção verificada, essa exceção deve ser compatível com as exceções listadas na cláusula #throws do método abstrato da interface funcional. Por exemplo, se uma expressão lambda lançar uma #IOException, o método abstrato da interface funcional deve listar #IOException em uma cláusula #throws:
+[[LambdaExcepctionDemo.java]]
+Já que uma chamada a read() pode resultar em uma IOException, o método iOAction da **inteface funcional** **MyIOAction** deve incluir **IOException** em uma cláusula throws:
+```java
+interface MyIoAction {
+    boolean ioAction(Reader rdr) throws IOException;
+}
+```
+Sem a declaração acima, o programa não será compilado porque a expressão lambda não será mais compatível com **ioAction**. 
 
+## Referências de método
+Há um recurso importante relacionado às expressões lambdas chamado *referência de método*. Uma referência de método fornece uma maneira de referenciarmos um método sem executá-lo. Este recurso está relacionado as expressões lambdas pelo fato delas exigirem um contexto de tipo de destino composto por uma interface funcional compatível. Quando avaliada, uma referência de método também cria uma instância de uma interface funcional. Há diferentes tipos de referências de método. 
 
+## Referências a métodos static
+Uma referência a um método static é criada com a especificação do nome do método precedido pelo nome de sua classe, com a sintaxe geral:
+```java
+NomeClass::nomeMétodo
+```
+O nome da classe é separado do nome do método por dois pontos duplos. Os dois pontos duplos :: são um novo separador adicionado a Java pelo #JDK8 expressamente para esse fim. Essa referência de método pode ser usada em qualquer local em que seja compatível com seu tipo de destino.
 
+O código abaixo irá demonstrar a referência de método #static. Para fazer isso primeiro ele declara uma interface funcional chamada **IntPredicate** que tem um método chamado **test()**. Esse método tem um parâmetro #int e retorna um resultado #boolean. Logo, pode ser usado para testar um valor inteiro em relação a alguma condição. Em seguida, o programa cria uma classe chamada **MyIntPredicates**, que define três métodos #static, todos verificando se um valor atende a uma condição. Os métodos se chamam **isPrime()**, **isEven()** e **isPositive()** e ada método executa o teste indicado por seu nome. Dentro de **MethodRefDemo**, é criado um método chamado **numTest()** que tem como seu primeiro parâmetro uma referência a **IntPredicate**. Seu segundo parâmetro especifica o inteiro que está sendo testado. 
+[[MethodRefDemo2.java]]
 
+## Referências de construtor
+Da mesma forma que podemos criar referências a métodos, também podemos criar referências a construtores. Esta é a forma geral da sintaxe usada:
+```java
+nomeclass:new
+```
+Esta referência pode ser atribuída a qualquer referência de interface funcional que defina um método compatível com o construtor. Vejamos um exemplo simples:
+[[ConstructorRefDemo.class]]
 
+No programa, observamos o método **func()** de **MyFunc** retornando uma referência de tipo **MyClass** e tem um parâmetro **String**.
+MyClass define dois construtores: 
+1. O primeiro especifica um parâmetro de tipo #String.
+2. O segundo é o construtor padrão sem parâmetros. 
+Examinamos a linha abaixo:
+```java
+MyFunc myClassCons = MyClass::new;
+```
+
+A expressão **MyClass::new** cria uma referência a um construtor de **MyClass**. Nesse caso, já que o método func() de myFunc usa um parâmetro **String** , o construtor que está sendo referenciado é **MyClass(String s)**.
+
+---
+**Pergunte ao especialista**
+Posso declarar uma referência de construtor que crie um array?
+Sim. Para criar a referência de construtor de um array, usamos a seguinte estrutura:
+```java
+tipo[]::new
+```
+Nesta sintaxe, *tipo* especifica o tipo do objeto que está sendo criado. Por exemplo, supondo o uso da forma de **MyClass** e dado a interface **MyClasssArrayCreator**:
+```java
+interface MyClassArrayCreator {
+	MyClass[] func(int n);
+}
+```
+
+O código a seguir cria um array de objetos **MyClass** e dá a cada elemento um valor inicial:
+```java
+MyClassArrayCreator mcArrayCons = MyClass[]::new;
+MyClass[] a = mcArrayCons.func(3);
+for(int i=0; i < 3; i++)
+	a[i] = new MyClass(i);
+```
+
+## Interfaces Funcionais predefinidas
+Nos exemplos, definimos as nossas próprias interfaces funcionais para que os conceitos básicos que compõem as expressões lambdas e as interfaces funcionais pudessem ser claramente ilustrados. Em muitos casos, no entanto, usaremos interfaces funcionais predefinidas, pois o JDK8 adicionou um novo pacote chamado #java-util-function que fornece várias interfaces predefinidas.
+
+Mostrando o uso da interface #Predicated:
+[[UsePredicateInterface.java]]
+
+---
+**Pergunte ao especialista**
+No início do capítulo, foi mencionado que a inclusão das expressões lambda resultava em novos recursos sendo incorporados à biblioteca de APIs. Pode dar um exemplo?
+
+**Resposta**: uma das melhorias mas importantes feitas na biblioteca de APIs Java e adicionada por JDK 8 é o novo pacote de fluxos #java-util-stream. Este pacote define várias classes de fluxos, a mais geral delas é a #Stream. No que diz respeito a #java-util-stream , *um fluxo é um canal de dados*. Logo, um fluxo representa uma sequência de objetos. Além disso, um fluxo dá suporte a muitos tipos de operações que permite a criação de pipeline que executará uma série de ações nos dados. Por exemplo, usando a API de fluxos, **podemos construir sequências de ações nos dados**. 
+
+**Exemplo comparativo com SQL**
+```sql
+SELECT name FROM users WHERE age > 30;
+```
+
+- Com a API de fluxos:
+```java
+List<String> names = users.stream()
+						.filter(user -> user.getAge() > 30)
+						.map(User::getName)
+						.collect(Collectors.toList());
+```
+- filter: filtra os usuários com idade maior que 30;
+- map: extrai o nome de cada usuário;
+- collect: coleta os resultados em uma lista.
