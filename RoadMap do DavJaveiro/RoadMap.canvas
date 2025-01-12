@@ -71,16 +71,6 @@
       "height": 1520
     },
     {
-      "id": "ec1701dc4e5a6548",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Entendendo Algoritmos.png",
-      "styleAttributes": {},
-      "x": -13500,
-      "y": -17473,
-      "width": 1028,
-      "height": 1433
-    },
-    {
       "id": "a80a977a8a4d8f6e",
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/Introdução a Programação.png",
@@ -111,16 +101,6 @@
       "height": 1614
     },
     {
-      "id": "546747b95e8fa5ca",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Data Structures AB.png",
-      "styleAttributes": {},
-      "x": -13487,
-      "y": -21600,
-      "width": 1002,
-      "height": 1253
-    },
-    {
       "id": "3e51aec221ffee62",
       "type": "file",
       "file": "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
@@ -130,16 +110,6 @@
       "width": 1141,
       "height": 1280,
       "color": "4"
-    },
-    {
-      "id": "c39c78c3df1c3ace",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
-      "styleAttributes": {},
-      "x": -1116,
-      "y": -2992,
-      "width": 814,
-      "height": 1069
     },
     {
       "id": "e6896536d3e83f67",
@@ -153,16 +123,6 @@
       "color": "1"
     },
     {
-      "id": "f5627e789defe17d",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Logo.png",
-      "styleAttributes": {},
-      "x": 1369,
-      "y": -4560,
-      "width": 1849,
-      "height": 1035
-    },
-    {
       "id": "be4aa4674f848f33",
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/Spring in Action Book.png",
@@ -171,46 +131,6 @@
       "y": -249,
       "width": 1626,
       "height": 2038
-    },
-    {
-      "id": "be7df8e39c9fd111",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
-      "styleAttributes": {},
-      "x": -6992,
-      "y": -2947,
-      "width": 775,
-      "height": 995
-    },
-    {
-      "id": "de90cc622ffca84a",
-      "type": "file",
-      "file": "Engenharia de Software Moderna/Capítulo 1 - Introdução.md",
-      "styleAttributes": {},
-      "x": -9840,
-      "y": -2650,
-      "width": 400,
-      "height": 400
-    },
-    {
-      "id": "6588a7d0a1456b92",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
-      "styleAttributes": {},
-      "x": -8890,
-      "y": -2948,
-      "width": 623,
-      "height": 996
-    },
-    {
-      "id": "66d87044445b6b5c",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Learning Domain-Driven Design.png",
-      "styleAttributes": {},
-      "x": -5032,
-      "y": -2947,
-      "width": 872,
-      "height": 1143
     },
     {
       "id": "2e1aecf8f9c46069",
@@ -302,16 +222,6 @@
       "height": 80
     },
     {
-      "id": "eedf3f261de1f486",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Software Requiriments Book 2.png",
-      "styleAttributes": {},
-      "x": -3858,
-      "y": -8561,
-      "width": 950,
-      "height": 1322
-    },
-    {
       "id": "a7f6f90e285ce4b2",
       "type": "file",
       "file": "Java Para Iniciantes/Capítulo 10 - Usando IO.md",
@@ -321,16 +231,6 @@
       "width": 260,
       "height": 226,
       "color": "4"
-    },
-    {
-      "id": "b8ec00a111066ee9",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Software Requirements Book1.png",
-      "styleAttributes": {},
-      "x": -3858,
-      "y": -7003,
-      "width": 960,
-      "height": 1259
     },
     {
       "id": "52fb6750a549dbdf",
@@ -418,17 +318,7 @@
       "y": -8531,
       "width": 274,
       "height": 315,
-      "color": "1"
-    },
-    {
-      "id": "8f1d3cc925d8afd8",
-      "type": "link",
-      "url": "https://www.udemy.com/course/java-curso-completo/?couponCode=NEWYEARCAREER",
-      "styleAttributes": {},
-      "x": 1458,
-      "y": -7629,
-      "width": 1671,
-      "height": 1160
+      "color": "4"
     },
     {
       "id": "9df33b8d2c0c5207",
@@ -526,16 +416,6 @@
       "color": "1"
     },
     {
-      "id": "40604f3ea361fbac",
-      "type": "text",
-      "text": "# 3° Semestre: **Modelagem de Dados**",
-      "styleAttributes": {},
-      "x": -13341,
-      "y": -2899,
-      "width": 728,
-      "height": 102
-    },
-    {
       "id": "073fe3b7f695f592",
       "type": "file",
       "file": "Getting Started with SQL/Chapter 2 - Databases.md",
@@ -598,26 +478,6 @@
       "y": -8640,
       "width": 3361,
       "height": 2722
-    },
-    {
-      "id": "68699022818f36df",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Desenvolvimento Real de Software.png",
-      "styleAttributes": {},
-      "x": 4001,
-      "y": -13863,
-      "width": 1035,
-      "height": 1342
-    },
-    {
-      "id": "46c4f896a99bb160",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Code Problems.png",
-      "styleAttributes": {},
-      "x": 4000,
-      "y": -15751,
-      "width": 1040,
-      "height": 1351
     },
     {
       "id": "e12e6df776240d1e",
@@ -986,18 +846,6 @@
       "color": "1"
     },
     {
-      "id": "3c8a097bd1cf703b",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Persistence Icon.png",
-      "styleAttributes": {
-        "border": null
-      },
-      "x": -13411,
-      "y": 2859,
-      "width": 866,
-      "height": 1090
-    },
-    {
       "id": "fb611372981b73bb",
       "type": "link",
       "url": "https://www.devmedia.com.br/orm-object-relational-mapper/19056",
@@ -1116,10 +964,183 @@
       "type": "file",
       "file": "Pasted image 20250110193424.png",
       "styleAttributes": {},
-      "x": 1520,
+      "x": 1521,
       "y": -198,
       "width": 1546,
       "height": 1937
+    },
+    {
+      "id": "f5627e789defe17d",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Logo.png",
+      "styleAttributes": {},
+      "x": 1369,
+      "y": -5960,
+      "width": 1849,
+      "height": 1035
+    },
+    {
+      "id": "1f704a86abaf0841",
+      "type": "file",
+      "file": "Pasted image 20250111201335.png",
+      "styleAttributes": {},
+      "x": 320,
+      "y": -9840,
+      "width": 951,
+      "height": 1190
+    },
+    {
+      "id": "8f1d3cc925d8afd8",
+      "type": "link",
+      "url": "https://www.udemy.com/course/java-curso-completo/?couponCode=NEWYEARCAREER",
+      "styleAttributes": {},
+      "x": 1458,
+      "y": -8209,
+      "width": 1671,
+      "height": 1160
+    },
+    {
+      "id": "40604f3ea361fbac",
+      "type": "text",
+      "text": "# 3° Semestre: **Modelagem de Dados**",
+      "styleAttributes": {},
+      "x": -13358,
+      "y": -2900,
+      "width": 761,
+      "height": 159
+    },
+    {
+      "id": "3c8a097bd1cf703b",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Persistence Icon.png",
+      "styleAttributes": {
+        "border": null
+      },
+      "x": -13795,
+      "y": 2442,
+      "width": 1635,
+      "height": 2059
+    },
+    {
+      "id": "84c56cfe5cab6ec4",
+      "type": "file",
+      "file": "Pasted image 20250111202450.png",
+      "styleAttributes": {},
+      "x": 1474,
+      "y": -3673,
+      "width": 1640,
+      "height": 2057,
+      "color": "4"
+    },
+    {
+      "id": "68699022818f36df",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Desenvolvimento Real de Software.png",
+      "styleAttributes": {},
+      "x": -3245,
+      "y": -2936,
+      "width": 1035,
+      "height": 1342
+    },
+    {
+      "id": "46c4f896a99bb160",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Code Problems.png",
+      "styleAttributes": {},
+      "x": 3520,
+      "y": -12755,
+      "width": 1040,
+      "height": 1351
+    },
+    {
+      "id": "c39c78c3df1c3ace",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Arquitetura de Software Book.png",
+      "styleAttributes": {},
+      "x": -1233,
+      "y": -2953,
+      "width": 1048,
+      "height": 1376
+    },
+    {
+      "id": "be7df8e39c9fd111",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Guide Book.png",
+      "styleAttributes": {},
+      "x": -7141,
+      "y": -2953,
+      "width": 1072,
+      "height": 1376
+    },
+    {
+      "id": "6588a7d0a1456b92",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Engenharia de Software Moderna Book.png",
+      "styleAttributes": {},
+      "x": -8978,
+      "y": -3053,
+      "width": 986,
+      "height": 1576
+    },
+    {
+      "id": "66d87044445b6b5c",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Learning Domain-Driven Design.png",
+      "styleAttributes": {},
+      "x": -5146,
+      "y": -2986,
+      "width": 1101,
+      "height": 1443
+    },
+    {
+      "id": "de90cc622ffca84a",
+      "type": "file",
+      "file": "Engenharia de Software Moderna/Capítulo 1 - Introdução.md",
+      "styleAttributes": {},
+      "x": -10160,
+      "y": -2665,
+      "width": 400,
+      "height": 400
+    },
+    {
+      "id": "eedf3f261de1f486",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Software Requiriments Book 2.png",
+      "styleAttributes": {},
+      "x": -4110,
+      "y": -8405,
+      "width": 950,
+      "height": 1322
+    },
+    {
+      "id": "b8ec00a111066ee9",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Software Requirements Book1.png",
+      "styleAttributes": {},
+      "x": -4110,
+      "y": -6847,
+      "width": 960,
+      "height": 1259
+    },
+    {
+      "id": "ec1701dc4e5a6548",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Entendendo Algoritmos.png",
+      "styleAttributes": {},
+      "x": -13500,
+      "y": -16800,
+      "width": 1028,
+      "height": 1433
+    },
+    {
+      "id": "546747b95e8fa5ca",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Data Structures AB.png",
+      "styleAttributes": {},
+      "x": -13583,
+      "y": -21840,
+      "width": 1194,
+      "height": 1493
     }
   ],
   "edges": [
@@ -1304,7 +1325,7 @@
       "fromSide": "left",
       "toNode": "0b6dc78bdd212b7d",
       "toSide": "right",
-      "color": "1"
+      "color": "4"
     },
     {
       "id": "4fae61180d223fcc",
@@ -1382,23 +1403,6 @@
       "toNode": "69e567e4932269a3",
       "toSide": "right",
       "color": "4"
-    },
-    {
-      "id": "873330929803ca06",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "right",
-      "toNode": "68699022818f36df",
-      "toSide": "bottom"
-    },
-    {
-      "id": "95770b6aaeb7dc7d",
-      "fromNode": "68699022818f36df",
-      "fromSide": "top",
-      "toNode": "46c4f896a99bb160",
-      "toSide": "bottom"
     },
     {
       "id": "86a3aefba17f9592",
@@ -2019,14 +2023,6 @@
       "toSide": "left"
     },
     {
-      "id": "b8cf066cd2f5190c",
-      "styleAttributes": {},
-      "fromNode": "6588a7d0a1456b92",
-      "fromSide": "left",
-      "toNode": "de90cc622ffca84a",
-      "toSide": "right"
-    },
-    {
       "id": "1b7f9f9ce2da7631",
       "styleAttributes": {
         "path": "long-dashed",
@@ -2151,7 +2147,8 @@
     {
       "id": "c8c7c2fa400cf567",
       "styleAttributes": {
-        "path": "short-dashed"
+        "path": "short-dashed",
+        "pathfindingMethod": "square"
       },
       "fromNode": "546747b95e8fa5ca",
       "fromSide": "top",
@@ -2236,14 +2233,6 @@
       "toSide": "right"
     },
     {
-      "id": "e51841489dd7918c",
-      "styleAttributes": {},
-      "fromNode": "f5627e789defe17d",
-      "fromSide": "bottom",
-      "toNode": "125af518e7bc2ae8",
-      "toSide": "top"
-    },
-    {
       "id": "37ab70e934bbe625",
       "fromNode": "4042faad3634a1c3",
       "fromSide": "right",
@@ -2308,6 +2297,67 @@
       "fromSide": "bottom",
       "toNode": "8981b4d411b5d42c",
       "toSide": "top"
+    },
+    {
+      "id": "4bb39caa91d96fb1",
+      "styleAttributes": {
+        "path": "short-dashed",
+        "pathfindingMethod": "direct"
+      },
+      "fromNode": "8f1d3cc925d8afd8",
+      "fromSide": "top",
+      "toNode": "1f704a86abaf0841",
+      "toSide": "right"
+    },
+    {
+      "id": "a360a62d9083fe62",
+      "styleAttributes": {
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "f5627e789defe17d",
+      "fromSide": "bottom",
+      "toNode": "84c56cfe5cab6ec4",
+      "toSide": "top",
+      "color": "4"
+    },
+    {
+      "id": "30d5536082e641dc",
+      "styleAttributes": {
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "84c56cfe5cab6ec4",
+      "fromSide": "bottom",
+      "toNode": "125af518e7bc2ae8",
+      "toSide": "top"
+    },
+    {
+      "id": "6b877ce8faf6e307",
+      "styleAttributes": {
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "e6896536d3e83f67",
+      "fromSide": "bottom",
+      "toNode": "68699022818f36df",
+      "toSide": "top"
+    },
+    {
+      "id": "c14dc8ab63c7cd0f",
+      "styleAttributes": {
+        "path": "short-dashed",
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "ea1c45dcc9c0b891",
+      "fromSide": "right",
+      "toNode": "46c4f896a99bb160",
+      "toSide": "bottom"
+    },
+    {
+      "id": "f4189b3070cc40b5",
+      "styleAttributes": {},
+      "fromNode": "6588a7d0a1456b92",
+      "fromSide": "left",
+      "toNode": "de90cc622ffca84a",
+      "toSide": "right"
     }
   ],
   "metadata": {}
