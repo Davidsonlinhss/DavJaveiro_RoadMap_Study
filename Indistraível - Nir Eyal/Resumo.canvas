@@ -464,6 +464,54 @@
       "width": 860,
       "height": 540,
       "color": "#ffffff"
+    },
+    {
+      "id": "51cc4f3b943d5635",
+      "type": "text",
+      "text": "18- Defenda-se do *Hacking* do seu Smartphone",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 5972,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "b90d585f90936812",
+      "type": "text",
+      "text": "## Resumo\n1. **Você pode defender-se do hacking dos gatilhos externos do seu celular seguindo quatro passos que levarão menos de uma hora.**\n2. **Remova**. desinstale os aplicativos dos quais você não precisa mais.\n3. **Substitua**. ajuste onde e quando você usa aplicativos potencialmente distrativos, como só acessar as mídias sociais e o YouTube no seu computador, nunca no celular. Use um relógio de pulso para não ter de usar o celular para ver a hora.\n4. **Reorganize:** retire da tela inicial do seu celular todos os aplicativos que possam induzi-lo à distração.\n5. **Retome o controle:** altera as configurações de notificação de cada aplicativo. Seja muito seletivo ao decidir quais aplicativos podem enviar notificações sonoras e visuais. Aprenda a usar as configurações \"Não perturbe\" do seu celular.",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 5760,
+      "width": 860,
+      "height": 540,
+      "color": "#ffffff"
+    },
+    {
+      "id": "f787d94ec3f792bc",
+      "type": "text",
+      "text": "19- Defenda-se do *Hacking* do seu Computador",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 6592,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "0de0a70a0d09545f",
+      "type": "text",
+      "text": "## Resumo\n1. **A bagunça na área de trabalho é um verdadeiro destruidor da atenção e do foco.** Eliminar os gatilhos externos do seu espaço de trabalho digital o ajudará a manter o foco.\n2. **Desative as notificações da área de trabalho.** Ao desabilitar as notificações do seu computador, você não se distrairá com gatilhos externos enquanto se concentra no trabalho.\n",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 6380,
+      "width": 860,
+      "height": 540,
+      "color": "#ffffff"
     }
   ],
   "edges": [
@@ -840,6 +888,46 @@
       "fromNode": "668c2eeb82c7da88",
       "fromSide": "right",
       "toNode": "73105ee3870a613d",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "a4e4b09d71cc462e",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "51cc4f3b943d5635",
+      "fromSide": "right",
+      "toNode": "b90d585f90936812",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "e8235b0e4a1ed4b5",
+      "styleAttributes": {},
+      "fromNode": "668c2eeb82c7da88",
+      "fromSide": "right",
+      "toNode": "51cc4f3b943d5635",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "4c57059cd850e8df",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "f787d94ec3f792bc",
+      "fromSide": "right",
+      "toNode": "0de0a70a0d09545f",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "6f4e93a028bf8373",
+      "styleAttributes": {},
+      "fromNode": "668c2eeb82c7da88",
+      "fromSide": "right",
+      "toNode": "f787d94ec3f792bc",
       "toSide": "left",
       "color": "4"
     }
