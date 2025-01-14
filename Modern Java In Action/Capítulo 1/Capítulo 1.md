@@ -107,7 +107,7 @@ cat file1 file2 | tr "[A-Z]" "[a-z]" | sort | tail -3
 Isso (suponde que os arquivos file1 e file2 contenham uma palavra por linha) imprime as três palavras dos arquivos que aparecem mais recentemente na ordem do dicionário, depois de serem primeiramente convertidas para minúsculas. Dizemos que o comando #sort recebe uma stream de linhas como entradas e gera outra stream de linhas como saída (a qual está ordenada). Vale ressaltar que, no Unix, esses comandos (cat, tr, sort e tail) são executados de forma concorrente, permitindo que o sort comece a processar as primeiras linhas antes que o cat e o tr termine. 
 
 Uma analogia mais mecânica seria uma linha de montagem de carros, onde uma stream de carros é enfileirada entre estações de processamento que cada uma pega um carro, modifica-o e passa para a próxima estação para mais modificações. O processamento nas estações separadas é tipicamente concorrente, embora a linha de montagem seja fisicamente uma sequência. 
-![[Capítulo 1.png]]
+![[Modern Java In Action/Capítulo 1/imagens/Capítulo 1.png]]
 
 O Java 8 adiciona uma API de Streams em #java-util-stream baseada nessa ideial **Stream< T >** é uma sequência de itens do tipo T (generic). <span style="background:#d4b106">Podemos pensar nela como um</span> #iterador sofisticado, por enquanto. A API Streams possui muitos métodos que podem ser encadeados para formar um #pipeline complexo, assim como os comandos do Unix foram encadeados no exemplo anterior.
 
@@ -119,7 +119,7 @@ O segundo conceito de programação adicionado ao Java 8 é a capacidade de pass
 Por exemplo, vamos supor que tenhamos uma coleção de IDs de faturas com um formato semelhante a 2013UK0001, 2014US0002 e assim por diante. Os primeiros quatro dígitos representam o ano, o código do país e o quatro últimos dígitos representam o ID de um cliente. Podemos querer ordenar esses IDs de fatura por ano, talvez usando o ID do cliente ou até o código do país. O queremos a capacidade de informar ao comando sort que ele deve aceitar como argumento uma ordenação definida pelo usuário: <span style="background:#d4b106">um trecho de código separado passado para o comando</span> #sort. 
 
 Agora, como um paralelo direto em Java, queremos informar a um método srot para comparar usando uma ordem personalizada. Podemos escrever um método #compareUsingCustomerId para comparar dois IDs de faturas, mas, **antes do Java 8, não seria possível passar esse método para outro método**! Poderíamos criar um objeto Comparator para passar para o método sort, mas isso seria verboso e dificultaria a ideia de simplesmente reutilizar um comportamento existente. **O Java 8 adiciona a capacidade de passar métodos (seu código) como argumentos para outros métodos**. Também nos referimos a isso conceitualmente como **parametrização de comportamento**. Por que isso é importante? A API Streams é construída com base na ideia de passar código para parametrizar o comportamento de suas operações, assim como passamos compareUsingCustomerId para parametrizar o comportamento de sort.
-![[Capítulo 1-1.png]]
+![[Modern Java In Action/Capítulo 1/imagens/Capítulo 1-1.png]]
 
 
 ### 1.2.4 Parallelism and shared mutable data
@@ -242,3 +242,193 @@ Um #Predicated é uma interface funcional especializada que recebe um argumento 
 
 ---
 ### 1.3.3 From passing methods to lambdas
+Passar métodos como valores é claramente útil, mas é incômodo ter que escrever uma definição para métodos curtos como isHeavyApple e isGreenApple quando eles são usados talvez apenas uma ou duas vezes. Porém, o Java 8 também resolveu isso. Ele introduz uma nova notação (funções anônimas, ou lambdas) que permite que você escreva apenas:
+```java
+filterApples(inventory, (Apple a) -> GREEN.equals(a.getColor()) );
+```
+ou
+```java
+filterApples(inventory, (Apple a) -> a.getWeight() > 150);
+```
+
+ou mesmo
+
+```java
+filterApples(inventory, (Apple a) -> a.getWeight() < 80 || RED.equals(a.getColor()) );
+```
+
+Não precisamos escrever uma definição de método que é usada apenas uma vez; o código fica mais enxuto e claro pelo fato de não precisarmos procurar para encontrar o código que estamos passando.
+Mas se tal lambda exceder algumas linhas de comprimento (de modo que seu comportamento não seja instantaneamente claro), devemos usar, ao invés disso, uma referência de método para um método com um nome descritivo, em vez de usar uma lambda anônima.
+
+O Java poderia ter finalizado com a adição de métodos genéricos de biblioteca como filter e alguns outros. 
+```java
+static <T> Collection<T> filter<Collection<T> c, Predicatee<T> p);
+```
+
+Não precisamos nem escrever o método filterApples anterior, como na chamada anterior
+```java
+filterApples(inventory, (Apple a) -> a.getWeight() > 150);
+```
+
+Podemos simplesmente escrever uma chamada para a biblioteca com o método #filter:
+```java
+filter(inventory, (Apple a) -> a.getWeight() > 150);
+```
+
+O Java, portanto, possuí uma Collection chamada #Stream, que possui um conjunto abrangente de operações semelhantes à operação filter, com as quais programadores funcionais podem estar familiarizados (por exemplo, #map, #reduce), junto com métodos para converter entre Collections e Streams.
+
+## 1.4 Streams
+Quase toda aplicação Java <span style="background:#fdbfff">cria e processa coleções</span>. 
+
+---
+#Coleções
+Elas oferecem uma maneira eficiente de manipular grandes quantidades de dados, proporcionando diversas operações como adição, remoção, busca e iteração sobre os elementos.
+****
+Mas trabalhar com coleções nem sempre é o ideal. Por exemplo, digamos que precisemos filtrar transações caras de uma lista e depois agrupá-las por moeda. Seria necessário escrever muito código repetitivo para implementar essa consulta de processamento de dados, como exemplo:
+```java
+Map<Currency, List<Transaction>> transactionsByCurrencies = new HashMap<>();
+for (Transaction transaction : transactions) {
+    if (transaction.getPrice() > 1000) {
+        Currency currency = transaction.getCurrency();
+        List<Transaction> transactionsForCurrency = transactionsByCurrencies.get(currency);
+        if (transactionsForCurrency == null) {
+            transactionsForCurrency = new ArrayList<>();
+            transactionsByCurrencies.put(currency, transactionsForCurrency);
+        }
+        transactionsForCurrency.add(transaction);
+    }
+}
+```
+Este código percorre a lista de transações, filtra aquelas com preço superior a 1000 e as agrupa por moeda (Currency). Se não houver uma lista de transações para uma moeda específica no mapa, ele cria uma nova lista e adiciona a transação. 
+É difícil entender à primeira vista o que o código faz devido às múltiplas declarações de controle de fluxo aninhadas.
+Usando a Streams API, podemos resolver este problema da seguinte maneira:
+```java
+import static java.util.stream.Collectors.groupingBy;
+Map<Currency, List<Transaction>> transactionsByCurrencies =
+	transactions.stream()
+				.filter((Transaction t) -> t.getPrice() > 1000)
+				.collect(groupingBy(Transaction::getCurrency));
+```
+
+Não se preocupe com este código por enquanto, pois ele pode parecer um pouco mágico. Por enquanto, vale notar que <span style="background:#b1ffff">a Stream API oferece uma maneira diferente de processar dados</span> em comparação com a Collections API. 
+
+Usando uma coleção, gerenciamos o processo de iteração por conta própria. Precisamos iterar sobre os elementos um por um, usando um loop #for-each, processando-os em sequência. Chamamos essa forma de iterar sobre os dados de **iteração externa**.
+
+Em contraste, ao usar a Streams API, <span style="background:#d4b106">não precisamos pensar em termos de loops</span>. O processamento de dados ocorre internamente dentro da biblioteca. Chamamos essa ideia de **iteração interna**.
+
+Ao processar uma grande lista de transações, um único processador pode não ser suficiente, especialmente em casos de grandes volumes de dados. Em um computador com múltiplos núcleos, seria ideal dividir o trabalho entre esses núcleos para reduzir o tempo de processamento. Em teoria, se houver oito núcleos, eles poderiam processar os dados até oito vezes mais rápido, trabalhando em paralelo.
+
+---
+**Computadores multicore**
+Todos os computadores de mesa novos são computadores multicore. O problema é que um programa Java clássico usa apenas um desses núcleos, e o poder dos outros fica desperdiçado. Da mesma forma, muitas empresas utilizam #clusters de computadores para processar grandes volumes de dados de forma eficiente. O Java 8 facilita novos estilos de programação para aproveitar melhor esses computadores.
+
+O mecanismo de busca do Google é um exemplo de um código tão grande que não poderia ser esxecutado em um único computador. Ele lê todas as páginas da internet e cria um índice, mapeando cada palavra que aparece em qualquer página da web para URL que contém essa palavra. Depois, quando fazemos a busca no Google com várias palavras, o software pode usar rapidamente esse índice para nos mostrar um conjunto de páginas da web que contenham essas palavras. Tente imaginar como codificaríamos esse algoritmo em Java (mesmo para um índice menor que o do Google, seria necessário explorar todos os núcleos do computador).
+
+---
+
+### 1.4.1 Multithreading is difficult
+O problema é que explorar o paralelismo escrevendo código multithread (usando a API de Threads das versões anteriores do Java ) é difícil. Precisamos pensar de maneira diferente: as threads podem acessar e atualizar variáveis compartilhadas ao mesmo tempo. Como resultado, os dados podem mudar inesperadamente se não forem coordenados corretamente. Esse modelo, é mais difícil de entender do que um modelo sequencial passo a passo. A figura abaixo mostra um possível problema com duas threads tentando adicionar um número a uma variável compartilhada chamada sum, caso não estejam sincronizados corretamente:
+![[Capítulo 1.png]]
+Como não estão sincronizadas, o resultado esperado de 108 não ocorre. 
+
+O Java 8 também resolve ambos os problemas (código repetitivo e obscuridade ao processar coleções, além da dificuldade em explorar múltiplos núcleos) com a Streams API (java.util.stream). O principal motivador de design é que existem muitos padrões de processamento de dados (semelhantes ao `filterApples` na seção anterior ou operações familiares de linguagens de consulta de banco de dados, como SQL) que ocorrem repetidamente e que se beneficiariam de fazer parte de uma biblioteca: filtrar dados com base em um critério (por exemplo, maçãs pesadas), extrair dados (por exemplo, extrair o campo de peso de cada maçã em uma lista) ou agrupar dados (por exemplo, agrupar uma lista de números em listas separadas de números pares e ímpares), e assim por diante.
+
+Filtrar uma lista em duas CPUs pode ser feito pedindo para uma CPU processar a primeira metade da lista e para a segunda CPU processar a outra metdade. Isso é chamado de etapa de "forking" (1). As CPUs então filtram suas respectivas metades da lista (2). Por fim (3), uma CPU juntaria os dois resultados. 
+![[Capítulo 1-1.png]]
+Por enquanto, diremos apenas que a nova Streams API se comporta de maneira semelhante à API Collections já existente no Java: ambas fornecem acesso a sequências de itens de dados. Mas é útil manter em mente que #Collections é principalmente sobre <span style="background:#d4b106">armazenar e acessar dados</span>, enquanto #Streams é <span style="background:#d4b106">principalmente sobre descrever cálculos em dados</span>. O ponto chave aqui é que a Streams API permite e incentiva que <span style="background:#d4b106">os elementos dentro de um stream sejam processados em paralelo</span>. Embora possa parecer estranho a princípio, muitas vezes a maneira mais rápida de filtrar uma coleção (por exemplo, usar `filterApples` na seção anterior em uma lista) é convertê-la em um stream, processá-la em paralelo e depois convertê-la de volta para uma lista. Novamente, diremos "paralelismo quase de graça" e daremos uma ideia de como você pode filtrar maçãs pesadas de uma lista sequencialmente ou em paralelo usando streams e uma expressão lambda.
+
+---
+O paralelismo no Java sempre foi considerado difícil, e tudo sobre o uso de `synchronized` é propenso a erros. Onde está a solução mágica no Java 8?
+
+Existem duas soluções mágicas. Primeiro, a biblioteca lida com a partição — dividindo um grande stream <span style="background:#d4b106">em vários streams menores para serem processados em paralelo por você</span>. Segundo, esse paralelismo quase "de graça" nos streams funciona apenas se os métodos passados para métodos da biblioteca, como `filter`, não interagirem (por exemplo, tendo objetos mutáveis compartilhados). Mas, essa restrição acaba parecendo natural para o programador (veja, a título de exemplo, o `Apple::isGreenApple`). Embora o principal significado de "funcional" em programação funcional seja "<span style="background:#d4b106">usar funções como valores de primeira classe</span>", muitas vezes, há uma nuance secundária de "sem interação durante a execução entre os componentes".
+
+## 1.5 Default methodss and Java Modules
+Como mencionamos anteriormente, os sistemas modernos tendem a ser construídos a partir de componentes — que talvez sejam adquiridos de outras fontes. Historicamente, o Java tinha pouco suporte para isso, além de um arquivo JAR contendo um conjunto de pacotes Java sem uma estrutura específica. Além disso, evoluir interfaces para esses pacotes era difícil — mudar uma interface Java significava mudar todas as classes que a implementavam. O Java 8 e 9 começaram a resolver isso.
+
+Primeiro, o Java 9 fornece um sistema de módulos que oferece uma sintaxe para definir módulos contendo coleções de pacotes — e permite um controle muito melhor sobre a visibilidade e namespaces. Os módulos enriquecem um componente simples no estilo JAR com estrutura, tanto para documentação do usuário quanto para verificação automática. Explicamos isso em detalhes no capítulo 14.
+
+Em segundo lugar, o Java 8 adicionou métodos default para apoiar interfaces evolutivas. Abordamos esses métodos em detalhes no capítulo 13. Eles são importantes porque você os encontrará cada vez mais em interfaces, mas, como relativamente poucos programadores precisarão escrever métodos default e porque eles facilitam a evolução do programa em vez de ajudar a escrever qualquer programa específico, mantemos a explicação aqui curta e baseada em exemplos.
+
+Na seção 1.4, fornecemos o seguinte exemplo de código Java 8:
+```java
+List<Apple> heavyApples1 =
+    inventory.stream()  // Cria um stream sequencial a partir da coleção 'inventory'
+    .filter((Apple a) -> a.getWeight() > 150)  // Filtra as maçãs com peso superior a 150
+    .collect(toList());  // Coleta os resultados filtrados em uma lista
+
+List<Apple> heavyApples2 =
+    inventory.parallelStream()  // Cria um stream paralelo a partir da coleção 'inventory'
+    .filter((Apple a) -> a.getWeight() > 150)  // Filtra as maçãs com peso superior a 150
+    .collect(toList());  // Coleta os resultados filtrados em uma lista
+
+```
+O problema destacado aqui é que, antes do Java 8, a interface `List<T>` (e também a interface `Collection<T>` que ela implementa) não possuía os métodos `stream()` ou `parallelStream()`. Esses métodos foram introduzidos no Java 8, mas não existiam nas versões anteriores. Se você tentar usar esses métodos em uma versão do Java anterior ao Java 8, o código não irá compilar.
+
+A solução mais simples que os designers do Java poderiam ter adotado seria adicionar o método `stream()` à interface `Collection` e implementar esse método na classe `ArrayList`. No entanto, isso teria gerado um grande problema para os usuários, pois muitas outras bibliotecas de coleções também implementam a interface `Collection`. Se fosse adicionado um novo método à interface, todas as implementações concretas dessa interface teriam que fornecer uma implementação para esse novo método, o que geraria um impacto significativo no ecossistema existente.
+
+A questão central aqui é como evoluir interfaces públicas (como a `Collection`) sem causar rupturas nas implementações existentes. Isso é um dilema de design de linguagem: é necessário equilibrar a introdução de novos recursos com a compatibilidade com o código e bibliotecas já existentes.
+
+Essa situação levou os designers do Java a encontrar uma solução alternativa, como o uso de **default methods** (métodos padrão) para adicionar novos métodos às interfaces, sem quebrar as implementações existentes. **Assim, o Java 8 introduziu métodos padrão que podem ser adicionados às interfaces sem a necessidade de alterar as classes que já implementam essas interfaces, permitindo a evolução das APIs de forma mais segura.**
+
+A solução do Java 8 para esse problema é permitir que interfaces incluam assinaturas de métodos para os quais uma classe implementadora não forneça uma implementação direta. Em vez disso, os corpos dos métodos ausentes são fornecidos dentro da própria interface, usando **implementações padrão** (default implementations).
+
+Isso significa que os designers de interfaces podem expandir uma interface com novos métodos sem quebrar o código existente. O Java 8 introduziu o uso da palavra-chave **default** nas interfaces para fornecer essa funcionalidade. Essa abordagem permite que novas funcionalidades sejam adicionadas às interfaces de maneira retrocompatível, sem a necessidade de modificar as classes que já as implementam.
+
+Por exemplo, no Java 8, você pode chamar o método `sort` diretamente em uma lista, como mostrado no código abaixo:
+
+```java
+default void sort(Comparator<? super E> c) {
+    Collections.sort(this, c);
+}
+```
+
+Essa implementação padrão no `List` usa o método estático `Collections.sort` para ordenar a lista. Isso permite que a interface `List` forneça uma implementação de ordenação sem que as classes concretas, como `ArrayList`, precisem fornecer uma implementação própria. Com isso, a evolução da API se torna possível sem causar rupturas nos códigos existentes que implementam a interface `List`.
+
+## 1.6 Other good ideas from functional programming
+As seções anteriores apresentaram duas ideias centrais da programação funcional que agora fazem parte do Java: usar métodos e lambdas como valores de primeira classe, e a ideia de que chamadas a funções ou métodos podem ser executadas de forma eficiente e segura em paralelo, na ausência de estado mutável compartilhado. Ambas essas ideias são exploradas pela nova API de Streams que descrevemos anteriormente.
+
+Linguagens funcionais comuns (como SML, OCaml e Haskell) também fornecem outras construções para ajudar os programadores. Uma dessas construções é evitar o uso de `null` por meio do uso explícito de tipos de dados mais descritivos. Tony Hoare, um dos gigantes da ciência da computação, disse isso em uma apresentação no QCon London 2009:
+
+_"Eu chamo isso de meu erro de bilhões de dólares. Foi a invenção da referência nula em 1965... Eu não consegui resistir à tentação de colocar uma referência nula, simplesmente porque era tão fácil de implementar."_
+
+Essa reflexão de Hoare destaca como o uso de `null` pode levar a muitos problemas, como exceções e comportamentos indesejados, e a busca por alternativas mais seguras e robustas nas linguagens de programação modernas.
+
+---
+O problema que Tony Hoare se referiu é o conceito de **referência nula** (`null`), que foi introduzido em 1965 na linguagem de programação Algol W, e que mais tarde foi adotado em várias outras linguagens, incluindo o Java.
+
+### O que é uma referência nula?
+
+Uma referência nula é uma referência que não aponta para nenhum objeto. Ou seja, ela é como uma "ponte" <span style="background:#b1ffff">que não está conectada a nada</span>. No Java, por exemplo, você pode ter uma variável do tipo `String` que, em vez de apontar para uma instância de um objeto `String`, pode ter o valor `null`, indicando que a variável não está associada a nenhum objeto.
+
+### O problema do `null`
+
+O grande problema do `null` é que ele pode causar muitos **erros difíceis de detectar**, como a famosa **NullPointerException (NPE)**. Por exemplo, se você tenta acessar um método ou um atributo de um objeto que é `null`, o Java lança uma exceção `NullPointerException`:
+
+```java
+String nome = null;
+System.out.println(nome.length());  // Lança NullPointerException
+```
+
+Esse tipo de erro é difícil de evitar porque você precisa verificar constantemente se o valor de uma variável é `null` <span style="background:#b1ffff">antes de usá-la</span>. Caso contrário, pode resultar em falhas no sistema.
+
+### A "billion-dollar mistake" de Tony Hoare
+
+Tony Hoare, que foi o responsável por introduzir o conceito de `null`, se arrependeu de tê-lo feito. Ele chama isso de **"billion-dollar mistake"** porque muitos erros de software (principalmente falhas e bugs em grandes sistemas) têm origem em referências `null` não verificadas. A ideia é que a introdução do `null` parecia uma solução simples e útil na época, mas, com o tempo, resultou em muitos problemas em sistemas de software de grande escala, como falhas de segurança, falhas de execução, e dificuldades em manutenção de código.
+
+### Soluções para evitar o problema
+
+Hoje em dia, muitas linguagens de programação estão tentando evitar o uso de `null` ou tratá-lo de uma maneira mais segura. Por exemplo:
+
+1. **Optional**: No Java, existe a classe `Optional`, <span style="background:#b1ffff">que pode ser usada para representar valores que podem ou não estar presentes</span>. Em vez de retornar `null`, você retorna um `Optional`, o que obriga o desenvolvedor a tratar o caso em que o valor está ausente, reduzindo o risco de erros.
+    
+    ```java
+    Optional<String> nome = Optional.ofNullable(null);
+    nome.ifPresent(n -> System.out.println(n.length()));  // Não gera exceção
+    ```
+    
+2. **Tipos não nulos**: Algumas linguagens, como Kotlin e Swift, evitam o uso de `null` de forma explícita, forçando o programador a usar tipos não nulos, o que melhora a segurança do código.
+    
+
+O "erro de bilhões de dólares" de Tony Hoare é um lembrete de como a escolha de certas funcionalidades de design pode ter implicações duradouras e difíceis de reverter, especialmente quando se trata de um conceito simples como o `null`.
+
+---
