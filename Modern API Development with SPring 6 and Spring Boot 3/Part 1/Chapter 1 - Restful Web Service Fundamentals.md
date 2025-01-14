@@ -32,4 +32,79 @@ Antes da adoção do REST, quando a internet estava apenas começando a se torna
 
 O REST foi projetado para funcionar sobre o HTTP, o que permite seu uso em toda a web e em redes internas.
 
-O eBay foi o primeiro a explorar APIs baseadas em REST, introduzindo sua API REST com parceiros selecionados em novembro de 2000. 
+O eBay foi o primeiro a explorar APIs baseadas em REST, introduzindo sua API REST com parceiros selecionados em novembro de 2000.  Posteriormente, Amazon, Delicious e Flickr também começaram a oferecer APIs baseadas em REST. Em 2006, a Amazon Web Services (AWS) aproveitou o conceito da Web 2.0 (com a invenção do REST) e disponibilizou APIs REST para desenvolvedores consumirem seus serviços em nuvem.
+
+Mais tarde, empresas como o Facebook, Twitter, Google e outras começaram a utilizá-lo. Atualmente (em 2023), dificilmente se encontra aplicações web desenvolvidas sem uma API REST. No entanto, as APIs baseadas em GraphQL, especialmente para aplicativos móveis, estão alcançando popularidade rapidamente.
+
+## REST fundamentals
+REST trabalha em cima do protocolo HTTP.  Cada URI funciona como um recurso da API. Portanto, devemos usar substantivos como #endpoints em vez de verbos. Endpoints no estilo RPC utilizam verbos, por exemplo, '/api/v1/getPersons'. Em comparação, no REST, esse endpoint poderia ser simplesmente escrito como '/api/v1/persons'.
+
+Você deve estar se perguntando, então, como podemos **diferenciar as diferentes ações realizadas em um recurso REST**. É aqui que os métodos HTTP nos ajudam. Podemos fazer com que nossos métodos HTTP atuem como verbos, por exemplo, GET, DELETE, POST , PUT e PATCH. Por enquanto, o endpoint no estilo RPC getPerson é traduzido para GET /api/v1/persons no REST.
+Portanto, os recursos são representados por substantivos e as ações que realizamos sobre esses substantivos são indicadas pelos métodos HTTP.
+Logo, o endpoint persons é usado para múltiplas ações (listar, adicionar, atualizar e deletar) sem precisar criar endpoints específicos para cada ação. 
+
+**Nota**
+O endpoint REST é um URI único que representa um recurso REST. Por exemplo, 
+- 'hhtps://demo.app/api/v1/persons' é um #endpoint REST. 
+- '/api/v1/persons' é o caminho do endpoint, 
+- 'persons' é o recurso REST
+
+Aqui, há comunicação entre cliente e servidor. Portanto, o REST é baseado no <span style="background:#fdbfff">conceito de cliente servidor.</span>  O cliente chama a API REST e o servidor responde. O REST permite que um cliente (que pode ser um programa, serviço web ou aplicação de interface de usuário) se comunique com um servidor (ou serviço web) em execução remotamente (ou localmente) usando solicitações e respostas HTTP. 
+
+O<span style="background:#b1ffff"> código de status HTTP geralmente indica o status,</span> e o corpo da resposta contém os dados retornados. Por exemplo, um código de status HTTP 200 OK normalmente representa **sucesso**.
+
+Do ponto de vista do REST, uma solicitação HTTP é autodescritiva e contém contexto suficiente para que o servidor a processe. Por isso, as chamadas REST são #stateless (sem estado). Os estados são gerenciados no lado do cliente ou no lado do servidor.  Uma API REST não mantém seu próprio estado; ela apenas transfere estados do servidor para o cliente e vice-versa. É por isso que se chama **Transferência de Estado Representacional**.
+
+O REST também utiliza o controle de cache do HTTP, tornando as APIs REST #cacheáveis. Assim, o cliente pode armazenar em cache a representação (ou seja, a resposta HTTP) (ou seja, a resposta HTTP), pois cada representação é autodescritiva.
+
+O estado, no contexto do REST, refere-se aos dados (ou valores) transferidos entre o cliente e o servidor durante uma interação. Esses dados geralmente estão no formato JSON (ou às vezes XML, YAML, etc.), e representam o **estado atual do recurso** ou as informações necessárias para realizar uma operação. A troca de dados é chamada de **transferência de estado** porque os valores enviados representam o estado atual ou desejado de um recurso, mas o servidor não mantém esse estado nem o cliente, após a operação ser concluída. Portanto, o REST é #stateless ou seja, sem estado. 
+
+As operações REST utilizam três componentes chaves:
+- Recursos e URIs;
+- Métodos HTTP;
+- HATEOAS
+Um exemplo de uma chamada REST simples seria a seguinte:
+GET /licenses HTTP/2
+Host: api.github.com
+
+Aqui, o caminho /licenses denota o recurso de licenças. GET é um método HTTP. O número 2 no final da primeira linha denota a versão do protocolo HTTP. A segunda linha compartilha o host para a chamada.
+
+O GitHub responde com um objeto JSON. O status é 200 OK e o objeto JSON está encapsulado em um corpo de resposta, da seguinte forma:
+```JSON
+HTTP/2 200 OK
+date: Mon, 10 Jul 2023 17:44:04 GMT
+content-type: application/json; charset=utf-8
+server: GitHub.com
+status: 200 OK
+cache-control: public, max-age=60, s-maxage=60
+vary: Accept, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"3cbb5a2e38ac6fc92b3d798667e828c7e3584af278aa314f6eb1857bbf2593ba"
+… <bunch of other headers>
+Accept-Ranges: bytes
+Content-Length: 2037
+X-GitHub-Request-Id: 1C03:5C22:640347:81F9C5:5F70D372
+
+[
+  {
+    "key": "agpl-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0",
+    "node_id": "MDc6TGljZW5zZTE="
+  },
+  {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  …
+]
+
+```
+A terceira linha nesta resposta, ela informa o valor do tipo de conteúdo. É uma boa prática ter JSON como tipo de conteúdo tanto para a requisição quanto para a resposta.
+
+Agora que nos familiarizamos com os fundamentos do REST, vamos nos aprofundar um pouco mais nos primeiros conceitos do REST: recursos e URIs.
+
+## Handling resources and URIs
