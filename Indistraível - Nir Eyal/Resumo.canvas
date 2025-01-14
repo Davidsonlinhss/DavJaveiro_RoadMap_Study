@@ -512,6 +512,30 @@
       "width": 860,
       "height": 540,
       "color": "#ffffff"
+    },
+    {
+      "id": "7eea786ea52d0c34",
+      "type": "text",
+      "text": "20- Defenda-se do *Hacking* das abas do seu Navegador de Internet",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 7292,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "372cf039fba12047",
+      "type": "text",
+      "text": "## Resumo\n1. **Os artigos na internet estão repletos de gatilhos externos que podem levar a distrações.** Abas abertas no nosso navegador podem nos desviar do caminho e tendem a nos sugar em um buraco negro de desperdício de tempo.\n2. **Imponha-se uma regra.** Salve os artigos que achar interessantes para ler depois usando um aplicativo como o Pocket.\n3. **Surpresa! Você pode fazer a multitarefa.** Use a multitarefa multicanal, como ouvir um audiobook ou podcast enquanto se exercita ou faze reuniões caminhando.\n",
+      "styleAttributes": {},
+      "x": 1900,
+      "y": 7080,
+      "width": 860,
+      "height": 540,
+      "color": "#ffffff"
     }
   ],
   "edges": [
@@ -930,6 +954,17 @@
       "toNode": "f787d94ec3f792bc",
       "toSide": "left",
       "color": "4"
+    },
+    {
+      "id": "8636318c71348435",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "7eea786ea52d0c34",
+      "fromSide": "right",
+      "toNode": "372cf039fba12047",
+      "toSide": "left",
+      "color": "#ffffff"
     }
   ],
   "metadata": {}
