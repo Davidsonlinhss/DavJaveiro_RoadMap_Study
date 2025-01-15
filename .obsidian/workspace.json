@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#FileInputStream",
+                "query": "tag:#Optional",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -207,13 +207,15 @@
   },
   "active": "b962e2e861ed0ffb",
   "lastOpenFiles": [
-    "Artigos/Papers for Science and Technology for Dummies.md",
+    "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
     "Artigos/Paradigmas/Functional Programming Oriented Software Design/Functional Programming Oriented Software Design.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1/Chapter 1 - Restful Web Service Fundamentals.md",
+    "Modern Java In Action/Capítulo 1/Capítulo 1.md",
+    "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization",
+    "Artigos/Papers for Science and Technology for Dummies.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1",
     "Modern API Development with SPring 6 and Spring Boot 3",
     "Indistraível - Nir Eyal/Resumo.canvas",
-    "Modern Java In Action/Capítulo 1/Capítulo 1.md",
     "Capítulo 1-1.png",
     "Capítulo 1.png",
     "RoadMap do DavJaveiro/RoadMap.canvas",
@@ -238,7 +240,6 @@
     "Java Para Iniciantes/Capítulo 10 - Usando IO.md",
     "2025/Janeiro/sub2",
     "2025/Janeiro/sub",
-    "2025/Janeiro/CriarSubdiretorio.class",
     "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
     "Excalidraw/Drawing 2024-12-30 13.57.25.excalidraw.md",
     "Excalidraw/Drawing 2024-12-30 13.57.24.excalidraw.md",
@@ -253,7 +254,6 @@
     "Cientista da Computação Autodidata/Capítulo 4 - Algoritmos de ordenação/Capítulo 4 - Algoritmos de ordenação.md",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
     "RoadMap do DavJaveiro/RoadMap.md",
-    "Fila Genérica.md",
-    "Teste.md"
+    "Fila Genérica.md"
   ]
 }

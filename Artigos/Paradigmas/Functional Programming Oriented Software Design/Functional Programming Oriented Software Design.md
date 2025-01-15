@@ -35,7 +35,7 @@ Dos 14 estudos selecionados, identificamos a distribuição de suas classificaç
 1. RQ1: Quais são as práticas de design de software para o paradigma de Programação Funcional?
 É importante especificar que uma prática é uma atividade que contribui para o propósito ou os resultados de um processo ou melhora de sua capacidade.
 
-A literatura relata que há uma falta de práticas de design de software orientado à Programação Funcional, em contraste com a abundância de práticas adotadas no POO. No entanto, os estudos coletados revelaram quatro práticas principais:
+<span style="background:#d4b106">A literatura relata que há uma falta de práticas de design de software orientado à Programação Funcional</span>, em contraste com a abundância de práticas <span style="background:#d4b106">adotadas no POO</span>. No entanto, os estudos coletados revelaram quatro práticas principais:
 
 1) **Modelagem de abstrações funcionais de alto nível**
 São conceitos e técnicas utilizadas na programação funcional para simplificar e abstrair a lógica de um programa ao resolver problemas gerais e genéricos de forma eficiente. Essas abstrações baseiam-se no uso de funções e são projetados para serem intuitivas e fáceis de usar pelos programadores. As abstrações funcionais de alto nível são benéficas para abstrair lógicas complexas e simplificar um programa, facilitando seu design e manutenção a longo prazo. Alguns exemplos de **abstrações funcionais de alto nível** incluem:

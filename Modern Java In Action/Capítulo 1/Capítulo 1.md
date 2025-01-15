@@ -419,7 +419,7 @@ Tony Hoare, que foi o responsável por introduzir o conceito de `null`, se arrep
 
 Hoje em dia, muitas linguagens de programação estão tentando evitar o uso de `null` ou tratá-lo de uma maneira mais segura. Por exemplo:
 
-1. **Optional**: No Java, existe a classe `Optional`, <span style="background:#b1ffff">que pode ser usada para representar valores que podem ou não estar presentes</span>. Em vez de retornar `null`, você retorna um `Optional`, o que obriga o desenvolvedor a tratar o caso em que o valor está ausente, reduzindo o risco de erros.
+1. **Optional**: No Java, existe a classe #Optional , <span style="background:#b1ffff">que pode ser usada para representar valores que podem ou não estar presentes</span>. Em vez de retornar `null`, você retorna um `Optional`, o que obriga o desenvolvedor a tratar o caso em que o valor está ausente, reduzindo o risco de erros.
     
     ```java
     Optional<String> nome = Optional.ofNullable(null);
@@ -432,3 +432,11 @@ Hoje em dia, muitas linguagens de programação estão tentando evitar o uso de 
 O "erro de bilhões de dólares" de Tony Hoare é um lembrete de como a escolha de certas funcionalidades de design pode ter implicações duradouras e difíceis de reverter, especialmente quando se trata de um conceito simples como o `null`.
 
 ---
+## Resumo
+- **Ecossistema de Linguagens**: considere a ideia do ecossistema das linguagens e a pressão para "evoluir ou definhar". Embora Java esteja em um ótimo momento, é importante lembrar de linguagens como COBOL, que não conseguiram evoluir.
+- **Novidades no Java 8**: As adições centrais do Java 8 trazem novos conceitos e funcionalidades para facilitar a escrita de programas mais eficazes e concisos.
+- **Processadores multicore:** As práticas de programação anteriores ao Java 8 não aproveitavam plenamente os processadores multicore.
+- **Funções como valores de primeira classe:** Lembre-se de como métodos podem ser passados como valores funcionais e como escrever funções anônimas ( #lambdas).
+- **Streams no Java 8:** O conceito de streams generalizava vários aspectos de coleções, permitindo códigos mais legíveis e o processamento paralelo dos elementos de um stream.
+- **Programação baseada em componentes:** Historicamente, a programação em grande escala baseada em componentes e a evolução de interfaces não eram bem suportadas pelo Java. Agora, é possível estruturar sistemas com módulos no Java 9 e usar métodos default para aprimorar interfaces sem modificar todas as classes que as implementam.
+- **Outras ideias do funcional:** conceitos interessantes da programação funcional incluem lidar com #null e usar correspondência de padrões.
