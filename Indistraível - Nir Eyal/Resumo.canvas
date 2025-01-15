@@ -536,6 +536,30 @@
       "width": 860,
       "height": 540,
       "color": "#ffffff"
+    },
+    {
+      "id": "26fa5fd8e6315111",
+      "type": "text",
+      "text": "20- Defenda-se do *Hacking* dos Feeds de Notícias",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 1020,
+      "y": 7932,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "b1c7e67831c38882",
+      "type": "text",
+      "text": "## Resumo\n1. **Os feeds, como os feeds aqueles que podemos passar horas rolando nas redes sociais, são feitos para nos manter engajados.** Os *feeds* são repletos de gatilhos externos que podem nos distrair.\n2. **Defenda-se recuperando o controle dos feeds.** Use extensões gratuitas de navegador, como o News Feed Eradicator for Facebook, o NewsFeed Burner, o Open Multiple Websites e o DF Tube para remover os gatilhos externos que levam a distrações.\n",
+      "styleAttributes": {},
+      "x": 1920,
+      "y": 7722,
+      "width": 860,
+      "height": 540,
+      "color": "#ffffff"
     }
   ],
   "edges": [
@@ -963,6 +987,17 @@
       "fromNode": "7eea786ea52d0c34",
       "fromSide": "right",
       "toNode": "372cf039fba12047",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "556e0830afd7c4d6",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "26fa5fd8e6315111",
+      "fromSide": "right",
+      "toNode": "b1c7e67831c38882",
       "toSide": "left",
       "color": "#ffffff"
     }
