@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a0a88009f7be6c4e",
+        "id": "6daca201a4434a65",
         "type": "tabs",
         "children": [
           {
-            "id": "f6041034f833c4e7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 1 - Restful Web Service Fundamentals.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chapter 1 - Restful Web Service Fundamentals"
-            }
-          },
-          {
-            "id": "5aff0eb101189995",
+            "id": "58c9d66fb6675bc3",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -97,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 444.51002502441406,
-    "collapsed": true
+    "width": 444.51002502441406
   },
   "right": {
     "id": "5ec10822b2a3b721",
@@ -215,21 +200,22 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "f6041034f833c4e7",
+  "active": "58c9d66fb6675bc3",
   "lastOpenFiles": [
-    "Artigos/Papers for Science and Technology for Dummies.md",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
+    "Capítulo 2 - Passing code with behavior parameterization.png",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 1 - Restful Web Service Fundamentals.md",
+    "Artigos/Papers for Science and Technology for Dummies.md",
     "Spring Boot 3 and Spring Framework 6/Capítulo 2 - Containers for Spring-Managed Beans.md",
     "Indistraível - Nir Eyal/Resumo.canvas",
     "Artigos/Paradigmas/Functional Programming Oriented Software Design/Functional Programming Oriented Software Design.md",
-    "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
     "Modern Java In Action/Capítulo 1/Capítulo 1.md",
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals",
     "Modern API Development with SPring 6 and Spring Boot 3",
     "Capítulo 1-1.png",
     "Capítulo 1.png",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Learn Java WIth Projects/Capítulo 2 - Variables and Primitive Data Types/Capítulo 2 - Variables and Primitive Data Types.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
     "Learn Java WIth Projects/Capítulo 2 - Variables and Primitive Data Types/codes",
@@ -245,7 +231,6 @@
     "RoadMap do DavJaveiro/Covers/Modern Java In Action.png",
     "RoadMap do DavJaveiro/Covers/Introduction to Java.png",
     "Introduction to Java.png",
-    "Modern Java In Action.png",
     "Sem título.md",
     "2025/Janeiro/12-01-2025.md",
     "Java Para Iniciantes/Capítulo 10 - Usando IO.md",
@@ -263,7 +248,6 @@
     "Nota Análise Comparativa de programação funcional e programação orientada a objeto.md",
     "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
     "Cientista da Computação Autodidata/Capítulo 4 - Algoritmos de ordenação/Capítulo 4 - Algoritmos de ordenação.md",
-    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
-    "RoadMap do DavJaveiro/RoadMap.md"
+    "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md"
   ]
 }

@@ -97,3 +97,126 @@ public static List<Apple> filterApplesByColor(List<Apple> inventory, Color color
 	return result;
 }
 ```
+
+Agora podemos fazer o agricultor satisfeito e invocar seu método da seguinte maneira:
+```java
+List< Apple > greenApples = filterApplesByColor(inventory, GREEN);
+List< Apple > redApples = filterApplesByColor(inventory, RED);
+```
+Estamos passando um valor do tipo ENUM como argumento para o método filterApplesByColor.
+
+Fácil demais, certo? Vamos complicar o exemplo um pouco mais. O agricultor volta até a gente e diz: "Seria muito legal diferenciar entre maçãs leves e pesadas. Maçãs pesadas geralmente têm um peso superior a 150g."
+Logo, criamos o seguinte método:
+```java
+public static List<Apple> filterApplesByWeight(List<Apple> inventory, int weight) {
+	List<Apple> result = new ArrayList<>();
+	For(Apple apple : inventory) {
+		if ( apple.getWeight() > weight) {
+			result.add(apple);
+		}
+	}
+	return result;
+}
+```
+
+Esta é uma boa solução, mas observe como precisamos duplicar a maior parte da implementação para percorrer o inventário e aplicar os critérios de filtragem em cada maçã. Isso é um pouco decepcionante, pois viola o princípio #DRY (<span style="background:#b1ffff">não se repita</span>) da engenharia de software. E se quisermos alterar o método de percorrer a filtragem para melhor o desempenho? Agora <span style="background:#b1ffff">teríamos que modificar a implementação de todos os seus métodos</span> em vez de apenas um único método. Isso é caro do ponto de vista do esforço de engenharia.
+Podemos combinar a cor e o peso em um único método chamado *filter*. Mas ainda precisaríamos de uma forma de diferenciar qual atributo desejamos filtrar. <span style="background:#ff4d4f">Podemos adicionar uma flag para diferenciar entre consultar de cor e peso (MAS NUNCA FAÇA ISSO!)</span>
+
+### 2.1.3 Third attempt: filtering with every attribute you can think of
+Uma tentativa feia de mesclar todos os atributos pode ser a seguinte:
+```java
+public static List<Apple> filterApples(List<Apple> inventory, Color color, int weight, boolean flag) {
+	List<Apple> result = new ArrayList<>();
+	if ( (flag && apple.getColor().equals(color)) ||
+		 (!flag && apple.getWeight() > weight) ) { // uma forma feia de selecionar a cor ou peso
+			 result.add(apple);
+		 }
+	}
+	return result;
+}
+
+```
+
+Podemos usar isso da seguinte maneira, mas é feio:
+```java
+List<Apple> greenApple = filterApples(inventory, GREEN, 0, true);
+List<Apple> heavyApples = filterApples(inventory, null, 150, false);
+```
+
+Essa solução é extremamente ruim. Primeiro, o código do cliente fica terrível. O que "true" e "false" significam? Além disso, essa solução <span style="background:#b1ffff">não lida bem com mudanças nos requisitos</span>. E se o agricultor pedir para filtrar por diferentes atributos de uma maçã, como seu tamanho, formato, origem, e assim por diante? Além disso, e se o agricultor solicitar consultas mais complexas que combinem atributos, como maçãs verdes que também sejam pesadas? Teríamos múltiplos métodos duplicados de filtragem ou um único método extremamente complexo. Até agora, parametrizamos o método filterApples com valores como uma String, um Integer, um tipo enum ou um boolean. Isso pode ser adequado para certos problemas bem definidos. Mas, neste caso, o que precisamos é de uma maneira melhor de informar ao método filterApples os critérios de seleção para as maçãs. Na próxima seção, descrevemos como usar a parametrização de comportamento para alcançar essa flexibilidade. 
+
+## 2.2 Behavior parameterization
+Vimos na seção anterior que é necessário uma maneira melhor do que adicionar muitos parâmetros para lidar com mudanças nos requisitos. Vamos dar um passo atrás e encontrar um nível melhor de abstração. Uma solução possível é modelar seus critérios de seleção: estamos trabalhando com maçãs e retornando um booleano com base em alguns atributos da maçã. Por exemplo, ela é verde? Ela é mais pesada do que 150g? Chamamos isso de #predicado (uma função que retorna um booleano). Vamos, definir uma interface para modelar os critérios de seleção:
+```java
+public interface ApplePredicate {
+	boolean test(Apple apple);
+}
+```
+Agora, <span style="background:#b1ffff">podemos declarar várias implementações</span> de ApplePredicate para representar diferentes critérios de seleção, como mostrado a seguir:
+```java
+public class AppleHeavyWeightPredicate implements ApplePredicate {
+	public boolean test(Apple apple) {
+		return apple.getWeight() > 150;
+	}
+}
+
+public class AppleGreenColorPredicate implements ApplePredicate {
+	public boolean test(Apple apple) {
+		returna GREEN.equals(apple.getColor());
+	}
+}
+```
+
+**Diferentes estratégias de seleção**
+![[Capítulo 2 - Passing code with behavior parameterization.png]]
+
+Podemos ver esses critérios como diferentes comportamentos para o método filter. O que acabamos de fazer está relacionado ao padrão de projeto *strategy*, que permite definir uma família de algoritmos, encapsular cada algoritmo (chamado de estratégia) e selecionar um algoritmo em tempo de execução. No nosso exemplo, *ApplePredicate* é a família de algoritmos e as diferentes estatégias são *AppleHeavyWeightPredicate* e *AppleGreenColorPredicate*.
+
+Mas como podemos fazer uso das diferentes implementações de `ApplePredicate`? Precisamos que nosso método *filterApples* aceite objetos *ApplePredicate* para testar uma condição em uma maçã. Isso é o que significa *parametrização de comportamento:* a capacidade de informar a um método para múltiplos comportamentos (ou estratégias) como parâmetros e usá-los internamente para realizar diferentes comportamentos.
+
+Para alcançar isso no exemplo em execução, podemos adicionar um parâmetro ao método filterApples para aceitar um objeto ApplePredicate. Isso tem um grande benefício em engenharia de software: agora podemos separar a lógica de iteração da coleção dentro do método filterApples do comportamento que desejamos aplicar a cada elemento da coleção. 
+
+### 2.2.1 Fourth attempt: filtering by abstract criteria
+Nosso método **filter** modificado, que utiliza um ApplePredicate:
+```java
+public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate p) {
+	List<Apple> result = new ArrayList<>();
+	for (Apple apple: inventory) {
+		if(p.test(apple)) {
+			result.add(apple)	
+		}
+	}
+	return result;
+}
+```
+
+**Passing CODE/BEHAVIOR**
+Vale a pena fazer uma pequena celebração neste momento. Este código é muito mais flexível do que nossa primeira tentativa, mas ao mesmo tempo é fácil de ler e usar! Agora podemos criar diferentes objetos *ApplePredicate* e passá-los para o método *filterApples*. Flexibilidade total! Se o usuário pedir para encontrar todas as maçãs vermelhas que são mais pesadas do que 150g, tudo o que precisamos fazer <span style="background:#b1ffff">é criar uma classe que implemente</span> o ApplePredicate de acordo. Nosso código é flexível o suficiente para qualquer alteração nos requisitos envolvendo os atributos de *Apple*:
+```java
+public class AppleRedAndHeavyPredicate implements ApplePredicate {
+		public boolean test(Apple apple) {
+			return RED.equals(apple.getColor()) 
+					&& apple.getWeiht() > 150;
+		}
+}
+List<Apple> redAndHeavyApples = filterApples(inventory, new AppleRedAndHeavyPredicate());
+```
+
+O comportamento do método *filterApple* agora depende do código que passamos a ele através do objeto *ApplePredicate*. Parametrizamos o comportamento do método *filterApples*. 
+
+Notamos que, no exemplo anterior, o único código que importa é a implementação do método *test*, como ilustrado na figura 2.2; é isso que define os novos comportamentos para o método *filterApples*. Infelizmente, como método *filterApples* só pode aceitar objetos, precisamos encapsular este código dentro de um objeto *ApplePredicate*. O que estamos fazendo é semelhante a **passar código inline**, pois estamos passando uma expressão #booleana por meio de um objeto que implementa o método *test*. Veremos na seção 2.3 (e em mais detalhes no capítulo 3) que, ao usar lambdas, podemos passar diretamente a expressão *RED.equals(apple.getColor()) && apple.getWeight() > 150* para o método *filterApples*, sem precisar definir várias classes *ApplePredicate*. Isso elimina verbosidade desnecessária! AMÉM!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
