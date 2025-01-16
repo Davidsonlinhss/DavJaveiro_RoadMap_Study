@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6daca201a4434a65",
+        "id": "26833d0f5bac6fde",
         "type": "tabs",
         "children": [
           {
-            "id": "58c9d66fb6675bc3",
+            "id": "0607bda5182a9871",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -200,16 +200,17 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "58c9d66fb6675bc3",
+  "active": "0607bda5182a9871",
   "lastOpenFiles": [
+    "Artigos/Paradigmas/Functional Programming Oriented Software Design/Functional Programming Oriented Software Design.md",
+    "Artigos/Efficient Reading of Papers in Science and Technology.pdf",
+    "Indistraível - Nir Eyal/Resumo.canvas",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
     "Capítulo 2 - Passing code with behavior parameterization.png",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 1 - Restful Web Service Fundamentals.md",
     "Artigos/Papers for Science and Technology for Dummies.md",
     "Spring Boot 3 and Spring Framework 6/Capítulo 2 - Containers for Spring-Managed Beans.md",
-    "Indistraível - Nir Eyal/Resumo.canvas",
-    "Artigos/Paradigmas/Functional Programming Oriented Software Design/Functional Programming Oriented Software Design.md",
     "Modern Java In Action/Capítulo 1/Capítulo 1.md",
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals",
@@ -235,7 +236,6 @@
     "2025/Janeiro/12-01-2025.md",
     "Java Para Iniciantes/Capítulo 10 - Usando IO.md",
     "2025/Janeiro/sub2",
-    "2025/Janeiro/sub",
     "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
     "Excalidraw/Drawing 2024-12-30 13.57.25.excalidraw.md",
     "Excalidraw/Drawing 2024-12-30 13.57.24.excalidraw.md",

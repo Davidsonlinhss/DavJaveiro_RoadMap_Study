@@ -560,6 +560,43 @@
       "width": 860,
       "height": 540,
       "color": "#ffffff"
+    },
+    {
+      "id": "0e9db8c151331f59",
+      "type": "text",
+      "text": "22- O Poder dos Pré-compromissos",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -3740,
+      "y": 6134,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "e39d322a20f21192",
+      "type": "text",
+      "text": "**Parte 4** Faça Pactos para Evitar as Distrações",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -5240,
+      "y": 6652,
+      "width": 520,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "5d7b66f35e8e26b7",
+      "type": "text",
+      "text": "## Resumo\n1. **Ser indistraível não requer apenas afastar as distrações.** Também precisamos aprender a nos conter.\n2. **Os pré-compromissos podem reduzir nossas chances de nos distrair.** Eles nos ajudam a nos ater às nossas decisões.\n3. **Os pré-compromissos só devem ser usados depois de aplicar as outras três estratégias para ser tornar uma pessoa indistraível.** Não pule as três primeiras etapas.",
+      "styleAttributes": {},
+      "x": -2860,
+      "y": 5922,
+      "width": 860,
+      "height": 483,
+      "color": "#ffffff"
     }
   ],
   "edges": [
@@ -857,7 +894,7 @@
       "fromSide": "right",
       "toNode": "668c2eeb82c7da88",
       "toSide": "left",
-      "color": "1"
+      "color": "4"
     },
     {
       "id": "22ec1d2acf083e47",
@@ -1000,6 +1037,26 @@
       "toNode": "b1c7e67831c38882",
       "toSide": "left",
       "color": "#ffffff"
+    },
+    {
+      "id": "c71959c51a0ca3cf",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "0e9db8c151331f59",
+      "fromSide": "right",
+      "toNode": "5d7b66f35e8e26b7",
+      "toSide": "left",
+      "color": "#ffffff"
+    },
+    {
+      "id": "de9e426daf0d9e6e",
+      "styleAttributes": {},
+      "fromNode": "e39d322a20f21192",
+      "fromSide": "right",
+      "toNode": "0e9db8c151331f59",
+      "toSide": "left",
+      "color": "4"
     }
   ],
   "metadata": {}

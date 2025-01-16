@@ -32,7 +32,7 @@ Identificamos, de forma geral, um baixo nível de atividade de publicação em r
 Dos 14 estudos selecionados, identificamos a distribuição de suas classificações, revelando que 10 foram provenientes de periódicos e 4 de conferências. 
 
 ### C. Síntese dos dados
-1. RQ1: Quais são as práticas de design de software para o paradigma de Programação Funcional?
+1. RQ1: Quais são as <span style="background:#b1ffff">práticas de design de software</span> para o paradigma de Programação Funcional?
 É importante especificar que uma prática é uma atividade que contribui para o propósito ou os resultados de um processo ou melhora de sua capacidade.
 
 <span style="background:#d4b106">A literatura relata que há uma falta de práticas de design de software orientado à Programação Funcional</span>, em contraste com a abundância de práticas <span style="background:#d4b106">adotadas no POO</span>. No entanto, os estudos coletados revelaram quatro práticas principais:
@@ -46,4 +46,49 @@ São conceitos e técnicas utilizadas na programação funcional para simplifica
 
 3) **Identificadores de Funções e Dados**: na POO, o processo comum é extrair substantivos e convertê-los em classes, seguido pela análise de verbos para determinar os métodos da classe. Em contraste, a FP inverte esse processo. Primeiro, os verbos são extraídos, seguidos pela extração de substantivos para identificar os dados utilizados no processamento [18]. A função ou processo é central no design de sistemas funcionais, tornando crucial a extração do verbo. Essa abordagem contribui para a criação de sistemas seguros, previsíveis, fáceis de compor e reutilizar. 
 
-4) **Uso de padrões recursivos:** 
+4) **Uso de padrões recursivos:** é uma técnica que simplifica a definição de muitas funções ao evitar as complexidades da recursão geral. Essa abordagem permite que os desenvolvedores trabalhem com recursão geral de forma confortável e confiável, tornando-a altamente benéfica no processo de Design de Software. Sem a necessidade de definir funções recursivas explícitas, os *Padrões Recursivos* economizam tempo dos desenvolvedores e ajudam a prevenir erros ao reduzir a complexidade das definições de funções.
+
+2. **RQ2: quais são as metodologias utilizadas no design de software que seguem o paradigma de Programação Funcional?**
+O termo metodologia, no contexto de design de software, refere-se a uma abordagem sistemática para criar um design que consiste na aplicação ordenada de uma coleção específica de ferramentas, técnicas e diretrizes.
+
+A literatura apresenta muito pouca informação sobre metodologias de design de software focadas em Programação Funcional. Assim como na RQ1, informações explícitas sobre essas metodologias são escassas. No entanto, o estudo SS8 menciona Linguagens Específicas de Domínio (Domain Specific Languages, DSLs), que encontramos relacionadas a algumas metodologias.
+
+As DSLs podem ser valiosas para o design de software funcional. DSLs são linguagens de programação projetadas para resolver problemas específicos em um determinado #Domínio, com uma sintaxe e semântica simplificadas, que as tornam facilmente compreensíveis por especialistas do domínio. No design de software, as #DSLs são frequentemente utilizadas para melhorar a eficiência e a produtividade do desenvolvimento, permitindo que os desenvolvedores expressem os requisitos e as restrições do problema que estão resolvendo de forma clara e concisa. As linguagens de programação funcional são particularmente adequadas para hospedar DSLs, graças a recursos como tipos algébricos de dados, funções de ordem superior e #lazy-evaluation.
+
+Da mesma forma, existem algumas metodologias de design de software que incluem a criação de DSLs como uma de suas etapas, como o *Domain-Driven Design (DDD)*. Essas metodologias poderiam ser aplicadas à programação funcional. De fato, embora estivesse fora do escopo deste trabalho de pesquisa, encontramos livros relacionados ao tema, como *Domain Modeling Made Functional* e *Functional and Reactive Domain Modelling*.
+
+**RQ3: Quais artefatos ou notações de design os desenvolvedores utilizam ao desenvolver software que segue o paradigma de Programação Funcional?**
+Por meio da nossa pesquisa, descobrimos várias abordagens para projetar software especificamente adaptadas ao paradigma de programação funcional. Ao avaliar essas abordagens, observamos tanto seus benefícios quanto suas limitações. Enquanto alguns artefatos se mostraram eficazes, outros são inadequados devido às bases nas quais estão fundamentados.
+
+Por exemplo, práticas tradicionais de UML, que priorizam a representação gráfica da estrutura do software, podem apresentar desafios ao projetar lógica funcional, pois originalmente carecem da capacidade de representar conceitos-chave da programação funcional, como a #imutabilidade. Problemas como esse, e outros semelhantes mencionados na RQ4, pode dificultar a compeensão e a implementação de designs funcionais, exigindo o desenvolvimento de novas abordagens que abracem os princípios dessa paradigma.
+
+Por fim, é essencial explorar novas metodologias de design de software funcional que permitam um desenvolvimento mais eficiente e preciso. Ou seja, para projetar e desenvolver software de forma mais precisa, é essencial garantir que os requisitos e especificações estabelecidos com base no paradigma funcional sejam atendidos.
+
+A tabela apresentado nesta seção destaca os artefatos e notações referenciados na literatura revisada, juntamente com o estudo fonte correspondente. Os padrões recursivos (APF-09) foram um dos achados mais frequentes. Esses padrões têm se mostrado eficazes para simplificar e esclarecer práticas de programação, oferecendo uma abordagem mais eficiente para recursão em comparação às técnicas gerais de recursão.
+
+Estudos demonstraram que os padrões recursivos, como os descritos nas obras de Bailes, são capazes de abstrair as complexidades e sutilezas das práticas tradicionais de recursão, permitindo um processo de programação mais intuitivo.
+
+Padrões recursivos não são exclusivos da programação funcional, mas são particularmente relevantes para esse paradigma. **Na programação funcional, as funções geralmente são puras e determinísticas, o que significa que sempre retornarão o mesmo resultado para uma mesma entrada**. Essa característica torna a resolução de problemas por meio de recursão mais fácil e eficaz. Além disso, a ausência de variáveis mutáveis na programação funcional faz da recursão uma técnica valiosa, permitindo que os desenvolvedores resolvam problemas de forma elegante e concisa. 
+Em resumo, devido às características de pureza das funções e à imutabilidade, a #recursão é uma técnica amplamente utilizada e extremamente benéfica na programação funcional. 
+
+De forma similar, nossas descobertas revelaram outros artefatos e notações que podem ser utilizadas no design de software orientado à programação funcional: APF-01, APF-02, APF-03 e APF-08. 
+
+Outros artefatos comuns para projetar software no contexto da programação funcional incluem diferentes diagramas UML, DFDs e BPMN. No entanto, esses artefatos podem não ser tão eficazes devido às características fundamentais que sustentam a programação funcional. Mesmo assim, eles podem ser adaptados e se mostrar úteis, embora não sejam a decisão de design mais eficiente especialmente ao representar a estrutura de sistemas funcionais mais complexos.
+
+Por exemplo, o autor de *String Diagrams for Modeling Functional Programming, High-Level Modelling for Typed Functional Programming e A Structural Modeling for the Typed Functional Paradigm*, menciona que:
+- **Diagramas comportamentais do UML:** são mais úteis para representar a estrutura semântica de um programa funcional. Diagramas de iteração (como diagramas de sequência e de comunicação) e diagramas de estado, em particular, são fáceis de adaptar para mostrar o comportamento dinâmico de objetos em um sistema funcional simples.
+- Diagramas de interação poderiam ser usados para representar funções como blocos, com dados rotulados entre eles.
+- Diagramas de estado poderiam ser usados para representar dados como blocos, com funções rotuladas conectando-os.
+EM outras palavras, os diagramas UML podem ser adaptados para representar a estrutura de programas funcionais simples; no entanto, podem ser tornar complexos e impraticáveis à medida que a complexidade do sistema aumenta.
+
+4) RQ4: quais são os desafios que os desenvolvedores enfrentam ao projeto software que segue o paradigma de Programação Funcional?
+Entre os principais desafios destacados na literatura sobre o Design de Software orientado à Programação Funcional, os seguintes pontos se destacam:
+1. **Falta de práticas e metodologias padronizadas:** não há um foco claro em pr´ticas e metodologias de design de software orientadas à programação funcional para alcançar a padronização. Ou seja, não existe uma visão geral de todo o processo de design de software, como ocorre com o UML para programas orientados a objetos. Isso causa dificuldades significativas para desenvolvedores de sistemas funcionais, forçando-os a apresentar sistemas ocultos por trás de interfaces orientadas a objetos ou a renunciar completamente às vantagens do uso de modelagem.
+
+2. **Abordando a falta de ferramentas e abordagens para compreender a analisar programas escritos em linguagens funcionais** um desafio significativo na compreensão de programas escritos em linguagens funcionais reside na ausência de ferramentas e técnicas adequadas para visualizar e analisar efetivamente o fluxo e a interação das funções dentro de um programa completo. Diferentemente das abordagens disponíveis para linguagens orientadas a objetos, onde existem métodos estabelecidos para compreender a estrutura e o comportamento dos objetos, a compreensão de programas funcionais é limitada devido à falta de ferramentas abrangentes de visualização e análise. Essa limitação dificulta que equipes de engenharia reversa modifiquem, estendam ou reutilizem código escrito em linguagens funcionais, pois elas carecem de artefatos de design apropriados e representações visuais compreensíveis para entender a lógica e o fluxo do programa em sua totalidade.
+
+3. **Aprender e compreender o paradigma funcional:** um dos principais desafios na comunidade de Engenharia de Software em relação ao paradigma funcional é a dificuldade associada à mudança de mentalidade e ao aprendizado de novos conceitos e técnicas.  Diferentemente de paradigmas mais tradicionais, o funcional exige uma abordagem diferente em termos  de design e resolução de problemas. Os desenvolvedores podem enfrentar dificultades para entender e aplicar conceitos-chave do paradigma funcional, como #imutabilidade, programação baseada em #expressões ou o uso de **funções de primeira classe**.  Essa transição pode ser desafiadora tanto conceitual quanto praticamente, pois pode exigir uma mudança de perspectiva. 
+
+4. **Desenvovler notações e diagramas apropriados que sejam eficazes para o design de sistemas orientados ao paradigma funcional:** diversas notações e diagramas, como UML e BPMN, foram adaptados para projetar software orientado à programação funcional. No entanto, muitos deles não são eficazes para o design de sistemas funcionais, uma vez que não foram originalmente baseados em conceitos relacionados à programação funcional, como funções de ordem superior. Como resultado, modelar um sistema funcional usando esses artefatos pode ser difícil ou até impossível. As notações e diagramas devem ser baseados em conceitos e princípios da programação funcional, permitindo que a estrutura e comportamento de sistemas funcionais sejam representados de forma precisa e compreensível. 
+
+## V. Discussion
