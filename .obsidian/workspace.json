@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "26833d0f5bac6fde",
+        "id": "57325bc006fe4950",
         "type": "tabs",
         "children": [
           {
-            "id": "0607bda5182a9871",
+            "id": "9c4a1175b79442ea",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 1 - Restful Web Service Fundamentals.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Chapter 1 - Restful Web Service Fundamentals"
             }
           }
         ]
@@ -83,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 444.51002502441406
+    "width": 444.51002502441406,
+    "collapsed": true
   },
   "right": {
     "id": "5ec10822b2a3b721",
@@ -200,15 +205,16 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "0607bda5182a9871",
+  "active": "9c4a1175b79442ea",
   "lastOpenFiles": [
+    "Chapter 1 - Restful Web Service Fundamentals.png",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 1 - Restful Web Service Fundamentals.md",
     "Artigos/Paradigmas/Functional Programming Oriented Software Design/Functional Programming Oriented Software Design.md",
     "Artigos/Efficient Reading of Papers in Science and Technology.pdf",
     "Indistraível - Nir Eyal/Resumo.canvas",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
     "Capítulo 2 - Passing code with behavior parameterization.png",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 1 - Restful Web Service Fundamentals.md",
     "Artigos/Papers for Science and Technology for Dummies.md",
     "Spring Boot 3 and Spring Framework 6/Capítulo 2 - Containers for Spring-Managed Beans.md",
     "Modern Java In Action/Capítulo 1/Capítulo 1.md",

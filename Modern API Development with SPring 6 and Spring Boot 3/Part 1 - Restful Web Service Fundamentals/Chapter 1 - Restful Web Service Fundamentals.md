@@ -298,3 +298,70 @@ No entanto, a API pública do GitHub oferece apenas operações de leitura no re
 Se observamos a API de licenças do GitHUb, podemos notar que o nome do recurso é dado no plural. <span style="background:#b1ffff">É uma boa prática usar a forma plural se o recurso representar uma coleção</span>. Portanto, podemos usar /licenses em vez de /license. Uma chamada GET retorna a coleção de licenças. O GitHub não permite operações públicas de criação, atualização ou exclusão em um recurso de licença. Hipoteticamente, se isso fosse permitido, uma chamada POST criaria uma nova licença na coleção de licenças existentes. Da mesma forma, para chamadas DELETE e PATCH, uma chave de licença seria usada para identificar a licença específica para realizar, respectivamente, operações de exclusão e atualizações menores.
 
 ## Usando Hypermedia (HATEOAS)
+Hypermedia (ou seja, links para outros recursos) facilita o trabalho do cliente REST. Existem **duas vantagens em fornecer links de URL explícitos** em uma *resposta*.  Primeiro, o cliente #REST não precisa construir os URLs REST por conta própria. Segundo, qualquer atualização no caminho do endpoint será tratada automaticamente, o que, por sua vez, torna as atualizações mais fáceis para clientes e desenvolvedores. 
+
+### Versioning your APIs
+O versionamento de APIs é fundamental para futuras atualizações. Com o tempo, as APIs continuam mudando, e podemos ter clientes que ainda utilizam uma versão mais antiga. Por isso, é necessário oferecer suporte a várias versões de APIs. Existem diferentes maneiras de versionar suas APIs:
+- **Usando cabeçalhos:** a API do GitHub utiliza essa abordagem. Podemos adicionar um cabeçalho #Accept que indica qual a versão da API deve atender à requisição; por exemplo: *Accept: application/vnd.github.v3+json*. Essa abordagem oferece a vantagem de definir uma versão padrão. Se não houver o cabeçalho *Accept*, a requisição será direcionada para a versão padrão. No entanto, se um cliente REST que utiliza o cabeçalho de versionamento não for atualizado após uma recente modificação na API, isso pode quebrar a funcionalidade. Por isso, recomenda-se o uso de um cabeçalho de versionamento. 
+- **Via Endpoint** envolve adicionar a versão diretamente na URL, como em *https://demo.app/api/v1/persons*, onde v1 indica a versão da API. Essa aobrdagem não permite definir uma versão padrão automaticamente, mas pode ser contornada com métodos como o encaminhamento de requisições. Os clientes sempre usam a versão específica da API que está indicada no caminho. 
+Com base em suas preferências e visões, podemos escolher qualquer uma dar abordagens anteriores para o versionamento. No entanto, o ponto importante é que devemos sempre usar o versionamento. 
+
+## Aninhamento de recursos
+Considere esta questão muito interessante: como você vai construir o endpoint para recursos que são aninhados ou têm um certo relacionamento? Vamos dar uma olhada em alguns exemplos de recursos de clientes sob a perspectiva de um e-commerce:
+- **GET /customers/1/addresses**: Retorna a coleção de endereços do cliente 1
+- **GET /customers/1/addresses/2**: Retorna o segundo endereço do cliente 1
+- **POST /customers/1/addresses**: Adiciona um novo endereço aos endereços do cliente 1
+- **PUT /customers/1/addresses/2**: Substitui o segundo endereço do cliente 1
+- **PATCH /customers/1/addresses/2**: Atualiza parcialmente o segundo endereço do cliente 1
+- **DELETE /customers/1/addresses/2**: Deleta o segundo endereço do cliente 1
+
+Até aqui tudo bem. Agora, podemos er um endpoint separado para o recurso de endereço (GET /addresses/2)? Faz sentido, e podemos fazer isso se houver um relacionamento que exija. Por exemplo, pedidos e pagamentos. EM vez de */orders/1/payments/1*, podemos preferir um endpoint separado */payments/1*. No mundo dos microsserviços, isso faz mais sentido; por exemplo, teríamos dois serviços web RESTful separados para **pedidos** e **pagamentos**. 
+
+Agora, se combinarmos essa abordagem com *hypermedia*, as coisas ficam mais fáceis. Quando fazemos uma solicitação de API REST para o cliente 1, ele fornece os dados do cliente 1 e os links de endereço como *hypermedia*. O mesmo vale para pedidos, o link de pagamento estará disponível como *hypermedia*.
+
+No entanto, em alguns casos, podemos ter uma resposta completa em uma única solicitação, em vez de usar URLs fornecidas pelo hypermedia para buscar o recurso relacionado. Isso reduz o número de acessos ao servidor. Porém, não existe uma regra definida. Para uma operação simples, faz sentido usar a abordagem de endpoint aninhado. Por exemplo, *PUT /GIST/2/star* que adiciona uma estrela e *DELETE /gist/2/star* que desfaz a estrela no caso da API do GitHub.
+
+Além disso, em alguns cenários, você pode não encontrar um nome de recurso adequado quando múltiplos recursos estão envolvidos, como em uma operação de busca. Nesse caso, devemos usar um endpoint direto, como /direct/search
+
+### Securing APIs
+A segurança da sua API é uma expectativa importante e requer atenção cuidadosa. Aqui estão algumas recomendações:
+- **Sempre use HTTPS** para comunicação criptografada;
+- **Sempre consulte as principais ameaças e vulnerabilidades de segurança da API da OWASP**. Elas podem ser encontradas no site deles ou no repositório do GitHub.
+- **APIs REST seguras devem ter autenticação implementada**. Como as APIs REST são sem estado, elas não devem usar cookies ou sessões. Em vez disso, devem ser protegidas usando tokens baseados em JWT ou OAuth 2.0.
+
+### Manutenção da documentação
+A documentação deve ser facilmente acessível e estar sempre atualizada com a implementação mais recente, incluindo as versões correspondentes. É sempre útil fornecer exemplos de código e casos de uso, pois isso facilita o trabalho de integração do desenvolvedor. 
+
+Um registro de alterações (changelog) ou um **registro de versões** deve listar todas as bibliotecas afetadas. Se algum API for descontinuada, a documentação deve fornecer APIs de substituição ou alternativas detalhadas.
+
+### Cumprindo com os códigos de status recomendado
+Já aprendemos sobre os códigos de status na seção "Explorando métodos HTTP e códigos de status. Certifiquemos de seguir as mesmas diretrizes discutidas nessa seção.
+
+### Garantindo o cache
+O HTTP já fornece um mecanismo de cache. Você só precisa adicionar cabeçalhos adicionais na resposta da API REST. O cliente REST. então, utiliza a validação para decidir se faz uma nova chamada ou usa a resposta  em cache. Existem duas formas de fazer isso:
+- #ETag: O ETag é um valor especial de cabeçalho que contém o valor de hash ou checksum da representação de recursos (ou seja, o objeto de respsota). Esse valor deve mudar em relação à representação da resposta. Ele permanecerá o mesmo se a resposta do recurso não mudar. Agora, o cliente pode enviar uma solicitação com outro campo de cabeçalho, chamado if-None-MAtch, que contém o valor do ETag. Quando o servidor recebe essa solicitação e econtra o valor do hash ou checksum da representação do recurso é diferente do valor do if-none-MAthc, ele deve retornar a resposta com uma nova representação do valor de hash no cabeçalho. 
+
+## Introducing our e-coomerce app
+O aplicativo de e-commerce que vamos construir será uma aplicação simples de compras online com as seguintes funcionalidades para os usuários:
+- **Navegar pelos produtos**
+- **Adicionar/remover/atualizar** os produtos no carrinho;
+- **Realizar um pedido**
+- **Modificar o endereço de entrega**
+- **Soporte para uma única moeda**
+
+E-commerce é um domínio muito popular. Se olharmos para as funcionalidades, podemos dividir a aplicação nos seguintes subdomínios usando contextos delimitados:
+- **Usuários:** este subdomínio está relacionado aos usuários. Vamos adicionar o serviço web RESTful de usuários, que fornece APIs REST para o gerenciamento de usuários.
+- **Carrinhos:** Este subdomínio está relacionado ao carrinho. Vamos adicionar o serviço web RESTful de carrinhos, que fornece APIs REST  para o gerenciamento de carrinhos. Os usuários podem realizar operações CRUD nos itens do carrinhos.
+- **Produtos:** Este subdomínio está relacionado aos pedidos. Vamos adicionar o serviço web RESTful de pedidos, que fornece APIs REST para os usuários realizarem pedidos. 
+- **Pagamentos:** Este subdomínio está relacionado aos pagamentos. Vamos adicionar o serviço web RESTful de pagamentos, que fornece APIs REST para processamento de pagamentos.
+- **Envios:** Este subdomínio está relacionado ao envio. Vamos adicionar o serviço web RESTful de envios, que fornece APIs REST para rastreamento de pedidos e envio. 
+
+![[Chapter 1 - Restful Web Service Fundamentals.png]]
+Nós implementaremos um serviço Web RESTfull para cada subdomínio. Manteremos a implementação simples, e nós focaremos em aprender esses conceitos através deste livro.
+
+## Resumo
+Neste capítulo, nós aprendemos os conceitos básicos sobre o estilo de arquitetura REST, qual é baseada sobre HTTP, simples e tornando a integração de diferentes aplicações e serviços fáceis.
+
+Nós exploramos os diferentes conceitos HTTP que nos permitiram escrever APIs REST de uma maneira agradável. Nós aprendemos sobre o HATEOAS, uma parte de implementação integral do REST. Adicionalmente, nós aprendemos as boas práticas para o design de APIs REST. 
+
+## Questions
