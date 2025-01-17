@@ -191,7 +191,7 @@ public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate p) 
 ```
 
 **Passing CODE/BEHAVIOR**
-Vale a pena fazer uma pequena celebração neste momento. Este código é muito mais flexível do que nossa primeira tentativa, mas ao mesmo tempo é fácil de ler e usar! Agora podemos criar diferentes objetos *ApplePredicate* e passá-los para o método *filterApples*. Flexibilidade total! Se o usuário pedir para encontrar todas as maçãs vermelhas que são mais pesadas do que 150g, tudo o que precisamos fazer <span style="background:#b1ffff">é criar uma classe que implemente</span> o ApplePredicate de acordo. Nosso código é flexível o suficiente para qualquer alteração nos requisitos envolvendo os atributos de *Apple*:
+Vale a pena fazer uma pequena celebração neste momento. Este código é muito mais flexível do que nossa primeira tentativa, mas ao mesmo tempo é fácil de ler e usar! Agora podemos criar diferentes objetos *ApplePredicate* e passá-los para o método *filterApples*. Flexibilidade total! Se o usuário **pedir para encontrar todas as maçãs vermelhas que são mais pesadas do que 150g**, tudo o que precisamos fazer <span style="background:#b1ffff">é criar uma classe que implemente</span> o *ApplePredicate* de acordo. Nosso código é flexível o suficiente para qualquer alteração nos requisitos envolvendo os atributos de *Apple*:
 ```java
 public class AppleRedAndHeavyPredicate implements ApplePredicate {
 		public boolean test(Apple apple) {
@@ -206,16 +206,82 @@ O comportamento do método *filterApple* agora depende do código que passamos a
 
 Notamos que, no exemplo anterior, o único código que importa é a implementação do método *test*, como ilustrado na figura 2.2; é isso que define os novos comportamentos para o método *filterApples*. Infelizmente, como método *filterApples* só pode aceitar objetos, precisamos encapsular este código dentro de um objeto *ApplePredicate*. O que estamos fazendo é semelhante a **passar código inline**, pois estamos passando uma expressão #booleana por meio de um objeto que implementa o método *test*. Veremos na seção 2.3 (e em mais detalhes no capítulo 3) que, ao usar lambdas, podemos passar diretamente a expressão *RED.equals(apple.getColor()) && apple.getWeight() > 150* para o método *filterApples*, sem precisar definir várias classes *ApplePredicate*. Isso elimina verbosidade desnecessária! AMÉM!
 
+![[Capítulo 2 - Passing code with behavior parameterization-1.png]]
+
+**Multiples Behaviors, One Parameter**
+Como explicamos anteriormente, a parametrização de comportamento é excelente porque <span style="background:#b1ffff">permite separar a lógica de iteração da coleção a ser filtrada do comportamento aplicada a cada elemento dessa coleção</span>. Como consequência, você pode reutilizar o mesmo método e fornecer diferentes comportamentos para alcançar resultados variados, como ilustrado na figura 2.3. Por isso, a parametrização de comportamento é um conceito útil que deve estar inclusiva no nosso conjunto de ferramentas para criar APIs flexíveis. 
+![[Pasted image 20250116210344.png]]
 
 
 
 
+---
+Quiz 2.1: Escreva um método flexível chamado **prettyPrintApple**
+Escreva um método chamado *prettyPrintApple* que receba uma lista de maçãs (*List< Apple >*) e permita ser parametrizado com múltiplas formas de gerar uma saída de texto (String) de uma maçã (de forma semelhante a vários métodos personalizados de toString). Por exemplo, podemos configurar o método *prettyPrintApple* para exibir apenas o peso de cada maçã. Além disso, poderíamos configurá-lo para imprimir cada maçã individualmente mencionando se é pesada ou leve. 
+
+```java
+public static List<Apple> prettyPrintApple(List<Apple> inventory, AppleFormatter formatter {
+	List<Apple> result = new ArrayList<>();
+	For(Apple apple: inventory)
+		String output = formatter.accept(apple);
+		System.out.println(output);
+}
+
+public interface AppleFormatter {
+	String accept(Apple a);
+}
 
 
+public class Formatter implements AppleFormater {
+	public String accept(Apple apple) {
+		String characteristic = apple.getWeight() > 150 ? "heavy" : "light";
+		return "A " + characteristic + " " + apple.getColor() +" apple"; 
+	}
+}
+```
+
+---
+**Resumo etapas de Parametrização de comportamento**
 
 
+1. **Definir uma Interface para representar o comportamento**;
+```java
+public interface AppleFormatter {
+	String accept(Apple a);
+}
+```
+
+2. **Implementar Comportamentos Específicos**
+```java
+public class AppleFancyFormatter implements AppleFormatter {
+	public String accept(Apple apple) {
+		String character = apple.getWeight() > 150 ? "heavy" : "light";
+		return "A " + character + " " + apple.getColor() + " apple";
+	}
+}
+```
 
 
+3. **Modificar o método para Receber o Comportamento como Parâmetro**
+- Altere o método para aceitar um parâmetro do tipo da interface criada.
+```java
+public static List<Apple> prettyPrintApple(List<Apple> inventory, AppleFormatter formatter) {
+	for(Apple apple: inventory) {
+		String output = formatter.accept(apple);
+		System.out.println(output);
+	}
+}
+```
+
+4. **Instanciar e Passar Implementações Específicas**
+```java
+prettyPrintApple(inventory, new AppleFancyFormatter());
+prettyPrintApple(inventory, new AppleSimpleFormatter());
+```
+
+É possível abstrair o comportamento e fazer o nosso código se adaptar às mudanças de requisitos, mas o processo é verboso, pois exige a declaração de várias classes que instanciamos apenas uma única vez. Vamos melhorar o processo.
+
+## 2.3 Tackling verbosity
 
 
 
