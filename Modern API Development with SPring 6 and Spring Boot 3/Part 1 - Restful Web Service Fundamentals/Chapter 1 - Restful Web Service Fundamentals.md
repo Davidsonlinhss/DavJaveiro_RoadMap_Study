@@ -365,3 +365,19 @@ Neste capítulo, nós aprendemos os conceitos básicos sobre o estilo de arquite
 Nós exploramos os diferentes conceitos HTTP que nos permitiram escrever APIs REST de uma maneira agradável. Nós aprendemos sobre o HATEOAS, uma parte de implementação integral do REST. Adicionalmente, nós aprendemos as boas práticas para o design de APIs REST. 
 
 ## Questions
+1. Por que estamos tendo serviços web RESTful se tornando popular, e, sem dúvida, o padrão da indústria?
+REST está se tornando popular pelo fato dele trabalhar em cima do protocolo HTTP, que é a espinha dorsal da internet. Não precisamos separar as implementações do protocolo, semelhante ao SOAP. Podemos utilizar tecnologias web existentes para implementar APIs REST com integrações de aplicações simples comparado com outras tecnologias disponíveis. REST APIs tornam a integração de aplicações bem mais simples do que outras tecnologias disponíveis atualmente. 
+
+Serviços RESTful trabalham sobre REST, na qual trabalham sobre recursos WEB. Os recursos representam os modelos de domínio. As ações são definidas usando métodos HTTP sobre recursos web. REST permite aos clientes que realizem ações baseadas nos links disponíveis através da implementação HATEOAS, semelhante a como um humano consegue navegar no navegador. 
+
+2. What is the difference between RPC and REST?
+RPC is more like functions that perform actions. Os endpoints RPC são diretamente formados baseados em verbos que levam para URLs separadas para cada ação. Whereas REST URLs represent nouns (substantivos) and could be the same for different operations.
+
+3. **How would you explain HATEOAS?**
+With HATEOAS, RESTful web services provide information dynamically through hypermedia. Hypermedia is the part of the content you recebie from a REST call response. 
+
+4. **What error codes should be used for server-related issues?**
+Status code 500 should be used for generic server erros. The 502 status code code should be used when an upstream server fails. Status code 503 is for unexpected server events such as an overload.
+
+5. **Should verbs be used from REST endpoints, and why?**
+Verbs should not be used to form REST endpoints. 
