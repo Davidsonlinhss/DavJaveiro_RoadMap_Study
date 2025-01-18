@@ -103,24 +103,94 @@ Agora, sabemos que a interface #ApplicationContext representa o contêiner IoC e
 - Configuração XML
 - #Annotation 
 - Java e Código Java
-Escrevemos os objetos de negócio e fornecemos o metadado de configuração, e o contêiner Spring gera um sistema totalmente configurado e pronto para uso, como mostrado na figura 2.1:
+Escrevemos os objetos de negócio e fornecemos o metadado de configuração, e o <span style="background:#affad1">contêiner Spring gera um sistema</span> totalmente configurado e pronto para uso, como mostrado na figura 2.1:
 ![[Chapter 2 - Sring Concepts and REST APIs.png]]
+
+![[Chapter 2 - Sring Concepts and REST APIs-1.png]]
+
 Agora que você tem uma ideia de como os beans são gerenciados, vamos aprender mais sobre o que é um bean e o que ele pode fazer.
 
 ## Defining a bean and its scope
-Os #Beans são objetos Java gerenciados pelos contêineres de Inversão de Controle (IoC). O desenvolvedor fornece os metadados de configuração para um contêiner IoC, que utiliza esses metadados para construir, montar e gerenciar os beans. Cada bean deve ter um identificador único dentro de um contêiner. Um bean pode até mesmo possuir mais de uma identidade, utilizando um alias.
+Os #Beans são #objetos <span style="background:#b1ffff">Java gerenciados pelos contêineres de Inversão de Controle</span> (IoC). O desenvolvedor **fornece os metadados** de configuração para um contêiner IoC, que utiliza esses metadados para construir, **montar e gerenciar os beans**. Cada bean deve ter um identificador único dentro de um contêiner. Um bean pode até mesmo possuir mais de uma identidade, utilizando um alias.
+
+#IoC - Inversão de Controle para Gerenciamento de Objetos
+#Beans - Objetos Java Gerenciado pelo Contêiner IoC. 
 
 Vamos declarar um bean simples utilizando uma configuração baseada em Java:
 ```java
 public class SampleBean {
-	public void init() { // initialization logic }
-	public void destroy() { // destruction logic }
-	// bean code
+
+    public void init() { 
+        // initialization logic
+    }
+
+    public void destroy() { 
+        // destruction logic
+    }
+
+    // bean code
 }
 
 public interface BeanInterface {
-	// interface code
+    // interface code
 }
 
-public class BeanInterfaceImpl implements BeanInterface
+public class BeanInterfaceImpl implements BeanInterface {
+    // bean code
+}
+
+@Configuration
+public class AppConfig {
+
+    @Bean(initMethod = "init", destroyMethod = "destroy", name = {"sampleBean", "sb"})
+    @Description("Demonstrate a simple bean")
+    public SampleBean sampleBean() {
+        return new SampleBean();
+    }
+
+    @Bean
+    public BeanInterface beanInterface() {
+        return new BeanInterfaceImpl();
+    }
+}
+
 ```
+
+No código acima, o #bean é declarado usando a classe *AppConfig*. A anotação *@Configuration* é uma anotação de nível de classe que indica que a classe contém código de configuração. A anotação *@Bean* é uma anotação de nível de método usada para definir o bean. Também podemos passar os métodos de ciclo de vida de inicialização e destruição do beans usando os atributos da anotação *@Bean*, conforme mostrado no código acima.
+
+Em geral, o nome de um bean é o nome da classe com a primeira letra em minúsculo. Por exemplo, o nome do bean de *BeanInterface* seria *beanInterface*. No entanto, também podemos usar o atributo *name* para definir o nome do bean e seus #aliases - como podemos ver no código acima, o *SampleBean* tem dois nomes de bean: *sampleBean* e *sb*.
+
+---
+**Nota**
+Os métodos padrão para destruição são os métodos públicos *close/shutdow*, que são chamados **automaticamente pelo contêiner**. No entanto, se desejarmos seguir um método diferente, podemos usar o código acima. Se não quiser que o contêiner chame o método de destruição padrão, podemos atribuir uma string vazia ao atributo *destroyMethod (destroyMethodo="")*.
+
+Um exemplo de uso 
+1. **Caso Padrão (usando close ou shutdown):** neste exemplo, temos um bean *DatabaseConnection* que gerencia a conexão com o banco de dados. No final da execução, queremos garantir que a conexão seja fechada corretamente.
+```java
+@Bean
+public DatabaseConnection databaseConnection() {
+	return new DatabaseConnection();
+}
+```
+
+2. **Controle Customizado (definido destroyMethod = ""):** Agora, digamos que você não quer que o Spring use o método *close()* automaticamente, porque talvez queiramos fechar a conexão de banco de dados manualmente em um momento específico ou após um evento, e não quando o bean for destruído pelo Spring.
+```java
+@Bean(destroyMethodo="")
+public DatabaseConnection databaseConnection() {
+	return new DatabaseConnection();
+}
+```
+Neste caso, estamos assumindo o controle total do fechamento da conexão. O Spring não chamará automaticamente o método de destruição *close()* ou *shutdown()*.
+
+Por padrão, o contêiner do Spring chama automaticamente o método de destruição de um bean quando ele é removido do contexto, ou seja, quando a aplicação é finalizada ou o bean é explicitamente destruído.
+
+
+---
+
+Também podemos criar um bean usando as interfaces mostrados no código anterior para o bean *BeanInterface*. Observe que a anotação *@Bean* deve estar dentro de uma classe anotada com *@Component*. A anotação *@Component* é uma forma **genérica** de declarar um bean. Uma classe anotada com *@Configuration* permite que um método retorne um bean anotado com *@Bean*. 
+
+A anotação *@Configuration* é meta-anotada com *@Component*, o que faz com que a anotação *@Bean* funcione dentro dela. Existem outra anotações, como *@Controller*, *@Service* e *@Repository*, que também são anotadas com *@Component*. 
+
+A anotação *@Description*, como nome sugere, é usada para descrever um bean. Quando ferramentas de monitoramento são utilizadas, essas descrições ajudam a entender os beans em tempo de execução. 
+
+### The *@ComponentScan* annotation

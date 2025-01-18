@@ -282,7 +282,129 @@ prettyPrintApple(inventory, new AppleSimpleFormatter());
 É possível abstrair o comportamento e fazer o nosso código se adaptar às mudanças de requisitos, mas o processo é verboso, pois exige a declaração de várias classes que instanciamos apenas uma única vez. Vamos melhorar o processo.
 
 ## 2.3 Tackling verbosity
+Sabemos que qualquer recurso ou conceito que seja difícil de usar será evitado. Atualmente, para passar um novo comportamento ao método *filterApples*, é necessário declarar várias classes que implementam a interface *ApplePredicate* e, em seguida, instanciar vários objetos *ApplePredicate*, que são alocados apenas uma vez. Como mostrado no exemplo a seguir, esse processo é bastante verboso e consome muito tempo! 
 
+```java
+// Predicate interface for apples
+public interface ApplePredicate {
+    boolean test(Apple apple);
+}
 
+// Implementation to filter de MAÇÃS PESADAS
+public class AppleHeavyWeightPredicate implements ApplePredicate {
+    @Override
+    public boolean test(Apple apple) {
+        return apple.getWeight() > 150;
+    }
+}
 
+// Implementation to filter MAÇÃS VERDES
+public class AppleGreenColorPredicate implements ApplePredicate {
+    @Override
+    public boolean test(Apple apple) {
+        return "GREEN".equals(apple.getColor());
+    }
+}
 
+// Main class to filter apples
+public class FilteringApples {
+    public static void main(String... args) {
+        // Sample inventory of apples
+        List<Apple> inventory = Arrays.asList(
+            new Apple(80, "GREEN"),
+            new Apple(155, "GREEN"),
+            new Apple(120, "RED")
+        );
+
+        // Filter heavy apples
+        List<Apple> heavyApples = filterApples(inventory, new AppleHeavyWeightPredicate());
+        
+        // Filter green apples
+        List<Apple> greenApples = filterApples(inventory, new AppleGreenColorPredicate());
+    }
+
+    // Method to filter apples based on a predicate
+    public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate p) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (p.test(apple)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+}
+```
+ 
+Isso é uma sobrecarga desnecessária. O Java possui mecanismos chamados classes anônimas, que permitem declarar e instanciar uma classe ao mesmo tempo. Elas possibilitam melhorar ainda mais o código, tornando um pouco mais *conciso*. No entanto, elas não são totalmente satisfatórias. 
+
+### 2.3.1 Anonymous classes
+*Anonymous classes* são como classes locais (uma classe definida em um bloco) que já conhecemos no Java. No entanto, classes anônimas não têm nome. Elas permitem declarar e instanciar uma classe ao mesmo tempo.  Em resumo, possibilitam criar implementações ad hoc.
+
+### 2.3.2 Fifth attempt: using an anonymous class
+O código a seguir mostra como reescrever o exemplo da filtragem criando um objeto que implementa *ApplePredicate* usando uma classe anônima:
+```java
+List<Apple> redApples = filterApples(inventory, new ApplePredicate()) {
+	public boolean test(Apple apple){
+		return RED.equals(apple.getColor());
+	}
+}
+```
+As classes anônimas são frequentemente usadas no contexto de aplicativos GUI para criar objetos manipuladores de eventos. 
+
+Mas, as classes anônimas ainda não são boas o suficiente. Primeiro, elas tendem a ser volumosas porque ocupam muito espaço, como mostrado no código em negrito aqui, utilizando os mesmos dois exemplos usados anteriormente:
+```java
+List<Apple> redApples = filterApples(inventory, new ApplePredicate() {
+    public boolean test(Apple a){
+        return RED.equals(a.getColor());
+    }
+});
+
+button.setOnAction(new EventHandler<ActionEvent>() {
+    public void handle(ActionEvent event) {
+        System.out.println("Uhuuu, um clique!!");
+    }
+});
+
+```
+
+A verbosidade no código é geralmente considerada ruim, pois ela desestimula o uso de um recurso de linguagem, já que exige mais tempo para escrever e manter o código, além de ser pouco agradável de ler. Um bom código deve ser fácil de entender rapidamente. Embora as classes anônimas ajudam a reduzir a verbosidade associada à declaração de várias classes concretas para uma interface, ainda não são uma solução ideal. Quando passamos uma parte simples de código (como uma expressão booleana representando um critério de seleção), ainda precisamos criar um objeto e implementar explicitamente um método para definir um novo comportamento (como o método *test* para *Predicated* ou o método *handle* para *EventHandler*).
+
+### 2.3.3 Sixth attempt: using a lambda expression
+O código anterior pode ser reescrito utilizando expressões lambda:
+```java
+List<Apple> result = filterApples(inventory, (Apple apple) -> RED.equals(apple.getColor()));
+```
+Temos que admitir que este código aparenta estar mais limpo do que o código anterior. Isso é ótimo porque agora está muito mais próximo da descrição do problema. Agora, resolvemos o problema da verbosidade. 
+![[Capítulo 2 - Passing code with behavior parameterization-2.png]]
+
+### 2.3.4 Seventh attempt: abstracting over List type
+Podemos dar mais um passo em nossa jornada em direção à abstração. No momento, o método *filterApples* funciona apenas para o tipo *Appe*. Mas também podemos abstrair sobre o tipo *List*, indo além do domínio do problema em que está pensando:
+```java
+public interface Predicate<T> {
+	boolean test(T t);
+}
+
+public static <T> List<T> filter(List<T> list, Predicate<T> p) {
+	List<T> result = new ArrayList<>();
+	for(T e: list) {
+		if(p.test(e)) {
+			result.add(e);
+		}
+	}
+	return result;
+}
+```
+Agora, o método *filter* pode ser usado com qualquer tipo de objeto, tornando o código mais reutilizável e flexível.
+
+Agora podemos usar o método *filter* com uma lista de bananas, laranjas, Integers ou String!
+```java
+List<Apple> redApples = filter(inventory, (Apple apple) -> RED.equals(apple.getColor()));
+
+List<Integer> evenNumbers = filter(numbers, (Integer i) -> i % 2 == 0);
+```
+
+## 2.4 Real-world examples
+Vimos que a *parametrização de comportamento* é um padrão útil para se adaptar facilmente a requisitos que mudam. Esse padrão permite encapsular um comportamento (um pedaço de código) e *parametrizar* o comportamento de métodos ao passar a usar esses comportamentos  que criamos. Essa abordagem é semelhante ao padrão de projeto *strategy*. Muitos métodos na API do Java podem ser *parameterized* com comportamentos diferentes. Esses métodos são frequentemente usados junto com classes anônimas. Mostramos quanto exemplos que devem solidificar a ideia de passar código: ordenação com um *Comparator*, execução de um bloco de código com *Runnable*, retornando um resultado de uma tarefa usando um *Callable* e tratamento de eventos GUI.
+
+### 2.4.1 Sorting with a *Comparator*
