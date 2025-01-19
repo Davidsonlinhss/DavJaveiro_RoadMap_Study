@@ -1137,10 +1137,19 @@
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/Data Structures AB.png",
       "styleAttributes": {},
-      "x": -13583,
-      "y": -21840,
+      "x": -14751,
+      "y": -22000,
       "width": 1194,
       "height": 1493
+    },
+    {
+      "id": "d4d32892c42179a8",
+      "type": "file",
+      "file": "Pasted image 20250118145051.png",
+      "x": -12560,
+      "y": -22000,
+      "width": 1187,
+      "height": 1526
     }
   ],
   "edges": [
@@ -2358,6 +2367,28 @@
       "fromSide": "left",
       "toNode": "de90cc622ffca84a",
       "toSide": "right"
+    },
+    {
+      "id": "f6042c54ab23559f",
+      "styleAttributes": {
+        "path": "short-dashed",
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "d4d32892c42179a8",
+      "fromSide": "top",
+      "toNode": "9debe4abf3e87081",
+      "toSide": "bottom"
+    },
+    {
+      "id": "1d6afc624d200865",
+      "styleAttributes": {
+        "path": "short-dashed",
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "892aa1e68ed8ecfe",
+      "fromSide": "top",
+      "toNode": "d4d32892c42179a8",
+      "toSide": "bottom"
     }
   ],
   "metadata": {}

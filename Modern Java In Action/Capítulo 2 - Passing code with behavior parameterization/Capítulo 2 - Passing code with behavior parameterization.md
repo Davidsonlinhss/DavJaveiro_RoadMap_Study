@@ -408,3 +408,55 @@ List<Integer> evenNumbers = filter(numbers, (Integer i) -> i % 2 == 0);
 Vimos que a *parametrização de comportamento* é um padrão útil para se adaptar facilmente a requisitos que mudam. Esse padrão permite encapsular um comportamento (um pedaço de código) e *parametrizar* o comportamento de métodos ao passar a usar esses comportamentos  que criamos. Essa abordagem é semelhante ao padrão de projeto *strategy*. Muitos métodos na API do Java podem ser *parameterized* com comportamentos diferentes. Esses métodos são frequentemente usados junto com classes anônimas. Mostramos quanto exemplos que devem solidificar a ideia de passar código: ordenação com um *Comparator*, execução de um bloco de código com *Runnable*, retornando um resultado de uma tarefa usando um *Callable* e tratamento de eventos GUI.
 
 ### 2.4.1 Sorting with a *Comparator*
+Ordenar uma coleção é uma tarefa comum em programação. Por exemplo, imagine que o nosso fazendeiro queira que organizemos o inventário de maçãs com base no peso delas. Ou talvez ele mude de ideia e prefira que as maçãs sejam ordenadas pela cor. Isso soa familiar? Sim, precisamos de uma maneira de representar e aplicar diferentes comportamentos de ordenação para nos adaptarmos facilmente às mudanças de requisitos. 
+
+A partir do Java 8, a classe #List possui um método #sort (também podemos usar #Collections-sort). O <span style="background:#d4b106">comportamento</span> do método #Sort pode ser <span style="background:#d4b106">parametrizado</span> usando um objeto da interface #java-util-Comparator, que possui a seguinte definição:
+```java
+public interface Comparator<T> {
+	int compare(T o1, T o2);
+}
+```
+
+Dessa forma, podemos criar diferentes comportamentos para o método #sort implementando a interface #Comparator de forma personalizada. Por exemplo, é possível usá-la para ordenar um inventário de maçãs por peso crescente, utilizando uma classe anônima:
+```java
+inventory.sort(new Comparator<Apple>(){
+	public int compare(Apple a1, Apple a2) {
+		return a1.getWeight().compareTo(a2.getWeight());
+	}
+});
+```
+
+Se o fazendeiro mudar de ideia sobre como deseja ordenar as maçãs, podemos criar um #Comparator ad hoc para atender à nova necessidade e passá-lo para o método #sort. Os detalhes internos de como a ordenação é feita ficam abstraídos. Com uma expressão lambda, isso ficaria assim:
+```java
+inventory.sort(
+	(Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight)
+);
+```
+
+
+### 2.4.2 Executing a block of code with Runnable
+Threads em Java permitem que um bloco de código seja executado simultaneamente com o restante do programa. Mas como informar a uma thread qual bloco de código ela deve executar? Diversas threads podem executar códigos diferentes. O que você precisa é de uma maneira de representar um pedaço de código para ser executado posteriormente.
+
+Até o Java 8, apenas objetos podiam ser passados para o construtor de #Thread. Por isso, o padrão típico e pouco elegante era passar uma classe anônima contendo um método #run que retorna #voi. Essas classes anônimas implementam a interface #Runnable.
+
+Em Java, podemos usar a interface #Runnable para representar um bloco de código a ser executado; observe que esse código retorna #void (não tem retorno);
+```java
+public interface Runnable {
+	void run();
+}
+```
+
+Essa interface pode ser usada para criar threads com o comportamento desejado, como no exemplo abaixo:
+```java
+Thread t = new Thread(new Runnable() {
+	public void run() {
+		System.out.println("Hello World");	
+	}
+}); 
+```
+
+No entanto, desde o Java 8, podemos usar uma expressão lambda, tornando a chamada à Thread assim:
+```java
+Thread t = new Thread(() -> System.out.println("Hello World"));
+```
+

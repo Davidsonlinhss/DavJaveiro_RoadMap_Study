@@ -104,9 +104,9 @@ Agora, sabemos que a interface #ApplicationContext representa o contêiner IoC e
 - #Annotation 
 - Java e Código Java
 Escrevemos os objetos de negócio e fornecemos o metadado de configuração, e o <span style="background:#affad1">contêiner Spring gera um sistema</span> totalmente configurado e pronto para uso, como mostrado na figura 2.1:
-![[Chapter 2 - Sring Concepts and REST APIs.png]]
+![[Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Imagens/Chapter 2 - Sring Concepts and REST APIs.png]]
 
-![[Chapter 2 - Sring Concepts and REST APIs-1.png]]
+![[Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Imagens/Chapter 2 - Sring Concepts and REST APIs-1.png]]
 
 Agora que você tem uma ideia de como os beans são gerenciados, vamos aprender mais sobre o que é um bean e o que ele pode fazer.
 
@@ -194,3 +194,330 @@ A anotação *@Configuration* é meta-anotada com *@Component*, o que faz com qu
 A anotação *@Description*, como nome sugere, é usada para descrever um bean. Quando ferramentas de monitoramento são utilizadas, essas descrições ajudam a entender os beans em tempo de execução. 
 
 ### The *@ComponentScan* annotation
+A anotação *@ComponentScan* permite a varredura automática de beans. Ela aceita alguns argumentos, como pacotes base e suas classes. **O container do Spring**, então, analisa todas as classes dentro do <span style="background:#d4b106">pacote base</span> (o Spring Boot considera como pacote base o mesmo pacote onde está localizada a classe principal, aquela com a anotação *@SpringBootApplication*) e busca por beans. Ele verifica todas as classes anotadas com *@Component* ou outras anotações que são meta-antoada com *@component*, como *@Configuration*, *@Configuration*, *@Controller*, entre outras...
+
+Por padrão, o Spring Boot define o pacote base a partir da classe que possui a anotação *@SpringBootApplication* ou *@ComponentScan*. No entanto, podemos utilizar o atributo *basePackageClasses* para especificar diretamente quais pacotes devem ser escaneados.
+
+Outra forma de escanear mais de um pacote é utilizando o atributo *basePackages*, que permite definir múltiplos pacotes para varredura. 
+
+Se for necessário usar mais de uma anotação *@ComponentScan*, podemos agrupá-las dentro da anotação *@ComponentScans*:
+```java
+@Configuration
+@ComponentsScans({
+	@ComponentScan(basePackages = "com.packt.modern.api"),
+	@ComponentScan(basePackageClasses = appConfig.class)
+})
+class AppConfig {
+	// Código da configuração
+}
+```
+
+### The bean's scope
+Os **containers do Spring** são responsáveis por criar instâncias dos beans. O modo como essas instâncias são criadas é definido pelo *escopo* do bean. O escopo padrão é #singleton, onde apenas uma instância será criada por contêiner IoC, e a mesma instância será injetada. Se desejarmos criar uma nova instância cada vez que for solicitada, podemos definir o escopo #prototype para o bean. 
+
+Os escopos #singleton e #prototype  estão disponíveis para todas as aplicações baseadas em Spring. Há mais quatro escopos disponíveis para aplicações web: #request, #session, #application e #websocket. Para esses quatro últimos escopos, o contexto da aplicação deve ter suporte a web, como as aplicações web baseadas em Spring Boot.
+
+#Singleton - cria uma nova instância por contêiner IoC. Este é o escopo padrão.
+#prototype - cria uma nova instância para cada injeção (para beans colaborativos)
+#request - somente para contexto web. Será criada uma única instância de bean para cada requisição HTTP e será válida durante todo o ciclo de vida da requisição HTTP.
+#Session - somente para contexto web. Será criada uma única instância de bean para cada sessão HTTP e será válida durante todo o ciclo de vida da sessão HTTP.
+
+### Configurando Beans usando Java
+Antes do Spring 3, os beans só podiam ser definidos utilizando XML. Com o Spring 3, foram introduzidas as anotações @Configuration, @Bean, @Import e @DependsOn para configurar beans no Spring utilizando Java.
+
+A anotação *@Import* é especialmente útil ao desenvolver uma aplicação sem utilizar a configuração automática (*autoconfiguration*).
+
+### The *@Import* annotation
+*@Import* é utilizada para modularizar configurações quando temos mais de uma classe de configuração. Com ela, podemos importar as definições de beans de outras classes de configuração, o que é útil quando instancia o contexto manualmente. O Spring Boot utiliza configuração automática (auto-configuration), então é necessário usar *@Import*. No entanto, seria necessário usar *@Import* para modularizar as configurações caso queiramos instanciarmos o contexto manualmente. 
+
+Vamos supor que a classe de configuração **FooConfig** contenha o **FooBean** e a classe de configuração **BarConfig** contenha o **BarBean**. A classe **BarConfig** também importa **FooConfig** utilizando *@Import*:
+```java
+@Configuration
+public class FooConfig {
+	@Bean
+	public FooBean fooBean() {
+		return new FooBean();
+	}
+}
+@Configuration
+@Import (FooConfig.class)
+public class BarConfig {
+	@Bean
+	public BarBean barBean() {
+		return new BarBean();
+	}
+}
+```
+Agora, ao instanciar o container (contexto), podemos fornecer apenas a classe BarConfig para carregar as definições de FooBean e BarBean no container do Spring:
+```java
+public static void main(String[] argts) {
+	ApplicationContext appContext = new
+		AnnotationConfigApplicationContext (
+			BarConfig.class);
+	// Get FooBean & BarBean beans from context
+	FooBean fooBean =
+		appContext.getBean(FooBean.class);
+	BarBean barBean =
+		appContext.getBean(BarBean.class);
+		)
+}
+```
+
+### The *@DependsOn annotation*
+O container do Spring gerencia a ordem de inicialização dos beans. E se você tiver um bean que depende de outro? Vamos querer garantir que o bean necessáriio seja inicializado antes do bean que depende dele. A anotação *@DependsOn* ajuda a alcançar isso quando configuramos beans utilizando Java (e não através de XML).
+
+Receberíamos a exceção *NoSuchBeanDefinitionException* se a ordem de inicialização dos beans estivesse correta, e o container do Spring falhasse ao encontrar a dependência como resultado.
+
+Vamos supor que temos um bean chamado **BazBean** que depende dos beans **FooBean** e **BarBean**. Usamos a anotação *@DependsOn* para garantir que a ordem de inicialização seja mantida. O container do Spring seguirá as instruções e inicializará os beans **FooBean** e **BarBean** antes de criar o **BazBean**. 
+```Java
+@Configuration
+public class AppConfig {
+	@Bean
+	public FooBean fooBean() {
+		return new FooBean();
+	}
+	@Bean
+	public BarBean barBean() {
+		return new BarBean();
+	}
+
+	@Bean
+	@DependsOn({"fooBean}","barBean"})
+	public BarBean barBean() {
+		return new BazBean();
+	}
+}
+```
+
+### How to code DI
+Veja o seguinte exemplo. O **CarService** tem uma dependência de **CarRepository**. A instância do **CartRepository** é criada dentro do construtor do **CartService**:
+```java
+public class CarService {
+	private CarRepository repository;
+	public CarService() {
+		this.repository = new CarRepositoryImpl();
+	}
+}
+```
+
+Podemos desacoplar essa dependência da seguinte maneira:
+```java
+public class CarService {
+	private CarRepository repository;
+
+	public CarService(CarRepository repository) {
+		this.repository = repository;
+	}
+}
+```
+Se criarmos um bean da implementação do *CarRepository*, podemos facilmente injetar o bean *CarRepository* usando os metadados de configuração. 
+
+Nós vimos como o #ApplicationContext pode ser inicializado na subseção "The @Import annotation" deste capítulo. Quando ele é criado, ele coleta todos os metadados da configuração dos beans. A anotação *@Import* permite que tenhamos múltiplas configurações. 
+
+Cada bean pode ter suas dependências, ou seja, um bean pode precisar de outros objetos para funcionar (composições), como no exemplo do CarService. Essas dependência podem ser definidas por meio de construtores, métodos setter ou propriedades. Esses objetos dependentes (parte dos construtores, argumentos de métodos setter ou propriedades da classe) são injetados pelo contêiner Spring *ApplicationContext* utilizando a definição do bean e seu escopo. 
+
+---
+**Nota**
+A Injeção de Dependência (DI) torna uma classe virtualmente independente de suas dependências. Portanto, uma alteração na dependência não afetará a classe (sem necessidade de alteração de código), dede que o contrato da interface não seja quebrado.
+Na verdade, podemos alterar a implementação subjacente da dependência ou usar uma classe de implementação diferente. 
+
+---
+
+### Using a constructor to define a dependency
+Agora, podemos ver como injetar o CarRepository no construtor CarService. Uma maneira de injetar uma dependência usando o construtor é a seguinte:
+```java
+@Configuration
+public class AppConfig {
+	@Bean
+	public CarRepository cartRepository() {
+		return new CartRepositoryImpl();
+	}
+
+	@Bean
+	public CartService cartService() {
+		return new CartService(cartRepository());
+	}
+}
+```
+
+### Using a setter method to define a dependency
+Agora, vamos alterar a classe CartService. Em vez de usar um construtor, vamos utilizar o método setter para instanciar a dependência:
+
+```java
+public class CartService {
+	private CartRepository repository;
+	public void setCartRepository(CarRepository repository) {
+		this.repository = repository;
+	}
+}
+
+```
+
+Agora, podemos usar a seguinte configuração para injetar a dependência:
+```java
+@Configuration
+public class AppConfig {
+	@Bean
+	public CartRepository cartRepository() {
+		return new CartRepository();
+	}
+
+	@Bean
+	public CartService cartService() {
+		CartService service = new CartService();
+		service.setCartRepository(cartRepository());
+		return service;
+	}
+}
+
+```
+
+### Using a class property to define a dependency
+Usando uma propriedade de classe para definir uma dependência o Spring também oferece uma solução pronta para injeção de dependência usando a anotação *@Autowired*. Isso torna o código mais limpo:
+```java
+@Serivice
+public class CartService {
+	@Autowired
+	private CartRepository repository; // repos
+}
+```
+O container do Spring se encarregará de injetar o bean CarRepository, logo, repository passa a ter uma instância de um bean que impolementa a interface CartRepository, sem que precisemos instanciá-la manualmente. O Spring faz essa injeção de dependência durante o ciclo de vida do bean, assegurando que a dependência necessária esteja disponível quando o *CartService* for usado. 
+
+## Configuring a bean's metadata using annotations
+O Spring Framework oferece várias anotações para configurar os metadados dos beans. No entanto, vamos focar nas anotações mais usadas: *@Autowired, @Qualifier, @Inject, @Resource, @Primary e @Value*.
+
+### How to use @Autowired?
+A anotação @Autowired permite que definamos a configuração dentro da própria classe do bean, em vez de escrever uma classe de configuração separada anotada com *@Configuration*. 
+
+A anotação *@Autowired* pode ser aplicada a um campo (como vimos no exemplo de DI baseado em propriedades de classe), construtor, setter ou qualquer método.
+
+O container do Spring faz uso de reflexão para injetar os beans anotados com *@Autowired*. Isso também torna esse processo mais custoso em comparação com outras abordagens de injeção.
+Vale ressaltar que aplicar *@Autowired* a membros da classe funcionará apenas se não houver um construtor ou método setter para injetar o bean dependente.
+
+**Exemplo Simples**
+Imagine que tenhamos uma classe **CarService** que depende de um **Engine** para funcionar. Teríamos que criar uma instância do **Engine** manualmente dentro de **CarService**:
+```java
+public class CarService {
+	private Engine engine;
+
+	public CarService() {
+		this.engine = new Engine();
+	}
+}
+```
+
+**Exemplo com @AuatoWired**
+Como *@Autowired*, não precisamos instanciar manualmente o **Engine** dentro do **CarService**. O Spring cuida disso por você, e a dependência (no caso, **Engine**) é injetada automaticamente.
+
+
+```java
+import org.springframework.stereotype.Component;
+
+@Component // Indica que o spring deve gerenciar essa classe como um bean
+public class Engine {
+	public void start() {
+		System.out.println("Engine is runnning...");
+	}
+}
+```
+
+```java
+@Service // a classe é um serviço gerenciado pelo Spring
+public class CarService {
+	@Autowired // Spring vai injetar a dependência de Engine automaticamente
+	private Engine engine; 
+
+	public void startCar() {
+		engine.start();
+		System.out.println("Car is ready to go!");
+	}
+}
+```
+Neste exemplo, o Spring vai procurar um bean do tipo Engine no contexto e irá automaticamente injetá-lo no campo *Engine*. Esse processo é chamado de **injeção de dependência**. 
+
+```java
+@SpringBootApplication
+public class Main implements CommandLineRunner {
+
+	@Autowired // Spring irá injetar o CarService automaticamente
+	private CarService carService;
+
+	public static void main(String[] args) {
+		SpringApplication.run(Main.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		carService.startCar(); // Chama o método startCar que uso o Engine
+	}
+}
+```
+
+### Writing code for AOP
+Discutimos AOP anteriormente na seção "Compreendendo os padrões e paradigmas do Spring". Em termos simples, AOP é um paradigma de programação que resolve preocupações transversais, como logging, transações e segurança. Essas preocupações transversais são conhecidas como aspectos em AOP. Elas permitem que modularizemos nosso código e centralizemos as preocupações transversais em um único local. 
+
+```java
+class Test
+	public void performSomeTask() {
+		long start = System.currentTimeMillis();
+
+		long executionTime =
+			System.currentTimeMillies()  - start;
+		System.out.println("Time taken: " + executionTime + "ms");
+	}
+```
+
+
+## Why use Spring Boot?
+ Hoje em dia, o Spring Boot é a escolha óbvia para o desenvolvimento de aplicações web de ponta e prontas para produção, específicas para o Spring. O seu site também destaca suas enormes vantagens. 
+
+O Spring Boot é uma ferramente incrível do Spring criada pela Pivotal, que foi lançada para Disponibilidade Geral em abril de 2014. O Spring Boot foca em se tornar um contêiner ultraleve.
+
+O Spring Boot possui suas próprias configurações padrão e também oferece suporte à configuração automática para simplificar o desenvolvimento de aplicações web prontas para produção. O Spring Intializr é um serviço baseado na web onde podemos escolher nossas ferramentas build, como **Maven** ou **Gradle**, junto com os metadados do projeto, como o grupo, artefatos e quaisquer dependências necessárias. 
+
+A opção de empacotamento do projeto padrão é #Jar, no entanto, podemos optar pelo empacotamento #War (arquivo de web application) caso desejamos implantar a aplicação em um servidor web, como #WebLogic ou #Tomcat.
+
+Em termos simples, o **Spring Initializr** realiza toda a configuração para que possamos focar na escrita da lógica de negócio e das APIs.
+
+---
+**Compilando e executando o código**
+Podemos compilar o código executando o comando:
+```bash
+gradlew clean build
+```
+
+## Understanding the importance of servlet dispatcher
+Aprendemos que os serviços web RESTful são desenvolvidos sobre o protocolo HTTP. O Java possui a funcionalidade de #Servlets para trabalhar com HTTP. 
+
+#Servlets permitem mapeamento de caminhos que podem funcionar como endpoints REST e oferecem métodos HTTP para identificação. Além disso, permitem a criação de diferentes tipos de objetos de resposta, incluindo JSON e XML. No entanto, servlets oferecem uma forma um tanto rudimentar de implementar endpoints REST, já que é necessário lidar manualmente com a URI da solicitação, analisar os parâmetros e converter JSON/XML nas respostas.
+
+O Spring MVC surge como uma solução para isso. O Spring MVC é baseado no padrão **Model-View-Controller (MVC)** e faz parte do **Spring Framework** desde a sua primeira versão. O MVC é um padrão de design bem conhecido:
+- #Model (Modelo): os modelos são objetos Java (também chamados de #POJO) que contêm os dados da aplicação. Eles também representam o estado da aplicação.
+- #View (Visão): a visão é a camada de apresentação composta por arquivos HTML, JSP ou templates. Ela renderiza os dados dos modelos e gera a saída em HTML.
+- #Controller (controlador): o controlador processa as solicitações do usuário e constrói o modelo.
+
+O #DispatcherServlet faz parte do Spring MVC. Ele atua como um **front controller**, ou seja, lida com todas as solicitações HTTP recebidas. O Spring MVC é um framework web que permite desenvolver aplicações web tradicionais, onde a interface do usuário (UI) também faz parte do backend. No entanto, ao desenvolver serviços web RESTful, com a interface de usuário baseada na biblioteca JavaScript #React, o papel do #DispatcherServlet será limitado à implementação dos endpoints #REST usando #RestController.
+
+Segue o fluxo de uma solicitação de usuário no Spring MVC para um controlador REST:
+1. O usuário envia uma solicitação HTTP, que é recebida pelo #DispatcherServlet;
+2. O #DispatcherServlet repassa o controle para o #HandlerMapping. O #HandlerMapping encontra o controlador correto para o URI solicitado e o retorna ao #DispatcherServlet;
+3. O #DispatcherServlet utiliza o #HandlerAdapter para lidar com o #Controller;
+4. O #HandlerAdapter chama o método apropriado dentro do #Controller;
+5. O #Controller executa a lógica de negócio associada e forma a resposta.
+6. O Spring realiza o processo de #marshaling #unmarshaling para converter os objetos da solicitação e resposta entre #JSON e objetos Java, e vice-versa.
+
+![[Chapter 2 - Sring Concepts and REST APIs-1.png]]
+O #DispatcherServlet se destaca como figura central, orquestrando a dança intricada de componentes envolvidos no tratamento de solicitações recebidas. Este servlet desempenha um papel fundamental em garantir que cada solicitação seja direcionada ao controlador apropriado, permitindo a execução da lógica de negócios e a geração de uma resposta significativa. 
+
+1. **Ponto de entrada para solicitações**:
+No coração de um aplicativo web Spring Boot está o #DispatcherServlet. Ao receber uma solicitação HTTP, esse servlet atua como o #gateway, interceptando a chamada de entrada e iniciando o processo de tratamento da solicitação. Ele serve como o hub central para <span style="background:#d4b106">gerenciar o fluxo de solicitações e respostas</span>. 
+
+2. **Contexto do aplicativo da Web**
+O #DispatcherServlet opera dentro do contexto do Spring. Este contexto é essencialmente um contêiner para gerenciar beans, incluindo controladores, serviços e outros componentes. O servlet usa este contexto para localizar e invocar os componentes apropriados para manipular a solicitação de entrada.
+
+3. **Mapeamento do manipulador: Determinando o manipulador**
+Uma das responsabilidades cruciais do #DispatcherServlet é consultar o #HandlerMapping. Esse mapeamento é responsável por determinar qual controlador (handler) deve processar a solicitação de entrada com base em fatores como URL da solicitação, método da solicitação ou outros parâmetros.
+
+4. **Adaptador de manipulador: preenchendo a lacuna da interface**
+Controladores em um aplicativo Spring podem ter assinaturas de métodos diferentes. O #HandlerAdapter entra em cena para preencher a lacuna entra as interfaces variáveis dos controladores. Ele garante que o manipulador escolhido possa processar efetivamente a solicitação, adaptando-a a uma interface padronizada, permitindo uma abordagem unificada para o tratamento de solicitações. 
+https://medium.com/@lakshyachampion/the-dispatcherservlet-the-engine-of-request-handling-in-spring-boot-3a85c2bdbe6b
