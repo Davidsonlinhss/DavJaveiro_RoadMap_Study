@@ -645,6 +645,54 @@
       "width": 580,
       "height": 60,
       "color": "4"
+    },
+    {
+      "id": "eab01ceb5a381946",
+      "type": "text",
+      "text": "25- Evite as Distrações Fazendo Pactos de Identidade",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -3300,
+      "y": 3833,
+      "width": 580,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "dc870368f452fba5",
+      "type": "text",
+      "text": "## Resumo\n1. **A identidade afeita muito o nosso comportamento.** As pessoas tendem a alinhar suas ações com a percepção que têm de si mesmas.\n2. **Um pacto de identidade é um pré-compromisso com uma autoimagem.** Você pode evitar as distrações agindo em alinhamento com a sua identidade.\n3. **Torna-se um substantivo.** Ao atribuir uma caracterização a si mesmo, você reforça os comportamentos a que refletem essa caracterização. Veja-se como uma pessoa indistraível.\n4. **Espalhe a palavra.** Ensinar reforça seu compromisso, mesmo se você ainda tiver suas dificuldades. Uma excelente maneira de ser indistraível é contar aos amigos o que você aprendeu neste livro e as mudanças que está fazendo na sua vida.\n5. **Adore rituais.** Repetir mantras, seguir uma programação ou manter outras rotinas são atitudes que reforçam a sua identidade e orientam as suas ações.",
+      "styleAttributes": {},
+      "x": -3440,
+      "y": 5221,
+      "width": 860,
+      "height": 619,
+      "color": "#ffffff"
+    },
+    {
+      "id": "10392e7b7d0b8ded",
+      "type": "text",
+      "text": "26- A distração é um Sinal de Disfunção",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -5260,
+      "y": 3893,
+      "width": 580,
+      "height": 87,
+      "color": "4"
+    },
+    {
+      "id": "837f9871ca6db8b1",
+      "type": "text",
+      "text": "## Resumo\n1. **Empresas que impõem altas expectativas e pouco controle dos funcionários levam a sintomas de depressão.**\n2. **Ninguém gosta de sentir sintomas de depressão.** Quando as pessoas se sentem mal, elas usam distrações para evitar a dor e recuperar um senso de controle.\n3. **O uso excessivo das tecnologias no trabalho é um sinal de uma cultura organizacional disfuncional.**\n4. **O aumento do uso das tecnologias agrava os problemas, perpetuando um \"ciclo de responsividade\".**",
+      "styleAttributes": {},
+      "x": -5400,
+      "y": 5281,
+      "width": 860,
+      "height": 483,
+      "color": "#ffffff"
     }
   ],
   "edges": [
@@ -1172,6 +1220,28 @@
       "toNode": "7a740334d436dbd1",
       "toSide": "top",
       "color": "4"
+    },
+    {
+      "id": "52f585ce48c45bf6",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "eab01ceb5a381946",
+      "fromSide": "bottom",
+      "toNode": "dc870368f452fba5",
+      "toSide": "top",
+      "color": "#ffffff"
+    },
+    {
+      "id": "0d0f2b9b7672f7c0",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "10392e7b7d0b8ded",
+      "fromSide": "bottom",
+      "toNode": "837f9871ca6db8b1",
+      "toSide": "top",
+      "color": "#ffffff"
     }
   ],
   "metadata": {}

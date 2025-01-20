@@ -18,7 +18,7 @@ Cobrir os fundamentos do Spring por si só exige um livro dedicado. Tentarei ser
 No entanto, antes de prosseguirmos, devemos entender os princípios e padrões de design que formam as bases do Spring, em particular #IOC (inversão de controle), DI (injeção de Dependência) e AOP (Programação Orientada a Aspectos). 
 
 ## What is IoC?
-Programas tradicionais CLI (Command Line Interface) são o método típico para implementações de programação procedural, onde o fluxo é determinado pelo programador e o código é executado sequencialmente, ou seja, uma etapa após a outra. No entanto, aplicações baseadas em interface gráfica (UI) determinam o fluxo dos programas com base nas entradas e eventos do usuário, que são dinâmicos. 
+Programas tradicionais CLI (Command Line Interface) são o método típico para implementações de programação #procedural, onde <span style="background:#d4b106">o fluxo é determinado pelo programador</span> e o código é executado sequencialmente, ou seja, uma etapa após a outra. No entanto, aplicações baseadas em interface gráfica (UI) determinam o fluxo dos programas com base nas entradas e eventos do usuário, que são dinâmicos. 
 
 Há muito tempo, quando predominavam os métodos procedurais de programação, era necessário encontrar uma forma de transferir o controle do fluxo do método tradicional procedural (onde o programador dita o fluxo) para fontes externas, como um framework ou componentes que determinassem o fluxo do programa. Esse movimento é conhecido como #IoC (Inversão de Controle). É um princípio genérico e parte integrante da maioria dos frameworks.
 
@@ -521,3 +521,4 @@ Uma das responsabilidades cruciais do #DispatcherServlet é consultar o #Handler
 4. **Adaptador de manipulador: preenchendo a lacuna da interface**
 Controladores em um aplicativo Spring podem ter assinaturas de métodos diferentes. O #HandlerAdapter entra em cena para preencher a lacuna entra as interfaces variáveis dos controladores. Ele garante que o manipulador escolhido possa processar efetivamente a solicitação, adaptando-a a uma interface padronizada, permitindo uma abordagem unificada para o tratamento de solicitações. 
 https://medium.com/@lakshyachampion/the-dispatcherservlet-the-engine-of-request-handling-in-spring-boot-3a85c2bdbe6b
+
