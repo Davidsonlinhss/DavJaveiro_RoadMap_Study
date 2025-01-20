@@ -13,11 +13,14 @@ info:
     name: MIT
     url: https://github.com/PacktPublishing/Modern-API-Development-with-Spring-6-and-Spring-Boot-3/blob/main/LICENSE
   version: 1.0.0
+
 externalDocs:
   description: Any document link you want to generate along with API.
   url: http://swagger.io
+
 servers:
   - url: https://ecommerce.swagger.io/v2
+
 tags:
   - name: cart
     description: Everything about cart
@@ -810,6 +813,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Product'
+
 components:
   schemas:
     Cart:

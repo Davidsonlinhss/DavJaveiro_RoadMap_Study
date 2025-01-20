@@ -76,3 +76,84 @@ Vamos dar uma olhada nas seções de metadados das definições da API de e-comm
 - #externalDocs: este é um campo opcional que aponta para a documentação estendida da API. Ele possui dois atributos - *description* e *url*. O atributo *description* é um campo opcional que define um resumo da documentação externa. Podemos usar a sintaxe Markdown para a descrição. O atributo *url* é obrigatório e fornece o link para a documentação externa. 
 
 vamos continuar construindo a definição da nossa API. Já concluímos a seção de metadados, então vamos discutir as seções *servers* e *tags*. 
+
+### The servers and tags sections of OAS
+Depois da seção de metadados, agora podemos descrever as seções *servers* e *tags*. Vamos dar uma nessas seções dentro do arquivo [[openapi.yaml]]. 
+
+- #servers:  a seção é opcional, ela contém uma lista de servidores que hospedam a API. Se o documento da API hospedada for interativo, ele pode ser usado pelo Swagger UI para chamar diretamente a API e exibir a resposta. Caso não seja fornecida, ele apontará para a raiz (/) do servidor onde o documento está hospedado. Os URLs dos servidores são exibidos utilizando o atributo url. 
+
+- #tags: a seção de tags, definida no nível raiz, contém uma coleção de tags e seus metadados. As tags são usadas para agrupar as operações realizadas nos recursos. Os metadados das tags incluem o *name*, que é um campo obrigatório, e dois atributos adicionais opcionais: *description* e *externalDocs*. O atributo *name* contém o nome da tag. 
+
+### The components section of OAS
+Se estivéssemos seguindo a estrutura de forma sequencial, teríamos discutido *patch* primeiro. No entanto, conceitualmente, queremos escrever nossos modelos primeiro, antes de usá-lo na seção *patch*. Portanto, vamos discutir a seção *componentes* primeiro, que é usada para definir os modelos. 
+
+```yaml
+components:
+  schemas:
+    Cart:
+      description: Shopping Cart of the user
+      type: object
+      properties:
+        customerId:
+          description: Id of the customer who possesses the cart
+          type: string
+        items:
+          description: Collection of items in cart.
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+
+```
+Se estamos trabalhando com YAML pela primeira vez, podemos achar um pouco desconfortável. No entanto, uma vez que passamos por essa seção, nos sentiremos mais confortáveis com YAML.
+
+Aqui, definimos um modelo chamado *Cart*. O modelo *Car* é do tipo objeto e contém dois campos: *customerId* (um string) e *items* (um array). 
+
+---
+**O tipo de dado objeto**
+Podemos definir qualquer modelo ou campo como um objeto. Assim que marcarmos um tipo como objeto, o próximo atributo será *properties*, que consiste em todos os campos do objeto. Por exemplo, o modelo *Cart* no código anterior terá a seguinte sintaxe:
+```yaml
+type: object
+properties:
+	<nome do campo>
+		type: <tipo de dados>
+```
+
+OAS supports seis tipos de dados básicos, no qual são os seguintes (todos estão em caixa baixa):
+- string
+- number
+- integer
+- boolean
+- object
+- array
+
+Vamos discutir o modelo *Cart*, no qual usamos os tipos de dados **string**, **object** e **array**. Outros tipos de dados são *number*, *integer* e *boolean*. Agora, como definimos os tipos *date*, *time*, *float*, e outros. Podemos fazer isso com o atributo *format*, que pode ser usado juntamente com o tipo *object*. Por exemplo, veja o seguinte código:
+```yaml
+orderDate:
+	type: string
+	format: date-time
+```
+
+No código anterior, *orderDate* é definido como o tipo *string*, mas o format determina qual valor de string ele conterá. Como o *format* é marcado com date-time, o campo orderDate conterá a data e a hora no formato definido na RFC 3339. 
+
+O campo *items* do nosso modelo *Cart* é um array do tipo *Item*, definido pelo usuário. Aqui, *Item* é outro modelo e é referenciado usando *ref*. Na verdade, todos os tipos definidos pelo usuário são referenciados usando ref. O modelo Item também faz parte da seção *components/schemas*. Portanto, o valor ref contém um anexo para tipos definidos pelo usuário com #/components/schemas/{type}.
+
+ref representa o objeto de referência. Ele é baseado na referência JSON e segue a mesma semântica no YAML. Ele pode se referir a um objeto no mesmo documento ou em documentos externos. Portanto, é usado quando você tem definições de API divididas em vários arquivos. Já vimos um exemplo de seu uso no código anterior. Vamos ver mais um exemplo:
+```yaml
+# Documento de Esquma Relativo
+$ref: Cart.yaml
+
+#Documento relativo com Esquema embutido
+$ref: definitions.yaml#/Cart
+```
+Há outra consideração sobre o código anterior. Se observarmos com atenção, encontrará dois itens - um é uma propriedade do tipo Cart e o outro é um atributo do tipo **array**. O primeiro é simples - um campo do objeto *Cart*. No entanto, o segundo pertence ao array e faz parte da sintaxe do array.
+
+
+## The path section of OAS
+A seção *path* é a última seção do OAS (em termos de sequência, é a penúltima, mas já discutimos *components* na subseção anterior), onde definimos os endpoints. É aqui que formamos o URI e anexamos os métodos HTTP.
+
+Vamos escrever a definição para *GET /api/v1/carts/{customerId}/items*. Essa API recupera os itens do carrinho associados a um identificador de cliente específico.
+
+Se observamos o código anterior, podemos ver qual é o #endpoint, qual método HTTP e quais parâmetros essa API utiliza, e, mais importante, qual resposta podemos esperar. Aqui, *v1* representa a versão da API. Cada caminho de endpoint (como */api/v1/carts/{customerId}/items*) tem um método HTTP (como #POST) associado a ele. O caminho do endpoint sempre começa com /.
+
+Cada método pode ter sete campos: *tags, sumary, description, operationId, paramters, responses e requestBody*. Vamos entender cada um deles:
+- #tags: as tags são usadas par agrupar APIs, como mostrado na captura de tela a seguir, para APIs marcadas com o grupo *cart*
