@@ -368,7 +368,7 @@ button.setOnAction(new EventHandler<ActionEvent>() {
 
 ```
 
-A verbosidade no código é geralmente considerada ruim, pois ela desestimula o uso de um recurso de linguagem, já que exige mais tempo para escrever e manter o código, além de ser pouco agradável de ler. Um bom código deve ser fácil de entender rapidamente. Embora as classes anônimas ajudam a reduzir a verbosidade associada à declaração de várias classes concretas para uma interface, ainda não são uma solução ideal. Quando passamos uma parte simples de código (como uma expressão booleana representando um critério de seleção), ainda precisamos criar um objeto e implementar explicitamente um método para definir um novo comportamento (como o método *test* para *Predicated* ou o método *handle* para *EventHandler*).
+A verbosidade no código é geralmente considerada ruim, pois ela desestimula o uso de um recurso de linguagem, já que exige mais tempo para escrever e manter o código, além de ser pouco agradável de ler. Um bom código deve ser fácil de entender rapidamente. Embora as classes anônimas ajudam a reduzir a verbosidade associada à declaração de várias #classes concretas para uma interface, ainda não são uma solução ideal. Quando passamos uma parte simples de código (como uma expressão booleana representando um critério de seleção), ainda precisamos criar um objeto e implementar explicitamente um método para definir um novo comportamento (como o método *test* para *Predicated* ou o método *handle* para *EventHandler*).
 
 ### 2.3.3 Sixth attempt: using a lambda expression
 O código anterior pode ser reescrito utilizando expressões lambda:
@@ -379,7 +379,7 @@ Temos que admitir que este código aparenta estar mais limpo do que o código an
 ![[Capítulo 2 - Passing code with behavior parameterization-2.png]]
 
 ### 2.3.4 Seventh attempt: abstracting over List type
-Podemos dar mais um passo em nossa jornada em direção à abstração. No momento, o método *filterApples* funciona apenas para o tipo *Appe*. Mas também podemos abstrair sobre o tipo *List*, indo além do domínio do problema em que está pensando:
+Podemos dar mais um passo em nossa jornada em direção à abstração. No momento, o método *filterApples* funciona apenas para o tipo *Apple*. Mas também podemos abstrair sobre o tipo *List*, indo além do domínio do problema em que está pensando:
 ```java
 public interface Predicate<T> {
 	boolean test(T t);

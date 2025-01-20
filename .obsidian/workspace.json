@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0deaa05034ee4a32",
+        "id": "cdf2e8e7f4cedd2d",
         "type": "tabs",
         "children": [
           {
-            "id": "092a8411b262cbc3",
+            "id": "0656e7004f179140",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Behavioral Interview/Introdução.md",
+                "file": "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introdução"
+              "title": "Capítulo 3 - Lambda Expressions"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Optional",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RoadMap do DavJaveiro/RoadMap.canvas",
+                "file": "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para RoadMap"
+              "title": "Links inversos para Capítulo 3 - Lambda Expressions"
             }
           },
           {
@@ -180,8 +180,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
@@ -205,18 +204,21 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "092a8411b262cbc3",
+  "active": "0656e7004f179140",
   "lastOpenFiles": [
-    "Behavioral Interview/Introdução.md",
-    "Behavioral Interview",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
+    "Pasted image 20250119183643.png",
+    "Behavioral Interview/Resolução de Problemas.md",
+    "Behavioral Interview/Introdução.md",
+    "Introdução.png",
+    "Behavioral Interview",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 2 - Sring Concepts and REST APIs.md",
     "Chapter 2 - Sring Concepts and REST APIs-1.png",
     "Chapter 2 - Sring Concepts and REST APIs.png",
     "Sem título.md",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
     "Pasted image 20250118145051.png",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Ragged.java",
     "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/LengthDemo.java",
@@ -226,10 +228,8 @@
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Imagens/Pasted image 20250116210344.png",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Imagens/Chapter 2 - Sring Concepts and REST APIs-1.png",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Imagens/Chapter 2 - Sring Concepts and REST APIs.png",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Imagens/Chapter 1 - Restful Web Service Fundamentals.png",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Imagens",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Nova pasta",
-    "Modern Java In Action/Capítulo 1/imagens/Capítulo 1.png",
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Imagens",
     "Modern Java In Action/Imagens",
     "Modern Java In Action/Nova pasta",
@@ -252,8 +252,6 @@
     "Excalidraw/Drawing 2024-12-28 15.32.55.excalidraw.md",
     "Excalidraw/Drawing 2024-12-16 19.54.30.excalidraw.md",
     "Excalidraw/Drawing 2024-12-07 18.33.28.excalidraw.md",
-    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/Capítulo 14 - Expressões lambda e referências de método.md",
-    "Java Para Iniciantes/Capítulo 9 - Tratamento de Exceções.md",
-    "Java The Complete Reference/Chapter 19 - Exploring java.lang/Chapter 19 - Exploring the java.lang.md"
+    "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/Capítulo 14 - Expressões lambda e referências de método.md"
   ]
 }
