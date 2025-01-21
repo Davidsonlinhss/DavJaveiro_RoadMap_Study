@@ -677,8 +677,8 @@
       "styleAttributes": {
         "textAlign": "center"
       },
-      "x": -5260,
-      "y": 3893,
+      "x": -4500,
+      "y": 3901,
       "width": 580,
       "height": 87,
       "color": "4"
@@ -688,8 +688,32 @@
       "type": "text",
       "text": "## Resumo\n1. **Empresas que impõem altas expectativas e pouco controle dos funcionários levam a sintomas de depressão.**\n2. **Ninguém gosta de sentir sintomas de depressão.** Quando as pessoas se sentem mal, elas usam distrações para evitar a dor e recuperar um senso de controle.\n3. **O uso excessivo das tecnologias no trabalho é um sinal de uma cultura organizacional disfuncional.**\n4. **O aumento do uso das tecnologias agrava os problemas, perpetuando um \"ciclo de responsividade\".**",
       "styleAttributes": {},
-      "x": -5400,
-      "y": 5281,
+      "x": -4640,
+      "y": 5289,
+      "width": 860,
+      "height": 483,
+      "color": "#ffffff"
+    },
+    {
+      "id": "d9a86b3f5c9d3570",
+      "type": "text",
+      "text": "27- As Melhores Culturas de Trabalho Combatem a Distração",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -5860,
+      "y": 3901,
+      "width": 580,
+      "height": 87,
+      "color": "4"
+    },
+    {
+      "id": "fad994105219b7c8",
+      "type": "text",
+      "text": "## Resumo\n1. **Não sofra em silêncio.** Um local de trabalho onde as pessoas não podem falar sobre o uso excessivo das tecnologias também é um local de trabalho onde as pessoas se calam sobre outros problemas (e soluções) importantes.\n2. **É fundamental saber que a sua opinião importa.** Equipes que promovem a segurança psicológica e facilitam discussões abertas e regulares sobre os problemas não só são menos vulneráveis à distração como também têm funcionários e clientes mais satisfeitos.\n",
+      "styleAttributes": {},
+      "x": -6000,
+      "y": 5289,
       "width": 860,
       "height": 483,
       "color": "#ffffff"
@@ -1240,6 +1264,17 @@
       "fromNode": "10392e7b7d0b8ded",
       "fromSide": "bottom",
       "toNode": "837f9871ca6db8b1",
+      "toSide": "top",
+      "color": "#ffffff"
+    },
+    {
+      "id": "993e515ae630dd38",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "d9a86b3f5c9d3570",
+      "fromSide": "bottom",
+      "toNode": "fad994105219b7c8",
       "toSide": "top",
       "color": "#ffffff"
     }

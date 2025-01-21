@@ -199,4 +199,149 @@ For this section, you can either clone the Git repository... or start to create 
 -  Dependencies: Spring Web
 
 Once you open the project in your favorite IDE, you can add the following extra dependencies required for OpenAPI support under dependencies in the build gradle file. 
-continuous tomorrow this section...
+
+Assim que abrirmos o projeto na nossa IDE favorita, adicionaremos as seguintes dependências extras necessárias para suporte ao OpenAPI na seção de dependências do arquivo build.gradle:
+```gradle
+swaggerCodegen 'org.openapitools:openapi-generator-cli:6.2.1' compileOnly 'io.swagger:swagger-annotations:1.6.4' compileOnly 'org.springframework.boot:spring-boot-starter- validation' compileOnly 'org.openapitools:jackson-databind-nullable:0.2.3' implementation 'com.fasterxml.jackson.dataformat:jackson- dataformat-xml' implementation 'org.springframework.boot:spring-boot-starter- hateoas' implementation 'io.springfox:springfox-oas:3.0.0'
+```
+
+Como mencionado anteriormente, usaremos o plugin Swagger para geração de código a partir das definições da API que acabamos de escrever:
+1. **Adicionar o plugin Gradle:** Para utilizar a ferramenta OpenAPI Generator CLI, podemos adicionar o plugin swagger Gradle na seção *plugins {*} do arquivo **build.gradle**, conforme mostrado abaixo:
+```groovy
+plugins {
+   ...
+   ...
+   id 'org.hidetake.swagger.generator' version '2.19.2'
+}
+
+```
+
+2. **Definindo a configuração do OpenAPI para geração de código**: É necessário especificar certas configurações, como os nomes dos pacotes de modelos e APIs que o CLI do OpenAPI Generator deve usar, ou a biblioteca que ele deve utilizar para gerar as interfaces REST ou objetos relacionados a data/hora. Todas essas configurações, e outras adicionais, podem ser definidas no arquivo **config.json** (localizado em `/src/main/resources/api/config.json`):
+
+```json
+{  
+  "library": "spring-boot",  
+  "dateLibrary": "java8",  
+  "hideGenerationTimestamp": true,  
+  "modelPackage": "com.packt.modern.api.model",  
+  "apiPackage": "com.packt.modern.api",  
+  "invokerPackage": "com.packt.modern.api",  
+  "serializableModel": true,  
+  "useTags": true,  
+  "useGzipFeature" : true,  
+  "hateoas": true,  
+  "unhandledException": true,  
+  "useSpringBoot3": true,  
+  "useSwaggerUI": true,  
+  "importMappings": {  
+"ResourceSupport":"org.springframework.hateoas.RepresentationModel",  
+    "Link": "org.springframework.hateoas.Link"  
+  }  
+}
+```
+
+Essa configuração define o **spring-boot** como a biblioteca - ou seja, o Swagger Codegen gerará classes alinhadas com o Spring Boot. Note que a propriedade useSpringBoot3 está definida como true para garantir que as classes geradas estejam alinhadas com o **Spring Boot 3**.
+
+Todas as outras propriedades são autoexplicativas, exceto **importMappings**. Essa propriedade contém o mapeamento de um tipo definido em um arquivo YAML para um tipo em **Java** ou para um tipo existente em uma biblioteca externa. Assim, quando o código é gerado para o objeto **importMappings**, ele utiliza a classe mapeada no código gerado.
+
+Por exemplo, se utilizarmos **Link** em algum dos modelos, os modelos gerados usarão a classe mapeada **org.springframework.hateoas.Link** em vez do modelo definido no arquivo YAML.
+
+A propriedade de configuração **hateoas** permite usar a biblioteca **Spring HATEOAS** e adicionar links HATEOAS.
+
+Você pode encontrar mais informações sobre a configuração em:  
+[https://github.com/swagger-api/swagger-codegen#customizing-the-generator](https://github.com/swagger-api/swagger-codegen#customizing-the-generator)
+
+3. **Definindo o arquivo de exclusão do OpenAPI Generator**: É possível adicionar um arquivo semelhante ao **.gitignore** para ignorar certos códigos que você não deseja gerar. Adicione a seguinte linha de código ao arquivo **/src/main/resources/api/.openapi-generator-ignore**:
+
+```
+**/*Controller.java
+```
+
+Isso indica que não queremos gerar os controladores. Após adicionar essa configuração, somente as interfaces Java da API e os modelos serão gerados. Os controladores serão adicionados manualmente.
+
+4. **Copie o arquivo OAS** do seguinte link:  
+[https://github.com/PacktPublishing/Modern-API-Development-with-Spring-6-and-Spring-Boot-3/blob/main/Chapter03/src/main/resources/api/openapi.yaml](https://github.com/PacktPublishing/Modern-API-Development-with-Spring-6-and-Spring-Boot-3/blob/main/Chapter03/src/main/resources/api/openapi.yaml)
+
+Cole-o no diretório:  
+`/src/main/resources/api`
+
+5. **Definindo uma tarefa `swaggerSources` no arquivo Gradle**: Agora, vamos adicionar a lógica à tarefa `swaggerSources` no arquivo **build.gradle**:
+
+```groovy
+swaggerSources {
+    def typeMappings = 'URI=URI'
+    def importMappings = 'URI=java.net.URI'
+    eStore {
+        def apiYaml = "${rootDir}/src/main/resources/api/openapi.yaml"
+        def configJson = "${rootDir}/src/main/resources/api/config.json"
+        inputFile = file(apiYaml)
+        def ignoreFile = file("${rootDir}/src/main/resources/api/.openapi-generator-ignore")
+        code {
+            language = 'spring'
+            configFile = file(configJson)
+            rawOptions = ['--ignore-file-override', ignoreFile, '--type-mappings', typeMappings, '--import-mappings', importMappings] as List<String>
+            components = [models: true, apis: true, supportingFiles: 'ApiUtil.java']
+            dependsOn validation
+        }
+    }
+}
+```
+
+Aqui, definimos **eStore** (o nome definido pelo usuário), que contém **inputFile**, apontando para o local do arquivo **openapi.yaml**. Depois de definir a entrada, o gerador precisa produzir a saída, que é configurada em **code**.
+
+No bloco de código, **language** é definido como **Spring** (ele suporta várias linguagens); **configFile** aponta para o **config.json**; **rawOptions** contém um arquivo de exclusão, mapeamento de tipo e importações; e **components** contém as flags de arquivos que você deseja gerar – **models** e **interfaces API Java**. Exceto por **language**, todas as outras propriedades de configuração no bloco **code** são opcionais.
+
+Queremos apenas gerar modelos e APIs. Você também pode gerar outros arquivos, como **clientes** ou **arquivos de teste**. **ApiUtil.java** é necessário na interface API Java gerada, caso contrário, ocorrerá um erro de compilação durante a construção. Por isso, ele é adicionado em **components**.
+
+6. **Adicionando `swaggerSources` como dependência da tarefa `compileJava`**: Agora, precisamos adicionar **swaggerSources** como uma tarefa dependente da tarefa **compileJava**.
+
+Este código aponta para o bloco **code** definido em **eStore**:
+
+```groovy
+compileJava.dependsOn swaggerSources.eStore.code
+```
+
+Além disso, você precisa adicionar a tarefa **generateSwaggerCode** como dependência da tarefa **processResources**:
+
+```groovy
+processResources {
+    dependsOn(generateSwaggerCode)
+}
+```
+
+Se você não definir essa dependência, pode receber um aviso em versões anteriores ao Gradle 8, mas ainda funcionará. No entanto, esse bloco de código é necessário para a versão do Gradle 8.
+
+7. **Adicionando o código-fonte gerado aos `sourceSets` do Gradle**: Também precisamos adicionar o código-fonte e os recursos gerados aos **sourceSets**. Isso torna o código-fonte e os recursos gerados disponíveis para desenvolvimento e construção:
+```groovy
+sourceSets.main.java.srcDir "${swaggerSources.eStore.code.outputDir}/src/main/java"
+sourceSets.main.resources.srcDir "${swaggerSources.eStore.code.outputDir}/src/main/resources"
+```
+
+O código-fonte será gerado no diretório **/build** do projeto, como em:  
+`Chapter03/build/swagger-code-eStore`.
+
+Esse bloco de código adicionará o código-fonte gerado e os recursos ao **sourceSets** do Gradle.
+
+**Nota Importante:**  
+Você gerou as interfaces API Java e os modelos usando a ferramenta Swagger Codegen. Por isso, ao carregar o projeto pela primeira vez em sua IDE, pode encontrar erros caso não tenha executado a build. Isso ocorre porque a IDE não encontrará os arquivos Java gerados (modelos e interfaces API Java). Para resolver, você pode executar o comando:
+
+```bash
+./gradlew clean build
+```
+
+**8. Construindo o projeto para gerar, compilar e construir o código:**  
+O último passo é executar a build. Certifique-se de que há um código Java executável no caminho de build. A versão do Java deve corresponder à versão definida na propriedade **build.gradle** (exemplo: `sourceCompatibility = '17'`) ou nas configurações da IDE:
+
+```bash
+./gradlew clean build
+```
+
+alterando a versão de uso do JDK
+sudo update-alternatives --config java
+
+## Implementing the OAS code interfaces
+Até agora, geramos um código que consiste nos modelos da aplicação de e-commerce e nas interfaces API em Java. Essas interfaces geradas contêm todas as anotações conforme a descrição YAML fornecida por nós. Por exemplo, no arquivo `CartApi.java`, as anotações `@RequestMapping`, `@PathVariable` e `@RequestBody` contêm, respectivamente, o caminho do endpoint (/api/v1/carts/{customerId}/items), o valor da variável de caminho (como `{customerId}` no caminho) e o payload da requisição (como `Item`). Da mesma forma, os modelos gerados contêm todo o mapeamento necessário para dar suporte aos tipos de conteúdo JSON e XML.
+
+O Swagger Codegen escreve o código Spring para nós. **Nós apenas precisamos implementar a interface e escrever a lógica de negócios dentro dela**. O Swagger Codegen gera as interfaces API em Java para cada uma das tags fornecidas. Por exemplo, ele gera as interfaces Java `CartApi` e `PaymentApi` para as tags de carrinho e pagamento, respectivamente. Todos os caminhos são agrupados em uma única interface Java com base na tag fornecida. Por exemplo, todas as APIs com a tag `cart` serão agrupadas em uma única interface Java, `CartApi.java`.
+
+Agora, precisamos apenas criar uma classe para cada uma das interfaces e implementá-las. Vamos criar o arquivo `CartController.java` no pacote `com.packt.modern.api.controllers` e implementar a interface `CartApi`.

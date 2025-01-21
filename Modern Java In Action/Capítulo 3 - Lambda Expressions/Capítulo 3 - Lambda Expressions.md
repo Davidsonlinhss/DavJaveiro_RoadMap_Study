@@ -257,3 +257,4 @@ public String processFile() throws IOException {
 
 ### 3.3.1 Step 1: Remember behavior parameterization
 O código atual é limitado. Você só consegue ler a primeira linha do arquivo. E se você quiser retornar as duas primeiras linhas ou até mesmo a palavra mais usada no arquivo? Idealmente, seria bom reutilizar o código de configuração *setup* e limpeza *cleanup*, dizendo ao método #processFile para que ele possa executar ações diferentes utilizando um #BufferedReader. Passar comportamentos é exatamente o propósito das lambdas. 
+

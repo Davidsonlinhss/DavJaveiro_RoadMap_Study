@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7c5ebc0bd9c6dd18",
+        "id": "bce6bdae290db159",
         "type": "tabs",
         "children": [
           {
-            "id": "d18c08e7609f3b0c",
+            "id": "faf687d881c38a92",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
+                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 3 - Lambda Expressions"
+              "title": "Chapter 3 - API Specifications and Implementation"
             }
           }
         ]
@@ -204,27 +204,31 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "d18c08e7609f3b0c",
+  "active": "faf687d881c38a92",
   "lastOpenFiles": [
-    "Capítulo 3 - Lambda Expressions.png",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 2/Chapter 2 - Sring Concepts and REST APIs.md",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 2",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 1/Chapter 1 - Restful Web Service Fundamentals.md",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 1",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/swagger-code-eStore/src/main/java/com/packt/modern/api/model/User.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/swagger-code-eStore/src/main/java/com/packt/modern/api/model/ShippingReq.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/swagger-code-eStore/src/main/java/com/packt/modern/api/model/Shipment.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/swagger-code-eStore/src/main/java/com/packt/modern/api/model/Product.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/swagger-code-eStore/src/main/java/com/packt/modern/api/model/PaymentReq.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/swagger-code-eStore/src/main/java/com/packt/modern/api/model/Payment.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/swagger-code-eStore/src/main/java/com/packt/modern/api/model/Order.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/swagger-code-eStore/src/main/java/com/packt/modern/api/model/NewOrder.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/HELP.md",
     "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
+    "Indistraível - Nir Eyal/Resumo.canvas",
+    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
+    "Capítulo 3 - Lambda Expressions.png",
     "Pasted image 20250120223109.png",
     "Pasted image 20250120222810.png",
     "Pasted image 20250120222409.png",
     "Pasted image 20250120215933.png",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
     "Sem título.md",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/exceptions/RestApiErrorHandler.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/exceptions/ErrorUtils.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/exceptions/ErrorCode.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/exceptions/Error.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/controllers/CartsController.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/test/java/com/packt/modern/api/eCommerceAppTests.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/exceptions",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/eCommerceApp.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/controllers",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/AppConfig.java",
     "Pasted image 20250119183643.png",
     "Pasted image 20250118145051.png",
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
@@ -234,8 +238,6 @@
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 2 - Sring Concepts and REST APIs.md",
     "Chapter 2 - Sring Concepts and REST APIs-1.png",
     "Chapter 2 - Sring Concepts and REST APIs.png",
-    "Indistraível - Nir Eyal/Resumo.canvas",
-    "Modern Java In Action/Capítulo 1/imagens/b.png",
     "Sem título 1.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 1 - Restful Web Service Fundamentals.md",
     "CND.md",
@@ -251,8 +253,6 @@
     "Artigos/Paradigmas/Análise Comparativa de programação funcional e programação orientada a objeto/Análise Comparativa de programação funcional e programação orientada a objeto.md",
     "Excalidraw/Drawing 2024-12-30 13.57.25.excalidraw.md",
     "Excalidraw/Drawing 2024-12-30 13.57.24.excalidraw.md",
-    "Excalidraw/Drawing 2024-12-28 15.32.55.excalidraw.md",
-    "Excalidraw/Drawing 2024-12-16 19.54.30.excalidraw.md",
-    "Excalidraw/Drawing 2024-12-07 18.33.28.excalidraw.md"
+    "Excalidraw/Drawing 2024-12-28 15.32.55.excalidraw.md"
   ]
 }
