@@ -4,31 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d4268cce25105da4",
+        "id": "7c5ebc0bd9c6dd18",
         "type": "tabs",
         "children": [
           {
-            "id": "d55f5d0def60e3c6",
+            "id": "d18c08e7609f3b0c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
+                "file": "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 3 - API Specifications and Implementation"
-            }
-          },
-          {
-            "id": "4ee69c7159f24d79",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Capítulo 3 - Lambda Expressions"
             }
           }
         ]
@@ -62,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Respondes",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,10 +204,17 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "d55f5d0def60e3c6",
+  "active": "d18c08e7609f3b0c",
   "lastOpenFiles": [
+    "Capítulo 3 - Lambda Expressions.png",
+    "RoadMap do DavJaveiro/RoadMap.canvas",
+    "Pasted image 20250120223109.png",
+    "Pasted image 20250120222810.png",
+    "Pasted image 20250120222409.png",
+    "Pasted image 20250120215933.png",
+    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 2 - Sring Concepts and REST APIs.md",
+    "Sem título.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/exceptions/RestApiErrorHandler.java",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/exceptions/ErrorUtils.java",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/exceptions/ErrorCode.java",
@@ -228,24 +225,17 @@
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/eCommerceApp.java",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/controllers",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter03/src/main/java/com/packt/modern/api/AppConfig.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 3 - API Specifications and Implementation.md",
-    "Indistraível - Nir Eyal/Resumo.canvas",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
     "Pasted image 20250119183643.png",
+    "Pasted image 20250118145051.png",
+    "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
     "Behavioral Interview/Resolução de Problemas.md",
     "Behavioral Interview/Introdução.md",
     "Introdução.png",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 2 - Sring Concepts and REST APIs.md",
     "Chapter 2 - Sring Concepts and REST APIs-1.png",
     "Chapter 2 - Sring Concepts and REST APIs.png",
-    "Sem título.md",
-    "Pasted image 20250118145051.png",
+    "Indistraível - Nir Eyal/Resumo.canvas",
     "Modern Java In Action/Capítulo 1/imagens/b.png",
-    "b.png",
-    "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Imagens/Pasted image 20250116210344.png",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Imagens/Chapter 2 - Sring Concepts and REST APIs-1.png",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Imagens/Chapter 2 - Sring Concepts and REST APIs.png",
     "Sem título 1.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Chapter 1 - Restful Web Service Fundamentals.md",
     "CND.md",
@@ -262,6 +252,7 @@
     "Excalidraw/Drawing 2024-12-30 13.57.25.excalidraw.md",
     "Excalidraw/Drawing 2024-12-30 13.57.24.excalidraw.md",
     "Excalidraw/Drawing 2024-12-28 15.32.55.excalidraw.md",
-    "Excalidraw/Drawing 2024-12-16 19.54.30.excalidraw.md"
+    "Excalidraw/Drawing 2024-12-16 19.54.30.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-07 18.33.28.excalidraw.md"
   ]
 }

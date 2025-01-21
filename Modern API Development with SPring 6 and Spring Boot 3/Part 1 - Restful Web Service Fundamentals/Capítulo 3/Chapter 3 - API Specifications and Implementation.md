@@ -156,4 +156,47 @@ Vamos escrever a definição para *GET /api/v1/carts/{customerId}/items*. Essa A
 Se observamos o código anterior, podemos ver qual é o #endpoint, qual método HTTP e quais parâmetros essa API utiliza, e, mais importante, qual resposta podemos esperar. Aqui, *v1* representa a versão da API. Cada caminho de endpoint (como */api/v1/carts/{customerId}/items*) tem um método HTTP (como #POST) associado a ele. O caminho do endpoint sempre começa com /.
 
 Cada método pode ter sete campos: *tags, sumary, description, operationId, paramters, responses e requestBody*. Vamos entender cada um deles:
-- #tags: as tags são usadas par agrupar APIs, como mostrado na captura de tela a seguir, para APIs marcadas com o grupo *cart*
+- #tags: as tags são usadas par agrupar APIs, como mostrado na captura de tela a seguir, para APIs marcadas com o grupo *cart*. O Swagger Codegen utiliza tags para organizar os métodos de uma API na mesma classe. Por exemplo, todos os endpoints listados relacionados ao "cart" na captura estaráo na classe CartsApi.java.
+
+- #sumary and #description: as seções *summary* e *description* são as mesmas mencionadas anteriormente na seção sobre metadados #OAS. Elas fornecem, respectivamente, o resumo da operação da API e uma descrição detalhada. O campo *description* permite o uso de Markdown, seguindo o mesmo esquema.
+
+- #operationId: representa o nome da operação. Como mostrado no código anterior, atribuímos o valor *getCartByCustomerId* a ele. Esse mesmo nome de operação será utilizado pelo Swagger Codegen como o nome do método na interface Java gerada para a API.
+
+- #parameters se observarmos com atenção, veremos um traço hífen na frente do campo nome. Isso é usado para declará-lo como um elemento de um array. O campo *parameters* pode conter múltiplos parâmetros - na verdade, uma combinação de parâmetros de *path* e *query*, por isso, ele é declarado como um array. Para parâmetros de *path*, é necessário garantir que o valor de name, no campo parameters, seja o mesmo especificado no path dentro de chaves. O campo *paramters* contém os parâmetros de *query*, *path*, cabeçalho (*header*) e *cookie* da API. No código anterior, utilizaremos o parâmetro de *path* (valor do campo in). É possível alterar esse valor para *query* caso deseje declará-lo como um parâmetro de *query*, e assim por diante para outros tipos de parâmetros. Podemos marcar um campo obrigatório *required* ou opcional utilizando o campo *required* dentro da seção *parameters*, que é um parâmetro booleano.
+
+- #Responses: o campo *responses* é obrigatório para todas as operações da API. Ele define os tipos de respostas que podem ser enviadas pela operação da API ao ser requisitada. Esse campo contém os códigos de status HTTP como padrão. É necessário que haja pelo menos uma resposta definida, que pode ser uma resposta padrão (*default response*) ou um código de status HTTP bem-sucedido, como 200. Como o nome indica, a resposta padrão será usada quando nenhuma outra resposta estiver definida ou disponível para a operação da API. The description field is used to describe the response. The headers field is used to define the header and its value. A headers example is showns as follows:
+```yaml
+responses:
+	200:
+		description: operation successful
+			headers:
+				X-RateLimit-Limit:
+					schema:
+						type: integer
+
+```
+
+- The *content* field, like we have previous code, defines the type of content that denotes the different media types. We use application/json. Similarly, you can define other media types, such as application/xml. The content type field contains the actual response object that can be defined using the *schema* field, as we have defined an array of the Item model inside it. 
+As mentioned earlier, <span style="background:#affad1">you can create a reusable response</span> under the components section and directly use it with $ref. 
+
+- #requestBody: the requestBody field is used to define the request payload object. Like the responses object, requestBody also contains the descriptiuon and content fields. Content can be defined in a similar fashion to the way it is defined for the responses object. You can refer to the previus code of POST /carts/{customerId}/items for an axample. As a response, you can also create reusable request bodies under the components section and directly use them with $ref.
+
+Here, we just described part of a sample e-commerce app's API. Similarly, you can describe other APIs. 
+
+I suggest that you copy the code from openapi.yaml and paste it into the editor... my intellij IDE just it.
+
+We have finished designing our APIs, so noew let's generate code using openapi.yaml and enjoy the fruits of our hard work. hahah
+
+## Converting OAS to Spring code
+I am sure you are as excited as I am to start implementing the API. So far (até o momento), we have learned about the RESTful web service theory and concepts and Spring fundamentals, and also designed our first API specs for a sample e-commerce application.
+
+For this section, you can either clone the Git repository... or start to create a Spring project from scratch using Spring Initializr... with the following options:
+- Project: Gradle - Groovy
+-  Language: Java
+ - Spring Boot: 3.0.8 Or use the 3.X.X available version. Replace the project metadata with your preferred values
+-  Packaging: Jar
+- Java: 17
+-  Dependencies: Spring Web
+
+Once you open the project in your favorite IDE, you can add the following extra dependencies required for OpenAPI support under dependencies in the build gradle file. 
+continuous tomorrow this section...

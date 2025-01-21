@@ -206,3 +206,54 @@ public void process(Runnable r) {
 
 process(() -> Sustem.out.println("This is awesome!!"));
 ```
+
+This code when executed will print "This is awesome!!" The lambda expression () -> System.out.println("This is awesome!!") takes no parameters and returns void. This is exactly the signature of the run method defined in the Runnable interface. 
+
+---
+**Lambdas and void method invocation**
+Embora isso possa parecer estranho, a seguinte expressão lambda é válida:
+```java
+process(() -> System.out.println("This is awesome"));
+```
+
+Afinal, System.out.println retorna *void*, então isso claramente não é uma expressão! Por que não precisamos envolver o corpo com chaves, como neste exemplo?
+```java
+process(() -> { System.out.println("This is awesome"); });
+```
+Acontece que há uma regra especial definida na *Java Language Specification* para chamadas de métodos que retornam void. Não é necessário envolver uma única chamada de método *void* em chaves.
+
+Por que podemos passar uma expressão lambda apenas onde uma *functional interface* é esperada?
+
+Os projetistas da linguagem consideraram abordagens alternativas, como adicionar *function types* (algo semelhante à notação especial que usamos para descrever a assinatura das expressões lambda - revisaremos esse tópico nos capítulos 20 e 21) ao Java. No entanto, escolheram o modelo atual porque ele se encaixa naturalmente sem aumentar a complexidade da linguagem.
+
+Além disso, a maioria dos programadores Java já estão familiarizados com a ideia de uma interface com um único método abstrato (como no caso do tratamento de eventos). Entretanto, a razão mais importante é que as *functional interfaces* já eram amplamente usadas antes do Java 8. Isso significa que elas oferecem um bom caminho de migração para o uso de expressões lambda. 
+
+Na verdade, se já utilizamos *functional interfaces* como *Comparator* e *Runnable*, ou até mesmo suas próprias interfaces que definem apenas um único método abstrato, agora pode usar expressões lambda sem precisar alterar suas APIs.
+
+---
+**What about @FunctionalInterface?**
+Se explorarmos a nova API do Java, perceberemos que as interfaces funcionais são geralmente anotadas com @FunctionalInterface. 
+
+Essa anotação é usada para indicar que a interface foi projetada para ser uma *functional interface*, sendo, portanto, útil para documentação. Além disso, o compilador retornará um erro significativo caso definamos uma interface com a anotação *@FunctionalInterface*, mas ela não seja uma functional interface. Por exemplo, uma mensagem de erro como "Multiple non-overring abstract methods found in interface Foo" pode indicar que há mais de um método abstrato disponível. 
+
+Vale destacar que a anotação *@FunctionalInterface* não é obrigatória, mas é uma boa prática utilizá-la quando uma interface é projetada para esse propósito. Podemos pensar nela como uma anotação @Override, que indica que um método está sendo sobrescrito. 
+
+## 3.3 Putting lambdas into practice: the execute-around pattern
+Vamos analisar um exemplo de como lambdas, junto com a parametrização de comportamento (behavior parameterization), podem  ser usados na prática para tornar seu código mais flexível e conciso.
+
+Um padrão recorrente no processamento de recursos (por exemplo, ao lidar com arquivos ou banco de dados) é abrir um recurso, realizar algum processamento nele e, em seguida, fechar o recurso. As fases de configuração *setup* e limpeza *cleanup* são sempre semelhantes e envolvem o código principal que realiza o processamento. Isso é chamado de execute-around pattern, como ilustrado na figura 3.2.
+
+![[Capítulo 3 - Lambda Expressions.png]]
+
+No código a seguir, as linhas destacadas mostram o código repetitivo *boilerplate* necessário para ler uma linha de um arquivo (observe também que usamos a instrução try-with-resources do Java 7), que já simplifica o código, pois não é necessário fechar o recurso explicitamente:
+```java
+public String processFile() throws IOException {
+	try (BufferedRead br = new BufferedReader(New FileReader("data.txt"))) {
+		return br.readLine();
+	}
+}
+```
+
+
+### 3.3.1 Step 1: Remember behavior parameterization
+O código atual é limitado. Você só consegue ler a primeira linha do arquivo. E se você quiser retornar as duas primeiras linhas ou até mesmo a palavra mais usada no arquivo? Idealmente, seria bom reutilizar o código de configuração *setup* e limpeza *cleanup*, dizendo ao método #processFile para que ele possa executar ações diferentes utilizando um #BufferedReader. Passar comportamentos é exatamente o propósito das lambdas. 
