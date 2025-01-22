@@ -340,8 +340,23 @@ alterando a versão de uso do JDK
 sudo update-alternatives --config java
 
 ## Implementing the OAS code interfaces
-Até agora, geramos um código que consiste nos modelos da aplicação de e-commerce e nas interfaces API em Java. Essas interfaces geradas contêm todas as anotações conforme a descrição YAML fornecida por nós. Por exemplo, no arquivo `CartApi.java`, as anotações `@RequestMapping`, `@PathVariable` e `@RequestBody` contêm, respectivamente, o caminho do endpoint (/api/v1/carts/{customerId}/items), o valor da variável de caminho (como `{customerId}` no caminho) e o payload da requisição (como `Item`). Da mesma forma, os modelos gerados contêm todo o mapeamento necessário para dar suporte aos tipos de conteúdo JSON e XML.
+Até agora, geramos um código que consiste nos modelos da aplicação de e-commerce e nas interfaces API em Java. Essas interfaces geradas contêm todas as anotações conforme a descrição YAML fornecida por nós. Por exemplo, no arquivo `CartApi.java`, as anotações `@RequestMapping`, `@PathVariable` e `@RequestBody` contêm, respectivamente, o caminho do endpoint (/api/v1/carts/{customerId}/items), o valor da variável de caminho (como `{customerId}` no caminho) e o #payload da requisição (como `Item`). 
+
+Em uma requisição HTTP, o payload é o corpo da mensagem, ou seja, os dados que estão sendo enviados para um servidor. É como se fosse o "presente" que estamos enviando dentro de uma caixa. No contexto de APIs REST, o payload geralmente <span style="background:#affad1">contém os dados necessários</span> para realizar uma determinada ação, como criar um novo recurso, atualizar um existente ou buscar informações.
+
+**Dados enviados no payload da requisição (anotação @RequestBody):**
+- Objeto do tipo *Item*:
+- Propriedade *id*: identificador único do item *SKU*
+- Propriedade *quantity*: quantidade do item a ser adicionado ao carrinho
+- Propriedade *unitPrice*: (opcional) preço unitário do item
+
+
+A interface *CartApi* define endpoints
+
+Da mesma forma, os modelos gerados contêm todo o mapeamento necessário para dar suporte aos tipos de conteúdo JSON e XML.
 
 O Swagger Codegen escreve o código Spring para nós. **Nós apenas precisamos implementar a interface e escrever a lógica de negócios dentro dela**. O Swagger Codegen gera as interfaces API em Java para cada uma das tags fornecidas. Por exemplo, ele gera as interfaces Java `CartApi` e `PaymentApi` para as tags de carrinho e pagamento, respectivamente. Todos os caminhos são agrupados em uma única interface Java com base na tag fornecida. Por exemplo, todas as APIs com a tag `cart` serão agrupadas em uma única interface Java, `CartApi.java`.
 
 Agora, precisamos apenas criar uma classe para cada uma das interfaces e implementá-las. Vamos criar o arquivo `CartController.java` no pacote `com.packt.modern.api.controllers` e implementar a interface `CartApi`.
+
+[[CartControllers.java]]
