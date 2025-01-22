@@ -8,7 +8,7 @@
 
 No capítulo anterior nós vimos que passar código utilizando a **parametrização de comportamento** é útil para lidar com *mudanças frequentes* nos requisitos do nosso código. Isso permite que definamos um bloco de código que represente um comportamento e, em seguida, o passe adiante. Podemos executar esse bloco de código quando um determinado evento ocorrer (por exemplo, um clique em um botão) ou em determinados pontos de um algoritmo (por exemplo, um predicado como "apenas maçãs mais pesadas que 150g" no algoritmo de filtragem ou a operação de comparação personalizada em uma ordenação). De forma geral, utilizando esse conceito, podemos escrever um código mais flexível e reutilizável. 
 
-Utilizar classes anônimas para representar diferentes comportamentos é insatisfatório. É algo verboso, o que não incentiva os programadores a utilizarem a parametrização de comportamento na prática. Neste capítulo, vamos apresentar um novo recurso do Java 8 que resolve esse problema: **expressões lambda.** Elas permitem representar um comportamento ou passar código de forma concisas. Por enquanto, podemos pensar nas expressões lambda como **funções anônimas** - **métodos sem nomes declarados**, mas que também **podem ser passados como argumentos** para outro método, assim como ocorre com classes anônimas. 
+Utilizar **classes anônimas** para representar diferentes comportamentos é insatisfatório. É algo verboso, o que não incentiva os programadores a utilizarem a parametrização de comportamento na prática. Neste capítulo, vamos apresentar um novo recurso do Java 8 que resolve esse problema: **expressões lambda.** Elas permitem representar um comportamento ou passar código de forma concisas. Por enquanto, podemos pensar nas expressões lambda como **funções anônimas** - **métodos sem nomes declarados**, mas que também **podem ser passados como argumentos** para outro método, assim como ocorre com classes anônimas. 
 
 Vamos mostrar como construir expressões lambda, onde utilizá-las e como tornar seu código mais conciso com o uso delas. Também explicaremos algumas novidades, como *inferência de tipos* e *interfaces* importantes adicionadas na API do Java 8. Por fim, introduzimos as referências a métodos, um recurso útil que complementa perfeitamente as expressões lambda. 
 
@@ -256,5 +256,24 @@ public String processFile() throws IOException {
 
 
 ### 3.3.1 Step 1: Remember behavior parameterization
-O código atual é limitado. Você só consegue ler a primeira linha do arquivo. E se você quiser retornar as duas primeiras linhas ou até mesmo a palavra mais usada no arquivo? Idealmente, seria bom reutilizar o código de configuração *setup* e limpeza *cleanup*, dizendo ao método #processFile para que ele possa executar ações diferentes utilizando um #BufferedReader. Passar comportamentos é exatamente o propósito das lambdas. 
+O código atual é limitado. Você só consegue ler a primeira linha do arquivo. E se você quiser retornar as duas primeiras linhas ou até mesmo a palavra mais usada no arquivo? Idealmente, seria bom reutilizar o código de configuração *setup* e limpeza *cleanup*, dizendo ao método #processFile para que ele possa executar ações diferentes utilizando um #BufferedReader. Passar comportamentos é exatamente o propósito das lambdas. Precisamos parametrizar o comportamento do *processFile* para que ele possa executar comportamentos diferentes usando um *BufferedReader*.
 
+Passar comportamento é exatamente para isso que as lambdas servem. Como um novo método *processFile* deve se parecer se você quiser ler duas linhas de uma vez? Vamos precisar de uma lambda que recebe um *BufferedReader* e retorne uma String. Por exemplo, imprimindo em duas linhas:
+```java
+String result = processFile((BufferedReader br) -> br.readLine() + br.readLine());
+```
+
+### 3.3.2 Step 2: Usa a functional interface to pass behaviors
+Explicamos anteriormente que as lambdas só podem ser usadas no contexto de uma interface funcional. Precisamos criar uma interface que corresponde à assinatura *BufferedRead -> String* e que possa lançar uma *IOException*. Vamos chamar essa interface de *BufferedReaderProcessor*:
+```java
+@FunctionalInterface
+public interface BufferedReaderProcessor {
+	String processFile(BufferedReader b) throws IOException;
+} 
+```
+Essa é a linha que faz o trabalho útil.
+BufferedReaderProcessor é a interface funcional que define um método *process*, que recebe um *BufferedReader* e retorna uma String, podendo lançar uma *IOException*.
+
+*processFile*: o método recebe um objeto do tipo *BufferedReaderProcessor* como argumento, permitindo passar comportamentos diferentes de processamento de arquivo de forma flexível com lambdas.
+
+### 3.3.3 Step 3: Execute a behavior!

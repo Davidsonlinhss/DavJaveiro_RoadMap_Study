@@ -437,7 +437,7 @@ inventory.sort(
 ### 2.4.2 Executing a block of code with Runnable
 Threads em Java permitem que um bloco de código seja executado simultaneamente com o restante do programa. Mas como informar a uma thread qual bloco de código ela deve executar? Diversas threads podem executar códigos diferentes. O que você precisa é de uma maneira de representar um pedaço de código para ser executado posteriormente.
 
-Até o Java 8, apenas objetos podiam ser passados para o construtor de #Thread. Por isso, o padrão típico e pouco elegante era passar uma classe anônima contendo um método #run que retorna #voi. Essas classes anônimas implementam a interface #Runnable.
+Até o Java 8, apenas objetos podiam ser passados para o construtor de #Thread. Por isso, o padrão típico e pouco elegante era passar uma classe anônima contendo um método #run que retorna #void. Essas classes anônimas implementam a interface #Runnable.
 
 Em Java, podemos usar a interface #Runnable para representar um bloco de código a ser executado; observe que esse código retorna #void (não tem retorno);
 ```java
@@ -460,3 +460,4 @@ No entanto, desde o Java 8, podemos usar uma expressão lambda, tornando a chama
 Thread t = new Thread(() -> System.out.println("Hello World"));
 ```
 
+### 2.4.3 Returning a result using Callable

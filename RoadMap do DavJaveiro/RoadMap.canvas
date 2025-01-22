@@ -738,16 +738,6 @@
       "height": 2349
     },
     {
-      "id": "1f704a86abaf0841",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Introduction to Java.png",
-      "styleAttributes": {},
-      "x": 10733,
-      "y": -10320,
-      "width": 951,
-      "height": 1190
-    },
-    {
       "id": "fe9f3a5b8f231a01",
       "type": "file",
       "file": "Pasted image 20250120222810.png",
@@ -789,16 +779,6 @@
       "height": 2452
     },
     {
-      "id": "0df6422df1570444",
-      "type": "file",
-      "file": "Pasted image 20250120222409.png",
-      "styleAttributes": {},
-      "x": -23520,
-      "y": 5877,
-      "width": 2080,
-      "height": 2607
-    },
-    {
       "id": "88f70d22d35db00a",
       "type": "file",
       "file": "Pasted image 20250120223109.png",
@@ -828,6 +808,26 @@
       "width": 2068,
       "height": 2551,
       "color": "4"
+    },
+    {
+      "id": "1f704a86abaf0841",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Introduction to Java.png",
+      "styleAttributes": {},
+      "x": 9473,
+      "y": -16480,
+      "width": 2038,
+      "height": 2550
+    },
+    {
+      "id": "0df6422df1570444",
+      "type": "file",
+      "file": "Pasted image 20250120222409.png",
+      "styleAttributes": {},
+      "x": -27040,
+      "y": 5877,
+      "width": 2080,
+      "height": 2607
     }
   ],
   "edges": [
@@ -1631,17 +1631,6 @@
       "toSide": "top"
     },
     {
-      "id": "a433d422250b12cb",
-      "styleAttributes": {
-        "pathfindingMethod": "square",
-        "path": "short-dashed"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "1f704a86abaf0841",
-      "toSide": "right"
-    },
-    {
       "id": "f9a4fe6a8295d629",
       "styleAttributes": {
         "pathfindingMethod": "square",
@@ -1700,6 +1689,14 @@
       "fromNode": "88f70d22d35db00a",
       "fromSide": "left",
       "toNode": "be4aa4674f848f33",
+      "toSide": "right"
+    },
+    {
+      "id": "168ba484b01c7206",
+      "styleAttributes": {},
+      "fromNode": "ea1c45dcc9c0b891",
+      "fromSide": "top",
+      "toNode": "1f704a86abaf0841",
       "toSide": "right"
     }
   ],
