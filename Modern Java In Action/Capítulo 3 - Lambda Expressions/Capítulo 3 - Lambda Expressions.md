@@ -253,8 +253,6 @@ public String processFile() throws IOException {
 	}
 }
 ```
-
-
 ### 3.3.1 Step 1: Remember behavior parameterization
 O código atual é limitado. Você só consegue ler a primeira linha do arquivo. E se você quiser retornar as duas primeiras linhas ou até mesmo a palavra mais usada no arquivo? Idealmente, seria bom reutilizar o código de configuração *setup* e limpeza *cleanup*, dizendo ao método #processFile para que ele possa executar ações diferentes utilizando um #BufferedReader. Passar comportamentos é exatamente o propósito das lambdas. Precisamos parametrizar o comportamento do *processFile* para que ele possa executar comportamentos diferentes usando um *BufferedReader*.
 
@@ -272,8 +270,95 @@ public interface BufferedReaderProcessor {
 } 
 ```
 Essa é a linha que faz o trabalho útil.
-BufferedReaderProcessor é a interface funcional que define um método *process*, que recebe um *BufferedReader* e retorna uma String, podendo lançar uma *IOException*.
+*BufferedReaderProcessor* é a interface funcional que define um método *process*, que recebe um *BufferedReader* e retorna uma String, podendo lançar uma *IOException*.
 
 *processFile*: o método recebe um objeto do tipo *BufferedReaderProcessor* como argumento, permitindo passar comportamentos diferentes de processamento de arquivo de forma flexível com lambdas.
 
 ### 3.3.3 Step 3: Execute a behavior!
+Qualquer lambda da forma *BufferedReader -> String* pode ser passado como argumento, pois corresponde à assinatura do método *process* definido na interface *BufferedReaderProcessor*. Agora, você só precisa de uma forma de executar o código representado pela lambda dentro do corpo do método *processFile*.  
+
+Lembre-se: **expressões lambda** permitem fornecer diretamente a **implementação do método** **abstrato** de uma *interface funcional* de forma #inline, tratando toda a expressão como uma instância da interface funcional. Assim, é possível chamar o método **process** no objeto *BufferedReaderProcessor* resultante dentro do corpo do método *processFile* para realizar o processamento:
+```java
+public String processFile(BufferedReaderProcessor p) throws IOException {
+    try (BufferedReader br = 
+        new BufferedReader(new FileReader("data.txt"))) {
+        return p.process(br);
+    }
+}
+```
+
+**try-with-resources** garante que o recurso *BufferedReader* seja fechado automaticamente após o uso, tornando o código mais seguro e conciso.
+
+### 3.3.4 Step 4: Pass lambdas
+Agora, podemos reutilizar o método *processFile* e processar arquivos de diferentes maneiras, passando diferentes lambdas.
+
+O exemplo a seguir demonstra o processamento de uma linha:
+```java
+String oneLine = processFile((BufferedReader br) -> br.readLine());
+```
+
+Método para processamento de duas linhass:
+```java
+String oneLine = processFile((BufferedReader br) -> br.readLine()  + br.readLine());
+```
+
+A figura 3.3 abaixo resume os quatro passos realizados para tornar o método *processFile* mais flexível.
+
+**Etapa 1**: Criação de um método *processFile* básico, que lê apenas a primeira linha de um arquivo usando #BufferedReader. 
+```java
+public String processFile() throws IOException {
+	try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+		return br.readLine();
+	}
+}
+```
+
+**Etapa 2**: definição da *interface funcional* **BufferedReaderProcessor** para parametrizar o comportamento. Essa interface tem um único método abstrato *process* que recebe um *BufferedReader* e retorna uma #String.
+```java
+public interface BufferedReaderProcessor {
+	String process (BufferedReader b) throws IOException;
+}
+
+```
+
+**Etapa 3:** alteração do método *processFile* para receber uma instância de *BufferedReaderProcessor* como parâmetro, permitindo processo o arquivo de diferentes formas ao executar o método *process*.
+```java
+public String processFile(BuffereadReaderProcessor p) throws IOException {
+	try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+		return p.process(br); // método process pertencente ao objeto BufferedReader
+	}
+}
+```
+
+**Etapa 4:** utilização de lambdas para passar diferentes comportamentos ao método *processFile*. Exemplos mostram como ler uma linha ou duas linhas do arquivo.
+```java
+String oneLine = processFile((BufferedReader br) -> br.readLine());
+String twoLines = processFile((BufferedReader br) -> br.readLine() + br.readLine());
+```
+
+## 3.4 Using functional interfaces
+Como aprendemos na seção 3.2.1, uma interface funcional especifica exatamente um único método abstrato. Interfaces funcionais são úteis porque a **assinatura do método abstrato** pode descrever a assinatura de uma expressão lambda. A assinatura do método abstrato de uma interface funcional é chamada de *descritor de função* ou *function descriptor*. Para usar diferentes expressões lambda, precisamos de um conjunto de interfaces funcionais que possam descrever descritores de função comuns. 
+
+Várias interfaces funcionais já estão disponíveis na API Java, como #Comparable, #Runnable e #Callable. 
+
+Os designers da biblioteca Java para o Java 8 facilitaram ainda mais, introduzindo várias novas interfaces funcionais no pacote #java-util-function. Vamos descrever as *interfaces* #Predicate, #Consumer e #Function. 
+
+### 3.4.1 Predicate
+ A interface #java-util-function-PredicateT define um método abstrato chamado *test*, que aceita um objeto do tipo genérico *T* e retorna um *boolean*.  É a mesma que criamos anteriormente, mas já está disponível diretamente na API! Podemos usar essa interface quando precisarmos representar uma expressão booleana que utiliza um objeto do tipo *T*. Por exemplo, é possível definir uma lambda que aceita objetos do tipo *String*, como mostrado no exemplo a seguir:
+```java
+@FunctionalInterface
+public interface Predicate<T> {
+	boolean test(T t);
+}
+
+public <T> List<T> filter(List<T> list, Predicate<T> p) {
+	List<T> results = new ArrayList<>();
+	for(T t: list) {
+		if(p.test(t)) {
+			results.add(t);
+		}
+	}
+}
+Predicate<String> nonEmptyStringPredicate = (String s) -> !s.isEmpty();
+List<String> nonEmpty = filter(listOfStrings, nonEmptyStringPredicate);
+```
