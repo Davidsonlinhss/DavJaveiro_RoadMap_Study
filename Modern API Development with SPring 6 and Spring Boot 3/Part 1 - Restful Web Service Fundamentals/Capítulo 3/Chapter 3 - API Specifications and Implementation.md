@@ -360,3 +360,111 @@ O Swagger Codegen escreve o código Spring para nós. **Nós apenas precisamos i
 Agora, precisamos apenas criar uma classe para cada uma das interfaces e implementá-las. Vamos criar o arquivo `CartController.java` no pacote `com.packt.modern.api.controllers` e implementar a interface `CartApi`.
 
 [[CartControllers.java]]
+
+Aqui, implementamos apenas os dois métodos para fins de demonstração. Implementaremos a lógica de negócios real no próximo capítulo.
+
+Para adicionar um item (requisição #POST *api/v1/carts/{customerId}items*), apenas registramos o #payload da requisição recebida e o ID do cliente dentro do método *addCartItemsByCustomerId*.
+
+Outro método, *getCartByCustomer Id*, simplesmente lança uma exceção. Isso nos permitirá demonstrar o *Global Exception Handler* na próxima seção.
+
+
+
+
+
+---
+**Algumas annotations importantes**
+- @RestController em Spring indica que uma classe Java é um controlador RESTful. Isso significa que essa classe é responsável por:
+- **Receber requisições HTTP:** a partir de cliente como navegadores web ou outras aplicações;
+- **Processar essas requisições:** executando o código Java correspondente aos endpoints definidos na classe.
+- **Gerar respostas HTTP:** enviando dados de volta ao cliente, como #JSON ou XML.
+- Em outras palavras, *@RestController* transforma uma classe Java em um ponto de entrada para a sua aplicação web, permitindo que ela se comunique com o mundo externo através de requisições HTTP.
+
+---
+
+**Entendo o que a classe faz**
+1. **Anotação** *@RequestController*
+```java
+@RestController
+public class CartControllers implements CartApi 
+```
+- **@RequestController:** diz ao Spring que esta classe é um controlador REST. Isso significa ela pode lidar com requisições HTTP (como #GET, #POST etc).
+- **implements CartApi**: a classe está implementando uma interface chamada **CartApi**. Isso significa que ela precisa fornecer as definições dos métodos declarados nessa interface.
+
+2. **Logger**
+```java
+private static final Logger log = LoggerFactory.getLogger(CartControllers.class);
+```
+- **Logger:** serve para registrar mensagens no console. Essas mensagens ajudam a entender o que o código está fazendo enquanto roda. 
+
+3. **Método *addCartItemsByCustomerId***
+```java
+@Override
+public ResponseEntity<List<Item>> addCartItemsByCustomerId(String customerId, @Valid Item item) {
+	log.infor("Request for customer ID: {}\nItem: {}", customerId, item);
+	return ok(Collections.EMPTY_LIST);
+}
+```
+**Parâmetros:**
+- **String customerId**: recebe o ID do cliente;
+- **@Valid Item item:** recebe um item, que será validado automaticamente. 
+
+**Registro no log:**
+```java
+log.info("Request for customer ID: {}\nItem: {}", customerId, item);
+```
+- Registra o ID do cliente e os detalhes no console.
+**Resposta**
+```java
+return ok(Collection.EMPTY_LIST);
+```
+- Retorna uma resposta HTTP com código 200 OK e uma lista vazia *Collections.EMPTY_LIST*.
+
+**4. Método `getCartByCustomerId`**
+```java
+@Override
+public ResponseEntity<List<Cart>> getCartByCustomerId(String customerId) {
+    throw new RuntimeException("Manual Exception thrown");
+}
+
+```
+- **Parâmetro**:
+    - `String customerId`: Recebe o ID do cliente.
+- **Lógica**:
+```java
+throw new RuntimeException("Manual Exception thrown");
+```
+    
+Este método lança manualmente uma exceção (erro) com a mensagem "Manual Exception thrown". Isso significa que, se alguém chamar esse método, o sistema vai retornar um erro.
+
+**5. Resumo Geral**
+Essa classe é um **controlador REST** que implementa a interface `CartApi`. Ela faz o seguinte:
+
+1. **`addCartItemsByCustomerId`**:
+    
+    - Recebe o ID de um cliente e um item.
+    - Registra a solicitação no log.
+    - Retorna uma lista vazia como resposta.
+2. **`getCartByCustomerId`**:
+    - Recebe o ID de um cliente.
+    - Lança uma exceção de forma proposital (não está implementado ainda).
+
+## Adding a Global Exception Handler
+Temos múltiplos controladores que consistem em múltiplos métodos. Cada método pode ter *checked exceptions* ou lançar *runtime exceptions*. Devemos ter um local centralizado para lidar com todos esses erros para melhorar a manutenção, modularidade e código limpo. 
+
+O Spring fornece um recurso #AOP ( #Aspect-Oriented-Programming é uma abordagem de programação que permite separar *preocupações transversais* da lógica principal do aplicativo. Essas *preocupações transversais* são funcionalidades que afetam várias partes do sistema, como tratamento de erros, **loggin**, **segurança** ou **monitoramente de desempenho**.
+
+Para isso. Basta escrever uma única classe anotada com *@ControllerAdvice*. Em seguida, basta adicionar *@ExceptionHandler* para cada tipo de exceção.
+
+Este método *@ExceptionHandler* gerará mensagens de erro amigáveis ao usuário com outras informações relacionadas.
+
+**Podemos usar a biblioteca Project Lombok se aprovado pela nossa empresa para o uso de bibliotecas de terceiros. Isso removerá a verbosidade do código para gtters, setters, construtores e assim por diante.**  
+Vamos primeiro escrever a classe *Error* no pacote *exceptions*, que contém todas as informações sobre erros:
+[[Error.java]]
+No código de erro acima, usamos as seguintes propriedades:
+- **errorCode**: código de erro da aplicação, que é diferente do código de erro HTTP;
+- **message:** um resumo curto e legível para humanos sobre o problema;
+- **status:** o código de status HTTP para essa ocorrência do problema, definido pelo servidor de origem.
+- **url** a URL da requisição que gerou o erro
+- **reqMethod** o método da requisição que gerou o erro
+
+Depois disso, escreveremos um **enum** chamado **ErrorCode** que conterá todas as chaves de exceção, incluindo erros definidos pelo usuário e seus respectivos códigos de erro:

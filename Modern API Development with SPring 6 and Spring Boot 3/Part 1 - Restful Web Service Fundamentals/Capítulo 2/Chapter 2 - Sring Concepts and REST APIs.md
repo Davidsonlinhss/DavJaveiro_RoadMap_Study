@@ -42,9 +42,9 @@ A DI também pode ser alcançada utilizada o padrão Service Locator. No entanto
 ## What is AOP?
 #AOP (Programação Orientada a Aspectos) é um paradigma de programação que trabalha em conjunto com a OOP (Programação Orientada a Objetos). Uma boa prática na OOP é lidar com uma única responsabilidade em uma classe específica - esse princípio é chamado de **Princípio da Responsabilidade Única** #SRP, aplicável a módulos, classes e métodos. Por exemplo, ao escrever uma classe *Gear* em uma aplicação do domínio automotivo, ela deve lidar apenas com funções relacionadas ao objeto *gear* (marcha) e não deve executar outras funções, como frenagem.
 
-No entanto, em modelos de programação, muitas vezes é necessário implementar funcionalidades que se estendem por várias classes. Em algumas aplicações, a maioria das classes utiliza recursos como logging (registro de logs) ou métricas. Funcionalidades como **logging**, segurança, gerenciamento de transações e métricas são exigidas em várias classes/módulos. O código dessas funcionalidades geralmente fica espalhado por diversas classes. Na OPP, não há uma forma nativa de abstrair e encapsular esses recursos. É aqui que o AOP entra em cena. 
+No entanto, em modelos de programação, muitas vezes é necessário implementar funcionalidades que *se estendem por várias classes*. Em algumas aplicações, a maioria das classes utiliza recursos como logging (registro de logs) ou métricas. Funcionalidades como **logging**, segurança, gerenciamento de transações e métricas são exigidas em várias classes/módulos. O código dessas funcionalidades geralmente fica espalhado por diversas classes. Na OPP, não há uma forma nativa de abstrair e encapsular esses recursos. É aqui que o AOP entra em cena. 
 
-Essas funcionalidades, conhecidas como #aspectos, são preocupações transversais que atravessam vários pontos no modelo de objetos. O AOP fornece uma maneira de lidar com esses aspectos de forma consistente em várias classes/módulos. 
+Essas funcionalidades, conhecidas como #aspectos, são *preocupações transversais que atravessam vários pontos no modelo de objetos*. O #AOP fornece uma maneira de lidar com esses aspectos de forma consistente em várias classes/módulos. 
 
 **AOP permite:**
 - Abstrair e encapsular preocupações transversais

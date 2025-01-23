@@ -19,7 +19,8 @@ public class CartControllers implements CartApi {
     private static final Logger log = LoggerFactory.getLogger(CartControllers.class);
 
     @Override
-    public ResponseEntity<List<Item>> addCartItemsByCustomerId(String customerId, @Valid Item item) {
+    public ResponseEntity<List<Item>> addCartItemsByCustomerId(String customerId,
+                                                               @Valid Item item) {
         log.info("Request for customer ID: {}\nItem: {}", customerId, item);
         return ok(Collections.EMPTY_LIST);
     }

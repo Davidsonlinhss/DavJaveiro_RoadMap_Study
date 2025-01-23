@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
+                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 3 - Lambda Expressions"
+              "title": "Chapter 3 - API Specifications and Implementation"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "null",
+                "query": "AOP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,11 +83,13 @@
               "title": "RunJS Codelist"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 444.51002502441406
+    "width": 444.51002502441406,
+    "collapsed": true
   },
   "right": {
     "id": "5ec10822b2a3b721",
@@ -205,10 +207,15 @@
   },
   "active": "3d69e19cd12d5779",
   "lastOpenFiles": [
-    "Modern Java In Action/Capítulo 1/Capítulo 1.md",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/controllers/CartControllers.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/exceptions/Error.java~",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/exceptions/Error.java",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/exceptions",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 2/Chapter 2 - Sring Concepts and REST APIs.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/controllers/CartControllers.java~",
+    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
+    "Modern Java In Action/Capítulo 1/Capítulo 1.md",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/controllers/CartControllers.java",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/controllers",
     "Artigos/Paradigmas/Artigo 3/High-Level Modelling for TypedFunctional Programming.md",
     "Java Interview/Perguntas/Perguntas que podem cair.md",
@@ -217,14 +224,10 @@
     "Artigos/Paradigmas/Artigo 2/Functional Programming Oriented Software Design.md",
     "Artigos/Paradigmas/Artigo 3",
     "Artigos/Papers for Science and Technology for Dummies.md",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/problems/problems-report.html",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/problems",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/tests/test/js/report.js",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/tests/test/js",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 2/Chapter 2 - Sring Concepts and REST APIs.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 1/Chapter 1 - Restful Web Service Fundamentals.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/HELP.md",
     "Indistraível - Nir Eyal/Resumo.canvas",
