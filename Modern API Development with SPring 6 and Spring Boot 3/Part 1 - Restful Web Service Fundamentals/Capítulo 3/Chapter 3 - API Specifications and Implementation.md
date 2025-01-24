@@ -417,11 +417,11 @@ log.info("Request for customer ID: {}\nItem: {}", customerId, item);
 ```java
 return ok(Collection.EMPTY_LIST);
 ```
-- Retorna uma resposta HTTP com código 200 OK e uma lista vazia *Collections.EMPTY_LIST*.
+- Retorna uma resposta HTTP com código 200 OK e uma lista vazia *Collections.EMPTY_LIST*. A lista vazia é uma implementação padrão ou temporária #placeholder
 
 **4. Método `getCartByCustomerId`**
 ```java
-@Override
+	@Override
 public ResponseEntity<List<Cart>> getCartByCustomerId(String customerId) {
     throw new RuntimeException("Manual Exception thrown");
 }
@@ -468,3 +468,4 @@ No código de erro acima, usamos as seguintes propriedades:
 - **reqMethod** o método da requisição que gerou o erro
 
 Depois disso, escreveremos um **enum** chamado **ErrorCode** que conterá todas as chaves de exceção, incluindo erros definidos pelo usuário e seus respectivos códigos de erro:
+ 

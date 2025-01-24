@@ -22,7 +22,7 @@ public class CartControllers implements CartApi {
     public ResponseEntity<List<Item>> addCartItemsByCustomerId(String customerId,
                                                                @Valid Item item) {
         log.info("Request for customer ID: {}\nItem: {}", customerId, item);
-        return ok(Collections.EMPTY_LIST);
+        return ok(Collections.EMPTY_LIST); // return an EMPTY_LIST = placeholder
     }
 
     @Override

@@ -362,3 +362,48 @@ public <T> List<T> filter(List<T> list, Predicate<T> p) {
 Predicate<String> nonEmptyStringPredicate = (String s) -> !s.isEmpty();
 List<String> nonEmpty = filter(listOfStrings, nonEmptyStringPredicate);
 ```
+
+### 3.4.2 Consumer
+A interface *java.util.function.Consumer* define um método abstrato chamado #accept, que recebe um objeto do tipo genérico T e não retorna nenhum resultado (void). Podemos usar essa interface quando precisarmos acessar um objeto do tipo T e realizar algumas operações sobre ele. Por exemplo, podemos utilizá-la para criar um método forEach, que recebe uma lista de Inteiros e aplica uma operação em cada elemento dessa lista:
+```java
+@FunctionalInterface // iformar que é uma interface funcional, garantia de compilação
+public interface Consumer<T> {
+	void accept(T t);
+}
+public <T> void forEach(List<T> list, Consumer<T> c) {
+	for(T t: list)
+		c.accept(t);
+}
+
+forEach(Arrays.asList(1,2,3,4,5), (Integer i) -> System.out.println(i));
+```
+
+### 3.4.3 Function
+A interface *java.util.function.Function<T, R>* define um método abstrato chamado #apply, que recebe um objeto do tipo genérico T como entrada e retorna um objeto do tipo genérico R. Podemos usar essa interface quando precisarmos definir  uma expressão lambda que mapeia informações de um objeto de entrada para uma saída (por exemplo, extraindo o peso de uma maçã ou mapeando uma String para seu comprimento). No exemplo a seguir, mostramos como podemos utilizá-la para criar um método #map que transforma uma lista de Strings em uma lista de Inteiros contendo o comprimento de cada String.
+```java
+@FunctionalInterface
+public interface Function<T, R> {
+	R apply(T t);
+}
+public <T, R> List<R> map(List<T> list, Function<T, R> f) {
+	List<R> result = new ArrayList<>();
+	for(T t: list) {
+		result.add(f.apply(t));
+	}
+	return result;
+}
+```
+
+**Especializações Primitivas**
+Descrevemos três interfaces funcionais que *são genéricas*: #Predicate, #Consumer e #Function. Também existem **interfaces funcionais** que são especializadas com certos **tipos**. 
+
+Para relembrar um pouco: todo tipo em Java é ou um **tipo de referência** (por exemplo, Byte, Integer, Object, List) ou um **tipo primitivo** (por exemplo, int, double, byte, char). 
+No entanto, os parâmetros genéricos (por exemplo, o T em Consumer) podem ser vinculados apenas a tipos de referência. Isso se deve à forma como os genéricos são implementados internamente. Como resultado, em Java existe um mecanismo para converter um tipo primitivo em um tipo de referência correspondente. Esse mecanismo é chamado de #boxing. A abordagem oposta (converter um tipo de referência em um tipo primitivo correspondente) é **chamada de unboxing**. Java também possui um mecanismo autoboxing para facilitar a tarefa: as operações de boxing e unboxing que são realizadas automaticamente. Por exemplo, é por isso que o seguinte código é válido (um int é convertido em um Integer):
+```java
+List<Integer> list = new ArrayList<>();
+for (int i = 300; i < 400; i++)
+	list.add(i);
+```
+
+Mas isto gera um custo de desempenho, os valores encapsulados são um invólucro em torno dos tipos primitivos e **são armazenados na heap**. Portanto, os valores encapsulados utilizam mais memória e requerem buscas adicionais na memória para acessar o valor primitivo encapsulado.
+
