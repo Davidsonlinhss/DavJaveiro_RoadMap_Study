@@ -16,17 +16,19 @@ import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
 public class CartControllers implements CartApi {
-    private static final Logger log = LoggerFactory.getLogger(CartControllers.class);
+    private static final Logger log = LoggerFactory.
+            getLogger(CartControllers.class);
 
     @Override
-    public ResponseEntity<List<Item>> addCartItemsByCustomerId(String customerId,
-                                                               @Valid Item item) {
-        log.info("Request for customer ID: {}\nItem: {}", customerId, item);
-        return ok(Collections.EMPTY_LIST); // return an EMPTY_LIST = placeholder
+    public ResponseEntity<List<Item>> addCartItemsByCustomerId(String customerId, @Valid Item item) {
+        log.info("Request for customer ID: {}\nItem: {}",customerId,
+                item);
+        return ok(Collections.EMPTY_LIST);
     }
-
     @Override
-    public ResponseEntity<List<Cart>> getCartByCustomerId(String customerId) {
+    public ResponseEntity<List<Cart>> getCartByCustomerId(String
+                                                                  customerId) {
         throw new RuntimeException("Manual Exception thrown");
     }
+// Other method implementations (omitted)
 }

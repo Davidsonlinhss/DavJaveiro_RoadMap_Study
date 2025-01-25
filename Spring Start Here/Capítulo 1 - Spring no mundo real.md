@@ -84,6 +84,7 @@ Por meio de configurações, instruímos a estrutura sobre como gerenciar o cód
 **With IoC**
 ![[Capítulo 1 - Spring no mundo real-3.png]]
 Começaremos a aprender o Spring com o Spring Core discutindo a funcionalidade IoC do Spring nos capítulos 2 a 5. O contêiner IoC une os componentes do Spring e os componentes do nosso aplicativo à estrutura. Usando o contêiner IoC, ao qual geralmente nos referimos o contexto do Spring, o que permite que a estrutura os use da maneira que nós configuramos.
+
 No capítulo 6, continuaremos nossa discussão sobre a programação orientada a aspectos (AOP) do Spring. O Spring pode controlar as instâncias adicionadas ao seu contêiner IoC, e uma das coisas que ele pode fazer é interceptar métodos que representam o comportamento dessas instâncias. Esse recurso é chamado de aspectar o método. A AOP do Spring é uma das formas mais comuns de interação da estrutura com o que seu aplicativo faz. Essa característica faz com que o Spring AOP também faça parte dos elementos essenciais. Como parte do Spring Core, também encontramos gerenciamento de recursos, internacionalização (i18n), conversão de tipos e SpEL. Encontraremos aspectos desses recursos em exemplos ao longo do livro.
 
 ### 1.2.2 Uso do recurso Spring Data Access para implementar a persistência do aplicativo

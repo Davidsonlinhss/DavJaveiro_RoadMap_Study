@@ -451,8 +451,27 @@ Essa classe é um **controlador REST** que implementa a interface `CartApi`. Ela
 ## Adding a Global Exception Handler
 Temos múltiplos controladores que consistem em múltiplos métodos. Cada método pode ter *checked exceptions* ou lançar *runtime exceptions*. Devemos ter um local centralizado para lidar com todos esses erros para melhorar a manutenção, modularidade e código limpo. 
 
-O Spring fornece um recurso #AOP ( #Aspect-Oriented-Programming é uma abordagem de programação que permite separar *preocupações transversais* da lógica principal do aplicativo. Essas *preocupações transversais* são funcionalidades que afetam várias partes do sistema, como tratamento de erros, **loggin**, **segurança** ou **monitoramente de desempenho**.
+O Spring fornece um recurso #AOP ( #Aspect-Oriented-Programming é uma abordagem de programação que permite separar *preocupações transversais* da lógica principal do aplicativo. Essas *preocupações transversais* são funcionalidades que afetam várias partes do sistema, como tratamento de erros, **loggin**, **segurança** ou **monitoramento de desempenho**.
 
+![[Pasted image 20250124183108.png]]
+
+As *classes interceptadoras*, *utilitárias* e *auxiliadoras* podem estar relacionadas ao conceito de Aspect-Oriented Programming AOP e às **preocupações transversais** no desenvolvimento de software. 
+
+A AOP é uma abordagem de programação que permite separar **preocupações transversais** do restante da lógica de negócio da aplicação. 
+
+As preocupações transversais *cross-cutting concerns* são funcionalidades que afetam várias partes de uma aplicação, como:
+- #Log (registro de evento);
+- #controle-de-transações;
+- #validação
+- #segurança 
+- #métricas e #melhoramento
+
+1. #Interceptadores: são um exemplo clássico de AOP. Eles podem ser utilizados para executar código antes, durante ou após a execução de métodos *em diferentes camadas* de nossa aplicação.
+Por exemplo, podemos usar interceptadores para registrar logs antes de um método ser executado, medir o tempo de execução das operações, validar entradas ou autenticar requisições.
+
+
+
+---
 Para isso. Basta escrever uma única classe anotada com *@ControllerAdvice*. Em seguida, basta adicionar *@ExceptionHandler* para cada tipo de exceção.
 
 Este método *@ExceptionHandler* gerará mensagens de erro amigáveis ao usuário com outras informações relacionadas.
@@ -468,4 +487,46 @@ No código de erro acima, usamos as seguintes propriedades:
 - **reqMethod** o método da requisição que gerou o erro
 
 Depois disso, escreveremos um **enum** chamado **ErrorCode** que conterá todas as chaves de exceção, incluindo erros definidos pelo usuário e seus respectivos códigos de erro:
- 
+```java
+public enum ErrorCode {
+    GENERIC_ERROR("PACKT-0001", "The system is unable to complete the request. Contact system support."),
+    HTTP_MEDIATYPE_NOT_SUPPORTED("PACKT-0002", "Requested media type is not supported. Please use application/json or application/xml as 'Content-Type' header value."),
+    HTTP_MESSAGE_NOT_WRITABLE("PACKT-0003", "Missing 'Accept' header. Please add 'Accept' header."),
+    HTTP_MEDIA_TYPE_NOT_ACCEPTABLE("PACKT-0004", "Requested 'Accept' header value is not supported. Please use application/json or application/xml as 'Accept' value."),
+    JSON_PARSE_ERROR("PACKT-0005", "Make sure request payload should be a valid JSON object."),
+    HTTP_MESSAGE_NOT_READABLE("PACKT-0006", "Make sure request payload should be a valid JSON or XML object according to 'Content-Type'.");
+
+    private String errCode;
+    private String errMsgKey;
+
+    ErrorCode(final String errCode, final String errMsgKey) {
+        this.errCode = errCode;
+        this.errMsgKey = errMsgKey;
+    }
+
+    public String getErrCode() {
+        return errCode;
+    }
+
+    public String getErrMsgKey() {
+        return errMsgKey;
+    }
+}
+```
+Adicionamos alguns enums de código de erro com seus códigos e mensagens. Também adicionamos mensagens de erro reais em vez de chaves de mensagem. Também podemos adicionar chaves de mensagem e incluir o arquivo de recursos em src/main/resources para internacionalização. 
+
+Em seguida, criamos uma classe utilitária para centralizar a lógica de criação de objetos de erro personalizados, facilitando o gerenciamento e a reutilização de código em diferentes partes da aplicação. Ao invés de instanciar e configurar objetos da classe #Error repetidamente em vários lugares do código, a classe *ErrorUtilis* encapsula essa lógica em um único método *createError*.
+Isso torna o código mais limpo e evita duplicação de lógica.
+[[ErrorUtils.java]]
+
+Finalmente nós vamos criar uma class para implementar o *Global Exception Handler:
+[[RestApiErrorHandler.java]]
+
+Marcamos a classe com *@ControllerAdvice*, o que permite que essa classe rastreie todo o processamento de requisições e respostas pelos controladores REST e nos permite tratar exceções usando *@ExceptionHandler*. 
+
+No código anterior, tratamos duas exceções - uma genérica de erro interno do servidor e a *HttpMediaTypeNotSupportException*. O método de tratamento apenas popula o objeto Error usando *ErrorCode*, *HttpServeletRequest* e *HttpStatus*. Finalmente ele retorna o erro encapsulado dentro de um ResponseEntity com o status HTTP apropriado.
+
+Neste código, também podemos adicionar exceções definidas pelo usuário. 
+
+## Testing the implementation of the API
+Funcionou essa merda!

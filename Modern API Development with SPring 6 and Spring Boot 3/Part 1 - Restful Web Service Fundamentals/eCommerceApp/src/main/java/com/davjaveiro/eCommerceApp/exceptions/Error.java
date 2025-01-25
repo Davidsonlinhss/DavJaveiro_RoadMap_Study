@@ -1,12 +1,14 @@
 package com.davjaveiro.eCommerceApp.exceptions;
 
+import org.apache.logging.log4j.util.Strings;
+
 public class Error {
     private static final long serialVersionUID = 1L;
     private String errorCode;
     private String message;
     private Integer status;
-    private String url = "Not available";
-    private String reqMethod "Not available";
+    private String url;
+    private String reqMethod;
 
     public String getErrorCode() {
         return errorCode;
@@ -36,15 +38,17 @@ public class Error {
         return url;
     }
 
-    public void setUrl(String url) {
+    public Error setUrl(String url) {
         this.url = url;
+        return this;
     }
 
     public String getReqMethod() {
         return reqMethod;
     }
 
-    public void setReqMethod(String reqMethod) {
+    public Error setReqMethod(String reqMethod) {
         this.reqMethod = reqMethod;
+        return this;
     }
 }

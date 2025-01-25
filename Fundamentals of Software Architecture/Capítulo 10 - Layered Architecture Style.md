@@ -15,8 +15,9 @@ Em alguns casos, a camada de negócios e persistência são combinadas em uma ú
 
 ![[Capítulo 10 - Layered Architecture Style.png]]
 
-As variações na topologia das camadas.
+### As variações na topologia das camadas.
 A **primeira variante** combina as camadas de apresentação, negócios e persistência em uma única unidade de implantação, com a camada de banco de dados geralmente representada como um banco de dados físico externo (ou sistema de arquivos). 
+
 A **segunda variante** separa fisicamente a camada de apresentação em sua própria em sua própria unidade de implantação, enquanto as camadas de negócio e persistência são combinadas em uma segunda unidade de implantação. Novamente, neste tipo de combinação, a camada de banco de dados continua fisicamente separada das demais.
 
 Uma **terceira variante** combina todas as quatro camadas padrão em uma única implantação, incluindo a camada de banco de dados. Essa variante pode ser útil para aplicações menores que utilizam um banco de dados embutido internamente ou um banco de dados em memória. Muitos produtos "on-premises" (instalado localmente) são construídos e entregues aos clientes usando a terceira variante. 
@@ -25,9 +26,9 @@ Cada camada possuí um papel e responsabilidades específicas dentro da arquitet
 
 Cada camada na arquitetura forma uma abstração sobre o trabalho necessário para atender a uma solicitação de negócio específica. Por exemplo, a camada de apresentação não precisa saber ou se preocupar com a forma de obter os dados de um cliente; ela só precisa exibir essas informações na tela em um formato específico. Da mesma forma, a camada de negócios não precisa se preocupar com a formatação dos do cliente para exibição ou mesmo de onde esses valores vêm; ela apenas precisa obter os dados da camada de persistência, aplicar a lógtica de negócio aos dados (como calculara valores ou agregar dados) e passar essas informações para a camada de apresentação.
 
-O conceito de separação de responsabilidades no estilo de arquitetura em camadas facilita a criação de modelos eficazes de papéis e responsabilidades dentro da arquitetura. Componentes em uma camada específica têm escopo limitado, lidando apenas com a lógica pertinente àquela camada. Por exemplo, componentes na camada de apresentação lidam exclusivamente com a lógica de apresentação. Isso permite que os desenvolvedores aproveitem sua expertise técnica específica, concentrando-se nos aspectos técnicos do domínio, como lógica de apresentação ou lógica de persistência. 
+O conceito de *separação de responsabilidades* no estilo de arquitetura em camadas facilita a criação de modelos eficazes de papéis e responsabilidades dentro da arquitetura. Componentes em uma camada específica têm escopo limitado, lidando apenas com a lógica pertinente àquela camada. Por exemplo, componentes na camada de apresentação lidam exclusivamente com a lógica de apresentação. *Isso permite que os desenvolvedores aproveitem sua expertise técnica específica*, concentrando-se nos aspectos técnicos do domínio, como lógica de apresentação ou lógica de persistência. 
 
-O trade-off desse benefício é a falta de agilidade geral, ou seja, a capacidade de responder rapidamente às mudanças. **A arquitetura em camadas é uma arquitetura particionada tecnicamente** (em oposição a uma arquitetura particionada por domínio). Em vez de agrupar componentes por domínio (como "cliente"), eles são agrupados por sua função técnica na arquitetura (como apresentação ou negócios). 
+O trade-off desse benefício é a falta de agilidade geral, ou seja, *a capacidade de responder rapidamente às mudanças*. **A arquitetura em camadas é uma arquitetura particionada tecnicamente** (em oposição a uma arquitetura particionada por domínio). Em vez de agrupar componentes por domínio (como "cliente"), eles são agrupados por sua função técnica na arquitetura (como apresentação ou negócios). 
 
 Consequentemente, qualquer domínio de negócio específico acaba sendo **distribuído por todas as camadas da arquitetura**. Por exemplo, o domínio "cliente" pode estar presente na camada de apresentação, na camada de negócios, na camada de regras, na camada de serviços e na camada de banco de dados, tornando difícil implementar mudanças nesse domínio. Por isso, uma abordagem de design orientado a domínio #DDD <span style="background:#d4b106">não funciona tão bem com o estilo de arquitetura em camadas</span>. 
 
