@@ -337,7 +337,7 @@ String twoLines = processFile((BufferedReader br) -> br.readLine() + br.readLine
 ```
 
 ## 3.4 Using functional interfaces
-Como aprendemos na seção 3.2.1, uma interface funcional especifica exatamente um único método abstrato. Interfaces funcionais são úteis porque a **assinatura do método abstrato** pode descrever a assinatura de uma expressão lambda. A assinatura do método abstrato de uma interface funcional é chamada de *descritor de função* ou *function descriptor*. Para usar diferentes expressões lambda, precisamos de um conjunto de interfaces funcionais que possam descrever descritores de função comuns. 
+Como aprendemos na seção 3.2.1, uma interface funcional especifica exatamente um único método abstrato. Interfaces funcionais são úteis porque a **assinatura do método abstrato** pode descrever a assinatura de uma expressão lambda. A assinatura do método abstrato de uma interface funcional é chamada de *descritor de função* ou *function descriptor*. Para usar diferentes expressões lambda, precisamos de um conjunto de interfaces funcionais que possam descrever descritores de função comuns.  
 
 Várias interfaces funcionais já estão disponíveis na API Java, como #Comparable, #Runnable e #Callable. 
 
@@ -354,15 +354,37 @@ public interface Predicate<T> {
 public <T> List<T> filter(List<T> list, Predicate<T> p) {
 	List<T> results = new ArrayList<>();
 	for(T t: list) {
-		if(p.test(t)) {
-			results.add(t);
+		if(p.test(t)) { // para cada t em list, (if = true), add t in results
+			results.add(t); // add se atender ao critério
 		}
 	}
+	return results; // retorna os elementos que passaram no filtro
 }
-Predicate<String> nonEmptyStringPredicate = (String s) -> !s.isEmpty();
+Predicate<String> nonEmptyStringPredicate = (String s) -> !s.isEmpty(); // verifica se não é vazia
 List<String> nonEmpty = filter(listOfStrings, nonEmptyStringPredicate);
-```
+// filter percorre cada string na lista listOfStrings
+// Para cada string, ele chama nonEmptyStringPredicate.test(s);
+// no final, nonEmpty contém apenas as strings não vazias da lista original
 
+
+// Lista de string com algumas vazias
+List<String> listOfStrings = Arrays.asList("Java", "", "Predicate", "Lambda", "");
+
+
+// Definindo o predicado para verificar strings não vazias
+Predicate<String> nonEmptyStringPredicate = (String s) -> !s.isEmpty();
+
+// Filtrando a lista com base no predicado
+List<String> nonEmpty = filter(listOfStrings, nonEmptyStringPredicate);
+
+// Exibindo o resultado
+System.out.println("Lista original: " + listOfStrings);
+System.out.println("Lista sem strings vazias: " + nonEmpty);
+
+
+```
+Fazendo uma analogia simples:
+Assim como no metabolismo, onde moléculas passam por reações catalisadas por enzimas para formar novos produtos, no Java, no exemplo acima, os elementos de uma lista passam pelo "processo" definido pelo **Predicate** para gerar um novo conjunto de elementos filtrados. Essa é a "química" da programação funcional. 
 ### 3.4.2 Consumer
 A interface *java.util.function.Consumer* define um método abstrato chamado #accept, que recebe um objeto do tipo genérico T e não retorna nenhum resultado (void). Podemos usar essa interface quando precisarmos acessar um objeto do tipo T e realizar algumas operações sobre ele. Por exemplo, podemos utilizá-la para criar um método forEach, que recebe uma lista de Inteiros e aplica uma operação em cada elemento dessa lista:
 ```java
@@ -377,6 +399,35 @@ public <T> void forEach(List<T> list, Consumer<T> c) {
 
 forEach(Arrays.asList(1,2,3,4,5), (Integer i) -> System.out.println(i));
 ```
+A interface #Consumer pode ser explicada usando uma analogia com uma fábrica que processa materiais. Imagine que tenhamos várias peças brutas (os elementos da lista), e queremos realizar alguma operação em cada uma dessas peças, polir ou inspecionar. Nesse caso:
+- As peças brutas (os elementos da lista) são os objetos do tipo genérico T;
+- A máquina da fábrica é a interface #Consumer. Ela aceita uma peça de cada vez e realiza a operação específica sobre ela.
+- O método *accept* é como a ação da máquina: ela executa a operação definida para processar cada peça.
+
+No nosso exemplo de código acima, o método *forEach* é como uma linha de produção. Ele pega cada peça (elemento da lista) e a envia a máquina (o *consumer*), que realiza a operação determinada.
+
+**Array.asList**
+O método estático #asList da classe #Arrays retorna uma lista que é passada para o construtor para a criação de um **ArrayList**.
+Exemplo:
+```java
+String[] array = {"Red", "Green", "Blue"};
+ArrayList<String> list = new ArrayList<>(Array.asList(array));
+```
+A lista criada por *asList* possuí tamanho fixo, não podemos adicionar ou remover elementos com os métodos #add ou #remove, caso utilizemos, uma exceção poderá ser lançada como #UnsupportedOperationException. 
+
+Podemos passar diretamente o retorno de Arrays.asList() como argumento de um método:
+```java
+forEach(Arrays.asList(1, 2, 3, 4, 5), (Integer i) -> System.out.println(i));
+```
+
+**Vantagens de passar diretamente**
+- Código mais conciso: evitamos a criação de uma variável intermediária para a lista, reduzindo o número de linhas de código;
+- **Melhora a legibilidade**: para quem lê o código, fica claro que a lista é apenas temporária e usada unicamente naquele método.
+
+**Quando usar uma variável intermediária?**
+- **Reutilização da lista:** se a lista for usada em outros lugares do nosso código;
+- **Depuração:** para inspecionar ou validar o conteúdo da lista antes de passá-la ao método;
+- **Clareza:** se o método tiver muitos argumentos ou se a criação da lista for complexa.
 
 ### 3.4.3 Function
 A interface *java.util.function.Function<T, R>* define um método abstrato chamado #apply, que recebe um objeto do tipo genérico T como entrada e retorna um objeto do tipo genérico R. Podemos usar essa interface quando precisarmos definir  uma expressão lambda que mapeia informações de um objeto de entrada para uma saída (por exemplo, extraindo o peso de uma maçã ou mapeando uma String para seu comprimento). No exemplo a seguir, mostramos como podemos utilizá-la para criar um método #map que transforma uma lista de Strings em uma lista de Inteiros contendo o comprimento de cada String.
@@ -389,8 +440,20 @@ public <T, R> List<R> map(List<T> list, Function<T, R> f) {
 	List<R> result = new ArrayList<>();
 	for(T t: list) {
 		result.add(f.apply(t));
-	}
+	} 
 	return result;
+}
+
+public class Main {
+	public static void main(String[] args) {
+		List<String> words = Arrays.asList("Apple", "banana", "cherry");
+
+		Function<String, Integer> lengthFunction = (String s) -> s.length();
+
+		List<Integer> lengths = map(words, lengthFunction);
+
+		System.out.println(lengths); // Saída: [5, 6, 6]
+	}
 }
 ```
 
@@ -398,7 +461,7 @@ public <T, R> List<R> map(List<T> list, Function<T, R> f) {
 Descrevemos três interfaces funcionais que *são genéricas*: #Predicate, #Consumer e #Function. Também existem **interfaces funcionais** que são especializadas com certos **tipos**. 
 
 Para relembrar um pouco: todo tipo em Java é ou um **tipo de referência** (por exemplo, Byte, Integer, Object, List) ou um **tipo primitivo** (por exemplo, int, double, byte, char). 
-No entanto, os parâmetros genéricos (por exemplo, o T em Consumer) podem ser vinculados apenas a tipos de referência. Isso se deve à forma como os genéricos são implementados internamente. Como resultado, em Java existe um mecanismo para converter um tipo primitivo em um tipo de referência correspondente. Esse mecanismo é chamado de #boxing. A abordagem oposta (converter um tipo de referência em um tipo primitivo correspondente) é **chamada de unboxing**. Java também possui um mecanismo autoboxing para facilitar a tarefa: as operações de boxing e unboxing que são realizadas automaticamente. Por exemplo, é por isso que o seguinte código é válido (um int é convertido em um Integer):
+No entanto, os parâmetros genéricos (por exemplo, o T em Consumer) podem ser vinculados apenas a *tipos de referência*. Isso se deve à forma como os genéricos são implementados internamente. Como resultado, em Java existe um mecanismo para converter um tipo primitivo em um tipo de referência correspondente. Esse mecanismo é chamado de #boxing. A abordagem oposta (converter um tipo de referência em um tipo primitivo correspondente) é **chamada de unboxing**. Java também possui um mecanismo autoboxing para facilitar a tarefa: as operações de boxing e unboxing que são realizadas automaticamente. Por exemplo, é por isso que o seguinte código é válido (um int é convertido em um Integer):
 ```java
 List<Integer> list = new ArrayList<>();
 for (int i = 300; i < 400; i++)
