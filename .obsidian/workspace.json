@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
+                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 3 - Lambda Expressions"
+              "title": "Chapter 3 - API Specifications and Implementation"
             }
           },
           {
@@ -221,6 +221,7 @@
   "active": "d933c31b36862ce1",
   "lastOpenFiles": [
     "Modern Java In Action/Capítulo 2 - Passing code with behavior parameterization/Capítulo 2 - Passing code with behavior parameterization.md",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
     "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
     "Chapter 13 - Abstract Classes and Interfaces.png",
@@ -231,7 +232,6 @@
     "Introduction to Java Programming and Data STRUCTURES/Chapter 1 - Introduction to Computers, Programs and Java/imagens",
     "Introduction to Java Programming and Data STRUCTURES/Chapter 1 - Introduction to Computers, Programs and Java",
     "Introduction to Java Programming and Data STRUCTURES",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 3/Chapter 3 - API Specifications and Implementation.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/problems/problems-report.html",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/problems",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/tests/test/js/report.js",

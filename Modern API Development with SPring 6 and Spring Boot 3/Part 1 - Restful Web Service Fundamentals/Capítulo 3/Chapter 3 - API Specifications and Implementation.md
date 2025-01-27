@@ -529,4 +529,71 @@ No código anterior, tratamos duas exceções - uma genérica de erro interno do
 Neste código, também podemos adicionar exceções definidas pelo usuário. 
 
 ## Testing the implementation of the API
-Funcionou essa merda!
+Após o código estar pronto para rodar, podemos compilar e buildar o artefato usando o seguinte comando através da pasta root do projeto:
+```sh
+./gradlew clean build
+```
+
+Similarmente, podemos fazer uma chamada para a API para adicionar um item ao carrinho, como mostrado:
+```sh
+$ curl --request POST 'http://localhost:8080/api/v1/carts/1/items' \ --header 'Content-Type: application/json' \ --header 'Accept: application/json' \ --data-raw '{ "id": "1", "quantity": 1, "unitPrice": 2.5 }' []
+```
+
+Acima, obtemos um [] array vazio como resposta, pois, na implementação, apenas retornamos a coleção vazia. Precisamos fornecer o cabeçalho **Content-Type** nesta requisição porque enviamos o payload (objeto item) junto com a solicitação. É possível alterar o **Content-type** para **application/xml** caso o payload esteja escrito em XML. 
+
+## Resumo
+Neste capítulo, optamos pela abordagem #design-first para escrever serviços web RESTful. Aprendemos como escrever uma descrição de API usando #OAS e como gerar modelos e interfaces Java da API usando a ferramenta *Swagger Codegen* (usando o plugin Gradle). Também implementamos um **Global Exception Handler** para centralizar o tratamento de todas as exceções. Uma vez que tenhamos a interface Java da API, podemos escrever nossas implementações para a lógica de negócios. Agora, sabemos como usar OAS e Swagger Codegen para escrever APIs RESTFul. 
+
+## Question
+1. What is OpenAPI and how does it help?
+A OpenAPI é uma especificação para descrever APIs RESTful de forma padronizada e independente de linguagem. Ele permite que desenvolvedores definam a estrutura, endpoints, métodos HTTP, parâmetros, tipos de dados e respostas de uma API em  um único documento, geralmente escrito no formato **YAML** ou **JSON**. Ferramentas baseadas no OpenAPI podem gerar código automaticamente, como clientes da API servidores, ou até mesmo documentação interativa (ex.: Swagger UI).
+
+2. How can you define a nested array in a model in a YAML OAS-based file?
+Em um arquivo YAML baseado na especificação OAS (OpenAPI Specification), podemos definir um array aninhado em um modelo utilizando type: array e especificando os itens do array com outro **type: array**. 
+- **nestedArray**: define o nome da propriedade no modelo;
+- **type: array:** declara que essa propriedade é um array;
+- **items:** define os elementos desse array como outro array
+- **type: string**: especifica que os itens do array interno são strings. Pode ser ajustado para outros tipos, como **integer** ou até mesmo objetos. 
+Exemplo de conteúdo:
+```json
+{
+	"nestedArray": [
+		["item1", "item2"]
+		["item3", "item4"]
+	]
+}
+```
+Isso é útil para representar estruturas de dados hierárquicas ou matrizes bidimensionais em uma API.
+
+---
+3. What annotation do we need to implement a Global Exception Handler?
+No Spring Framework, para implementar um **Global Exception Handler**, precisamos usar a anotação *@ControllerAdvice*. Essa anotação transforma a classe marcada em um componente global que pode tratar exceções em todos os controladores da aplicação.
+**Etapas principais:**
+1. Use @ControllerAdvice: aplica o escopo global para capturar exceções;
+2. Use @ExceptionHandler: define métodos específicos para tratar tipos específicos de exceções.
+
+**Entendendo melhor a estrutura modular para tratamento de exceções**
+1. **Quando uma exceção ocorre no sistema**
+Quando ocorre uma exceção em qualquer ponto da aplicação (por exemplo, um erro genérico ou uma requisição com o tipo de mídia não suportado), o **Spring** encaminha a exceção para o *@ControllerAdvice*. 
+Nesse caso, a classe RestApiErrorHandler é responsável por capturar e tratar essas exceções globalmente. 
+
+2. **Classe *RestApiErrorHandler***
+Essa é a classe central de tratamento de erros, anotada com @ControllerAdvice, o que faz com que ela atue como interceptadora global de exceções para todos os controladores. Cada método marcado com *@ExceptionHandler* trata um tipo específico de exceção.
+
+**Métodos importantes:**
+1. *handleException*:
+- É um método genérico que captura qualquer exceção da classe **Exception** (base de quase todas as exceções no Java).
+- Ele utiliza o utilitário **ErrorUtils** para criar um objeto **Error** com as informações do erro.
+- Adiciona informações como URL e método HTTP da requisição e retorno uma resposta *ResponseEntity* com código *500 (Internal Server Error)*.
+
+2. *handleHttpMediaTypeSupportedException:*
+- Captura exceções específicas do tipo *HttpMediaTypeNotSupportedException*, que ocorrem quando o cliente envia um tipo de mídia não suportado pelo servidor (ex.: tipo de **Content-type** inválido).
+- Também cria um objeto **Error** via **ErrorUtils** e retorna uma resposta com o código 415 (Unsupported Media Type).
+
+3. **Classe *Error***
+Essa classe é um #POJO (Plain Old Java Object) que representa a estrutura do erro retornado para o cliente.  Contém os seguintes atributos:
+- **ErrorCode:** código único do erro, definido no **ErrorCode**
+- **Message:** mensagem de erro amigável (ex.:"Requested media type is not supported").
+- **status:** código de status HTTP (ex.: 500, 415);
+- **url:** URL da requisição onde ocorreu o erro;
+- **reqMethod:** método HTTP da requisição (ex.: GET, POST).
