@@ -470,3 +470,42 @@ for (int i = 300; i < 400; i++)
 
 Mas isto gera um custo de desempenho, os valores encapsulados são um invólucro em torno dos tipos primitivos e **são armazenados na heap**. Portanto, os valores encapsulados utilizam mais memória e requerem buscas adicionais na memória para acessar o valor primitivo encapsulado.
 
+1. **Alocação de Objetos na Memória**
+- Tipos primitivos são armazenados diretamente na **pilha (stack)**, que é uma região de memória mais rápida e eficiente.
+- Tipos de referência (objetos) são armazenados no #heap, que é uma região de memória mais lenta e sujeita a gerenciamento de garbage collection;
+- Quando ocorre o boxing, um novo objeto é criado no heap para armazenar o valor primitivo. Essa alocação de memória é mais custosa do que simplesmente armazenar o valor primitivo na pilha.
+
+2. **Garbage Collection**
+- Objetos criados no heap precisam ser gerenciados pelo **garbage collector** (coletor de lixo) do Java.
+- Quando muitos objetos são criados devido ao boxing (por exemplo, em loops ou operações repetitivas), o garbage collector precisa trabalhar mais para liberar memória, o que pode causar pausas e impactar o desempenho da aplicação.
+
+3. **Uso de Memória**
+- Objetos consomem mais memória do que tipos primitivos. Por exemplo: Um #int ocupa *4 bytes* já um objeto do tipo #integer ocupa *16 bytes* (ou mais, dependendo da JVM), devido ao overhead do objeto (como cabeçalho, referências, etc).
+- Esse aumento no uso de memória pode levar a mais alocações e, consequentemente, a mais trabalho para o garbage collector.
+
+**Como Evitar o Custo do Boxing?**
+1. **Usar tipos primitivos sempre que possível:**
+- Evite usar tipos de referência (como *Integer*, *Double*, etc) quando tipos primitivos #int, #double são suficientes.
+
+2. **Estruturas de dados especializados:**
+- Use classes como #IntStream, #LongStream, ou bibliotecas como **Eclipse Collection ou Trove**, que evitam o boxing ao trabalhar com tipos  primitivos.
+
+3. **Cuidado com APIs que exigem tipos de referência**
+- Algumas APIs (como coleções do Java, por exemplo, **List< Integer >**) exigem tipos de referência. Nesses casos, avalie se o uso é realmente necessário ou se há alternativas mais eficientes. 
+
+O Java 8 também adicionou uma versão especializada de interfaces funcionais que descrevemos anteriormente, a fim de evitar operações de autoboxing quando as entradas ou saídas são tipos primitivos. Por exemplo, no código a seguir, o uso de um *IntPredicate* evita a operação de boxing do valor 1000, enquanto o uso de um *Predicate< Integer>* faria o boxing do argumento 1000 para um objeto *Integer*:
+```java
+public interface IntPredicate {
+	boolean test(int t);
+}
+
+IntPredicate evenNumbers = (int i) -> i % 2 == 0;
+evenNumbers.test(1000); // True (no boxing)
+
+Predicate<Integer> oddNumbers = (Integer i) -> i % 2 != 0;
+oddNumbers.test(1000); // False (boxing)
+```
+
+Essas interfaces funcionais evitam o autoboxing, pois trabalham diretamente com tipos primitivos.
+Quando usamos *IntPredicate*, o valor de 1000 é tratado como *int*, sem conversão para **Integer**. 
+Quando usamos *Predicate< Integer>*, o valor de 1000 é convertido automaticamente para **Integer**, o que gera um custo adicional.
