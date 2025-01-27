@@ -597,3 +597,37 @@ Essa classe é um #POJO (Plain Old Java Object) que representa a estrutura do er
 - **status:** código de status HTTP (ex.: 500, 415);
 - **url:** URL da requisição onde ocorreu o erro;
 - **reqMethod:** método HTTP da requisição (ex.: GET, POST).
+Essa classe facilita a #serialization do erro em JSON ou XML para o cliente.
+
+4. **Enumeração *ErrorCode***
+Essa enumeração serve como um **repositório central de códigos e mensagens de erro**, garantindo consistência em todo os sistema.  Cada código tem:
+- **errCode:** Código identificador único do erro (ex.: PACKT-0001);
+- **errMsgKey:** mensagem descritiva erro para o cliente
+Exemplo do erro:
+```java
+GENERIC_ERROR("PACKT-0001", "The system is unable to complete the request, Contact system support.")
+```
+5. **Classe *ErrorUtils***
+Essa é uma classe de utilitário que facilita a criação de objetos **Error**. Ela encapsula a lógica de preenchimento de atributos básicos, como:
+- Mensagem (message);
+- Código do erro (errorCode);
+- Código de status HTTP (status).
+
+**Exemplo:**
+O método *createError* recebe as informações principais do erro e retorna um objeto Error preenchido. Isso evita a duplicação de código nos métodos do *RestApiErrorHandler.*
+
+6. **Fluxo Completo do Tratamento**
+1. **Exceção é lançada**
+O cliente envia uma requisição com o cabeçalho *Content-type* inválido. 
+
+2. **Spring direciona para o *RestApiErrorHandler***:
+O spring identifica que o tipo de exceção é *HttpMediaTypeNotSupoortedException* e direciona para o método *handleHtppMediaTypeNotSupportedException*.
+
+3. **Criação do objeto *Error***
+O método usa *ErrorUtils* para criar um objeto *Error* com o código de erro (PACK-0002), mensagem descritiva e informações adicionais (URL, método HTTP).
+
+4. **Resposta ao cliente:**
+O método retorna um **ResponseEntity** com o objeto *Error* convertido em JSON ou XML e o código de status HTTP correspondente (ex.: 415).
+
+Essa implementação é chamada de **Global Exception Handler**, uma prática amplamente utilizada em aplicações Spring para tratar erros de forma centralizada e consistente. 
+
