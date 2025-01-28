@@ -241,7 +241,7 @@ Vale destacar que a anotação *@FunctionalInterface* não é obrigatória, mas 
 ## 3.3 Putting lambdas into practice: the execute-around pattern
 Vamos analisar um exemplo de como lambdas, junto com a parametrização de comportamento (behavior parameterization), podem  ser usados na prática para tornar seu código mais flexível e conciso.
 
-Um padrão recorrente no processamento de recursos (por exemplo, ao lidar com arquivos ou banco de dados) é abrir um recurso, realizar algum processamento nele e, em seguida, fechar o recurso. As fases de configuração *setup* e limpeza *cleanup* são sempre semelhantes e envolvem o código principal que realiza o processamento. Isso é chamado de execute-around pattern, como ilustrado na figura 3.2.
+Um padrão recorrente no processamento de recursos (por exemplo, ao lidar com arquivos ou banco de dados) é abrir um recurso, realizar algum processamento nele e, em seguida, fechar o recurso. As fases de configuração *setup* e limpeza *cleanup* são sempre semelhantes e envolvem o código principal que realiza o processamento. Isso é chamado de #execute-around-pattern, como ilustrado na figura 3.2.
 
 ![[Capítulo 3 - Lambda Expressions.png]]
 
@@ -509,3 +509,45 @@ oddNumbers.test(1000); // False (boxing)
 Essas interfaces funcionais evitam o autoboxing, pois trabalham diretamente com tipos primitivos.
 Quando usamos *IntPredicate*, o valor de 1000 é tratado como *int*, sem conversão para **Integer**. 
 Quando usamos *Predicate< Integer>*, o valor de 1000 é convertido automaticamente para **Integer**, o que gera um custo adicional.
+
+Em geral, o **tipo primitivo apropriado** precede os nomes das interfaces funcionais que possuem uma especialização para o parâmetro de tipo de entrada (por exemplo, #DoublePredicate, #IntConsumer, #LongBinaryOperator, #IntFunction, e assim por diante). A interface #Function também possui variantes para o parâmetro de tipo de saída: #ToIntFunction< T>, #IntToDoubleFunction, e assim por diante...
+
+A tabela 3.2 resume as interfaces funcionais mais comumente usadas disponíveis na API do Java e seus descritores de função, juntamente com suas especializações para tipos primitivos. Precisamos ter em mente estas são apenas interfaces de kit inicial, podemos sempre criar nossas próprias interfaces. <span style="background:#b1ffff">Criar nossas próprias interfaces também pode ajudar quando um nome específico do domínio contribuí para a compreensão e manutenção do programa</span>.
+
+Lembramos sempre da notação **(T, U) -> R**, ela nos mostra como pensar sobre um descritor de função. O lado esquerda da seta é uma lista que representa os tipos de argumentos, e o lado direito representa os tipos dos resultados. Neste caso, representa uma função com dois argumentos de tipos genéricos T e U, respectivamente, e que tem um tipo de retorno R.
+
+![[Capítulo 3 - Lambda Expressions-1.png]]
+
+To summarize the discussion about functional interfaces and lambdas, table 3.3 provides a summary of use cases, examples of lambdas, and functional interfaces that can be used:
+![[Capítulo 3 - Lambda Expressions-2.png]]
+
+**E quanto as exceções, lambdas e interfaces funcionais?**
+Note que nenhuma das interfaces funcionais permite que uma *checked exception* seja lançada. Temos duas opções caso precisemos que o corpo de uma expressão lambda lance uma exceção:
+1. Definir sua própria interface funcional que declare uma *checked exception*;
+2. Ou envolver o corpo da lambda em um bloco *try/catch*.
+Por exemplo, na seção 3.3, introduzimos uma nova interface funcional chamada *BufferedReaderProcessor* que declarava explicitamente uma *IOException*:
+```java
+@FunctionalInterface
+public interface BufferedReaderProcessor {
+	String process(BufferedReader b) throws IOException;
+}
+```
+
+Com isso, podemos utilizá-la assim:
+```java
+BufferedReaderProcessor p = (BufferedReader br) -> br.readLine();
+```
+
+No entanto, podemos usar uma API que espera uma interface funcional, como *Function< T, R>*, e não tem a opção de criar sua própria. No próximo capítulo, veremos que a API de Streams faz uso intenso das interfaces funcionais da tabela 3.2. Nesse caso, podemos capturar explicitamente a *checked exception* da seguinte forma:
+```java
+Function<BufferedReader, String> f =
+	(BufferedReader b) -> {
+		try {
+			return b.readLine();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+```
+
+## 3.5 Type checking, type inference, and restrictions

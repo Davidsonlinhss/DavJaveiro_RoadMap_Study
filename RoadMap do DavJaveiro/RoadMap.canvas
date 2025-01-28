@@ -156,148 +156,6 @@
       "height": 1526
     },
     {
-      "id": "f35686000e0cddf7",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
-      "styleAttributes": {},
-      "x": 4146,
-      "y": -13643,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "a2595995daec73e6",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
-      "styleAttributes": {},
-      "x": 3203,
-      "y": -13425,
-      "width": 260,
-      "height": 210,
-      "color": "#ffffff"
-    },
-    {
-      "id": "d8218e1451a358e2",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
-      "styleAttributes": {},
-      "x": 4146,
-      "y": -13316,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "48eeaeb6594f4d17",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 7 - Heranças.md",
-      "styleAttributes": {},
-      "x": 4146,
-      "y": -12662,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "7ad9b858444d00d8",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
-      "styleAttributes": {},
-      "x": 4146,
-      "y": -12989,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "69e567e4932269a3",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 8 - Pacotes e interfaces.md",
-      "styleAttributes": {},
-      "x": 4146,
-      "y": -12335,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "03bb7707f5c1f1cc",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 9 - Tratamento de Exceções.md",
-      "styleAttributes": {},
-      "x": 4146,
-      "y": -12008,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "a7f6f90e285ce4b2",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 10 - Usando IO.md",
-      "styleAttributes": {},
-      "x": 4153,
-      "y": -11681,
-      "width": 260,
-      "height": 226,
-      "color": "4"
-    },
-    {
-      "id": "2a3e4399b2c8ac4a",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
-      "styleAttributes": {},
-      "x": 4146,
-      "y": -11346,
-      "width": 274,
-      "height": 218,
-      "color": "4"
-    },
-    {
-      "id": "ae98440bae032737",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
-      "styleAttributes": {},
-      "x": 4139,
-      "y": -11019,
-      "width": 274,
-      "height": 339,
-      "color": "4"
-    },
-    {
-      "id": "51e79e37835a9bbc",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
-      "styleAttributes": {},
-      "x": 4146,
-      "y": -10571,
-      "width": 274,
-      "height": 273,
-      "color": "4"
-    },
-    {
-      "id": "a4ccf6139a71624b",
-      "type": "link",
-      "url": "https://mkyong.com/java/java-how-to-read-a-file/",
-      "styleAttributes": {},
-      "x": 2080,
-      "y": -12043,
-      "width": 1123,
-      "height": 951
-    },
-    {
-      "id": "0b6dc78bdd212b7d",
-      "type": "file",
-      "file": "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/Capítulo 14 - Expressões lambda e referências de método.md",
-      "styleAttributes": {},
-      "x": 4146,
-      "y": -10188,
-      "width": 274,
-      "height": 315,
-      "color": "4"
-    },
-    {
       "id": "02383c611ce857f1",
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/Mock Book.png",
@@ -336,16 +194,6 @@
       "y": 5927,
       "width": 2000,
       "height": 2506
-    },
-    {
-      "id": "125af518e7bc2ae8",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Spring Start Here.png",
-      "styleAttributes": {},
-      "x": 12545,
-      "y": 5883,
-      "width": 2070,
-      "height": 2594
     },
     {
       "id": "3c8a097bd1cf703b",
@@ -718,21 +566,11 @@
       "height": 880
     },
     {
-      "id": "ea1c45dcc9c0b891",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Java Para Iniciantes Book.png",
-      "styleAttributes": {},
-      "x": 12768,
-      "y": -12537,
-      "width": 1625,
-      "height": 2349
-    },
-    {
       "id": "fe9f3a5b8f231a01",
       "type": "file",
       "file": "Pasted image 20250120222810.png",
       "styleAttributes": {},
-      "x": 12599,
+      "x": 12543,
       "y": 1120,
       "width": 1963,
       "height": 2460
@@ -742,7 +580,7 @@
       "type": "file",
       "file": "RoadMap do DavJaveiro/Covers/Modern Java In Action.png",
       "styleAttributes": {},
-      "x": 12628,
+      "x": 12573,
       "y": -3840,
       "width": 1904,
       "height": 2388,
@@ -800,16 +638,6 @@
       "color": "4"
     },
     {
-      "id": "1f704a86abaf0841",
-      "type": "file",
-      "file": "RoadMap do DavJaveiro/Covers/Introduction to Java.png",
-      "styleAttributes": {},
-      "x": 9473,
-      "y": -16480,
-      "width": 2038,
-      "height": 2550
-    },
-    {
       "id": "0df6422df1570444",
       "type": "file",
       "file": "Pasted image 20250120222409.png",
@@ -828,6 +656,178 @@
       "y": -21967,
       "width": 1194,
       "height": 1493
+    },
+    {
+      "id": "f35686000e0cddf7",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 4 - Introdução a classes, objetos e métodos.md",
+      "styleAttributes": {},
+      "x": 4146,
+      "y": -13849,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "a2595995daec73e6",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Bubble.java",
+      "styleAttributes": {},
+      "x": 3203,
+      "y": -13631,
+      "width": 260,
+      "height": 210,
+      "color": "#ffffff"
+    },
+    {
+      "id": "d8218e1451a358e2",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 5 - Mais tipos de dados e operadores/Capítulo 5 - Mais tipos de dados e operadores.md",
+      "styleAttributes": {},
+      "x": 4146,
+      "y": -13522,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "7ad9b858444d00d8",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 6 - Verificação minuciosa dos métodos e classes/Capítulo 6 - Verificação minuciosa dos métodos e classes.md",
+      "styleAttributes": {},
+      "x": 4146,
+      "y": -13195,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "48eeaeb6594f4d17",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 7 - Heranças.md",
+      "styleAttributes": {},
+      "x": 4146,
+      "y": -12868,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "69e567e4932269a3",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 8 - Pacotes e interfaces.md",
+      "styleAttributes": {},
+      "x": 4146,
+      "y": -12541,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "03bb7707f5c1f1cc",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 9 - Tratamento de Exceções.md",
+      "styleAttributes": {},
+      "x": 4146,
+      "y": -12214,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "a7f6f90e285ce4b2",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 10 - Usando IO.md",
+      "styleAttributes": {},
+      "x": 4153,
+      "y": -11887,
+      "width": 260,
+      "height": 226,
+      "color": "4"
+    },
+    {
+      "id": "2a3e4399b2c8ac4a",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 11 - Programação com Várias Threads.md",
+      "styleAttributes": {},
+      "x": 4146,
+      "y": -11552,
+      "width": 274,
+      "height": 218,
+      "color": "4"
+    },
+    {
+      "id": "ae98440bae032737",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações/Capítulo 12 - Enumerações, autoboxing, importação estática e anotações.md",
+      "styleAttributes": {},
+      "x": 4139,
+      "y": -11225,
+      "width": 274,
+      "height": 339,
+      "color": "4"
+    },
+    {
+      "id": "51e79e37835a9bbc",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 13 - TIpos Genéricos/Capítulo 13 - Tipos Genéricos.md",
+      "styleAttributes": {},
+      "x": 4146,
+      "y": -10777,
+      "width": 274,
+      "height": 273,
+      "color": "4"
+    },
+    {
+      "id": "0b6dc78bdd212b7d",
+      "type": "file",
+      "file": "Java Para Iniciantes/Capítulo 14 - Expressões lambda e referências de método/Capítulo 14 - Expressões lambda e referências de método.md",
+      "styleAttributes": {},
+      "x": 4146,
+      "y": -10394,
+      "width": 274,
+      "height": 315,
+      "color": "4"
+    },
+    {
+      "id": "ea1c45dcc9c0b891",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Java Para Iniciantes Book.png",
+      "styleAttributes": {},
+      "x": 7200,
+      "y": -13849,
+      "width": 1625,
+      "height": 2349
+    },
+    {
+      "id": "a4ccf6139a71624b",
+      "type": "link",
+      "url": "https://mkyong.com/java/java-how-to-read-a-file/",
+      "styleAttributes": {},
+      "x": 2080,
+      "y": -12249,
+      "width": 1123,
+      "height": 951
+    },
+    {
+      "id": "1f704a86abaf0841",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Introduction to Java.png",
+      "styleAttributes": {},
+      "x": 12506,
+      "y": -11840,
+      "width": 2038,
+      "height": 2550
+    },
+    {
+      "id": "125af518e7bc2ae8",
+      "type": "file",
+      "file": "RoadMap do DavJaveiro/Covers/Spring Start Here.png",
+      "styleAttributes": {},
+      "x": 12490,
+      "y": 5883,
+      "width": 2070,
+      "height": 2594
     }
   ],
   "edges": [
@@ -927,17 +927,6 @@
       "fromNode": "ea1c45dcc9c0b891",
       "fromSide": "left",
       "toNode": "48eeaeb6594f4d17",
-      "toSide": "right",
-      "color": "4"
-    },
-    {
-      "id": "adfe94408af6861c",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "left",
-      "toNode": "69e567e4932269a3",
       "toSide": "right",
       "color": "4"
     },
@@ -1132,7 +1121,7 @@
       "styleAttributes": {
         "pathfindingMethod": "square"
       },
-      "fromNode": "ea1c45dcc9c0b891",
+      "fromNode": "1f704a86abaf0841",
       "fromSide": "top",
       "toNode": "892aa1e68ed8ecfe",
       "toSide": "right",
@@ -1585,7 +1574,7 @@
       "styleAttributes": {
         "pathfindingMethod": "square"
       },
-      "fromNode": "ea1c45dcc9c0b891",
+      "fromNode": "1f704a86abaf0841",
       "fromSide": "right",
       "toNode": "01af3d4df987f7ce",
       "toSide": "left"
@@ -1595,7 +1584,7 @@
       "styleAttributes": {
         "pathfindingMethod": "square"
       },
-      "fromNode": "ea1c45dcc9c0b891",
+      "fromNode": "1f704a86abaf0841",
       "fromSide": "right",
       "toNode": "09195bf816903377",
       "toSide": "left"
@@ -1605,27 +1594,17 @@
       "styleAttributes": {
         "pathfindingMethod": "square"
       },
-      "fromNode": "ea1c45dcc9c0b891",
+      "fromNode": "1f704a86abaf0841",
       "fromSide": "right",
       "toNode": "a505a7e8df6e0b21",
       "toSide": "left"
-    },
-    {
-      "id": "caaa6256c05bb813",
-      "styleAttributes": {
-        "pathfindingMethod": "square"
-      },
-      "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "right",
-      "toNode": "36be36802905817b",
-      "toSide": "bottom"
     },
     {
       "id": "08fd6479f6e5c932",
       "styleAttributes": {
         "pathfindingMethod": "square"
       },
-      "fromNode": "ea1c45dcc9c0b891",
+      "fromNode": "1f704a86abaf0841",
       "fromSide": "bottom",
       "toNode": "84c56cfe5cab6ec4",
       "toSide": "top"
@@ -1693,11 +1672,44 @@
     },
     {
       "id": "168ba484b01c7206",
-      "styleAttributes": {},
+      "styleAttributes": {
+        "path": "long-dashed"
+      },
       "fromNode": "ea1c45dcc9c0b891",
-      "fromSide": "top",
+      "fromSide": "right",
       "toNode": "1f704a86abaf0841",
       "toSide": "right"
+    },
+    {
+      "id": "adfe94408af6861c",
+      "styleAttributes": {
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "ea1c45dcc9c0b891",
+      "fromSide": "left",
+      "toNode": "69e567e4932269a3",
+      "toSide": "right",
+      "color": "4"
+    },
+    {
+      "id": "c7d8faf5d40718c4",
+      "styleAttributes": {
+        "path": "short-dashed"
+      },
+      "fromNode": "84c56cfe5cab6ec4",
+      "fromSide": "left",
+      "toNode": "1be170aa70ec5557",
+      "toSide": "top"
+    },
+    {
+      "id": "caaa6256c05bb813",
+      "styleAttributes": {
+        "pathfindingMethod": "square"
+      },
+      "fromNode": "1f704a86abaf0841",
+      "fromSide": "right",
+      "toNode": "36be36802905817b",
+      "toSide": "bottom"
     }
   ],
   "metadata": {}
