@@ -381,3 +381,29 @@ Status code 500 should be used for generic server erros. The 502 status code cod
 
 5. **Should verbs be used from REST endpoints, and why?**
 Verbs should not be used to form REST endpoints. 
+
+
+---
+**Resumo**
+
+**Introdução às APIs REST**
+- **Definição:** APIs REST (Representational State Transfer) permitem comunicação entre sistemas via HTTP, seguindo princípios arquiteturais definidos por Roy Fielding (2000).
+- **Histórico:** Surgiu como alternativa a SOAP/RPC, ganhando popularidade com empresas como eBay, Amazon e Google. Atualmente, é padrão para integração de aplicações.
+
+**Recursos e URIs**
+- **URI** (Uniform Resource Identifier): Identifica recursos na web. Exemplos: https://api.com/users. 
+- **Estrutura:** Esquema *http*, autoridade *www.exemplo.com*, caminho */users*, parâmetros de consulta (*?page=1*).
+- URL vs URN: URL localiza recursos, URN nomeia recursos.
+
+**HATEOAS Hypermedia as the Engine of Application State**
+Inclui links de hypermedia em respostas para navegação dinâmica.
+GitHub inclui links de paginação em cabeçalhos (LInk: <...>; rel="net").
+Desacoplamento cliente-servidor, auto-descobrimento de recursos.
+
+**Melhores Práticas para Design de APIs REST**
+1. **Nomenclatura:** use *substantivos* para endpoints */users* e não verbos ou ações como *getUsers*. Forma *plural* para coleções */products*.
+2. **Versionamento:** via URL */api/v1/users* ou cabeçalhos *Accept: application/vnd.api.v1+json*
+3. **Alinhamento de Recursos:** exemplo */users/1/orders* para pedidos do usuário 1.
+4. **Segurança:** sempre use **HTTPS**, autenticação via **JWT** ou **OAuth 2.o**.
+5. **Documentação:** mantenha atualizada com exemplos e changelot (OpenAPI/Swagger).
+6. **Cache**: use cabeçalhos como **ETag** e **Cache-Control** para otimização.

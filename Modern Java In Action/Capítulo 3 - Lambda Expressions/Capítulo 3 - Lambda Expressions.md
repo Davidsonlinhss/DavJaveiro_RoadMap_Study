@@ -550,4 +550,40 @@ Function<BufferedReader, String> f =
 	}
 ```
 
+---
+**Resumo sobre Lambdas**
+As expressões lambdas em Java, introduzidas no Java 8, são uma forma concisa de implementar *interfaces funcionais* (*interfaces com um único método* abstrato, como #Runnable, #Comparator, etc.). Resumidamente:
+
+**Sintaxe Básica:**
+```java
+(parâmetros) -> {corpo}
+```
+- **Parâmetros**: lista de argumentos (tipos podem ser omitidos se inferidos);
+- **Operador**: -> separa parâmetros do corpo;
+- **Corpo:** Bloco de código ou expressão única (se for uma expressão, *return* e {} são opcionais).
+
+**Exemplos:**
+1. **Sem parâmetros:**
+```java
+Runnable r = () -> System.out.println("Hello World!");
+```
+
+2. **Com parâmetros:**
+```java
+Comparator<Integer> com = (a, b) -> a.compareTo(b);
+```
+
+3. **Corpo com múltiplas linhas:**
+```java
+MathOperation op = (x, y) -> {
+	int result = x + y;
+	return result;
+}
+```
+**Características Principais:**
+1. **Concisão:** reduz código comparado a classes anônimas;
+2. **Inferência de Tipos:** o compilador infere tipos dos parâmetros;
+3. **Interfaces Funcionais:** Funcionam apenas com interfaces que têm um único método abstrato (ex.: #Predicate, #Function, #Consumer ).
+4. **Variáveis Externas:** podem acessar variáveis de escopo externo se forem **final** ou efetivamente final.
+
 ## 3.5 Type checking, type inference, and restrictions
