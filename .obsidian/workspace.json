@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ebad8e28293162da",
+        "id": "99353ac164dae3fb",
         "type": "tabs",
         "children": [
           {
-            "id": "86848bc7cbe4c024",
+            "id": "5948a0f45e454f34",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -87,8 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 444.51002502441406,
-    "collapsed": true
+    "width": 444.51002502441406
   },
   "right": {
     "id": "5ec10822b2a3b721",
@@ -193,10 +192,10 @@
       "graph:Abrir visualização em gráfico": false,
       "canvas:Criar novo canvas": false,
       "daily-notes:Abrir a nota de hoje": false,
-      "templates:Inserir modelo": false,
       "command-palette:Abrir paleta de comandos": false,
       "audio-recorder:Começar/parar a gravação de áudio": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templates:Inserir modelo": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "float-search:Search Obsidian In Modal": false,
       "runjs:RunJS": false,
@@ -204,10 +203,23 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "86848bc7cbe4c024",
+  "active": "5948a0f45e454f34",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
+=======
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/resources/application.properties~",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build.gradle~",
+    "Artigos/Paradigmas/Artigo 3/High-Level Modelling for TypedFunctional Programming.md",
+    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
+    "Pasted image 20250118145051.png",
+    "Pasted image 20250120215933.png",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 1/Chapter 1 - Restful Web Service Fundamentals.md",
+    "Capítulo 3 - Lambda Expressions-2.png",
+    "Capítulo 3 - Lambda Expressions-1.png",
+>>>>>>> 37ba4bc85b1c1a94066ee0474cdbbef0ba42c386
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/imagens/Chapter 13 - Abstract Classes and Interfaces.png",
     "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/imagens",
@@ -238,16 +250,27 @@
     "Introduction to Java Programming and Data STRUCTURES/Chapter 1 - Introduction to Computers, Programs and Java",
     "Introduction to Java Programming and Data STRUCTURES",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/problems/problems-report.html",
+<<<<<<< HEAD
+=======
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/problems",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/tests/test/js/report.js",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/tests/test/js",
+    "Pasted image 20250124183108.png",
+>>>>>>> 37ba4bc85b1c1a94066ee0474cdbbef0ba42c386
     "Spring Start Here/Capítulo 1 - Spring no mundo real.md",
     "Java Persistence with Spring Data e Hibernate/Capítulo 3 - Domain Models and Metadata/Capítulo 3 - Domain Models and Metadata.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 2/Chapter 2 - Sring Concepts and REST APIs.md",
     "Fundamentals of Software Architecture/Capítulo 10 - Layered Architecture Style.md",
     "Modern Java In Action/Capítulo 1/Capítulo 1.md",
-    "Artigos/Paradigmas/Artigo 3/High-Level Modelling for TypedFunctional Programming.md",
     "Artigos/Paradigmas/Artigo 2/Functional Programming Oriented Software Design.md",
     "Artigos/Papers for Science and Technology for Dummies.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/HELP.md",
     "Indistraível - Nir Eyal/Resumo.canvas",
+<<<<<<< HEAD
+=======
+    "Capítulo 3 - Lambda Expressions.png",
+    "Pasted image 20250120223109.png",
+>>>>>>> 37ba4bc85b1c1a94066ee0474cdbbef0ba42c386
     "Sem título.md",
     "Behavioral Interview/Resolução de Problemas.md",
     "Behavioral Interview/Introdução.md",
