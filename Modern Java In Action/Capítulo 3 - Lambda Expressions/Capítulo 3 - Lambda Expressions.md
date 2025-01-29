@@ -587,3 +587,70 @@ MathOperation op = (x, y) -> {
 4. **Variáveis Externas:** podem acessar variáveis de escopo externo se forem **final** ou efetivamente final.
 
 ## 3.5 Type checking, type inference, and restrictions
+**Verificação de tipos, inferência de tipos e restrições**
+Quando mencionamos as expressões lambdas pela primeira vez, dissemos que elas permitem que geremos uma instância de uma interface funcional. No entanto, uma expressão lambda em si não contém a informação sobre qual interface funcional ela está implementando. Para ter um entendimento mais formal das expressões lambda, precisamos saber qual é o tipo de uma lambda. 
+```java
+@FunctionInterface
+interface MyFunction {
+	void execute();
+}
+
+public class LambdaExample {
+	public static void main(String[] args) {
+		// Aqui a lambda é "convertida" em uma instância de MyFunction
+		MyFunction func = () -> System.out.println("Hello World");
+		func.execute(); // chama o método da interface funcional
+	}
+}
+```
+A lambda em si não diz explicitamente qual interface funcional ela está implementando. O **tipo de lambda** é inferido pelo compilador com base no contexto em que ela é usada.
+
+No exemplo acima, a lambda *() -> System.out.println("Hello World")* não diz explicitamente que está implementando *MyFunction*. O compilador **infere** que o tipo de lambda é *MyFunction* com base no contexto de criação, pois *func* é do tipo *MyFunction*. 
+
+### 3.5.1 Type checking
+O tipo de uma **lambda** é deduzido a partir do contexto em que a **lambda** é usada. O tipo esperado para a expressão **lambda** dentro do contexto (por exemplo, um parâmetro de método ao qual ela é passada ou uma variável local à qual ela é atribuída) é chamado de **target type**. Vamos ver um exemplo para entender o que acontece nos bastidores quando usamos uma expressão lambda:
+```java
+List<Apple> heavierThan150g = filter(inventory, (Apple apple) -> apple.getWeight() > 150);
+```
+
+O processo de verificação de tipo é decomposto da seguinte forma:
+1. Primeiro, verifica-se a declaração do método *filter*;
+2. O método espera, como segundo parâmetro formal, um objeto do tipo *Predicate< Apple>* (o tipo alvo);
+3. *Predicate< Apple>* é uma **interface funcional** que define um único método abstrato chamado *test*.
+4. O método *test* descreve um *function descriptor*, aceitando um objeto **Apple** e retornando um **boolean**;
+5. Por fim, qualquer argumento passado para o método *filter* precisa corresponder a esse requisito.
+6. 
+O código é válido porque a expressão lambda que estamos passando também recebe um **Apple**
+como parâmetro e retorna um **booleano**. Observe que, se a expressão lambda estivesse lançando
+uma exceção, então a cláusula throws declarada do método abstrato também teria
+para corresponder.
+
+Uma expressão lambda deve seguir a **assinatura da interface funcional**, ou seja:
+- O **Parâmetro da lambda** deve corresponder ao tipo esperado pelo método abstrato da interface;
+- O **Valor de retorno** deve ser o mesmo tipo definido pela interface funcional.
+
+O exemplo acima, pode também ser explanado no seguinte exemplo:
+```java
+@FunctionalInterface
+public interface Predicate<T> {
+	boolean test(T t);
+}
+
+Predicate<Apple> isGreenApple = (Apple apple) -> apple.getColor().equals("GREEN");
+```
+
+## 3.5.2 Same lambda, different functional interfaces
+Devido ao conceito de *target typing*, a mesma expressão lambda pode ser associada a diferentes *interfaces funcionais*, desde que elas possuam uma **assinatura compatível** para o método abstrato. 
+
+Por exemplo, as interfaces *Callable< T>* e *PrivilegedAction< T>* representam funções que não recebem parâmetros e retornam um tipo genérico *T*.
+
+Logo, as seguintes atribuições são válidas:
+```java
+Callable<Integer> c = () -> 42;
+PrivilegedAction<Integer> p = () -> 42;
+```
+
+Tanto **Callable< T>** quanto **PrivilegedAction< T>** possuem um método abstrato que *não recebe argumentos e retornam um genérico T*.
+A lambda *() -> 42* se encaixa neste formato, podendo ser usada em ambas as interfaces.
+
+Neste caso, a primeira atribuição tem o tipo salvo *Callable< Integer>*, enquanto a segunda atribuição tem o tipo 
