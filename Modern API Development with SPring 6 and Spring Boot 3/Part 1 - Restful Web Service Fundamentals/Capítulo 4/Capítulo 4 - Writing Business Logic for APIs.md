@@ -149,3 +149,58 @@ public class UserController {
 }
 ```
 
+## The @Repository annotation
+Os componentes de repositório são classes Java marcadas com a anotação *@Repository.* Esse é um componente especial do Spring usado para interagir com banco de dados.
+
+*@Repository* é um estereótipo de uso geral que representa tanto o padrão de Repositório do DDD (Domain-Driven Design) quanto o padrão DAO (Data Acess Object) da Java Enterprise Edition (JEE). Desenvolvedores e equipes devem gerenciar objetos de repositório com base na abordagem utilizada.
+
+No DDD, um repositório é um objeto central que mantém referências a todos os objetos e deve retornar a referência de um objeto solicitado. Antes de começar a escrever classes marcadas com *@Repository*, é necessário garantir que todas as dependências e configurações necessárias estejam configuradas corretamente.
+
+As seguintes bibliotecas serão usadas como dependências do banco de dados:
+- **Banco de dados H2:** para persistência de dados: utilizaremos uma instância em memória do H2, mas também é possível usar uma instância baseada em arquivo;
+- **Hibernate (ORM - Object Relational Mapping)** - para mapeamento de objetos do banco de dados.
+- **Flyway para migração de banco de dados:** ajuda a gerenciar o banco de dados, mantendo um histórico de alterações, permitindo rollbacks, atualizações de versão e outras funcionalidades.
+
+Vamos adicionar essas dependências ao arquivo *build.gradle*;
+O pacote *org.springframework.boot:spring-boot-starter-data-jpa* inclui todas as dependências necessárias do JPA, incluindo o Hibernate.
+
+## Configurando o banco de dados e o JPA
+Também precisamos modificar o arquivo *application.properties* com a seguinte configuração.
+
+## Configuração do Datasource
+A seguir, estão as configurações do datasource no Spring:
+```properties
+spring.datasource.name=ecomm
+spring.datasource.url=jdbc:h2:mem:ecomm;DB_CLOSE_DELAY=-1;IGNORECASE=TRUE;DATABASE_TO_UPPER=false
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+```
+
+Precisamos adicionar propriedades específicas do H2 ao datasource. O valor da URL indica que será usada uma instância de banco de dados H2 baseada em memória.
+
+**Configuração do banco de dados H2**
+```properties
+# h2 configuration  
+spring.h2.console.enabled=true  
+spring.h2.console.settings.web-allow-others=false
+```
+Aqui, o **H2 Console** é um cliente web do H2 que permite realizar diversas operações, como visualizar tabelas e executar consultas.
+
+O console do H2 está habilitado apenas para acesso local, o que significa que só podemos acessá-lo no *localhost*. Além disso, o acesso remoto está desativado definindo web-allow-other como false.
+
+**Configuração do JPA/Hibernate**
+```properties
+spring.jpa.properties.hibernate.default_schema=ecomm
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.show-sql=true
+spring.jpa.format_sql=true
+spring.jpa.generate-ddl=false
+spring.jpa.hibernate.ddl-auto=none
+
+```
+Não queremos que o Hibernate gere o DDL ou processe arquivos SQL, pois utilizaremos o *Flyway* para gerenciar as migrações do banco de dados.
+
+Por isso, *generate-ddl* está definido como *false* e *ddl-auto* está definido como *none*.
+

@@ -34,6 +34,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 	implementation 'io.springfox:springfox-oas:3.0.0'
 
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.4.2'
+	implementation 'org.flywaydb:flyway-core:11.2.0'
+	runtimeOnly 'com.h2database:h2:2.3.232'
+
+
+
 }
 
 processResources {

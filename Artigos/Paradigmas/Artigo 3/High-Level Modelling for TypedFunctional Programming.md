@@ -8,7 +8,7 @@ O design estrutural de sistemas funcionais - ou seja, aqueles escritos em uma li
 
 Este trabalho faz parte de um esforço mais amplo para permitir que programas funcionais sejam modelados de forma intuitiva. Ele foca especificamente na modelagem estrutural de programas funcionais tipados em um nível elevado e propõe uma notação geral e padrão que deve ser aplicável a todas as linguagens funcionais. 
 
-A computação em uma linguagem orientada a objetos baseia-se na ideia de que o progresso ocorre por meio da comunicação entre objetos, <span style="background:#affad1">cada um colaborando para alcançar o objetivo do sistema</span>. Em contraste, a computação em uma linguagem funcional tipada é fundamentada na transformação de valores através de funções puras, que podem resultar em um valor final, representando o objetivo do sistema. 
+A computação em uma linguagem orientada a objetos baseia-se na ideia de que o progresso ocorre por meio da comunicação entre objetos, <span style="background:#affad1">cada um colaborando para alcançar o objetivo do sistema</span>. Em contraste, a computação em uma linguagem funcional tipada é fundamentada na <span style="background:#d4b106">transformação de valores através de funções puras</span>, que podem resultar em um valor final, representando o objetivo do sistema. 
 
 Existem várias características importantes de um sistema funcional tipado que são difíceis ou até impossíveis de modelar usando diagramas estruturais do UML. Essas características estão presentes na maioria das linguagens funcionais tipadas. Por exemplo:
 - As enumerações do UML são insuficientes para representar *sum types*, já que os casos desses tipos frequentemente estão ligados a outros dados; para contornar isso, seria necessário utilizar o padrão de design #Composite. 
@@ -38,14 +38,14 @@ As contribuições deste trabalho são as seguintes:
 ## 2. Aproach
 A maior parte deste artigo percorre o terreno da filosofia, linguagem, discurso matemático e design - com um estudo de caso no final. Leva tempo para construir pontes entre essas áreas e explicá-las com detalhes suficientes para nossos propósitos. Por que seguir um caminho tão longo e sinuoso, em vez de simplesmente encontrar alguma notação que pareça utilizável e faça com que os praticantes acenem com a cabeça?
 
-O design de sistemas é, em última análise, uma atividade proposital: todo sistema tem algum motivo para existir, mesmo que esse motivo seja puramente exploratório. **Esse design geralmente seguirá as formas de pensamento desenvolvidas pelo designer e**, muitas vezes, também será restrito por essas formas de pensamento. 
+<span style="background:#d4b106">O design de sistemas</span> é, em última análise, uma atividade proposital: <span style="background:#affad1">todo sistema tem algum motivo para existir</span>, mesmo que esse motivo seja puramente exploratório. **Esse design geralmente seguirá as formas de pensamento desenvolvidas pelo designer e**, muitas vezes, também será restrito por essas formas de pensamento. 
 
 Portanto, é de fundamental importância garantir que as partes interessadas do sistema sejam incentivadas a pensar de uma maneira que facilite um design que possa ser facilmente codificado como um sistema de computador e que desestimule formas de pensar que são difíceis de codificar. Três categorias de pensamento comum relacionado ao design são categorizadas aqui:
 1. **Pensando em um domínio do problema:** uma pessoa pode pensar em um problema em termos de sua área de especialização, como contabilidade ou botânica, ou termos de alguma outra influência, como pesca ou discussões familiares. **A facilidade de tradução para um sistema de computador depende do grau em que as linguagens do sistema são capazes de representar ou codificar o pensamento original.** 
 
 2. **Pensando em uma linguagem de programação:** um desenvolvedor pode pensar em um problema em termos que uma linguagem disponibiliza para ele. A facilidade de tradução para um sistema de computador é garantida, mas <span style="background:#b1ffff">o grau em que esse sistema reflete o domínio do problema real será relativo a quão precisamente o domínio do problema pode ser expresso na linguagem</span>. Outra questão é que um design desse tipo pode ser inacessível às partes interessadas sem o conhecimento técnico necessário.
 
-3. **Pensando em uma notação:** uma parte interessada - seja um desenvolvedor, analista de negócios ou outra pessoa - pode pensar em um problema **em termos que uma notação suporta**. A facilidade de tradução para um sistema de computador está relacionada à facilidade com que a semântica da notação é traduzível para a semântica computacional, e o grau em que o sistema reflete o domínio do problema real é relativo a quão-precisamente o domínio do problem a pode ser expresso na notação. 
+3. **Pensando em uma notação:** uma parte interessada - seja um desenvolvedor, analista de negócios ou outra pessoa - pode pensar em um problema **em termos que uma notação suporta**. A facilidade de tradução para um sistema de computador está relacionada à <span style="background:#affad1">facilidade com que a semântica da notação é traduzível para a semântica computacional</span>, e o grau em que o sistema reflete o domínio do problema real é relativo a quão-precisamente o domínio do problem a pode ser expresso na notação. 
 
 Linguagens específicas de domínio podem ser usadas com sucesso para conectar (1) e (2), mas introduzem problemas próprios e, portanto, não devem ser usadas sem a devida consideração. É a categoria (3) que é mais acessível ao público mais amplo e com a qual este artigo está preocupado. No entanto, a acessibilidade dessa categoria introduz problemas próprios, pois as partes interessadas devem usar a mesma filosofia subjacente para poder participar de qualquer processo de modelagem que usa a notação. Essa filosofia é, no mundo orientado a objetos, fornecida por uma teoria subjacente de objetos - embora os detalhes do que é um "objeto" em si tenham sido contestados. Se uma filosofia subjacente compartilhada, argumenta-se que as partes interessadas terão dificuldade em conceituar suas ideias notacionalmente e ficarão frustradas com uma notação em vez de usá-la efetivamente. 
 
@@ -73,3 +73,32 @@ No contexto, uma notação é um conjunto de símbolos e regas que permitem repr
 - **Comunicar ideias:** transmitir informações sobre o sistema para diferentes stakeholders.
 - **Analisar e validar:** analisar as propriedades do sistema e validar sua corretude.
 - **Gerar código:** em alguns casos, a notação pode ser usada para gerar automaticamente código executável. 
+
+## 3 Modelling Context
+Os modelos obtêm seu poder por meio de sua capacidade de "ser usado no lugar daquilo que modelam". Isso geralmente se refere a um sistema que faz parte de um domínio maior de interesse, que, por sua vez, é parte da totalidade da realidade. Uma linguagem de modelagem geral útil deve ser capaz de modelar muitos domínios de interesse e, idealmente, grande parte da realidade. Isso se alinha bem com a ideia de uma linguagem de programação geral, sem diminuir a importância e a utilizada de linguagens de modelagem e programação especializadas.
+
+Os modelos podem ser estruturais ou comportamentais. Um modelo estrutural expressa os elementos de um modelo que existem e a maneira como esses elementos se relacionam entre si. Um modelo comportamental expressa a maneira como um sistema realiza uma tarefa. **Esse trabalho está preocupado apenas com a modelagem estrutura, ou seja, descrever os elementos e suas relações.**
+Em programação declarativa, especificamos o que desejamos que o sistema faz, em vez de **como** ele deve fazer. 
+
+Programação funcional -> paradigma declarativo, determina o que o sistema vai fazer. Portanto, em programação funcional, a forma como os elementos estruturais se relacionam já define parte do comportamento do sistema dizendo *o que fazer*;
+
+Programação Orientado a Objeto -> Paradigma Imperativo 
+
+
+Dito isto, o termo "estrutural" também pode abranger aspectos comportamentais de um sistema funcional. Isso ocorre porque a programação funcional é declarativa, e descrever as relações entre as declarações também contribuí de alguma forma para expressar como uma tarefa é realizada. No entanto. a distinção entre comportamental e estrutural é útil, pois exclui modelos que se concentram principalmente no comportamento em vez da estrutura. 
+
+Um modelo pode ser usado tanto como uma **descrição** quanto como uma **especificação**. A diferença está em onde reside a verdade do sistema: no primeiro caso, a verdade está no próprio sistema; no segundo, está no modelo.Já existem muitas linguagens excelentes de especificação para o paradigma funcional, e este trabalho busca complementar a elas. Portanto, ele propõe uma **linguagem de modelagem declarativa**.
+
+Isso não impede que ela tenha um papel semelhante ao de uma especificação, pois um modelo descritivo, quando desenvolvido nas primeiras etapas do processo, pode ser usado como um modelo prescritivo - uma especificação flexível, caso desejado - e pode ser visto como tendo um papel mais descritivo durante e após o desenvolvimento.
+
+Seguindo #Stackowiak, conforme relatado por #Kühne, um modelo deve ter três qualidades:
+1. **Mapeamento**: deve ser baseado em algum sistema real;
+2. **Redução:** deve refletir apenas as partes relevantes desse sistema;
+3. **Pragmatismo**: deve ser utilizável no lugar do sistema original para algum propósito;
+
+O autor está explicando dois usos principais para um modelo:
+1. **Modelo descritivo** - ele reflete um sistema existente, ou seja, a verdade sobre o sistema está no próprio sistema, e o modelo apenas o descreve.
+2. **Modelo prescritivo (ou especificação)** - ele define como um sistema **deverá ser**, ou seja, a verdade sobre o sistema está no modelo, que serve como um guia para sua implementação.
+
+O trabalho do autor foca em **modelagem descritiva**, mas reconhece que um modelo descritivo, pode, no início do desenvolvimento, acabar servindo como uma especificação flexível.
+
