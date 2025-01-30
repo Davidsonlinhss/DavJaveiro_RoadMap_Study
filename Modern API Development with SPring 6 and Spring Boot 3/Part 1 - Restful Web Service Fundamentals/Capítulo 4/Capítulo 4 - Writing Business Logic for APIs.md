@@ -235,3 +235,5 @@ Este script criou um schema ecomm e adicionou todas as tabelas necessárias para
 Logo, o código é um conjunto de instruções SQL para a criação de um banco de dados de e-commerce, com várias tabelas para gerenciar produtos, usuários, pedidos, pagamentos, etc. Inserimos dados simulados para popular essas tabelas, representando um catálogo de produtos, tags associadas aos produtos e informações de usuários. Além disso, há a criação de um sistema de pagamento, envio de pedidos e associação entre produtos e usuários através de endereços e cartões de crédito. 
 
 ## Adding entities
+Agora, podemos adicionar as entidades. Uma entidade é um objeto especial marcado com a anotação *@Entity* que mapeia diretamente para a tabela do banco de dados utilizando uma implementação de ORM como o Hibernate. Outro ORM popular é o EclipseLInk. Podemos colocar todos os objetos de entidade no pacote `com.packt.modern.api.entity`.
+Vamos criar o arquivo `CartEntity.java`.
