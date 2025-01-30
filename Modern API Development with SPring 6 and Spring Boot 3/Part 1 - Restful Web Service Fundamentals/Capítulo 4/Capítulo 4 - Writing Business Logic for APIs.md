@@ -204,3 +204,34 @@ Não queremos que o Hibernate gere o DDL ou processe arquivos SQL, pois utilizar
 
 Por isso, *generate-ddl* está definido como *false* e *ddl-auto* está definido como *none*.
 
+## The database and seed data script
+Agora que terminamos de configurar os arquivos *build.gradle* e *application.properties*, podemos começar a escrever código. Primeiro, adicionaremos o script de migração de banco de dados com o Flyway.
+
+Esse script deve ser escrito apenas em SQL e deve ser colocado no diretório *db/migration*, dentro de `sr/main/resources`. Seguiremos a convenção de nomenclatura do Flyway.
+
+```sql
+CREATE SCHEMA IF NOT EXISTS ecomm;
+
+CREATE TABLE IF NOT EXISTS ecomm.product (
+    id UUID NOT NULL DEFAULT random_uuid(),
+    name VARCHAR(56) NOT NULL,
+    description VARCHAR(200),
+    price NUMERIC(16, 4) DEFAULT 0 NOT NULL,
+    count NUMERIC(8, 0),
+    image_url VARCHAR(40),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS ecomm.tag (
+    id UUID NOT NULL DEFAULT random_uuid(),
+    name VARCHAR(20),
+    PRIMARY KEY (id)
+);
+
+-- Other code is removed for brevity
+```
+Este script criou um schema ecomm e adicionou todas as tabelas necessárias para o nosso app simples de e-commerce. Também adiciona instruções *Insert* para os dados iniciais.
+
+Logo, o código é um conjunto de instruções SQL para a criação de um banco de dados de e-commerce, com várias tabelas para gerenciar produtos, usuários, pedidos, pagamentos, etc. Inserimos dados simulados para popular essas tabelas, representando um catálogo de produtos, tags associadas aos produtos e informações de usuários. Além disso, há a criação de um sistema de pagamento, envio de pedidos e associação entre produtos e usuários através de endereços e cartões de crédito. 
+
+## Adding entities
