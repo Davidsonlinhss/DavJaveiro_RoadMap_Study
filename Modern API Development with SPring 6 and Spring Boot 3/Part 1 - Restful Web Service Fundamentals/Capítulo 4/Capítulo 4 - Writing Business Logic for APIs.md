@@ -237,3 +237,7 @@ Logo, o código é um conjunto de instruções SQL para a criação de um banco 
 ## Adding entities
 Agora, podemos adicionar as entidades. Uma entidade é um objeto especial marcado com a anotação *@Entity* que mapeia diretamente para a tabela do banco de dados utilizando uma implementação de ORM como o Hibernate. Outro ORM popular é o EclipseLInk. Podemos colocar todos os objetos de entidade no pacote `com.packt.modern.api.entity`.
 Vamos criar o arquivo `CartEntity.java`.
+
+A anotação `@Entity` faz parte do pacote `Jakarta.persistence`, o que indica que a classe é uma entidade e deve ser mapeada para uma tabela no banco de dados. Por padrão, ela usa o nome da entidade, mas estamos utilizando a anotação `@Table` para definir explicitamente o nome da tabela no banco de dados.
+
+Anteriormente, o pacote `javax.persistence` fazia parte da Oracle. No entanto, quando a Oracle tornou o JEE open source o transferiu para a Eclipse Foundation, foi necessário alterar o nome do pacote de `javax.persistence` para `jakarta.persistence`. 
