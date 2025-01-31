@@ -337,3 +337,4 @@ private List<OrderEntity> orders;
 Quando *UserEntity* for buscado, a lista de *orders* não será carregada no exemplo acima, também. Apenas quando passarmos o método *user.getOrders*, que o Hibernate irá buscar os cartões no banco.
 
 
+- *ManyToMany* é um tipo de relacionamento bidirecional.

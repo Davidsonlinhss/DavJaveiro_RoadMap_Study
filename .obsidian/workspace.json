@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
+                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 3 - Lambda Expressions"
+              "title": "Capítulo 4 - Writing Business Logic for APIs"
             }
           }
         ]
@@ -197,6 +197,10 @@
   },
   "active": "a1a6a0c1e1f33ae0",
   "lastOpenFiles": [
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/TagEntity.java~",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/ProductEntity.java~",
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/TagEntity.java",
+    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/OrderEntity.java",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/CardEntity.java",
@@ -206,8 +210,6 @@
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports/problems",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build/reports",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/build",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/CartEntity.java~",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/ItemEntity.java~",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/ItemEntity.java"
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/CartEntity.java~"
   ]
 }

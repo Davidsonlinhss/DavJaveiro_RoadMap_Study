@@ -143,7 +143,7 @@ public class UserEntity {
     }
 
     public UserEntity setCard(List<CardEntity> card) {
-        this.cards = (CardEntity) card;
+        this.cards = (List<CardEntity>) card;
         return this;
     }
 
