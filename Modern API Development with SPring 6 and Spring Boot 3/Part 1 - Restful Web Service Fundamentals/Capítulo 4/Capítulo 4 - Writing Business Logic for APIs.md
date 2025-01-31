@@ -241,3 +241,99 @@ Vamos criar o arquivo `CartEntity.java`.
 A anotação `@Entity` faz parte do pacote `Jakarta.persistence`, o que indica que a classe é uma entidade e deve ser mapeada para uma tabela no banco de dados. Por padrão, ela usa o nome da entidade, mas estamos utilizando a anotação `@Table` para definir explicitamente o nome da tabela no banco de dados.
 
 Anteriormente, o pacote `javax.persistence` fazia parte da Oracle. No entanto, quando a Oracle tornou o JEE open source o transferiu para a Eclipse Foundation, foi necessário alterar o nome do pacote de `javax.persistence` para `jakarta.persistence`. 
+
+Também estamos utilizando as anotações `@OneToOne` e `@ManyToMany` para mapear a entidade *Cart* com as entidades *User* e *Item*, respectivamente. A lista de *ItemEntity* também está associada 
+
+---
+**Anotações utilizadas em Frameworks de Persistência**
+*@OneToOne*: Usada para definir relacionamentos **um-para-um** entre duas entidades. Logo, uma instância de uma entidade está associada a uma instância de outra entidade.
+
+```java
+@Entity
+public class Usuario {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private String nome;
+
+	@OneToOne
+	@JoinColumn(name = "endereco_id") // a tabela Usuário terá uma coluna address_id, que armazenará o ID de um Address.
+	private Endereco endereco;
+
+	// getters e setters
+}
+
+@Entity
+public class Endereco {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTIFY)
+	private Long id;
+
+	private String rua;
+	private String cidade;
+
+	@OneToOne(mappedBy = "endereco")
+	private Usuario usuario;
+
+	// getters e setters
+}
+```
+
+Neste exemplo, a entidade *Usuario* tem um relacionamento um-para-um com a entidade *Endereco*. 
+A anotação *@JoinColumn* é usada para especificar a coluna na tabela *Usuario* que será usada para armazenar a chave estrangeira para a tabela *Endereco*. A anotação *mappedBy* na entidade *Endereco* indica que o relacionamento é gerenciado pela entidade *Usuario*. 
+
+- @ManyToMany define um relacionamento muitos-para-muitos entre duas entidades. Múltiplas instâncias de uma entidade podem estar associadas a múltiplas instâncias de outra entidade. Logo, um registro em uma table apode estar associado a vários registros em outra tabela, e vice-versa. Um exemplo clássico é a relação entre **produtos** e **categorias**, onde um produto pode pertencer a várias categorias e, por sua vez, uma categoria pode ter vários produtos.
+
+```java
+@ManyToMany(
+	cascade = CascadeType.All // toda mudança feita em CarEntity, também serão propagadas para a entidade relacionada ItemEntity 
+)
+```
+
+- O exemplo abaixo, define uma tabela intermediária que será criada no banco de dados, mantendo a associação entre o *CartEntity* e o *ItemEntity*.
+```java
+@JoinTable( name = "CART_ITEM")
+```
+
+
+- Define a coluna na tabela intermediária que vai armazenar a chave estrangeira referenciando a entidade *CartEntity*, ou seja, *CART_ID* vai armazenar o ID do carrinho.
+```java
+joinColumns = @JoinColumn(name = "CART_ID")
+```
+
+- Define a coluna da tabela intermediária que vai armazenar a chave estrangeira referenciando a entidade *ItemEntity*. A coluna *ITEM_ID* vai armazenar o ID do item:
+```java
+inverseJoinColumns = @JoinColumn(name = "ITEM_ID")
+```
+
+- A lista *items* contem os itens associados ao carrinho. Isso representa a relação muitos para muitos, onde cada carrinho pode ter múltiplos itens:
+```java
+private List<ItemEntity> items = new ArrayList<>();
+```
+
+- *orphanRemoval = true*: é uma funcionalidade do JPA que permite gerenciar automaticamente a remoção de entidades "órfãs" (entidades que não estão mais associadas a uma entidade pai) quando a associação entre elas é desfeita. É frequentemente utilizada em conjunto com a anotação *@OneToMany* ou *@OneToOne*.
+
+- **Lazy**
+```java
+@Entity
+public class UserEntity {
+    
+    @Id
+    @GeneratedValue
+    private UUID id;
+    
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY) 
+    private List<CardEntity> cards = new ArrayList<>();
+}
+```
+
+Quando um *UserEntity* é buscado, a lista *cards* não será carregada imediatamente. Se chamarmos *user.getCard()*, só então o Hibernate buscará os cartões no banco.
+
+```java
+@OneToMany(mappedBy = "userEntity", fetch = FetchType.LAZY, orphanRemoval = true)  
+private List<OrderEntity> orders;
+```
+Quando *UserEntity* for buscado, a lista de *orders* não será carregada no exemplo acima, também. Apenas quando passarmos o método *user.getOrders*, que o Hibernate irá buscar os cartões no banco.
+
+

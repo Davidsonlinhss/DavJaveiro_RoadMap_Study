@@ -14,19 +14,21 @@ public class CartEntity {
     @GeneratedValue
     @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
-    @OneToOne
-    @JoinColumn(name = "USER_ID", referencedColumnName = "ID")
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID", referencedColumnName = "ID", nullable = false)
     private UserEntity user;
 
     @ManyToMany(
             cascade = CascadeType.ALL
     )
     @JoinTable(
-            name = "CART_ITEM",
-            joinColumns = @JoinColumn(name = "CART_ID"),
-            inverseJoinColumns = @JoinColumn(name = "ITEM_ID")
+            name = "CART_ITEM", // nome da tabela intermediária
+            joinColumns = @JoinColumn(name = "CART_ID"), // coluna que se refere ao Product
+            inverseJoinColumns = @JoinColumn(name = "ITEM_ID") // coluna que se refere a categoria
     )
     private List<ItemEntity> items = new ArrayList<>();
+
 
     public UserEntity getUser() {
         return user;
