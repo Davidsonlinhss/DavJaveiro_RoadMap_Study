@@ -653,4 +653,44 @@ PrivilegedAction<Integer> p = () -> 42;
 Tanto **Callable< T>** quanto **PrivilegedAction< T>** possuem um método abstrato que *não recebe argumentos e retornam um genérico T*.
 A lambda *() -> 42* se encaixa neste formato, podendo ser usada em ambas as interfaces.
 
-Neste caso, a primeira atribuição tem o tipo salvo *Callable< Integer>*, enquanto a segunda atribuição tem o tipo 
+Neste caso, a primeira atribuição tem o tipo salvo *Callable< Integer>*, enquanto a segunda atribuição tem o tipo *PrivilegedAction< Integer>*.
+
+**Operador Diamante**
+Aqueles que estão familiarizados com a evolução do Java lembrarão que o **Java 7** já havia introduzido a ideia de tipos sendo inferidos a partir do contexto, com a inferência genérica utilizando o **operador diamante** <> (essa ideia pode ser encontrada ainda antes com métodos genéricos). 
+
+Uma determinada expressão de instância de classe pode aparecer em dois ou mais contextos diferentes, e o argumento de tipo apropriado será inferido, como exemplificado abaixo:
+```java
+List<String> listOfStrings = new ArrayList<>();
+List<Integer> listOfIntegers = new ArrayList<>();
+```
+
+**Regra especial de compatibilidade com *void***
+Se uma **lambda** possui uma expressão de instrução como seu corpo, ela é compatível com um **descritor de função** que retorna void (desde que a lista de parâmetros também seja compatível).
+
+Por exemplo, ambas as linhas abaixo são válidas, mesmo que o método **add** de uma **List** retorne um **boolean** e não **void**, como seria esperado no contexto de um **Consumer**.
+
+Java ignora o valor retornado pela expressão e a trata como se não retornasse nada. 
+
+```java
+
+// Predicate retorna um boolean
+Predicate<String> p = (String s) -> list.add(s);
+
+// Consumer retorna void
+Consumer<String> b = (String s) -> list.add(s);
+```
+
+---
+**Quiz 3.5: Verificação de Tipos - Por que o código abaixo não compila**
+Como poderíamos corrigir esse problema?
+```java
+Object o = () -> { System.out.println("Tricky example");};
+```
+
+**Resposta**
+O problema ocorre porque a expressão lambda está sendo atribuída a uma variável do tipo *Object*, que *não é uma interface funcional*. Expressões lambda precisam de um tipo alvo, ou seja, uma interface funcional que defina o comportamento esperado.
+
+Para corrigir isso, podemos alterar o tipo da variável para *Runnable*, que é uma interface funcional com o método *run()*, cujo formato corresponde ao da expressão lambda (() -> void):
+```java
+Runnable r = () -> {System.out.println("Trycky example);};
+```

@@ -337,4 +337,142 @@ private List<OrderEntity> orders;
 Quando *UserEntity* for buscado, a lista de *orders* não será carregada no exemplo acima, também. Apenas quando passarmos o método *user.getOrders*, que o Hibernate irá buscar os cartões no banco.
 
 
-- *ManyToMany* é um tipo de relacionamento bidirecional.
+- *ManyToMany* é um tipo de relacionamento bidirecional. 
+
+---
+**Resume**
+```java
+@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)  
+@JoinTable(  
+        name = "USER_ADDRESS",  
+        joinColumns = @JoinColumn(name = "USER_ID"),  
+        inverseJoinColumns = @JoinColumn(name = "ADDRESS_ID")  
+)  
+private List<AddressEntity> addresses = new ArrayList<>();
+```
+
+- **@OneToMany**: indica que *um usuário* pode ter *vários endereços*, mas *um endereço* pertence a apenas *um usuário*. Como estamos lidando com uma *List< AddressEntity>*, significa que esse relacionamento é 1:N (um para muitos). 
+
+- **cascade = CascadeType.ALL**: o *cascading* define o que acontece com os endereços quando manipulamos a entidade *usuário*. Quando aplicamos o CascadeType.ALL, significa que qualquer operação feita em **UserEntity** (persistência, remoção, atualização) também será aplicada automaticamente a todos os endereços associados.
+
+- **orphanRemoval = true**: se um endereço for removido da lista *address* do usuário, ele será **automaticamente deletado do banco de dados**.
+
+- **@JoinTable**: a anotação é utilizada para definir uma **tabela intermediária** que faz a associação entre *UserEntity* e *AddressEntity*. Isso significa que haverá **uma tabela no banco de dados**, contendo duas colunas principais:
+1. *USER_ID* -> referência para a tabela *User*
+2. *ADDRES_ID* -> referência para a tabela *Addres* (inverseJoinColumns especifica a coluna na tabela de junção que armazena a chave estrangeira para a entidade do lado "muitos", no caso, *AddresEntity*).
+
+---
+**Revisando a arquitetura**
+1. **Entity** contém as classes que representam as *entidades do banco de dados*, geralmente anotadas com *@Entity*. Elas correspondem às tabelas do banco.
+
+2. **Repository** contém as interfaces que estendem *JpaRepository* ou *CrudRepository* para facilitar a comunicação com o baco de dados, ou seja, acessar o banco de dados:
+```java
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long> {}
+```
+
+3. **Service**: contém a lógica de negócio da aplicação, isolando a manipulação de dados e regras. Exemplos:
+```java
+@Service
+public class ProductService {
+	@Autowired
+	private ProductRepository repository;
+
+	public List<Product> getAllProducts() {
+		return repository.findAll();
+	}
+}
+```
+
+4. **Controller**: define as APIs REST da aplicação. Essas classes geralmente são anotadas com *@RestController* e manipulam requisições HTTP.
+Exemplo:
+```java
+@RestController
+@RequestMapping("/products")
+public class ProductController {
+	@Autowired
+	private ProductService service;
+
+	@GetMapping
+	public List<Product> geAll() {
+		return service.getAllProducts();
+	}
+}
+```
+
+---
+
+## Adding repositories
+Os repositórios são a forma mais simples de adicionar operações CRUD, graças ao Spring Data JPA. Só precisamos estender as interfaces com implementações padrão, como o *CrudRepository*, que fornece todas as implementações de operações CRUD, como #save, #saveAll, #findAll, #findaAllById, #delete e #deleteById. O método #Save(Entity e) é utilizado tanto para operações de criação quanto de atualização de entidades.
+
+Let's create *CartRepository.java*:
+```java
+public interface CartRepository extends CrudRepository<CartEntity, UUID> {
+	@Query("select c from CartEntity c join c.user u where u.id = :customerId")
+
+	public Optional<CartEntity> findByCustomerId(
+		@Param("customerId") UUID customerId);
+	)
+
+}
+```
+
+- *CrudRepository< CartEntity, UUID>* -> significa que essa interface é um repositório para a entidade *CartEntity*, com *UUID* como chave primária.
+
+- Como *CrudRepository* já fornece métodos como **save()**, **findAll()**, **deleteById()**, podemos usá-los sem precisar implementá-los.
+
+**Definição de uma consulta personalizada**
+```java
+@Query("select c from CartEntity c join c.user u where u.id = :customerId")
+```
+- Esse *@Query* define uma consulta JPQL (Java Persistence Query Language), que é especifica para o JPA;
+- Ele está buscando um carrinho de compras (*cartEntity*) associado a um usuário *user* cujo ID é fornecido *:customerId*.
+- O *join c.user u* indica que *CartEntity* tem uma relação *@ManyToOne* ou *OneToOne* com *UserEntity*.
+
+3. **Método** `findByCustomerId`
+```java
+public Optional<CartEntity> findByCustomerId(@Param("customerId") UUID customerId);
+```
+- O método retorna um `Option<CartEntity>`, o que significa que pode ou não existir um carrinho para o usuário.
+- `@Param("customerId") UUID customerId` -> define o **parâmetro nomeado** `:customerId` dentro da consulta.
+- O Spring Data JPA usará esse método para buscar um carrinho pelo **ID do usuário**.
+
+**Resumo**
+1. CartRepository fornece operações CRUD automaticamente vida *CrudRepository*;
+2. **O método** *findByCustomerId(uUUID customerId)* executa uma consulta JPQL para buscar um *CartEntity* pelo ID do usuário (customerId).
+3. A relação *@ManyToOne* entre *CartEntity* e *UserEntity* permite buscar o carrinho de compras do usuário. 
+
+## 📌 `Repository` vs `CrudRepository`
+
+|Interface|Métodos CRUD|Paginação/Ordenação|Métodos Extras|
+|---|---|---|---|
+|`Repository<T, ID>`|❌ Não|❌ Não|❌ Não|
+|`CrudRepository<T, ID>`|✅ Sim|❌ Não|❌ Não|
+|`PagingAndSortingRepository<T, ID>`|✅ Sim|✅ Sim|❌ Não|
+|`JpaRepository<T, ID>`|✅ Sim|✅ Sim|✅ Sim|
+
+### 1️⃣ **`Repository<T, ID>` (Interface Raiz)**
+```java
+public interface Repository<T, ID> {}
+```
+
+🔹 É a **interface base genérica** para todos os repositórios.  
+🔹 **Não** contém métodos diretamente; apenas **marca** a interface como um repositório Spring Data.  
+🔹 Se você estender **apenas `Repository`**, precisará definir manualmente os métodos CRUD.
+
+### 2️⃣ `JpaRepository<T, ID>` (Mais Completo)
+🔹 Extende **`CrudRepository` + `PagingAndSortingRepository`**.  
+🔹 Tem métodos extras como `flush()`, `saveAndFlush()`, `deleteInBatch()`, etc.
+```java
+public interface CartRepository extends JpaRepository<CartEntity, UUID> {
+	Optional<CartEntity> findByCustomerId(UUID customerId);
+}
+```
+
+---
+🔹 **Se você só precisa de CRUD → `CrudRepository`.**  
+🔹 **Se precisa de paginação e ordenação → `PagingAndSortingRepository`.**  
+🔹 **Se quer o máximo de flexibilidade e otimizações para JPA → `JpaRepository`.**
+
+
+---

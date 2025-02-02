@@ -3,7 +3,6 @@ package com.davjaveiro.eCommerceApp.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
-import javax.smartcardio.Card;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -47,8 +46,9 @@ public class UserEntity {
     )
     private List<AddressEntity> addresses = new ArrayList<>();
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
-    private List<CardEntity> cards;
+    // um user pode conter mais de 1 cartão
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true, cascade = CascadeType.ALL)
+    private List<CardEntity> cards = new ArrayList<>();
 
     @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
     private CartEntity cart;
