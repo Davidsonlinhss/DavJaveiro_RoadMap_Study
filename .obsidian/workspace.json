@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "e94deffab7bd2bdd",
+    "id": "e5ce5402939db6cd",
     "type": "split",
     "children": [
       {
-        "id": "e752634fcdd8b716",
+        "id": "474a0ade77e3a2c0",
         "type": "tabs",
         "children": [
           {
-            "id": "a1a6a0c1e1f33ae0",
+            "id": "5d5de4c5a539423f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Beginning Spring Data/Part 1 - Introduction/Capítulo 1 - Application Architecture.md",
+                "file": "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 1 - Application Architecture"
+              "title": "Chapter 13 - Abstract Classes and Interfaces"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "e99e4d110a72e121",
+    "id": "a19cafb38678c334",
     "type": "split",
     "children": [
       {
-        "id": "486da3b3e7a12c3c",
+        "id": "506da6836ea65d1d",
         "type": "tabs",
         "children": [
           {
-            "id": "dac0e4e6ae55a3bd",
+            "id": "37f5777138dfab5b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "46a0906880247475",
+            "id": "b54c5ca34bfa7dc3",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "df7421464147cd2c",
+            "id": "edb5f121362a4be3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "c031bff67b5ee7d3",
+            "id": "40ec0dd2c5caf865",
             "type": "leaf",
             "state": {
               "type": "runjs-codelist-view",
@@ -88,23 +88,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 451.0125503540039
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "50c8bc7ce6bb6f83",
+    "id": "a94c2fa1e8b98cef",
     "type": "split",
     "children": [
       {
-        "id": "83cf6faa2a1e7dad",
+        "id": "45db367e026aa969",
         "type": "tabs",
         "children": [
           {
-            "id": "82761235a9732eb1",
+            "id": "a6519784183c79e4",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
+                "file": "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,38 +115,40 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Capítulo 4 - Writing Business Logic for APIs"
+              "title": "Links inversos para Chapter 13 - Abstract Classes and Interfaces"
             }
           },
           {
-            "id": "ef8cb9bfc805d3aa",
+            "id": "d5542b296103ada7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
+                "file": "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Capítulo 4 - Writing Business Logic for APIs"
+              "title": "Links de saída para Chapter 13 - Abstract Classes and Interfaces"
             }
           },
           {
-            "id": "eb1993bdbac01d0a",
+            "id": "e2fd2f68bfdb3269",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
             }
           },
           {
-            "id": "3cff0b3dda4954a2",
+            "id": "2161dfc304130cea",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -155,23 +158,26 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "All properties"
+              "title": "Todas as propriedades"
             }
           },
           {
-            "id": "8648b75b5b839da9",
+            "id": "924b40e8d9fbd07b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md"
+                "file": "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de Capítulo 4 - Writing Business Logic for APIs"
+              "title": "Sumário de Chapter 13 - Abstract Classes and Interfaces"
             }
           },
           {
-            "id": "4799aaec7de34faf",
+            "id": "e016b53484029828",
             "type": "leaf",
             "state": {
               "type": "planner-timeline",
@@ -189,8 +195,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-day-planner:Open Timeline": false,
-      "obsidian-day-planner:Open Multi-Day View": false,
       "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
       "canvas:Criar novo canvas": false,
@@ -203,30 +207,14 @@
       "float-search:Search Obsidian In Modal": false,
       "runjs:RunJS": false,
       "obsidian-git:Open Git source control": false,
-      "vscode-editor:Create Code File": false
+      "vscode-editor:Create Code File": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "a1a6a0c1e1f33ae0",
+  "active": "5d5de4c5a539423f",
   "lastOpenFiles": [
-    "Capítulo 1 - Application Architecture-4.png",
-    "Capítulo 1 - Application Architecture-3.png",
-    "Capítulo 1 - Application Architecture-2.png",
-    "Capítulo 1 - Application Architecture-1.png",
-    "Capítulo 1 - Application Architecture.png",
-    "Beginning Spring Data/Part 1 - Introduction/imagens",
-    "Beginning Spring Data/Part 1 - Introduction",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
-    "Beginning Spring Data/Part 1 - Introduction/Capítulo 1 - Application Architecture.md",
-    "Beginning Spring Data",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/repository/CartRepository.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/repository",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/ShipmentEntity.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/PaymentEntity.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/AuthorizationEntity.java",
-    "Day Planners/Day Planner-20250201.md",
-    "Day Planners",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/TagEntity.java~",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
-    "RoadMap do DavJaveiro/RoadMap.canvas"
+    "Sem título.md",
+    "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md"
   ]
 }

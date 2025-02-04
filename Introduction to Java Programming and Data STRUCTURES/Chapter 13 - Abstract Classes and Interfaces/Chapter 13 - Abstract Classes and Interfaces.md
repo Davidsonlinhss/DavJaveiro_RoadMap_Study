@@ -97,9 +97,13 @@ When invoking **equalArea(geoObject1, geoObject2)**, the **getArea()** method de
 Similarly, when invoking **displayGeometricObject** (**geoObject1**), the methods **getArea()** and **getPerimeter()** defined in the **Circle** class are used, and when invoking **displayGeometricObject(geoObject2)**, the methods **getArea** and **getPerimeter** defined in the **Rectangle** class are used. The JVM dynamically determines which of theses methods to invoke at runtime, depending on the actual object that invokes the method.
 
 ### 13.2.2 Interesting Points about Abstract Classes
-The following points about abstract classes are worth noting:
-- An abstract method cannot be contained in a nonabstract class. If a subclass of an abstract superclass does not implement all the abstract methods, the subclass must be defined as abstract. In other words, in a nonabstract subclass extended from abstract class, all the abstract methods must be implemented. Also note abstract methods are nonstatic. 
-- An abstract class cannot be instantiated using the **new** operator, but you can still define its constructors, which are invoked in the constructors of its subclass. For instance, the constructor of **GeometricObject** are invoked in the **Circle** and **Rectangle** class. 
-- A class that contains abstract methods must be abstract. However, it is possible to define an abstract class that doesn't contain any abstract methods. This abstract class is used as a base class for defining subclasses. 
-- A subclass can be abstract even if its superclass is concrete. For example, the Object class is concrete, but its subclasses, such as **GeometricObject**, may be abstract.
-- You cannot create an instance from an abstract class using the **new** operator, but an abstract class can be used as a data type. 
+Os seguintes pontos sobre classes abstratas merecem destaque:
+- Um **método abstrato** não pode estar contido em uma classe **não abstrata**. Se uma subclasse de uma **superclasse abstrata** não implementar todos os métodos abstratos, essa subclasse deve ser definida como abstrata. Em outras palavras, em uma subclasse não abstrata estendida de uma classe abstrata, todos os métodos abstratos devem ser implementados. Além disso, note que métodos abstratos são não estáticos.
+- Um **classe abstrata** não pode ser instanciada usando o operador #new, mas ainda é possível definir seus construtores, que são invocados nos construtores de suas subclasses. Por exemplo, os construtores da classe *GeometricObject* são chamados nas classes *Circle* e *Rectangle*.
+- Uma classe que contém **métodos abstratos** deve ser abstrata. No entanto, é possível definir uma classe abstrata sem nenhum método abstrato. Esse tipo de classe abstrata é utilizado como **classe base** para definição de subclasses.
+- Uma subclasse pode sobrescrever um método de sua superclasse e defini-lo como **abstrato**. Isso é incomum, mas pode ser útil quando a implementação do método na superclasse se torna inválida na subclasse. Nesse caso, a subclasse deve ser definida como abstrata.
+- Uma subclasse pode ser **abstrata**, mesmo que sua superclasse seja **concreta**. Por exemplo, a classe #Object é concreta, mas suas subclasses, como *GeometricObject*, podem ser abstratas.
+- Não podemos criar uma instância de uma classe abstrata usando o operador #new, mas uma classe abstrata pode ser usada como **tipo de dado**. Portanto, a seguinte declaração, que cria um array cujos elementos são do tipo **GeometricObject**, é válida:
+```java
+GeometricObject[] objects = new GeometricObject[10];
+```
