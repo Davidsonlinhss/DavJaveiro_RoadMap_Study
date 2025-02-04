@@ -694,3 +694,33 @@ Para corrigir isso, podemos alterar o tipo da variável para *Runnable*, que é 
 ```java
 Runnable r = () -> {System.out.println("Trycky example);};
 ```
+
+### 3.5.3 Type Inference 
+Podemos simplificar ainda mais o nosso código. O compilador Java deduz qual interface funcional associar a uma expressão lambda a partir de seu contexto circundante (o tipo alvo), o que significa que ele também pode deduzir uma assinatura apropriada para a lambda porque o descritor da função está disponível através do tipo alvo. O benefício é que o compilador tem acesso aos tipos dos parâmetros de uma expressão lambda. 
+```java
+List<Apple> greenApples = filter(inventory, apple -> GREEN.equals(apple.getColor()));
+```
+
+Os benefícios da legibilidade do código são mais perceptíveis com expressões lambda que têm vários parâmetros. Por exemplo, aqui está como criar um objeto Comparator:
+
+```java
+Comparator<Apple> c =
+(Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight()); // com tipo
+
+Comparator<Apple> c = (a1, a2) -> a1.getWeight().compareTo(a2.getWeight()); // sem tipo
+```
+Às vezes é mais legível incluir os tipos explicitamente, e outras é mais legível excluí-los. Não há uma regra sobre qual maneira é melhor; os desenvolvedores devem fazer suas próprias escolhas sobre o que torna seu código mais legível.
+
+## Using local variables
+Todas as expressões lambda que mostramos até agora usaram apenas seus argumentos dentro de seu corpo. No entanto, as expressões lambda também podem usar variáveis livres (variáveis que não são os parâmetros e são definidas em um escopo externo), assim como as classes anônimas podem. Essas são chamadas de lambda de captura. Por exemplo, a seguinte lambda captura a variável portNumber:
+```java
+int portNumber = 1337;
+Runnable r = () -> System.out.println(portNumber);
+```
+
+No exemplo acima, a variável `portNumber` é definida fora da expressão lambda, mas a lambda captura essa variável e a utiliza dentro de seu corpo para imprimir seu valor. 
+
+**Restrições sobre variáveis locais**
+Por qual motivos as variáveis locais têm restrições? Primeiro, há uma diferença fundamental em como variáveis de instância e variáveis locais são implementadas nos bastidores. Variáveis de instância são armazenadas no **heap**, enquanto variáveis locais vivem na **stack**. Se uma lambda pudesse acessar diretamente a variável local e a lambda fosse usada em uma thread, a thread usando a lambda poderia tentar acessar a variável depois que a thread que alocou a variável tivesse desalocada. Por tanto, o Java implementa o acesso a uma variável local livre como acesso a uma cópia dela, em vez de acesso à variável original. Isso não faz diferença se a variável local for atribuída apenas umas vez - daí a restrição. 
+
+Em segundo lugar, essa restrição também desencoraja padrões típicos de programação imperativa (que, como explicamos em capítulos posteriores, impedem a paralelização fácil) que alteram uma variável externa.

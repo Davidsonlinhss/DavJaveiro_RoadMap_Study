@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e752634fcdd8b716",
+        "id": "7e7172bb12518057",
         "type": "tabs",
         "children": [
           {
-            "id": "a1a6a0c1e1f33ae0",
+            "id": "afda90ca53f5c139",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Beginning Spring Data/Part 1 - Introduction/Capítulo 1 - Application Architecture.md",
+                "file": "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 1 - Application Architecture"
+              "title": "Capítulo 3 - Lambda Expressions"
             }
           }
         ]
@@ -170,6 +170,16 @@
               "icon": "lucide-list",
               "title": "Sumário de Capítulo 4 - Writing Business Logic for APIs"
             }
+          },
+          {
+            "id": "87d82af5ea76db60",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Timeline"
+            }
           }
         ]
       }
@@ -180,6 +190,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false,
       "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
       "canvas:Criar novo canvas": false,
@@ -195,26 +207,32 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "a1a6a0c1e1f33ae0",
+  "active": "afda90ca53f5c139",
   "lastOpenFiles": [
+    "Beginning Spring Data/Part 1 - Introduction/Capítulo 1 - Application Architecture.md",
+    "Capítulo 1 - Application Architecture-12.png",
+    "Capítulo 1 - Application Architecture-11.png",
+    "Capítulo 1 - Application Architecture-10.png",
+    "Artigos/Papers for Science and Technology for Dummies.md",
+    "Capítulo 1 - Application Architecture-9.png",
+    "Capítulo 1 - Application Architecture-8.png",
+    "Capítulo 1 - Application Architecture-7.png",
+    "Capítulo 1 - Application Architecture-6.png",
+    "Capítulo 1 - Application Architecture-5.png",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/repository.iml",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/src/test/java/desktop.ini",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/src/test/java",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/src/test/desktop.ini",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/src/test",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/src/main/resources/desktop.ini",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/src/main/resources",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/src/main/java/com/apress/pattern/persistence/desktop.ini",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/src/main/java/com/apress/pattern/persistence/CityRepositoryImpl.java",
+    "Beginning Spring Data/Part 1 - Introduction/chapter 1/repository/src/main/java/com/apress/pattern/persistence/CommonDao.java",
     "Capítulo 1 - Application Architecture-4.png",
     "Capítulo 1 - Application Architecture-3.png",
-    "Capítulo 1 - Application Architecture-2.png",
-    "Capítulo 1 - Application Architecture-1.png",
-    "Capítulo 1 - Application Architecture.png",
-    "Beginning Spring Data/Part 1 - Introduction/imagens",
-    "Beginning Spring Data/Part 1 - Introduction",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
-    "Beginning Spring Data/Part 1 - Introduction/Capítulo 1 - Application Architecture.md",
-    "Beginning Spring Data",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/repository/CartRepository.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/repository",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/ShipmentEntity.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/PaymentEntity.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/AuthorizationEntity.java",
     "Day Planners/Day Planner-20250201.md",
-    "Day Planners",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/entity/TagEntity.java~",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
     "RoadMap do DavJaveiro/RoadMap.canvas"
   ]
