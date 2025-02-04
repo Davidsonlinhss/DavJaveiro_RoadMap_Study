@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 451.0125503540039,
-    "collapsed": true
+    "width": 451.0125503540039
   },
   "right": {
     "id": "50c8bc7ce6bb6f83",
@@ -170,6 +169,16 @@
               "icon": "lucide-list",
               "title": "Sumário de Capítulo 4 - Writing Business Logic for APIs"
             }
+          },
+          {
+            "id": "4799aaec7de34faf",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Timeline"
+            }
           }
         ]
       }
@@ -180,6 +189,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false,
       "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
       "canvas:Criar novo canvas": false,

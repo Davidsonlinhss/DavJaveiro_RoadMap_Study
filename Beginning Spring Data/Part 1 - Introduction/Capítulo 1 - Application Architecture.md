@@ -81,3 +81,4 @@ Vamos analisar todos os conceitos relacionados ao acesso a um banco de dados e �
 
 ![[Capítulo 1 - Application Architecture-4.png]]
 Quando tudo parece bastante semelhante no seu banco de dados, podemos conectarmos ao banco e obter uma lista dos países existente usando um bloco de código semelhante ao seguinte:
+
