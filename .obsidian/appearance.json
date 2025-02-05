@@ -1,10 +1,10 @@
 {
   "accentColor": "#8273b5",
   "baseFontSize": 23,
-  "cssTheme": "AnuPpuccin",
+  "cssTheme": "Catppuccin",
   "nativeMenus": true,
   "translucency": true,
-  "theme": "moonstone",
+  "theme": "obsidian",
   "textFontFamily": "Comic Sans MS",
   "baseFontSizeAction": true,
   "showViewHeader": true,
