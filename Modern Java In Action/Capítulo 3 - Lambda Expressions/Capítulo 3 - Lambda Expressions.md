@@ -718,9 +718,85 @@ int portNumber = 1337;
 Runnable r = () -> System.out.println(portNumber);
 ```
 
-No exemplo acima, a variável `portNumber` é definida fora da expressão lambda, mas a lambda captura essa variável e a utiliza dentro de seu corpo para imprimir seu valor. 
+No exemplo acima, a variável `portNumber` é definida fora da expressão lambda, **mas a lambda captura essa variável** e a utiliza dentro de seu corpo para imprimir seu valor. 
 
 **Restrições sobre variáveis locais**
 Por qual motivos as variáveis locais têm restrições? Primeiro, há uma diferença fundamental em como variáveis de instância e variáveis locais são implementadas nos bastidores. Variáveis de instância são armazenadas no **heap**, enquanto variáveis locais vivem na **stack**. Se uma lambda pudesse acessar diretamente a variável local e a lambda fosse usada em uma thread, a thread usando a lambda poderia tentar acessar a variável depois que a thread que alocou a variável tivesse desalocada. Por tanto, o Java implementa o acesso a uma variável local livre como acesso a uma cópia dela, em vez de acesso à variável original. Isso não faz diferença se a variável local for atribuída apenas umas vez - daí a restrição. 
 
 Em segundo lugar, essa restrição também desencoraja padrões típicos de programação imperativa (que, como explicamos em capítulos posteriores, impedem a paralelização fácil) que alteram uma variável externa.
+
+**Closure**
+Um #closure é uma instância de uma função que pode referenciar variáveis não locais dessa função sem restrições. 
+Por exemplo, um #closure pode ser passado como argumento para outra função. Ele também pode acessar e modificar variáveis definidas fora de seu escopo.
+
+As *lambdas* e *classes anônimas* do Java 8 fazem algo semelhante aos #closures: elas podem ser passadas como argumento para métodos e podem acessar variáveis fora de seu escopo. No entanto, há uma restrição: elas não podem modificar o conteúdo de variáveis locais do método onde a lambda foi definida. Essas variáveis precisam ser implicitamente *final*.
+
+É útil pensar que as *lambdas* capturam valores em vez de variáveis. Como explicado anteriormente, essa restrição existe porque variáveis locais vivem na pilha (stack) e estão implicitamente confinada à *thread* em que foram criadas. Permitir a captura de variáveis locais mutáveis abriria possibilidades inseguras para *threads*, o que não é desejável (variáveis de instância, por outro lado, não apresentam esse problema, pois vivem no *heap*, que é compartilhado entre *threads*).
+
+```java
+public class Exemplo {
+	public static void main(String[] args) {
+		String nome = "Carlos"; // essa variável é efetivamente final;
+
+		Runnable r = () -> System.out.println("Olá, " + nome);
+		r.run();
+	}
+
+}
+```
+Aqui, a *lambda* acessa a variável *nome*, que está fora do seu escopo, mas **não pode modificá-la**. 
+Se tentarmos modificar o *nome*, o código não compila:
+```java
+public class Exemplo {
+	public static void main(String[] args) {
+		String nome = "Carlos";
+
+		Runnable r = () -> {
+			nome = "João";
+			System.out.println("Olá, " + nome);
+		};
+	r.run();
+	}
+}
+```
+Erro. Isso acontece porque variáveis locais vivem na *pilha (stack)* e não são compartilhadas entre *threads*. Permitir que uma lambda modifique essas variáveis poderia causar problemas de concorrência e insegurança em *multithreading*.
+
+Por outro lado, **variáveis de instância** vivem no *heap*, que é compartilhado entre threads. Então, **lambdas podem modificar variáveis de instância:**
+```java
+public class Exemplo {
+	private String nome = "Carlos";
+	
+	publiuc void executar() {
+		Runnable r = () -> {
+			nome = "Zulu"; // isso é permitido!
+			System.out.println("Olá, " + nome);
+		};
+		r.run(); 
+	}
+
+	public static void main(String[] args) {
+		new Exemplo().executar();
+}
+}
+```
+
+**Resumo**
+- #closures podem acessar e modificar variáveis externas;
+- Lambdas em Java podem acessar variáveis externas, mas não modificá-las, a menos que sejam variáveis de instância ou estáticas.
+- Essa restrição existe porque variáveis locais vivem na *stack* e não são compartilhadas entre *threads*, evitando problemas de concorrência.
+
+## 3.6 Method references
+As referências a métodos permitem **reutilizar definições de métodos existentes** e passá-las como se fossem expressões lambda. Em alguns casos, elas tornam o código mais legível e natural do que o uso direto de lambdas.
+
+Exemplo de ordenação de uma lista usando #lambdas:
+```java
+inventory.sort((Apple a1, Apple a2) ->
+	a1.getWeight().compareTo(a2.getWeight()));
+```
+
+Usando *referência a método e comparator.comparing* do Java 8:
+```java
+inventory.sort(comparing(Apple::getWeight));
+```
+O método `Apple::getWeight` faz exatamente o que a lambda faria...
+
