@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "474a0ade77e3a2c0",
+        "id": "d928cf2e78cfdfb2",
         "type": "tabs",
         "children": [
           {
-            "id": "5d5de4c5a539423f",
+            "id": "d6f6acd41da3c5f4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Chapter 13 - Abstract Classes and Interfaces"
+              "title": "Nova aba"
             }
           }
         ]
@@ -88,8 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a94c2fa1e8b98cef",
@@ -212,9 +207,9 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "5d5de4c5a539423f",
+  "active": "d6f6acd41da3c5f4",
   "lastOpenFiles": [
-    "Sem título.md",
-    "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md"
+    "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
+    "Sem título.md"
   ]
 }
