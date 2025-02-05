@@ -1,36 +1,24 @@
 {
   "main": {
-<<<<<<< HEAD
-    "id": "a9ab90114e86a52a",
+    "id": "fd7d188f736b1213",
     "type": "split",
     "children": [
       {
-        "id": "31b3758a17a075c1",
+        "id": "4bf63acbeb3969ad",
         "type": "tabs",
         "children": [
           {
-            "id": "c7a3730a03f4b5e0",
-=======
-    "id": "e5ce5402939db6cd",
-    "type": "split",
-    "children": [
-      {
-        "id": "d928cf2e78cfdfb2",
-        "type": "tabs",
-        "children": [
-          {
-<<<<<<< HEAD
-            "id": "d6f6acd41da3c5f4",
-=======
-            "id": "5d5de4c5a539423f",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
->>>>>>> 1453a1b1547063f601bdc5ec0a5d5fd35c584f82
+            "id": "edd33e57e051120a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Chapter 13 - Abstract Classes and Interfaces"
             }
           }
         ]
@@ -39,27 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-<<<<<<< HEAD
-    "id": "99c7eee5a885695a",
+    "id": "bc5979b56c969d2b",
     "type": "split",
     "children": [
       {
-        "id": "68b10ef87d057336",
+        "id": "148c026c2ae72193",
         "type": "tabs",
         "children": [
           {
-            "id": "20ef374e0bce1313",
-=======
-    "id": "a19cafb38678c334",
-    "type": "split",
-    "children": [
-      {
-        "id": "506da6836ea65d1d",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "37f5777138dfab5b",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "d8ace1bd3e1185b2",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -72,11 +48,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "eeaa492968ca4744",
-=======
-            "id": "b54c5ca34bfa7dc3",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "06f87ed22546d347",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -93,11 +65,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "9379ea3efd674d62",
-=======
-            "id": "edb5f121362a4be3",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "11e90dcc2bf9fbbb",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -107,11 +75,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "6c319cac540a15d5",
-=======
-            "id": "40ec0dd2c5caf865",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "1b188563ef97bd14",
             "type": "leaf",
             "state": {
               "type": "runjs-codelist-view",
@@ -124,30 +88,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-<<<<<<< HEAD
-    "id": "6fa83ca12789c766",
+    "id": "80c3d83199a5dd81",
     "type": "split",
     "children": [
       {
-        "id": "4a120f3a1dc5e76c",
+        "id": "fb024bac3d81ed63",
         "type": "tabs",
         "children": [
           {
-            "id": "278d176d99bb110e",
-=======
-    "id": "a94c2fa1e8b98cef",
-    "type": "split",
-    "children": [
-      {
-        "id": "45db367e026aa969",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a6519784183c79e4",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "eb7bf3ee1c749e7b",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -166,11 +119,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "9f0a0b23a65a352e",
-=======
-            "id": "d5542b296103ada7",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "d9cb1929405a6119",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -184,11 +133,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "0d7ed5df0da99706",
-=======
-            "id": "e2fd2f68bfdb3269",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "7f0d3f1337d1e5d0",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -203,11 +148,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "06da22e16539740b",
-=======
-            "id": "2161dfc304130cea",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "23a57661e25e6c5a",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -221,11 +162,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "6c08eda403acce70",
-=======
-            "id": "924b40e8d9fbd07b",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "2bd5d363588fde84",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -240,11 +177,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "bbd6aae307888085",
-=======
-            "id": "e016b53484029828",
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+            "id": "b49ce157a8bee02d",
             "type": "leaf",
             "state": {
               "type": "planner-timeline",
@@ -279,34 +212,11 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-<<<<<<< HEAD
-  "active": "d6f6acd41da3c5f4",
+  "active": "edd33e57e051120a",
   "lastOpenFiles": [
+    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/ECommerceAppApplication.java~",
     "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
-    "Sem título.md"
-=======
-<<<<<<< HEAD
-  "active": "c7a3730a03f4b5e0",
-  "lastOpenFiles": [
-    "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Chapter 13 - Abstract Classes and Interfaces.png",
-    "Capítulo 1 - Application Architecture.png",
-    "Capítulo 1 - Application Architecture-9.png",
-    "Capítulo 1 - Application Architecture-8.png",
-    "Capítulo 1 - Application Architecture-7.png",
-    "Capítulo 1 - Application Architecture-6.png",
-    "Capítulo 1 - Application Architecture-5.png",
-    "Capítulo 1 - Application Architecture-4.png",
-    "Capítulo 1 - Application Architecture-3.png",
-    "Capítulo 1 - Application Architecture-2.png",
+    "Chapter 13 - Abstract Classes and Interfaces-1.png",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md"
-=======
-  "active": "5d5de4c5a539423f",
-  "lastOpenFiles": [
-    "Sem título.md",
-    "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md"
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
->>>>>>> 1453a1b1547063f601bdc5ec0a5d5fd35c584f82
   ]
 }

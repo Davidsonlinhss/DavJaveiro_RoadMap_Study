@@ -1,6 +1,6 @@
 **Objectives**
-- [ ] To design and use abstract classes;
-- [ ] To generalize numeric wrapper classes **BigInteger** and **BigDecimal** using the abstract **Number** class.
+- [x] To design and use abstract classes;
+- [x] To generalize numeric wrapper classes **BigInteger** and **BigDecimal** using the abstract **Number** class.
 - [ ] To process a calendar using the **Calendar** and **GregoriCalendar** classes. 
 - [ ] To specify common behavior for objects using interfaces;
 - [ ] To define interfaces and define classes that implement interfaces;
@@ -136,7 +136,6 @@ GeometricObject geoObject2 = new Rectangle(5, 3);
 criam um novo círculo e um retângulo e os atribuem às variáveis geoObject1 e geoObject2. Essas duas variáveis são do tipo GeometricObject. Ao invocar equalArea(geoObject1, geoObject2), o método getArea() definido na classe Circle é usado para object1.getArea(). 
 
 ### 13.2.2 Interesting Points about Abstract Classes
-<<<<<<< HEAD
 Os seguintes pontos sobre classes abstratas são dignos de nota:
 - Um método abstrato não pode estar contido em uma classe não abstrata. Se uma subclasse de uma superclasse abstrata não implementar todos os métodos abstratos, a subclasse deve ser definida como abstrata. Em outras palavras, em uma subclasse não abstrata estendida de um a classe abstrata, todos os métodos abstratos devem ser implementados. Também observe que métodos abstratos não são estáticos. 
 
@@ -166,4 +165,120 @@ Os seguintes pontos sobre classes abstratas merecem destaque:
 ```java
 GeometricObject[] objects = new GeometricObject[10];
 ```
->>>>>>> 0c6e8bbf279207ccdf56c3c5d23df0acdc6bf12d
+## 13.3 - Case Study: The Abstract Number Class
+O *Number* é uma superclasse abstrata para as classes wrapper numéricas #BigInter e #BigDecimal. A seção 10.7 introduziu classes wrappers numéricas e a seção 10.9 introduziu #BigInter e #BigDecimal. Essas classes possuem métodos comuns *byteValue()*, *shortValue()*, *intValue()*, *longValue()*, *floatValue()* e *doubleValue()* para retornar um valor byte, short, int, long, float e double de um objeto dessas classes. Esses métodos comuns são realmente definidos na classe Number, que é uma superclasse para as classes de empacotamento numérico BigInter e BigDecimal.
+![[Chapter 13 - Abstract Classes and Interfaces-1.png]]
+Como os métodos intValue(), longValue(), floatValue() e doubleValue() não podem ser implementados na classe Number, eles são definidos como métodos abstratos na classe Number. Portanto, a classe Number é uma classe *abstrata*. Os métodos byteValue() e shortValue() são implementados a partir do método intValue() da seguinte forma:
+```java
+public byte byteValue() {
+	return (byte)intValue();
+}
+
+public short shortValue() {
+	return (short)intValue();
+}
+```
+Com a classe *Number* definida como a superclasse para as classes numéricas, podemos definir métodos para realizar operações comuns com números. O programa abaixo apresenta um código para encontrar o maior número em uma lista de objetos Number:
+```java
+import java.util.ArrayList;
+import java.math.*;
+
+public class LargestNumber {
+	public static void main(String[] args) {
+		ArrayList<Number> list = new ArrayList<>();
+		list.add(45); // add an integer
+		list.add(3445.53); // add a double
+
+		// add a BigInter
+		list.add(new BigInteger("3432323234344343101"));
+
+		// add a BigDecimal
+		list.add(new BigDecimal("2.0909090989091343433344343"));
+
+		System.out.println("The largest number is " + getLargestNumber(list));
+	}
+
+	public static Number getLargestNumber(ArrayList<Number> list) {
+	if(list == null) || list.size() == 0
+		return null
+
+	Number number = list.get(0);
+	for (int i = 1; i < list.size(); i++)
+		if(number.doubleValue() < list.get(i).doubleValue())
+			number = list.get(i);
+
+	return number;
+	}
+}
+```
+
+O programa cria um *ArrayList* de objetos *Number*. Ele adiciona um objeto Integer, um objeto Double, um objeto BigInteger e um objeto BigDecimal à lista. Observamos que o número 45 é automaticamente convertido em um objeto Double e adicionado à lista na linha 8 usando autoboxing. Ao chamarmos o método *getLargestNumber*, o método retornará o maior número na lista. O método retorna *null* se a lista for *null* ou se o tamanho da lista for 0. Para encontrar o maior número na lista, os números são comparados invocando seu método doubleValue(). O método doubleValue() é definido na classe *Number* e implementado na subclasse concreta de *Number*. Se um número é um objeto Integer, o doubleValue do BigDecimal é invocado. Se o método doubleValue()
+
+### 13.3.1 Por que as duas linhas de código a seguir compilam, mas causam um erro em tempo de execução? 
+```java
+Number numberRef = Integer.valueOf(0);
+Double doubleRef = Double(numberRef);
+```
+**Por que o código compila?**
+1. **Polimorfismo e upcasting:**
+- *Integer* é uma subclasse de **Number**, então *Integer.valueOf(0)* pode ser atribuído a uma variável do tipo #Number. *Number numberRef = Integer.valueOf(0);* é um **upcasting** válido, já que **Integer** herda de **Number**.
+
+1. **Conversão explícita (cast) de *Number* para *Double***:
+- **Double doubleRef = (Double) numberRef;**
+O compilador aceita esse tipo de conversão, pois *numberRef* é do tipo *Number*, e *Double* também herda de *Number*.
+O compilador **não verifica o tipo real do objeto** em tempo de compilação, apenas a compatibilidade das classes. 
+
+**Por que o código falha em tempo de execução?**
+Quando o programa roda, o erro ocorre na seguinte linha:
+```java
+Double doubleRef = (Double) numberRef;
+```
+- Em tempo de execução, *numberRef* contém um objeto *Integer* (*Integer.valueOf(0)*).
+- O cast  `(Double) numberRef` tenta forçar um *Integer* a ser tratado como um *Double*.
+- Como *Integer* não é um **Double**, o Java lança um **ClassCastException:**
+
+### 13.3.2 Why do the following two lines of code compile but cause a runtime error?
+```java
+Number[] numberArray = new Integer[2]; // cria um array de Integer
+numberArray[0] = Double.valueOf(1.5); // Erro em tempo de execução
+```
+1. **Polimorfismo com arrays:**
+- **Integer[]** é um subtipo de *Number* porque arrays em Java seguem a **covariância**. Isso significa que podemos atribuir um array de Integer a uma variável do tipo **Number[]**, pois Integer herda de *Number*.
+- Isso faz com que a linha *Number[] numberArray = new Integer[2];* seja aceita pelo compilador.
+-
+2. **Atribuição de *Double* ao array de *Number***:
+- Double.valuoeOf(1.5) é do tipo *Double*, que também herda de *Number*.
+
+O Array real que foi criado é do tipo *Integer* e não do tipo *Number*;
+Em tempo de execução, o Java verifica o tipo real do array e vê que estamos tentando armazenar um Double dentro de um *Integer*.
+
+Como Double não é um *Integer*, o Java lança um *ArrayStoreException*.
+**Como podemos evitar esse erro?**
+1. Usar um array de *Number[]* corretamente:
+```java
+Number[] numberArray = new Number[2];
+numberArray[0] = Double.valueOf(2.0);
+numberArray[1] = Integer.valueOf(10);
+```
+
+1. Usar *List< Number>* em vez de arrays para evitar problemas de #covariância:
+```java 
+List<Number> numberList = new ArrayList<>();
+numberList.add(Double.valueOf(1.5)); // Funciona
+numberList.add(Integer.valueOf(10));
+```
+A principal diferença aqui é que List< Number> não é covariante, então não permite atribuir List< Integer> a List< Number>, evitando esse tipo de erro.
+
+### 13.3.4 What is wrong in the following code? (Note the *compareTo* method for the *Integer* and *Double* classes was introduced in Section 10.7)
+```java
+public class Teste {
+	public static void main(String[] args) {
+		Number x = Integer.valueOf(3);
+		System.out.println(x.intValue()); // obtém o valor interior 3
+		System.out.println(x.compareTo(4));
+	}
+}
+```
+
+Temos um erro de compilação no método *compareTo*, pois *compareTo(int)* é um método da classe **Integer**, não da classe **Number**. Como x é do tipo **Number**, não há garantia de que ele seja um **Integer**, e o método **compareTo(int)** não está disponível na classe Number.
+## 13.4 Case Study: Calendar and GregorianCalendar
