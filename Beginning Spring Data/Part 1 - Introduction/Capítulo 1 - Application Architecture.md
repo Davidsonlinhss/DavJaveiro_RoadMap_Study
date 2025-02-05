@@ -82,6 +82,8 @@ Vamos analisar todos os conceitos relacionados ao acesso a um banco de dados e �
 ![[Capítulo 1 - Application Architecture-4.png]]
 Quando tudo parece bastante semelhante no seu banco de dados, podemos conectarmos ao banco e obter uma lista dos países existente usando um bloco de código semelhante ao seguinte:
 
+<<<<<<< HEAD
+=======
 ## EJB
 Enterprise JavaBeans (EJB) é uma especificação para a construção de aplicações empresariais portáteis, escaláveis e reutilizáveis, sem a necessidade de reinventar soluções para tarefas comuns, como segurança, acesso a banco de dados, envio de mensagens entre diferentes aplicações e muito mais.
 
@@ -237,3 +239,4 @@ Aqui está a tabela refeita dos padrões DAO e Repositório:
 O padrão DTO é usado em várias linguagens, agregando e encapsulando dados para transferência entre as camadas de sua aplicação ou aplicações. Podemos pensar nesse padrão como uma estrutura de dados que não contém nenhuma lógica de negócios e pode representar uma combinação de estruturas. Martin Fowler introduziu esse padrão em 2002, em seu livro _Patterns of Enterprise Application Architecture_. Esse padrão ajuda a reduzir o número de chamadas para diferentes endpoints ou processos para obter todas as informações necessárias para realizar uma determinada tarefa, o que é caro em termos de tempo ou tamanho das informações a serem transferidas.
 
 ![[Capítulo 1 - Application Architecture-12.png]]
+>>>>>>> 559e7d83e1eaccc43213a76aff22941c40fdb35f
