@@ -282,3 +282,57 @@ public class Teste {
 
 Temos um erro de compilação no método *compareTo*, pois *compareTo(int)* é um método da classe **Integer**, não da classe **Number**. Como x é do tipo **Number**, não há garantia de que ele seja um **Integer**, e o método **compareTo(int)** não está disponível na classe Number.
 ## 13.4 Case Study: Calendar and GregorianCalendar
+*GregorianCalendar* é uma **subclasse** concreta da classe abstrata *Calendar*. 
+
+Uma instância de *java.util.Date* representa um instante específico no tempo com precisão de **milissegundo**. 
+*java.util.Calendar* é uma classe base abstrata para extrair informações detalhadas de calendário, como o **ano**, **mês**, **data**, **hora**, **minuto**, e **segundo**. Subclasses de *Calendar* podem implementar sistemas de calendário específicos, como o calendário **Gregoriano**, o calendário **lunar** e o calendário **judaico**. Atualmente, o *java.util.GregorianCalendar* para o calendário **Gregoriano*** é suportado no **Java**, conforme mostrado na figura 13.3. O método add é abstrato na classe *Calendar*, pois sua implementação depende de um sistema de calendário concreto.
+
+Podemos usar o *new GregorianCalendar()* para construir um GregorianCalendar padrão com a hora atual e *new GregorianCalendar(year, month, date)* para construir um **GregorianCalendar** como o **ano**, **mês** e **data** especificados. O parâmetro **mês** é baseado em 0, ou seja, 0 corresponde a **Janeiro**.
+
+O método *get(int field)* definido na classe *Calendar* é útil para extrair informações de data e hora de um objeto Calendar. Os campos são definidos como constantes, conforme mostrado na Tabela 13.1
+
+![[Chapter 13 - Abstract Classes and Interfaces-2.png]]
+
+[[TestCalendar.java]]
+**Índice do array**
+O array *dayNameofWeek* está definido como:
+```java
+String[] dayNameOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday" ...}
+```
+Os índices deste array começcam em 0 (ou seja, "sunday" está no índice 0, "Monday" no índice 1, e assim por diante).
+
+**Ajuste com *-1***
+Como o valor retornado por *calendar1.get(Calendar.DAY_OF_WEEK)* começa em 1(para Domingo), mas o índice do array *dayNameofWeek* começa em 0, é necessário subtrair 1 para alinhar corretamente o valor do dia da semana com o índice do array.
+
+**Portanto:** o *-1* serve para ajustar o valor retornado por *calendar1.get(Calendar.DAY_OF_WEEK*) que começa em 1 ao índice do array *dayNameOfWeek* que começa em 0. Isso garante que o dia da semana seja mapeado corretamente para o nome correspondente no array.
+
+O método *set(int field, value)* definido na classe *Calendar* pode ser usado para definir um campo. Por exemplo, podemos usar *Calendar.set(Calendar.DAY_OF_MONTH, 1)* para definir o calendário para o primeiro dia do mês.
+
+O método *add(field, value)* adiciona uma quantidade específica a um determinado campo.
+- *add(Calendar.DAY_OF_MONT, 5)* adiciona cinco dias ao tempo atual do calendário.
+- *add(Calendar.DAY_OF_MONTH, -5* subtrai cinco dias do tempo atual do calendário.
+Para obter o número de dias em um mês, use *Calendar.getActualMaximum(Calendar.DAY_OF_MONTH)*. Se o calendário fosse Março, esse método retornaria 31.
+
+Podemos definir um tempo representado em um objeto *Date* para o calendário invocando *calendar.setTime(date)*. Para recuperar o tempo, usamos *calendar.getTime()*.
+
+### 13.4.1 É possível criar um objeto Calendar usando a classe Calendar?
+Não podemos criar um objeto Calendar usando a própria classe Calendar, pois ela é uma classe *abstrata*. Em vez disso, usamos a subclasse concreta, como *GregorianCalendar*.
+
+### 13.4.2 Qual método na classe Calendar é abstrato?
+O método *add* na classe *Calendar* é **abstrato**. Sua implementação depende de um sistema de calendário concreto fornecido por uma subclasse (por exemplo, *GregorianCalendar*).
+
+### 13.4.3 Como criamos um objeto Calendar para o horário atual?
+Usamos o método *Calendar.getInstance()*, que retorna um calendário inicializado com a data e hora atuais no fuso horário e localidade padrão:
+```java
+Calender calendar = Calendar.getInstance();
+```
+### 13.4.4 Para um objeto Calendar C, como obter o ano, mês, data, hora, minuto e segundo?
+```java
+Calendar c = new GregoriCalendar();
+// ano
+c.get(Calendar.YEAR)
+
+// mês
+c.get(Calendar.MONTH)
+```
+
