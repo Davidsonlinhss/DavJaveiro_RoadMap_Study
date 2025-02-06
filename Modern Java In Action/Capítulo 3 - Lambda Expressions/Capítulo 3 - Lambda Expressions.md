@@ -800,3 +800,72 @@ inventory.sort(comparing(Apple::getWeight));
 ```
 O método `Apple::getWeight` faz exatamente o que a lambda faria...
 
+### In a nutshell
+Por qual motivo precisamos nos preocupar-mos com *method references?* Eles podem ser vistos como uma forma **simplificada** de expressar #lambdas que **chamam apenas um método específico**. Já que uma expressão lambda funciona "chamando um método diretamente", é melhor referenciar o método pelo nome, em vez de descrever como chamá-lo. 
+
+Na prática, uma *method reference* permite criar uma expressão lambda a partir da implementação de um método já existente. Além disso, ao referenciar o nome do método explicitamente, seu código pode se tornar mais legível.
+
+Como funciona na prática? Quando precisamos de um *method reference*, a referência ao alvo é colocada antes do delimitador : :, e o nome do método vem depois dele. Por exemplo:
+*Apple::getWeight* é um method reference para o método *getWeight* definido na classe *Apple*.
+
+**Expressão lambda completa:**
+```java
+(Apple apple) -> apple.getWeight();
+```
+
+**Method Reference**
+```java
+Apple::getWeight
+```
+
+```java
+(Strin s) -> System.out.println(s)
+System.out::println
+```
+
+```java
+(String s) -> this.isValidName(s)
+this::isValidName
+```
+
+Podemos pensar em *method references* como um "açúcar sintático" para #lambdas que se referem apenas a um único método, pois precisamos escrever menos para expressar a mesma coisa.
+
+**Recipe for Constructing Method References**
+Existem três tipos principais de *method references*:
+1. **Referência a um método estático:** método *parseInt* da classe *Integer*: *Integer::perseInt*
+2. **Referência a um método de instância de um tipo arbitrário** (por exemplo, o método #lenght de String) *String::lenght*
+3. **Referência a um método de instância de um objeto ou expressão existente:** por exemplo, suponhamos que tenhamos uma variável local *expansiveTransaction* que armazena um objeto do tipo *Transaction*, o qual possuí um método de instância *getValue*; neste caso, podemos escrever *expanseiveTransaction::getValue*;
+
+O segundo e o terceiro tipo podem parecer um pouco complexos no início:
+- No segundo tipo, como *String::lenght*, a ideia é que estamos referenciando um método que será aplicado a um objeto fornecido como um dos parâmetros da *lambda expression*.  Por exemplo, a expressão lambda *(String s) -> s.toUpperCase()* pode ser reescrita como *String::toUpperCase*. 
+- Já o terceiro tipo ocorre quando a **lambda expression** chama um método em um objeto externo que já existe. Por exemplo, a expressão *() -> expensiveTransaction.getValue()* pode ser reescrita como *expensiveTransaction::getValue*. 
+
+Esse terceiro tipo de method reference é particularmente útil quando precisamos passar um método definido como um **helper privado**. Por exemplo, suponha que tenhamos um método auxiliar chamado *isValidName:*
+```java
+private boolean isValidName(String string) {
+	return Character.isUpperCase(string.charAt(0));
+}
+```
+Esse método pode ser referenciado e reutilizado facilmente através de method references, tornando o código mais conciso e legível:
+```java
+filter(words, this::isValidName)
+```
+
+Para ajudá-lo a assimilar esse novo conhecimento, as regras abreviadas para *refatorar uma expressão lambda* em uma referência de método equivalente seguem receitas simples, mostradas na figura 3.5.
+Observamos que também existem formas especiais de referências de métodos para construtores, construtores de arrays e chamadas super. Vamos aplicar referências de métodos em um exemplo concreto.
+
+Vamos ordenar uma lista de Strings, ignorando diferenças de maiúsculas e minúsculas. O método sort em uma List espera um Comparator como parâmetro. Podemos definir uma expressão lambda que usa o método compareToIgnoreCase na classe String da seguinte forma (compareToIgnoreCase é predefinido na classe String):
+```java
+List<String> str = Arrays.asList("a", "b", "A", "B");
+str.sort((s1, s2) -> s1.compareToIgnoreCase(s2));
+```
+
+![[Capítulo 3 - Lambda Expressions.png]]
+
+A expressão lambda possui uma assinatura compatível com o descritor de função do *Comparator*. Usando as regras descritas, podemos utilizar referência  de método para reescrever a expressão:
+```java
+List<String> str = Arrays.asList("a", "b", "A", "B");
+str.sort(string::compareToIgnoreCase);
+```
+
+Observe que o compilador passa por um processo de verificação de tipos semelhante ao das expressões lambda para determinar se uma referência de método é válida. 

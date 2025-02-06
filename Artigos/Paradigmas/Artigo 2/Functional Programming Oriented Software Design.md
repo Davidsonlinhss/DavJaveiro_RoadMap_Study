@@ -80,7 +80,7 @@ Por exemplo, o autor de *String Diagrams for Modeling Functional Programming, Hi
 - **Diagramas comportamentais do UML:** são mais úteis para representar a estrutura semântica de um programa funcional. Diagramas de iteração (como diagramas de sequência e de comunicação) e diagramas de estado, em particular, são fáceis de adaptar para mostrar o comportamento dinâmico de objetos em um sistema funcional simples.
 - Diagramas de interação poderiam ser usados para representar funções como blocos, com dados rotulados entre eles.
 - Diagramas de estado poderiam ser usados para representar dados como blocos, com funções rotuladas conectando-os.
-EM outras palavras, os diagramas UML podem ser adaptados para representar a estrutura de programas funcionais simples; no entanto, podem ser tornar complexos e impraticáveis à medida que a complexidade do sistema aumenta.
+Em outras palavras, os diagramas UML podem ser adaptados para representar a estrutura de programas funcionais simples; no entanto, podem ser tornar complexos e impraticáveis à medida que a complexidade do sistema aumenta.
 
 4) RQ4: quais são os desafios que os desenvolvedores enfrentam ao projeto software que segue o paradigma de Programação Funcional?
 Entre os principais desafios destacados na literatura sobre o Design de Software orientado à Programação Funcional, os seguintes pontos se destacam:
