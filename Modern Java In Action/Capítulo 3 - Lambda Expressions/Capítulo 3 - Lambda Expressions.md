@@ -869,3 +869,75 @@ str.sort(string::compareToIgnoreCase);
 ```
 
 Observe que o compilador passa por um processo de verificação de tipos semelhante ao das expressões lambda para determinar se uma referência de método é válida. 
+
+**What are equivalent method references for the following lambda expressions?**
+1. *ToIntFunction< String> stringToInt = (String s) -> Integer.parseInt(s);*
+ToIntFunction< String> stringToInt = stringToInt::parseInt;
+
+```java
+BiPredicate<List<String>, String> contains = (list, element) -> list.contains(elements);
+
+BiPredicate<List<String>, String> contains = List::contains;
+```
+- O método *contains* pertence à interface *List< E>*, logo, ele precisa ser chamado em um **objeto do tipo** *List< String>*.
+
+A regra do *ClasName::methodName* depende do tipo de método que estamos referenciando. Existem **quatro** tipos principais de *method references*, e é importante entender como cada um funciona.
+
+---
+**Resumindo**
+No Java, podemos usar **expressões lambdas** para referenciar métodos de forma mais curta e legível. Um **Method reference** (referência a método) é uma forma de escrever uma **expressão lambda** sem precisar escreve explicitamente os parâmetros.
+
+A sintaxe geral de um **method reference é**:
+```java
+ClassName::methodName // para métodos estáticos e métodos de instância
+ObjectReference::methodName // para métodos de instância de um objeto específico
+ClassName::new // para construtores
+```
+
+## 2. Tipos de Method References
+Existem quatro tipos principais de *method references*. 
+**1️⃣** **Referência a um Método Estático**
+Se um método for #static, podemos referenciá-lo diretamente usando a classe que o define:
+```java
+Function<String, Integer> converter = Integer::parseInt;
+```
+**Explicação**:
+- *Integer::parseInt* refere-se ao método #static parseInt(String) da classe #Integer.
+- Isso é equivalente a escrever:
+```java
+Function<String, Integer> converter = s -> Integer.parseInt(s);
+```
+
+**2️⃣** **Referência a um Método de Instância de um Objeto Específico**
+Podemos referenciar um método que pertence a um objeto específico:
+```java
+String texto = "hello";
+Supplier<Integer> tamanho = texto::length;
+```
+- *texto::length* refere-se ao método *length()* do objeto *texto*.
+- Isso é equivalente a escrever:
+```java
+Supplier<Integer> tamanho = () -> texto.length();
+```
+
+**3️⃣** **Referência a um Método de Instância de um Objeto Arbitrário de um Tipo Específico**
+Aqui, referenciamos um método que será chamado em qualquer objeto de um determinado tipo:
+```java
+BiPredicate<List<String> String> contains = List::contains;
+```
+
+- *List::contains* refere-se ao método de instância **contains(Object)** da classe *List< E>*.
+- Isso é equivalente a escrever:
+```java
+BiPredicate<List<String> String> contains = (list, element) -> list.contains(element);
+```
+
+**4️⃣ Referência a um Construtor**
+Podemos referenciar um construtor para criar objetos
+```java
+Supplier<ArrayList<String>> criarList = ArrayList::new;
+```
+
+- **ArrayList::new** refere-se ao construtor *ArrayList()*, que será chamado quando criarList.get() for executado.
+---
+### 3.6.2 Constructor references
