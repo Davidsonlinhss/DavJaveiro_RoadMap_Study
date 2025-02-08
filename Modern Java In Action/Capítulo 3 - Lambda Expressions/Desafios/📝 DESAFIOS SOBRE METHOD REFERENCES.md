@@ -1,10 +1,10 @@
-## **📝 DESAFIOS SOBRE METHOD REFERENCES**
-
 ### **1️⃣ Criando uma referência a um método estático**
 
 Crie uma referência ao método estático `parseInt(String s)` da classe `Integer`, usando um `Function<String, Integer>` chamado `stringToInt`.
 
 💡 **Dica:** Method references para métodos estáticos seguem o formato `Classe::método`.
+
+
 
 ---
 
@@ -13,6 +13,15 @@ Crie uma referência ao método estático `parseInt(String s)` da classe `Intege
 Dado um `String nome = "Java";`, crie um `Supplier<Integer>` chamado `stringLength` que retorne o comprimento do nome usando method reference.
 
 💡 **Dica:** Você pode usar `nome::length`, pois está referenciando um método de instância de um objeto específico.
+
+#Supplier: é uma *interface funcional* que foi introduzida no Java 8 como parte das APIs de programação funcional. Ele representa uma operação que **não recebe argumentos**, mas produz um resultado. A assinatura da #Interface é a seguinte:
+```java
+@FunctionalInterface
+public interface Supplier<T> {
+	T get();
+}
+```
+O #Supplier é usando quando precisamos **gerar ou fornecer um valor** sob demanda, sem precisar passar nenhum argumento para essa operação. Ele é especialmente útil em cenários onde o valor não está disponível imediatamente ou precisa ser gerado dinamicamente. 
 
 ---
 
