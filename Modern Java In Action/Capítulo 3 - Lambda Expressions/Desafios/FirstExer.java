@@ -22,7 +22,7 @@ public class FirstExer {
         Random random = new Random();
         Supplier<Number> numeroAleatorio2 = random::nextDouble;
 
-
+        Function<String, Integer> converter = s -> Integer.parseInt(s);
 
         System.out.println(numeroAleatorio.get());
         System.out.println(numeroAleatorio2.get());
