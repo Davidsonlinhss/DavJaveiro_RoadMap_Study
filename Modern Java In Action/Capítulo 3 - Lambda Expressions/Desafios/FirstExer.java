@@ -23,6 +23,7 @@ public class FirstExer {
         Supplier<Number> numeroAleatorio2 = random::nextDouble;
 
         Function<String, Integer> converter = s -> Integer.parseInt(s);
+        Function<String, Integer> converter1 = Integer::parseInt;
 
         System.out.println(numeroAleatorio.get());
         System.out.println(numeroAleatorio2.get());

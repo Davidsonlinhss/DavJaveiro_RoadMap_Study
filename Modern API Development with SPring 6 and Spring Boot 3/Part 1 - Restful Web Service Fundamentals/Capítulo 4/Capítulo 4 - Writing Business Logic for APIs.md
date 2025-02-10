@@ -474,5 +474,80 @@ public interface CartRepository extends JpaRepository<CartEntity, UUID> {
 🔹 **Se precisa de paginação e ordenação → `PagingAndSortingRepository`.**  
 🔹 **Se quer o máximo de flexibilidade e otimizações para JPA → `JpaRepository`.**
 
+---
+A *interface* **CartRepository** estende a parte **CrudRepository** do pacote *org.springframework.data.repository*. Também podemos adicionar métodos suportados pela linguagem de consulta #JPA, marcados com a anotação *@Query* (parte do pacote *org.springframework.data.jpa.repository*). A consulta dentro da anotação *@Query* é escrita em **Java Persistence Query Language (JPQL)**. O JPQL é muito semelhante ao SQL; no entanto, aqui usamos o nome da classe Java mapeada para uma tabela do banco de dados, em vez de usar o nome real da tabela. Por tanto, usamos CartEntity como o nome da tabela em vez de **Cart**. 
+
+### #JPQL
+1. JPQL se baseia em **entidades**, não em tabelas. 
+- A consulta *refere-se à entidade CartEntity* e **não ao nome da tabela** no banco de dados.
+- A associação com *user* (c.user u) é feita com base nos relacionamentos da JPA, e não através de *JOIN* explícito em tabelas.
+
+2. *Uso de parâmetros nomeados*
+- O parâmetro *:customerId* é passado usando *@Param("customerId")*, que é uma característica do JPQL.
+
+3. JPQL usa *select c from CartEntity c* em vez de *SELECT * FROM cart*.
+- Em SQL seria algo parecido com:
+```sql
+SELECT C.* FROM CART c JOIN users u ON C.user_id = u.id WHERE u.id = ?
+```
 
 ---
+*Select columns in JPQL*
+Da mesma forma, para as colunas, devemos usar os nomes das variáveis fornecidos na classe para os campos, em vez de usar os campos da tabela do banco de dados. Caso usemos o nome da tabela do banco de dados ou o nome do campo e ele não corresponder à classe e aos membros da classe mapeados para a tabela real, receberemos um erro.
+
+Ou seja, quando estamos escrevendo consultas usando JPQL (Java Persistence Query Language), precisamos nos referir aos **nomes das classes e atributos** que estão definidos no seu código Java, e não aos nomes das tabelas e colunas que existem no banco de dados. 
+Por exemplo:
+1. **No banco de dados:**
+- Tabela: *Cart*
+- Colunas: *id*, *product_name*, *quantity*
+
+2. **No seu código Java:**
+- Classe: *CartEntity*
+- Atributos: *id*, *productName*, *quantity*
+
+Exemplos, usando JPQL e consulta SQL:
+```java
+// SQL
+SELECT * FROM Cart;
+```
+
+```Java
+// JPQL
+@Query("SELECT c FROM CartEntity c") // utilizamos o nome da classe (CartEntity)
+List<CartEntutty> findAllCarts();
+```
+
+Da mesma forma, se quisermos filtrar por um campo, usamos o nome do *atributo da classe*, não o nome da coluna do banco de dados, Por exemplo:
+```java
+@Query(SELECT c FROM CartEntity c WHERE c.productName = :name")
+List<CartEntity> findByProductName(@Param("name") String name);
+```
+
+O #JPQL é uma linguagem orientada a objetos, então ele trabalha com as *entidades e atributos mapeados* no nosso código JAVA, e não diretamente com as tabelas e colunas do banco de dados. O framework (como o Hibernate) cuida de traduzir isso para o SQL correto no banco de dados.
+
+**E se eu usar o nome errado?**
+Se usarmos o nome errado da tabela ou coluna do banco de dados diretamente no JPQL, o framework não conseguirá mapear corretamente e lançará um erro, porque ele espera os nomes das classes e atributos definidos no nosso código.
+
+Você deve estar se perguntando:  "E se eu quiser adicionar meu próprio método personalizado com JPQL ou SQL nativo?" Bem, também podemos fazer isso. Para os pedidos, adicionamos uma interface personalizada exatamente para esse propósito. Primeiro, vamos dar uma olhada no *OrderRepository*, que é muito semelhante ao *CartRepository*:
+[[OrderRepository.java]]
+Logo, podemos criar métodos personalizados usando JPQL ou SQL nativo, e o Spring Data JPA facilita isso com a anotação @QUERY.
+
+Se olharmos atentamente, nós estendemos uma interface extra *OrderRepositoryExt*. Essa  é a nossa interface extra para o repositório *Order* e ela consiste no seguinte código:
+```java
+public interface OrderRepositoryExt {
+	Optional<OrderEntity> insert (NewOrder m);
+}
+```
+
+Nós já temos um método *save()* para esse propósito em *CrudRepository*; No entanto, Nós iremos utilizar uma implementação diferente. Para esse propósito, e para demonstrar como você pode criar seu método de implementação em nosso repositório, nós estamos adicionando uma interface repository extra.
+
+Agora, vamos criar a interface de implementação de *OrderRepositoryExt*, como mostrado a seguir:
+```java
+@Repository
+@Transactional
+public class OrderRepositoryImpl implements OrderRepositoryExt {
+	
+}
+```
+
+**CONTINUAR A IMPLEMENTAÇÃO AMANHÃ**

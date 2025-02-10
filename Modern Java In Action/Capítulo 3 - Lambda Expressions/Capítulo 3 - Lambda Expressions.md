@@ -941,3 +941,96 @@ Supplier<ArrayList<String>> criarList = ArrayList::new;
 - **ArrayList::new** refere-se ao construtor *ArrayList()*, que será chamado quando criarList.get() for executado.
 ---
 ### 3.6.2 Constructor references
+Podemos criar uma referência para um construtor usando o nome da classe e a palavra-chave #new da seguinte forma: *ClassName::new*. Funciona de maneira semelhante a uma referência para um método estático:
+Por exemplo, suponhamos que haja um construtor sem argumentos. Isso se encaixa na assinatura *() -> Apple* de um #Supplier:
+```java
+Supplier<Apple> c1 = Apple::new;
+Apple a1 = c1.get();
+```
+Essa forma é semelhante a seguinte:
+```java
+Supplier<Apple> c1 = () -> new Apple(); // lambda expression to create an Apple using the default constructor
+Apple a1 = c1.get(); // Calling Supplier`s get method produces a new Apple.
+```
+
+Se temos um construtor com a assinatura *Apple(Integer weight)*, ele se encaixa na assinatura da #interface #Function, logo, podemos fazer isso:
+```java
+Function<Integer, Apple> c2 = Apple::new;
+Apple a2 = c2.apply(100);
+```
+Isso é equivalente a:
+```java
+Function<Integer, Apple> c2 = (weight) -> new Apple(weight);
+Apple a2 = c2.apply(110);
+```
+
+A interface #Function é uma *interface funcional* que recebe um argumento do tipo #Integer e retorna um objeto do tipo *Apple*. 
+*Apple a2 = c2.apply(100);*
+Estamos chamando o método #apply da interface *Function*, isso invoca o construtor da classe #Apple com valor 100 como argumento. O resultado será uma nova variável de instância da classe *Apple*, sendo atribuída à variável *a2*.
+
+Para que o código funcione, a classe *Apple* deve ter um construtor que aceita um *Integer* como parâmetro:
+```java
+public class Apple {
+	private int weight;
+
+	public Apple(int weight) {
+		this.weight = weight;
+	}
+}
+```
+Quando tivermos mais de argumento, como dois, por exemplo, a interface *Function* não será o suficiente, pois ela só aceita um único argumento como entrada. Neste caso, podemos usar a interface *BiFunction*, ela passará a aceitar dois argumentos e retorna um valor.
+
+Se temos um construtor com a assinatura *Apple(Integer weight)*, ele se encaixa na assinatura da interface *Function*, logo, podemos utilizar a forma a seguir:
+```java
+Function<Integer, Apple> c2 = Apple::new;
+Apple a2 = c2.apply(100);
+```
+
+
+No código abaixo, cada elemento de uma *List* de *Integer* é passado para o construtor de *Apple* usando um método *map* semelhante ao que definimos anteriormente, isso resultará em um List de maçãs com vários pesos:
+```java
+List<Integer> weights = Arrays.asList(7, 8, 9, 4, 10);
+List<Apple> apples = map(weights, Apple::new);
+
+public List<Apple> map(List<Integer> list, Function<Integer, Apple> f {
+	List<Apple> result = new ArrayList<>();
+	for(Integer i: list) {
+		result.add(f.apply(i));
+	}
+	return result;
+})
+```
+
+Como já verificamos anteriormente, se temos um construtor com dois argumentos, *Apple(Color color, Integer weight)*, ele se encaixa na assinatura da interface *BiFunction*, logo, podemos fazer o seguinte:
+```java
+BiFunction<Color, Integer, Apple> c3 = Apple::new;
+
+Apple a3 = c3.apply(GREEN, 110);
+```
+
+A capacidade de se referir a um **construtor** sem instanciá-lo permite aplicações interessantes. Por exemplo, podemos usar um *Map* para associar **construtores** a um valor do tipo *String*. Em seguida, podemos criar um método *giveMeFruit* que, dado um *String* e um *Integer*, pode criar diferentes tipos de frutas com diferentes pesos:
+```java
+static Map<String, Function<Integer, Fruit>> map = new HashMap<>();
+
+static {
+	map.put("apple", Apple::new);
+	map.put("orange", Orange::new);
+}
+
+public static Fruit giveMeFruit(String fruit, Integer weight) {
+	return map.get(fruit.toLowerCase()).apply(weight);
+}
+```
+
+1. *Map<String, Function<Integer, Fruit>> map = new HashMap<>();*
+Aqui, estamos criando um *Map* que associa uma **String** (o nome da fruta) a um *Function* que recebe um **Integer** (peso) e retorna um objeto do tipo *Fruit*.
+
+2. *Bloco static {...}*
+No bloco estático, estamos populado o Map com entradas que associam nomes de frutas (como "apple" e "orange") a referências de construtores das classes **Apple** e **Orange**, respectivamente.
+Por exemplo, *Apple::new* é uma referência ao construtor da classe *Apple* que aceita um *Integer* como argumento.
+
+3. *Motodo giveMeFruit*:
+O método giveMeFruit recebe dois parâmetros: uma **String** (nome da fruta) e um **Integer** (peso).
+Ele usa o Map para obter a função (Function) correspondente ao nome da fruta (convertido para minúsculas como *toLowerCase()*);
+Em seguida, chama o método **apply** da função, passando o peso como argumento, para criar e retornar uma instância da fruta correspondente.
+
