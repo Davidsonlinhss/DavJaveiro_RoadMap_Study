@@ -372,7 +372,6 @@ Account account = repository.findByEmail(dto.getEmail())
 - Usa o repositório (AccountRepository) para buscar um usuário pelo e-mail. Se não encontrar, lança uma exceção *AccountNotFoundException*.
 
  **5️⃣ Retorno do Token Mockado**
-
 ```java
 AuthenticationResponseDTO response = new AuthenticationResponseDTO();
 response.setJwt("mocked_jwt");
@@ -383,3 +382,39 @@ response.setExpiresIn(Instant.now().getEpochSecond());
 - Define um timestamp indicando a expiração.
 
 Essa classe busca o usuário no banco de dados e retorna um JWT falso, sem validar a senha ainda. 
+
+## AccountController
+Essa é a classe  responsável por lidar com requisições relacionadas a contas de usuário. Ela expõe *endpoints HTTP* para *autenticação e registro de contas.*
+
+1. **Anotações da Classe**
+```java
+@RequestMapping(path = "/api/v1/accounts")
+@RestController
+public class AccountController {}
+```
+
+#RestController  - indica que esta classe é um *controller REST*, ou seja, ela manipula requisições HTTP e retorna JSON.
+
+#RequestMapping  - define a URL Base para os endpoints deste controller.
+- **Todos os endpoints começarão com** */api/v1/accounts*.
+
+2. **Dependência *AccountService***
+```java
+private final AccountService service;
+AccountController(AccountServiceImpl service) {
+	this.service = service;
+}
+```
+- Injeta o **serviço de contas *AccountServiceImpl*** no controller. 
+- Isso permite que o controller **chame os métodos do serviço** para processar a lógica de negócios.
+
+1. **Método *authenticate***
+```java
+@PostMapping(path = "/authenticate")
+public ResponseEntity<AuthenticationResponseDTO> authenticate(@RequestBody AuthenticationRequestDTO dto) {
+	return new ResponseEntity<>(service.authenticate(dto), HttpStatus.OK);
+}
+```
+1. Mapeia requisições *POST* para */api/v1/accounts/authenticate*
+2. Recebe um JSON no corpo da requisição (*@RequestBody AuthenticationRequestDTO dto*), que contém e-mail e senha. 
+3. Chama *service.authenticate(dto),* que: busca um usuário no banco de dados; e retorna um HTTP 200 OK. 
