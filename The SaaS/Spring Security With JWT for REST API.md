@@ -168,3 +168,24 @@ public interface UserDetailsService {
 
 Aqui, podemos ver que é necessário retornar o objeto que implementa a *UserDetails* interface, e nossa *User* entidade o implementa (para detalhes de implementação, consulte o repositório do projeto de exemplo). Considerando o fato de que ele expõe apenas o protótipo de função única, podemos tratá-lo como uma interface funcional e fornecer implementação como uma expressão lambda.
 
+## Retornando para a classe SecurityConfig
+```java
+private final UserRepository userRepository;  
+  
+public SecurityConfig(UserRepository userRepository) { 
+    this.userRepository = userRepository;  
+}
+```
+- *UserRepository* é uma interface (geralmente usada com Spring DATA JPA) que fornece métodos para acessar os dados dos usuários no banco de dados.
+- Injeção de dependência: o construtor recebe uma instância de *UserRepository* como parâmetro. Isso é feito automaticamente pelo Spring, graças a injeção de dependência. 
+- Isso permite que a classe *SecurityConfig* use o *UserRepository* para buscar informações dos usuários no banco de dados.
+
+## 3. Para que serve isso?
+Aqui está o propósito de cada parte:
+1. *UserRepository*: Usado para acessar os dados dos usuários no banco de dados; pode ser usado para verificar se um usuário existe ou para carregar detalhes do usuário durante o login.
+2. *SecurityConfig:* configura como a aplicação lida com autenticação (quem pode acessar) e autorização (o que cada pessoa pode fazer).
+
+## 4. Exemplo de uso prático
+Imagine que queiramos permitir que apenas usuários autenticados acessem partes específicas da sua aplicação. Podemos usar o *UserRepository* para verificar se o usuário existe no banco de dados de suas credenciais estão corretas. 
+
+Exemplo simplificado:
