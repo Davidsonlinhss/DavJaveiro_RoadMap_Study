@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ba56145d8c758d2b",
+        "id": "fb309fc3d158cbf4",
         "type": "tabs",
         "children": [
           {
-            "id": "046b0cc37ae91928",
+            "id": "865cb79c4d36a9dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Boot DDD/Visão Geral do Projeto.md",
+                "file": "The SaaS/Spring Security With JWT for REST API.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Visão Geral do Projeto"
+              "title": "Spring Security With JWT for REST API"
             }
           }
         ]
@@ -84,8 +84,7 @@
               "title": "RunJS Codelist"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -213,26 +212,31 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "046b0cc37ae91928",
+  "active": "865cb79c4d36a9dd",
   "lastOpenFiles": [
-    "Sem título 1.md",
+    "Spring Security With JWT for REST API.png",
+    "The SaaS/SpringSecurityTest/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst",
+    "The SaaS/SpringSecurityTest/target/test-classes/com/davjaveiro/helloworldjpa/springsecuritytest/SpringSecurityTestApplicationTests.class",
+    "The SaaS/SpringSecurityTest/target/test-classes/com/davjaveiro/helloworldjpa/springsecuritytest",
+    "The SaaS/SpringSecurityTest/target/test-classes/com/davjaveiro/helloworldjpa",
+    "The SaaS/SpringSecurityTest/target/test-classes/com/davjaveiro",
+    "The SaaS/SpringSecurityTest/target/test-classes/com",
+    "The SaaS/SpringSecurityTest/target/test-classes",
+    "The SaaS/SpringSecurityTest/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst",
+    "The SaaS/SpringSecurityTest/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile",
+    "The SaaS/SpringSecurityTest/target/maven-status/maven-compiler-plugin/testCompile",
+    "The SaaS/SpringSecurityTest/HELP.md",
+    "The SaaS/Spring Security With JWT for REST API.md",
+    "Mastering Git/Parte 1 - Exploring Project History and Managing Your Own Work/Chapter 1 - Git Basics in Practice.md",
+    "Git/Feature Branch Workflow.md",
     "Spring Boot DDD/Visão Geral do Projeto.md",
-    "Spring Boot DDD",
+    "Sem título 1.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/repository/OrderRepository.java",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/eCommerceApp/src/main/java/com/davjaveiro/eCommerceApp/repository/OrderRepositoryExt.java",
     "E.md",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/AppleTest.class",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/AppleTest$Apple.class",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/AppleTest.java",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Post Method Reference.md",
     "The SaaS/Introduction.md",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/📝 DESAFIOS SOBRE METHOD REFERENCES.md",
-    "The SaaS",
-    "desktop.ini",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/text.mk",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/GenericClass.class",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Exerc Prompt.md",
     "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
