@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fb309fc3d158cbf4",
+        "id": "6d7df14313275ee6",
         "type": "tabs",
         "children": [
           {
-            "id": "865cb79c4d36a9dd",
+            "id": "0f1b8f171b333044",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "The SaaS/Spring Security With JWT for REST API.md",
+                "file": "Spring Start Here/Capítulo 1 - Spring in the real world/Chapter 1 - Spring in the real world.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spring Security With JWT for REST API"
+              "title": "Chapter 1 - Spring in the real world"
             }
           }
         ]
@@ -212,20 +212,22 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "865cb79c4d36a9dd",
+  "active": "0f1b8f171b333044",
   "lastOpenFiles": [
+    "Spring Start Here/Capítulo 1 - Spring in the real world",
+    "Spring Start Here/Capítulo 1 - Spring in the real world/Chapter 1 - Spring in the real world.md",
+    "Spring Start Here",
+    "The SaaS/Spring Security With JWT for REST API.md",
+    "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/auth/CustomerUserDetailsService.java",
+    "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/auth/CustomerUserDetails.java",
+    "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/auth",
+    "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/repository/UserRepository.java~",
     "The SaaS/Repository.md",
     "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/security/config/SecurityConfig.java~",
-    "The SaaS/Spring Security With JWT for REST API.md",
-    "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/repository/UserRepository.java~",
     "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/repository/UserRepository.java",
     "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/repository",
     "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/security/config/SecurityConfig.java",
     "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/security/config",
-    "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/model/User.java~",
-    "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/model/User.java",
-    "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/model",
-    "The SaaS/SpringSecurityTest/src/main/java/com/davjaveiro/helloworldjpa/springsecuritytest/user/User.java~",
     "Git/Feature Branch Workflow.md",
     "Spring Security With JWT for REST API.png",
     "The SaaS/SpringSecurityTest/HELP.md",

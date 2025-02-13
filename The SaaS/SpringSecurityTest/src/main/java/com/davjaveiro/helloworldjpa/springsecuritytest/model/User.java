@@ -2,35 +2,51 @@ package com.davjaveiro.helloworldjpa.springsecuritytest.model;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true, nullable = false)
     private String username;
 
+    @Column(unique = true, nullable = false)
+    private String email;
+
+    @Column(unique = true, nullable = false)
     private String password;
 
-    private String role;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> roles;
 
     public User() {}
 
-    public User(String username, String password, String role) {
+    public User(String username, String email, String password, List role) {
         this.username = username;
+        this.email = email;
         this.password = password;
-        this.role = role;
+        this.roles = role;
     }
 
+    public List<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
+    }
+
+    @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(() -> role); // Retorna a role do usuário
+        return List.of();
     }
-
 
     public String getPassword() {
         return password;
@@ -64,5 +80,11 @@ public class User {
         return true;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

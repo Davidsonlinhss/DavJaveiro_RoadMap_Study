@@ -189,3 +189,56 @@ Aqui está o propósito de cada parte:
 Imagine que queiramos permitir que apenas usuários autenticados acessem partes específicas da sua aplicação. Podemos usar o *UserRepository* para verificar se o usuário existe no banco de dados de suas credenciais estão corretas. 
 
 Exemplo simplificado:
+```java
+protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+	auth.userDetailsService(email -> userRepository.findByEmail(email)).orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado")));
+}
+```
+
+
+---
+## UserDetails
+
+1. **Implementando #userDetails na Entidade *User***
+Essa abordagem é mais simples e evita a necessidade de criar uma classe extra:
+```java
+@Entity
+public class User implements UserDetails {
+	...
+}
+```
+
+*Vantagens*
+- Menos código - não precisamos criar uma classe extra;
+- Integração direta - O *User* já pode ser retornado no *CustomerDetailsService*.
+
+Logo, no *CustomerDetailsService* podemos retornar o método:
+```java
+@Override
+public UserDetails loadUserByUserName(String email) throws UsernameNotFoundException{
+	return userRepository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrtado com o email: " + email));
+}
+```
+
+1. **Criando uma Classe Separada *CustomerUserDetails* (Abordagem Personalizada)
+
+Se não quisermos que a entidade User dependa do Spring Security, podemos criar a classe desacoplada:
+
+A classe que criarmos *personalizável*, implementará a interface *UserDetails* e utilizara os dados da entidade #User [[CustomerUserDetails.java]]
+
+
+
+2. **Configuração no *SecurityConfig***
+No método *userDetailsService*, devemos converter a entidade *User* em *CustumerUserDetails*
+[[SecurityConfig.java]]
+
+**Qual Abordagem Escolher?**
+
+| **Abordagem**                              | **Vantagens**                                         | **Desvantagens**                            |
+| ------------------------------------------ | ----------------------------------------------------- | ------------------------------------------- |
+| **Criar `CustomUserDetails`**              | Separação clara entre entidade e lógica de segurança. | Mais código (duas classes ao invés de uma). |
+| **Fazer `User` implementar `UserDetails`** | Menos código, mais simples.                           | Mistura lógica de segurança com a entidade. |
+
+Se precisamos manter uma **separação clara** entre a entidade *User* e a lógica de segurança, usamos a primeira abordagem, desacoplada e personalizável. 
+Se preferirmos algo mais simples e direto, devemos utilizar a segunda abordagem (fazendo *User* implementar *UserDetails*).
+
