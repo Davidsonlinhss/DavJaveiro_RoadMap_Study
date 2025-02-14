@@ -13,4 +13,15 @@ public class ProjectConfig {
         p.setName("Koko");
         return p;
     }
+
+    // adds the string "hello" to the Spring context
+    @Bean
+    String hello() {
+        return "Hello World";
+    }
+
+    @Bean
+    Integer ten(){
+        return 10;
+    }
 }

@@ -162,4 +162,21 @@ Observe que o nome que usei para o método não contém um verbo. Você provavel
 
 **PASSO 3: FAÇA O SPRING INICIALIZAR SEU CONTEXTO USANDO A CLASSE DE CONFIGURAÇÃO RECÉM-CRIADA**
 Implementamos uma classe de configuração na qual informamos ao Spring a instância do objeto que precisa se tornar um _bean_. Agora, precisamos garantir que **o Spring use essa classe de configuração ao inicializar seu contexto.** O próximo trecho mostra como alterar a instanciação do contexto do Spring na classe `main` para usar a classe de configuração que implementamos nos dois primeiros passos.
- 
+```java
+public class Main {
+	public static void main(String[] args) {
+		var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+	}
+}
+```
+
+- *var context = new AnnotationConfigApplicationContext(ProjectConfig.class);*
+Quando criamos o a instância do Spring Context, enviamos a configuração da class como um parâmetro para instruir o Spring a utilizá-la.
+
+Para verificar a classe *Parrot* se ela faz parte do contexto agora, podemos referenciar a instância e printar o nome no console:
+
+**NOTA**: Em cenários do mundo real, usamos testes unitários e de integração para validar se nossas implementações funcionam conforme o desejado. Os projetos neste livro implementam testes unitários para validar o comportamento discutido. Como este é um livro de "introdução", ainda não estamos familiarizados com testes unitários. Para evitar confusão e permitir que nos concentremos no assunto abordado, não discutiremos testes unitários até o capítulo 15. 
+
+Como no exemplo anterior, podemos adicionar qualquer tipo de objeto ao contexto do Spring. Vamos adicionar uma String e um Integer e verificar que está funcionando.
+
+![[The Spring Context - Defining beans-2.png]]
