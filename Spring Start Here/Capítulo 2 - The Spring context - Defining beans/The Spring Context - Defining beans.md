@@ -180,3 +180,73 @@ Para verificar a classe *Parrot* se ela faz parte do contexto agora, podemos ref
 Como no exemplo anterior, podemos adicionar qualquer tipo de objeto ao contexto do Spring. Vamos adicionar uma String e um Integer e verificar que está funcionando.
 
 ![[The Spring Context - Defining beans-2.png]]
+
+Até agora, adicionamos um ou mais beans de diferentes tipos ao contexto do Spring. Mas poderíamos adicionar mais de um objeto do mesmo tipo? Se sim, como podemos nos referir individualmente a esses objetos? Vamos criar um novo projeto, para demonstrar como podemos adicionar múltiplos beans do mesmo tipo ao contexto do Spring e como referenciá-los posteriormente. 
+
+![[The Spring Context - Defining beans-3.png]]
+
+**NOTA:** não confunda o nome do *bean* com o nome do papagaio. No nosso exemplo, os nomes (ou identificadores) dos *beans* no contexto do Spring são **parrot1**, **parrot2**, e **parrot3** (como os nomes dos métodos anotados com *@Bean* que os definem). Os nomes que atribuí aos papagaios são **Koko**, **Miki**, **Riki**. O nome do papagaio é apenas um atributo do objeto **Parrot** e não tem nenhum significado para o Spring. 
+
+Podemos declarar quantas instâncias do mesmo tipo desejarmos simplesmente declarando mais métodos anotados com o *@Bean*. A listagem a seguir mostra como declarei três *beans* do tipo *Parrot* na classe de configuração. 
+
+Agora, obviamente, não podemos mais obter os *beans* do contexto apenas especificando o tipo. Se fizermos isso, uma exceção será lançada porque o Spring não pode adivinhar a qual instância declarada estamos nos referindo.
+
+Para resolver esse problema de ambiguidade, precisamos referirmos a uma das instâncias utilizando o nome do **bean**. Por padrão, o Spring usa os nomes dos métodos anotados com *@Bean* como os próprios nomes dos **beans**. Lembre-se de que é por isso que não nomeamos os métodos *@Bean* usando verbos. No nosso caso, os *beans* têm os nomes **parrot1**, **parrot2** e **parrot3** (lembre-se, o método representa o *bean*). 
+
+Agora, vamos alterar o método **main** para referir-se explicitamente a um desses *beans* usando seu nome:
+```java
+public class Main {
+	public static void main(String[] args) {
+		var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+	Parrot p = context.getBean("parrot2", Parrot.class);
+	System.out.println(p.getName());
+	}
+}
+```
+
+
+Executando o aplicativo agora, não receberemos uma exception, em vez disso, veremos no console o nome do segundo papagaio, Miki.
+
+Se desejarmos atribuir outro nome ao *bean*, podemos usar tanto o atributo **name** quanto o atributo *value* da anotação *@Bean*. Qualquer uma das seguintes sintaxes alterará o nome do *bean* para "miki":
+- *@Bean(name = "miki"*);
+- *@Bean(value = "miki*);
+- *@Bean("miki")*;
+
+```java
+@Bean(name = "miki") // sets the name of the bean
+Parrot parrot2() {
+    var p = new Parrot();
+    p.setName("Miki"); // sets the name of the parrot
+    return p;
+}
+```
+
+**Definindo um bean como primário**
+Anteriormente nesta seção, discutimos que você pode ter vários *beans* do mesmo tipo no contexto do Spring, mas precisa referir-se a eles usando seus nomes. No entanto, existe outra opção para referenciar *beans* no contexto quando há múltiplos do mesmo tipo.
+
+Quando você tem vários *beans* do mesmo tipo no contexto do Spring, pode tornar um deles como **primário**. Você marca o *bean* que deseja tornar primário usando a anotação `@Primary`. Um *bean* primário é aquele que o Spring escolherá automaticamente se houver várias opções e você não especificar um nome; em outras palavras, o *bean* primário é simplesmente a escolha padrão do Spring.
+
+O próximo trecho de código mostra como fica o método anotado com `@Bean` e marcado como primário:
+```java
+@Bean
+@Primary
+Parrot parrot2() {
+    var p = new Parrot();
+    p.setName("Miki");
+    return p;
+}
+```
+Se referenciarmos *Parrot* sem especificar o nome, o Spring irá selecionar agora *Miki* por padrão. Obviamente, se eu declarar um bean do tipo primary. 
+
+### 2.2.2 Using stereotype annotation to add beans to the Spring context
+Nesta seção, você aprenderá uma abordagem diferente para adicionar *beans* ao contexto do Spring (mais adiante neste capítulo, também vamos comparar as abordagens e discutir quando escolher uma ou outra). Lembre-se de que adicionar *beans* ao contexto do Spring é essencial porque é assim que você informa ao Spring sobre as instâncias de objetos da sua aplicação, que precisam ser gerenciadas pelo framework. O Spring oferece várias maneiras de adicionar *beans* ao seu contexto. Em diferentes cenários, você pode achar mais conveniente usar uma dessas abordagens em vez de outra. Por exemplo, <span style="background:#d4b106">com anotações estereótipos, você observará que escreve menos código para instruir o Spring a adicionar um *bean* ao seu contexto.</span>
+
+Mais tarde, você aprenderá que o Spring oferece várias anotações estereótipos. Mas nesta seção, quero que você se concentre em como usar uma anotação estereótipo de forma geral. Vamos utilizar a mais básica delas, a `@Component`, e usá-la para demonstrar nossos exemplos.
+
+Com anotações estereótipos, você **adiciona a anotação acima da classe para a qual deseja ter uma instância no contexto do Spring**. Ao fazer isso, dizemos que você **marcou a classe como um componente**. Quando o aplicativo cria o contexto do Spring, <span style="background:#d4b106">o Spring cria uma instância da classe que você marcou como componente e adiciona essa instância ao seu contexto</span>. Continuaremos a ter uma classe de configuração ao usar essa abordagem para informar ao Spring onde procurar as classes anotadas com anotações estereótipos. Além disso, você pode usar ambas as abordagens juntas (usando `@Bean` e anotações estereótipos simultaneamente; trabalharemos nesses tipos de exemplos complexos em capítulos posteriores).
+
+Os passos que precisamos seguir no processo são os seguintes:
+1. Usando a anotação *@Component*, marcamos as classes para as quais desejamos que o Spring adicione uma instância ao seu contexto (no nosso caso, a classe *Parrot*);
+2. Usando a anotação *@ComponentScan* sobre a classe de configuração, instruímos o Spring sobre onde encontrar as classes que nós marcamos.
+
+Vamos pegar nosso exemplo com a classe *Parrot*. Podemos adicionar uma instância
