@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 484.01216888427734,
-    "collapsed": true
+    "width": 484.01216888427734
   },
   "right": {
     "id": "80c3d83199a5dd81",
@@ -214,6 +213,7 @@
   },
   "active": "0f1b8f171b333044",
   "lastOpenFiles": [
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/src/main/java/com/DavJaveiro/helloWorldJPA/Parrot.java~",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/src/main/java/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.java~",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro/helloWorldJPA/main",
@@ -226,7 +226,6 @@
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro/helloWorldJPA",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/generated-sources/annotations",
     "The Spring Context - Defining beans-1.png",
     "The Spring Context - Defining beans.png",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/gsws_ap_b_ex1/HELP.md",

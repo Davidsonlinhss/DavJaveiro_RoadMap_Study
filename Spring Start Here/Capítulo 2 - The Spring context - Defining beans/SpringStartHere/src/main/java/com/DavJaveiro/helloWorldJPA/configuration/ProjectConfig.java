@@ -30,8 +30,7 @@ public class ProjectConfig {
         p.setName("Kiki");
         return p;
     }
-
-
+    
     // adds the string "hello" to the Spring context
     @Bean
     String hello() {

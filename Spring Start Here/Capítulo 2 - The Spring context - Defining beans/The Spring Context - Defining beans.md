@@ -243,10 +243,10 @@ Nesta seção, você aprenderá uma abordagem diferente para adicionar *beans* a
 
 Mais tarde, você aprenderá que o Spring oferece várias anotações estereótipos. Mas nesta seção, quero que você se concentre em como usar uma anotação estereótipo de forma geral. Vamos utilizar a mais básica delas, a `@Component`, e usá-la para demonstrar nossos exemplos.
 
-Com anotações estereótipos, você **adiciona a anotação acima da classe para a qual deseja ter uma instância no contexto do Spring**. Ao fazer isso, dizemos que você **marcou a classe como um componente**. Quando o aplicativo cria o contexto do Spring, <span style="background:#d4b106">o Spring cria uma instância da classe que você marcou como componente e adiciona essa instância ao seu contexto</span>. Continuaremos a ter uma classe de configuração ao usar essa abordagem para informar ao Spring onde procurar as classes anotadas com anotações estereótipos. Além disso, você pode usar ambas as abordagens juntas (usando `@Bean` e anotações estereótipos simultaneamente; trabalharemos nesses tipos de exemplos complexos em capítulos posteriores).
+Com anotações estereótipos, <span style="background:#affad1">você adiciona a anotação acima da classe para a qual deseja ter uma instância no contexto do Spring</span>. Ao fazer isso, dizemos que você **marcou a classe como um componente**. Quando o aplicativo cria o contexto do Spring, <span style="background:#d4b106">o Spring cria uma instância da classe que você marcou como componente e adiciona essa instância ao seu contexto</span>. Continuaremos a ter uma classe de configuração ao usar essa abordagem para informar ao Spring onde procurar as classes anotadas com anotações estereótipos. Além disso, você pode usar ambas as abordagens juntas (usando `@Bean` e anotações estereótipos simultaneamente; trabalharemos nesses tipos de exemplos complexos em capítulos posteriores).
 
 Os passos que precisamos seguir no processo são os seguintes:
 1. Usando a anotação *@Component*, marcamos as classes para as quais desejamos que o Spring adicione uma instância ao seu contexto (no nosso caso, a classe *Parrot*);
 2. Usando a anotação *@ComponentScan* sobre a classe de configuração, instruímos o Spring sobre onde encontrar as classes que nós marcamos.
 
-Vamos pegar nosso exemplo com a classe *Parrot*. Podemos adicionar uma instância
+Vamos pegar nosso exemplo com a classe *Parrot*. Podemos adicionar uma instância da classe no Spring context anotando a class *Parrot* com um dos stereotype annotation, dizendo *@Component*.
