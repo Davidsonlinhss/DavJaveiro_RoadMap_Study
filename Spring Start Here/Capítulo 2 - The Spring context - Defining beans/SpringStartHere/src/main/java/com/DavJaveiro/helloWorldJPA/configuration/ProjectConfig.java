@@ -1,11 +1,13 @@
 package com.DavJaveiro.helloWorldJPA.configuration;
 
-import com.DavJaveiro.helloWorldJPA.Parrot;
+import com.DavJaveiro.helloWorldJPA.main.Parrot;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
+@ComponentScan(basePackages = "com.DavJaveiro.helloWorldJPA.main")
 public class ProjectConfig {
 
     // Adicionando multiplos beans para tipos iguais ao Sprin context
@@ -16,7 +18,7 @@ public class ProjectConfig {
         return p;
     }
 
-    @Primary // quando definimos primary, um Spring escolherá automaticamente
+//    @Primary // quando definimos primary, um Spring escolherá automaticamente
     @Bean
     Parrot parrot2() {
         var p = new Parrot();
@@ -28,6 +30,14 @@ public class ProjectConfig {
     Parrot parrot3() {
         var p = new Parrot();
         p.setName("Kiki");
+        return p;
+    }
+
+    @Bean
+    @Primary
+    Parrot primaryParrot() {
+        var p = new Parrot();
+        p.setName("Primary Parrot");
         return p;
     }
     

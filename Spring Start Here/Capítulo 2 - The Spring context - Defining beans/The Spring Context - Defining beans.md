@@ -250,3 +250,100 @@ Os passos que precisamos seguir no processo são os seguintes:
 2. Usando a anotação *@ComponentScan* sobre a classe de configuração, instruímos o Spring sobre onde encontrar as classes que nós marcamos.
 
 Vamos pegar nosso exemplo com a classe *Parrot*. Podemos adicionar uma instância da classe no Spring context anotando a class *Parrot* com um dos stereotype annotation, dizendo *@Component*.
+
+![[The Spring Context - Defining beans-4.png]]
+
+The next code shows you how to use the *@Component* annotation for the **Parrot** class:
+```java
+@Component
+public class Parrot {
+	private String name;
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}
+```
+
+- By using *@Component* annotation over the class, we instruct Spring to create an instance of this class and add it to its context. 
+
+Por padrão, o Spring não busca classes anotadas com *stereotype annotation*, então, se deixarmos o código como está, o Spring não adicionará um bean do tipo #Parrot em seu contexto. Para informar ao Spring que ele precisa buscar classes anotadas com *stereotype annotation*, usamos a anotação *@ComponentScan* na classe de configuração. Além disso, com a anotação *@ComponentScan*, indicamos ao Spring onde procurar essas classes. Listamos os pactos onde definimos as classes com *stereotype annotations*. A listagem a seguir mostra como usar a anotação *@ComponentScan* na classe de configuração do projeto.
+
+```java
+
+@Configuration
+@ComponentScan(basePackages = "com.DavJaveiro.helloWorldJPA.main")
+public class ProjectConfig {
+	@Bean
+	Parrot parrot1() {
+		var p = new Parrot();
+		p.setName("Koko");
+		return p;
+	}
+
+}
+```
+
+Neste ponto, dizemos ao Spring o seguinte:
+1. Quais classes adicionar uma instância ao seu context (Parrot.java);
+2. Onde encontrar essas classes (usando o *@ComponenetScan(basePackages)*)
+
+**NOTA:** Não precisamos mais de métodos para definir os beans. E agora, parece que essa abordagem é melhor, pois conseguimos o obter o mesmo resultado escrevendo bem menos código. 
+
+Em cenários reais, usaremos anotações de estereótipo (*stereotype annotations*) tanto quanto possível, pois essa abordagem implica na escrita de menos código, e usaremos *@Bean* quando não for possível adicionar o bean de outra forma (quando criamos o bean para uma classe que faz parte de uma biblioteca, e portanto, não podemos modificar essa classe para adicionar a anotação de estereótipo). 
+
+Para obtermos todos os beans, podemos utilizar algumas das abordagens abaixo:
+
+#### 1. Usar o Nome do Bean Explicitamente
+O Spring permite que **especifiquemos** o nome do bean ao recuperá-lo do contexto. O nome do bean é o mesmo que o nome do método que o define:
+```java
+var context = new AnnotationConfigApplicationContext(ProjectConfig.class); 
+
+// Recuperando o bean pelo nome "parrot2"
+Parrot p = context.getBean("parrot2", Parrot.class);
+System.out.println(p.getName());
+
+```
+
+#### 2. Usando a Anotação *@Primary*
+Quando utilizamos o *@Primary*, o Spring escolhe automaticamente um bean especificado por essa annotation quando houver múltiplos candidatos.
+
+#### 3. Listar Todos os Beans do Tipo *Parrot*
+Se quisermos listar todos os beans do tipo *Parrot* registrados no contexto do Spring, podemos usar o método *getBeansOfType*.
+
+```java
+var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+
+// Iterando sobre os beans e imprimindo seus nomes
+Map<String, Parrot> parrots = context.getBeansOfType(Parrot.class);
+
+parrots.forEach((name, parrot) -> {
+	System.out.println("Bean Name: " + name + ", Parrot Name: " + parrot.getName());
+})
+```
+
+Essa abordagem é útil quando precisamos trabalhar com todos os beans de um determinado tipo.
+
+ **Tabela 2.1: Vantagens e Desvantagens - Comparação das Duas Formas de Adicionar Beans ao Contexto do Spring**
+
+| **Critério**                                      | **Usando a Anotação `@Bean`**                                                                                                                                                                                                                             | **Usando Anotações de Estereótipo**                                                                                                                                                                                                                                       |
+| ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Controle sobre a Criação da Instância**      | Você tem controle total sobre a criação da instância que é adicionada ao contexto do Spring. É sua responsabilidade criar e configurar a instância no corpo do método anotado com `@Bean`. O Spring apenas adiciona essa instância ao contexto como está. | Você só tem controle sobre a instância após o framework criá-la.                                                                                                                                                                                                          |
+| **2. Número de Instâncias do Mesmo Tipo**         | Você pode usar esse método para adicionar várias instâncias do mesmo tipo ao contexto do Spring. Por exemplo, adicionamos três instâncias de `Parrot` na Seção 2.1.1.                                                                                     | Dessa forma, você só pode adicionar uma instância da classe ao contexto.                                                                                                                                                                                                  |
+| **3. Tipos de Objetos que Podem Ser Adicionados** | Você pode usar a anotação `@Bean` para adicionar qualquer objeto ao contexto do Spring. A classe que define a instância não precisa estar definida em sua aplicação. Por exemplo, adicionamos uma `String` e um `Integer` ao contexto do Spring.          | Você só pode usar anotações de estereótipo para criar beans das classes que sua aplicação possui. Por exemplo, não poderia adicionar um bean do tipo `String` ou `Integer`, pois você não possui essas classes para modificá-las adicionando uma anotação de estereótipo. |
+| **4. Código Adicional (Boilerplate)**             | Você precisa escrever um método separado para cada bean que cria, o que adiciona código boilerplate à sua aplicação. Por isso, preferimos usar `@Bean` como segunda opção em relação às anotações de estereótipo em nossos projetos.                      | Usar anotações de estereótipo para adicionar beans ao contexto do Spring não adiciona código boilerplate à sua aplicação. Em geral, você preferirá essa abordagem para as classes que pertencem à sua aplicação.                                                          |
+### **Resumo da Tabela**
+- **`@Bean`**: Útil quando você precisa de controle total sobre a criação da instância, deseja adicionar múltiplas instâncias do mesmo tipo ou precisa adicionar objetos de classes que não pertencem à sua aplicação (como `String` ou `Integer`). No entanto, essa abordagem gera mais código boilerplate.
+- **Anotações de Estereótipo**: Preferidas para classes que pertencem à sua aplicação, pois reduzem o código boilerplate e são mais simples de usar. No entanto, elas têm limitações, como a impossibilidade de adicionar múltiplas instâncias do mesmo tipo ou trabalhar com classes externas.
+
+---
+### Usando `@PostConstruct` para gerenciar a instância após sua criação
+Ao usar **anotações de esteriótipo (como *@Componenet***), instruímos o Spring a criar um bean e adicioná-lo ao seu contexto. No entanto, diferentemente do uso da anotação *@Bean*, não temos controle total sobre a criação da instância. Com o *@Bean*, conseguimos definir nomes para cada uma das instâncias *Parrot* que adicionamos ao contexto do Spring. Já com *@Component*, não tivemos a chance de fazer algo após o Spring chamar o construtor da classe **Parrot**. 
+
+Mas e se quisermos executar algumas instruções logo após o Spring criar o bean? Podemos usar a anotação *@PostConstruct*.
+
+### O que é `@PostConstruct`?
+O Spring utiliza a anotação `@PostConstruct`, que foi originalmente introduzida no **Java EE** . Com ela, <span style="background:#d4b106">podemos especificar um conjunto de instruções que o Spring deve executar após a criação do bean.</span> Para isso, basta definir um método na classe do componente e anotá-lo com `@PostConstruct`. Isso instrui o Spring a chamar esse método logo após o construtor terminar sua execução.
