@@ -34,7 +34,7 @@ public class ProjectConfig {
     }
 
     @Bean
-    @Primary
+    @Primary // o Spring escolhe automaticamente esse bean no contexto do Spring
     Parrot primaryParrot() {
         var p = new Parrot();
         p.setName("Primary Parrot");

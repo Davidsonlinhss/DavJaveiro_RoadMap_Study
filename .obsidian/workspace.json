@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#AOP",
+                "query": "tag:#supplier",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 484.01216888427734,
-    "collapsed": true
+    "width": 484.01216888427734
   },
   "right": {
     "id": "80c3d83199a5dd81",
@@ -212,22 +211,24 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "0f1b8f171b333044",
+  "active": "d8ace1bd3e1185b2",
   "lastOpenFiles": [
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/main",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.class",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/configuration",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/pom.xml",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/src/main/java/com/DavJaveiro/helloWorldJPA/main/Main.java~",
+    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/📝 DESAFIOS SOBRE METHOD REFERENCES.md",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/The Spring Context - Defining beans.md",
     "Como ser um programador melhor/Capítulo 2 - Mantendo as aparências.md",
     "Sem título 2.md",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/src/main/java/com/DavJaveiro/helloWorldJPA/main/Main.java~",
     "Como ser um programador melhor/Capítulo 1 - Importar-se com o código.md",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/The Spring Context - Defining beans.md",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.class",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro/helloWorldJPA/configuration",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/target/classes/pom.xml",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/target/classes",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/target",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro/helloWorldJPA/main",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere/target/classes/com/DavJaveiro/helloWorldJPA",
     "The Spring Context - Defining beans-4.png",
     "The Spring Context - Defining beans-3.png",
     "The Spring Context - Defining beans-2.png",
@@ -252,7 +253,6 @@
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Post Method Reference.md",
     "The SaaS/Introduction.md",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/📝 DESAFIOS SOBRE METHOD REFERENCES.md",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Exerc Prompt.md",
     "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",

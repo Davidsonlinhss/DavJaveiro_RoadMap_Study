@@ -27,9 +27,8 @@ public class Main {
 
 
 
-        //
+        // 3. Listando todos os Beans do tipo Parrot
         Map<String, Parrot> parrots = context.getBeansOfType(Parrot.class);
-
         parrots.forEach((name, parrot) -> {
             System.out.println("Bean name: " + name + ", Parrot Name : " + parrot.getName());
         });
