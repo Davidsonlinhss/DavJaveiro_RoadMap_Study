@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/The Spring Context - Defining beans.md",
+                "file": "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Spring Context - Defining beans"
+              "title": "Capítulo 3 - The Spring Context - Wiring Beans"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 484.01216888427734
+    "width": 484.01216888427734,
+    "collapsed": true
   },
   "right": {
     "id": "80c3d83199a5dd81",
@@ -211,8 +212,13 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "d8ace1bd3e1185b2",
+  "active": "0f1b8f171b333044",
   "lastOpenFiles": [
+    "Capítulo 3 - The Spring Context - Wiring Beans.png",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/SpringStartHere.iml",
+    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/The Spring Context - Defining beans.md",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans",
     "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class",
@@ -221,11 +227,7 @@
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/configuration",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/pom.xml",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/src/main/java/com/DavJaveiro/helloWorldJPA/main/Main.java~",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/📝 DESAFIOS SOBRE METHOD REFERENCES.md",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/The Spring Context - Defining beans.md",
     "Como ser um programador melhor/Capítulo 2 - Mantendo as aparências.md",
     "Sem título 2.md",
     "Como ser um programador melhor/Capítulo 1 - Importar-se com o código.md",
@@ -258,7 +260,6 @@
     "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
     "Chapter 13 - Abstract Classes and Interfaces-2.png",
     "Artigos/Papers for Science and Technology for Dummies.md",
-    "Artigos/Paradigmas/Artigo 1/Análise Comparativa de programação funcional e programação orientada a objeto.md",
-    "Artigos/Paradigmas/Artigo 2/Functional Programming Oriented Software Design.md"
+    "Artigos/Paradigmas/Artigo 1/Análise Comparativa de programação funcional e programação orientada a objeto.md"
   ]
 }
