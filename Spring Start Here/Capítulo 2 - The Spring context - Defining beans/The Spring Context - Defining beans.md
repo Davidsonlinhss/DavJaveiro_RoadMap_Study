@@ -347,3 +347,4 @@ Mas e se quisermos executar algumas instruções logo após o Spring criar o bea
 
 ### O que é `@PostConstruct`?
 O Spring utiliza a anotação `@PostConstruct`, que foi originalmente introduzida no **Java EE** . Com ela, <span style="background:#d4b106">podemos especificar um conjunto de instruções que o Spring deve executar após a criação do bean.</span> Para isso, basta definir um método na classe do componente e anotá-lo com `@PostConstruct`. Isso instrui o Spring a chamar esse método logo após o construtor terminar sua execução.
+
