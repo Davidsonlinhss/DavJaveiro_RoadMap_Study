@@ -36,3 +36,57 @@ Portanto, para cada uma das duas abordagens (wiring e auto-wiring), temos dois p
 **STEP 1:** In the Spring context you add a parrot and a person as beans;
 **STEP 2:** You make the person own the parrot.
 
+Antes de mergulharmos em qualquer uma das abordagens, vamos começar com o primeiro exemplo deste capítulo para lembrar como adicionar os beans ao contexto do Spring usando métodos anotados com *@Bean* na classe de configuração. **(Passo 1)**
+
+Adicionaremos uma instância de papagaio e uma instância de pessoa. Depois que tivermos esse projeto pronto, mudamos para estabelecer a relação entre as duas instâncias **(passo 2)**. 
+
+No arquivo pom.xml do projeto Maven, adicionamos a dependência para o contexto do Spring, conforme encontramos no trecho de código a seguir:
+
+```java
+<dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-context</artifactId>
+<version>5.2.7.RELEASE</version>
+</dependency>
+```
+Então, definimos uma classe para descrever o objeto *Parrot* e outra para descrever o objeto *Person*. 
+
+[[Person.java | Classe Person]]
+[[Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/src/main/java/com/DavJaveiro/helloWorldJPA/main/Parrot.java| Class Parrot]]
+
+Agora, vamos definir as anotações *@Beans* na classe de configuração:
+
+[[Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.class|ProjectConfig]]
+
+ A coisa mais importante a ser observada aqui é que o papagaio da pessoa (terceira linha de saída) é nulo. No entanto, tanto a instância da pessoa quanto a do papagaio estão no contexto. A saída é nula, o que significa que não há uma relação entre as instâncias.
+
+### 3.1.1 Wiring the beans using a direct method call between the @Bean methods
+
+Nesta seção, estabeleceremos a relação entre as duas instâncias de Person e Parrot. A primeira maneira (ligação) de conseguir isso é chamar um método a partir de outro na classe de configuração. Veremos bastante essa forma, pois é uma abordagem direta. Na listagem a seguir, encontramos uma pequena mudança que fizemos na classe de configuração para estabelecer um link entre a pessoa e o papagaio. Para manter todos os passos separados e ajudar a entender o código com mais facilidade.
+
+[[Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/src/main/java/com/DavJaveiro/helloWorldJPA/main/Main.java|Main]]
+
+```java
+@Configuration
+public class ProjectConfig {
+	@Bean
+	public Parrot parrot() {
+		Parrot p = new Parrot();
+		p.setName("Koko")
+		return p;
+	}
+
+	@Bean
+	public Person person() {
+		Person p = new Person();
+		p.setName("Ella");
+		p.setParrot(parrot());
+		return p;
+	}
+}
+```
+
+Acima, nós definimos a relação entre um bean person e um bean parrot chamando diretamente o método que retorna o bean que nós setamos.
+
+The result is the has-A relationship between the two beans. The person has-A (owns) the parrot.
+

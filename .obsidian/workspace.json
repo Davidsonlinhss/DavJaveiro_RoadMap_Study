@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
+                "file": "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
                 "mode": "source",
                 "source": false
               },
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 484.01216888427734,
-    "collapsed": true
+    "width": 484.01216888427734
   },
   "right": {
     "id": "80c3d83199a5dd81",
@@ -214,19 +213,20 @@
   },
   "active": "0f1b8f171b333044",
   "lastOpenFiles": [
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/src/main/java/com/DavJaveiro/helloWorldJPA/main/Main.java~",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.class",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com/DavJaveiro/helloWorldJPA/configuration",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/src/main/java/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.java~",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com/DavJaveiro/helloWorldJPA/main/Person.class",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com/DavJaveiro/helloWorldJPA/main",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com/DavJaveiro/helloWorldJPA",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com/DavJaveiro",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/target/classes/com",
     "Capítulo 3 - The Spring Context - Wiring Beans.png",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/SpringStartHere.iml",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/The Spring Context - Defining beans.md",
     "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/main",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.class",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA/configuration",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro/helloWorldJPA",
-    "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/SpringStartHere2/target/classes/com/DavJaveiro",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/📝 DESAFIOS SOBRE METHOD REFERENCES.md",
     "Como ser um programador melhor/Capítulo 2 - Mantendo as aparências.md",
     "Sem título 2.md",
@@ -258,7 +258,6 @@
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Exerc Prompt.md",
     "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
-    "Chapter 13 - Abstract Classes and Interfaces-2.png",
     "Artigos/Papers for Science and Technology for Dummies.md",
     "Artigos/Paradigmas/Artigo 1/Análise Comparativa de programação funcional e programação orientada a objeto.md"
   ]
