@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6d7df14313275ee6",
+        "id": "d17f1ee6dce4cbf3",
         "type": "tabs",
         "children": [
           {
-            "id": "0f1b8f171b333044",
+            "id": "56eb034947dd3072",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
+                "file": "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
                 "mode": "source",
                 "source": false
               },
@@ -212,25 +212,25 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "0f1b8f171b333044",
+  "active": "56eb034947dd3072",
   "lastOpenFiles": [
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com/DavJaveiro/helloWorldJPA/main/Person.class",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/src/main/java/com/DavJaveiro/helloWorldJPA/main/Person.java~",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com/DavJaveiro/helloWorldJPA/main",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.class",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com/DavJaveiro/helloWorldJPA/configuration",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com/DavJaveiro/helloWorldJPA",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com/DavJaveiro",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/src/main/java/com/DavJaveiro/helloWorldJPA/main/Main.java~",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/main/Person.class",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/main",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.class",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/configuration",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/src/main/java/com/DavJaveiro/helloWorldJPA/main/Person.java",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/src/main/java/com/DavJaveiro/helloWorldJPA/main/Parrot.java",
     "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
     "Capítulo 3 - The Spring Context - Wiring Beans-2.png",
     "Capítulo 3 - The Spring Context - Wiring Beans-1.png",
     "Capítulo 3 - The Spring Context - Wiring Beans.png",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/The Spring Context - Defining beans.md",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Desafios/📝 DESAFIOS SOBRE METHOD REFERENCES.md",
     "Como ser um programador melhor/Capítulo 2 - Mantendo as aparências.md",
     "Sem título 2.md",

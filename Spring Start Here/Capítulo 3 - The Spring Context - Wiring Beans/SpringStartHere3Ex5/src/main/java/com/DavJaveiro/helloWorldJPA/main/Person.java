@@ -7,8 +7,13 @@ import org.springframework.stereotype.Component;
 public class Person {
     private String name = "Davidson";
 
+
+    private final Parrot parrot;
+
     @Autowired
-    Parrot parrot = new Parrot(); // não podemos tornar o campo final;
+    public Person(Parrot parrot) {
+        this.parrot = parrot;
+    }
 
     public String getName() {
         return name;
@@ -22,7 +27,5 @@ public class Person {
         return parrot;
     }
 
-    public void setParrot(Parrot parrot) {
-        this.parrot = parrot;
-    }
+
 }

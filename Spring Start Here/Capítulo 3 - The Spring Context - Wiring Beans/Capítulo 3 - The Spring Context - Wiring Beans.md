@@ -274,7 +274,7 @@ Vamos adicionar a classe principal (main class) para provar que o Spring injetou
 
 Neste exemplo, usamos a classe ProjectConfig para configurar o contexto do Spring e, em seguida, obtemos o bean *Person* a partir desse contexto. Quando executamos o código, o Spring deve injetar a instância de Parrot no campo parrot da classe Person, e a saída deve mostrar que a injeção foi bem sucedida.
 
-Por qual motivo essa abordagem não é desejada em código de produção? Não é totalmente errado usá-la, mas precisamos garantir que o nosso aplicativo seja mantenível e testável em código de produção. Ao injetar o valor diretamente no campo:
+<span style="background:#d4b106">Por qual motivo essa abordagem não é desejada em código de produção?</span> Não é totalmente errado usá-la, mas precisamos garantir que o nosso aplicativo seja mantenível e testável em código de produção. Ao injetar o valor diretamente no campo:
 - não temos a opção de tornar o campo *final* (veja o próximo trecho de código), e desta forma, garantir que ninguém possa alterar seu valor após a inicialização;
 ```java
 @Component
@@ -288,3 +288,83 @@ public class Person {
 ```
 
 ### 3.2.2 Using *@Autowired* to Inject the values through the constructor
+A segunda maneira que temos como opção para injetar valores nos atributos do objeto quando o Spring cria um bean <span style="background:#d4b106">é usar o construtor da classe definindo a instância</span> (figura 3.10). Esta abordagem é a mais frequentemente utilizada em código de produção e é a que eu recomendo. Ela permite que definamos campos como *final*, garantindo que ninguém possa alterar seus valores após a inicialização pelo Spring. A possi bilidade de definir os valores ao chamar o construtor também é útil ao escrever testes unitários específicos nos quais não desejamos depende do Spring para realizar a injeção de campo. 
+
+```java
+@Component
+public class Person {
+	private String name = "Ella";
+
+	private final Parrot parrot;
+
+	@Autowired
+	public Person(Parrot parrot) {
+		this.parrot = parrot;
+	}
+}
+```
+- *@Component* - A anotação do tipo Stereotype instruí o Spring a criar e adicionar um bean ao contexto do tipo dessa classe: Person;
+- Quando o Spring cria o bean do tipo *Person*, ele chama o construtor anotado com *@Autowired*. O Spring fornece um bean do tipo *Parrot* do seu contexto como valor do parâmetro.
+
+Podemos rapidamente alterar a implementação do projeto para utilizar *a injeção via construtor em vez de injeção de campo.* Só precisamos modificar a classe *Person*. É necessário definir um construtor para a classe e anotá-lo com *@Autowired*. Agora, também podemos tornar o campo *parrot* como *final*. Não é preciso fazer nenhuma alteração na sua classe de configuração.
+
+```java
+@Component
+public class Person {
+	private String name = "Davidson";
+	
+	private final Parrot parrot; //
+	
+	@Autowired
+	public Person(Parrot parrot) {
+		this.parrot = parrot;
+	}
+}
+```
+
+## 3.2.3 Using dependency injection through the setter
+Raramente encontraremos desenvolvedores aplicando a abordagem de usar o *setter* para injeção de dependência. Esta abordagem *tem mais desvantagens do que vantagens*: é mais desafiadora de ler, não permite que torne o campo final e não facilita os testes. Precisamos abordar esse maneira de fazer DI, pois podemos encontrá-la em algum momento.
+
+Mudando a classe *person* para implementar dessa forma:
+[[Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/src/main/java/com/DavJaveiro/helloWorldJPA/main/Person.java|Person]]
+
+## 3.3 Dealing with circular dependencies
+
+É confortável deixar o Spring construir e definir as dependências dos objetos da nossa aplicação. Permitir que o Spring faça esse trabalho por nós permite que economizemos tempo e várias linhas de código, além de facilitar a leitura e compreensão do aplicativo. <span style="background:#d4b106">Mas o Spring também pode se confundir em alguns casos</span>. Um cenário frequentemente encontrado na prática é gerar uma dependência por engano.
+
+Uma dependência circular é uma situação em que, para criar um bean (vamos chamá-lo de Bean A), o Spring precisa injetar outro bean que ainda não existe *Bean B*. Mas o Bean B também solicita uma dependência do Bean A. Então, para criar o Bean B, o Spring precisa primeiro ter o Bean A. Agora, o Spring está em um impasse. Ele não pode criar o Bean A porque precisa do Bean B, e não pode criar o Bean B porque precisa do Bean A.
+
+**Exemplo de uma dependência circular**
+1. Spring needs to create a bean of type Parrot;
+2. To call the *Parrot* class constructor, Spring needs a bean of type *Person*;
+```java
+@Component
+public class Parrot {
+	private final Person person;
+
+	@Autowired
+	public Parrot(Person person) {
+		this.person = person;
+	}
+}
+```
+
+1. Spring tries to create the bean of type Person;
+2. To create a bean of type Person, Spring needs a bean of type Parrot. Spring is now in a deadlock!
+
+Uma dependência circular é fácil de evitar. <span style="background:#d4b106">Precisamos apenas garantir que não defina objetos cuja criação depende um do outro</span>. Ter dependências desse tipo entre objetos é um mau design de classes. Nesse caso, vamos precisar reescrever o nosso código.
+
+Quando tentamos executar um programa, uma exceção é lançada:
+*With this exception, Spring tries to tell you the problem it encountered. The exception
+message is quite clear: Spring deals with a circular dependency and the classes
+that caused the situation. Whenever you find such an exception, you need to go to the
+classes specified by the exception and eliminate the circular dependency.*
+
+Com essa exceção, o Spring tenta informar o problema que encontrou. A mensagem de exceção é bastante clara: o Spring está lidando com uma dependência circular e as classes que causaram a situação. Sempre que você encontrar tal exceção, <span style="background:#d4b106">precisa ir até as classes especificadas pela exceção e eliminar a dependência circular</span>.
+
+## 3.4 Choosing from multiple beans in the Spring context
+Nesta seção, discutiremos o cenário em que o Spring precisa injetar um valor em um parâmetro ou campo de classe, mas possui vários beans do mesmo tipo para escolher. Suponha que tenhamos três beans de Parrot no Spring Context. Configuramos o Spring para injetar um valor do tipo Parrot em um parâmetro. Como o Spring se comportará? Qual dos beans do mesmo tipo o framework escolheria para injetar nesse cenário?
+Dependendo da nossa implementação, temos os seguintes casos:
+1. O identificador do parâmetro coincide com o nome de um dos beans do contexto (que é o mesmo nome do método anotado com @Bean que retorna seu valor). Nesse caso, o Spring escolherá o bean cujo nome é o mesmo que o do parâmetro;
+2. O identificador do parâmetro não coincide com nenhum dos nomes dos beans do contexto. Então, temos as seguintes opções: a. marcamos um dos beans como primary (usando a annotation *@Primary*). Nesse caso, o Spring selecionará o bean primário para a injeção. **b**. Precisamos selecionar explicitamente um bean especifico usando a anotação *@Qualifier*, que discutimos. **C.** Se nenhum dos beans for primário e não usarmos @Qualifier, o aplicativo falhará com uma exceção, reclamando que o contexto contém mais beans do mesmo tipo e o Spring não sabe qual escolher.
+
