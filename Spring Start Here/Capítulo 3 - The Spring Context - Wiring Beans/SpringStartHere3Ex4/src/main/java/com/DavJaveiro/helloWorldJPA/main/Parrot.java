@@ -2,8 +2,9 @@ package com.DavJaveiro.helloWorldJPA.main;
 
 import org.springframework.stereotype.Component;
 
+@Component
 public class Parrot {
-    private String name;
+    private String name = "Koko";
 
     public String getName() {
         return name;
@@ -11,10 +12,6 @@ public class Parrot {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Parrot() {
-        System.out.println("Parrot Created");
     }
 
     public String toString() {

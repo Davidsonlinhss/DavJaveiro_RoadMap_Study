@@ -23,10 +23,10 @@ public class ProjectConfig {
 //    }
 
     @Bean
-    public Person person() {
+    public Person person(Parrot parrot) {
         Person p = new Person();
         p.setName("Davidson");
-        p.setParrot(parrot()); // set the reference of the parrot bean to the person's parrot attribute
+        p.setParrot(parrot); // set the reference of the parrot bean to the person's parrot attribute
         return p;
     }
 

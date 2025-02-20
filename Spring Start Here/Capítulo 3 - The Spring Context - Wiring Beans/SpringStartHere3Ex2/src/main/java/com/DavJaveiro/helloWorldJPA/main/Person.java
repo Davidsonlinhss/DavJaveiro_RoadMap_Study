@@ -1,9 +1,8 @@
 package com.DavJaveiro.helloWorldJPA.main;
 
-import org.springframework.stereotype.Component;
-
-public class Parrot {
+public class Person {
     private String name;
+    private Parrot parrot;
 
     public String getName() {
         return name;
@@ -13,11 +12,11 @@ public class Parrot {
         this.name = name;
     }
 
-    public Parrot() {
-        System.out.println("Parrot Created");
+    public Parrot getParrot() {
+        return parrot;
     }
 
-    public String toString() {
-        return "Parrot : " + name;
+    public void setParrot(Parrot parrot) {
+        this.parrot = parrot;
     }
 }

@@ -62,7 +62,7 @@ Agora, vamos definir as anotações *@Beans* na classe de configuração:
 
 ### 3.1.1 Wiring the beans using a direct method call between the @Bean methods
 
-Nesta seção, estabeleceremos a relação entre as duas instâncias de Person e Parrot. A primeira maneira (ligação) de conseguir isso é chamar um método a partir de outro na classe de configuração. Veremos bastante essa forma, pois é uma abordagem direta. Na listagem a seguir, encontramos uma pequena mudança que fizemos na classe de configuração para estabelecer um link entre a pessoa e o papagaio. Para manter todos os passos separados e ajudar a entender o código com mais facilidade.
+Nesta seção, <span style="background:#d4b106">estabeleceremos a relação entre as duas instâncias de Person e Parrot</span>. A primeira maneira (ligação) de conseguir isso é chamar um método a partir de outro na classe de configuração. Veremos bastante essa forma, pois é uma abordagem direta. Na listagem a seguir, encontramos uma pequena mudança que fizemos na classe de configuração para <span style="background:#d4b106">estabelecer um link entre a pessoa e o papagaio</span>. Para manter todos os passos separados e ajudar a entender o código com mais facilidade.
 
 [[Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3/src/main/java/com/DavJaveiro/helloWorldJPA/main/Main.java|Main]]
 
@@ -90,3 +90,201 @@ Acima, nós definimos a relação entre um bean person e um bean parrot chamando
 
 The result is the has-A relationship between the two beans. The person has-A (owns) the parrot.
 
+Sempre que ensino essa abordagem em uma aula, sei que alguns têm a pergunta: isso não significa que criamos duas instâncias de Parrot - uma instância que o Spring cria e adiciona em seu contexto e outra quando o método *person()* faz a chamada direta ao método *parrot()*? Não, na verdade temos apenas uma instância de parrot nesta aplicação.
+
+Pode parecer estranho no início, mas o Spring é esperto o suficiente para entender que ao chamar o método *parrot()*, queremos nos referir ao bean parrot em seu contexto. Quando usamos a anotação @Bean para definir beans no contexto do Spring, o Spring controla como os métodos são chamados e pode aplicar lógica acima da chamada do método (aprenderemos como o Spring intercepta métodos no capítulo 6). Por enquanto, lembre-se de que quando o método *person()* chama o método parrot(), o Spring aplicará lógica, conforme descrito a seguir:
+![[Capítulo 3 - The Spring Context - Wiring Beans-1.png]]
+
+*Isso significa que são criadas duas instâncias do tipo parrot?*
+
+Se o bean parrot já existir no contexto, em vez de chamar o método parrot(), o Spring pegará diretamente a instância do seu contexto. Se o bean parrot ainda não existir no contexto, o Spring chama o método parrot() e retorna o bean. 
+![[Capítulo 3 - The Spring Context - Wiring Beans-2.png]]
+1. A primeira etapa é chamar o método *parrot()* @Bean a partir do método *person()* @Bean;
+2. O Bean *Parrot* já existe no contexto do Spring?
+3. **A** Se sim, retorna diretamente o bean parrot do contexto do Spring sem delegar a chamada ao método *parrot()*;
+**3.B** Se não, chama o método parrot(), adiciona o valor retornado ao contexto do Spring, e retorne o valor para a chamada real feita pelo método person().
+
+Na verdade, é bem fácil testar esse comportamento. Basta adicionar um construtor sem argumentos (no-args constructor) à classe *Parrot* e imprimir uma mensagem no console a partir dele. Quantas vezes a mensagem será impressa no console? Se o comportamento estiver correto, você verá a mensagem apenas uma vez. Vamos fazer este experimento. No próximo trecho de código, eu modifiquei a classe *Parrot* para adicionar um construtor sem argumentos:
+```java
+public class Parrot {
+	private String name;
+
+	public Parrot() {
+		System.out.println("Parrot created");
+	}
+
+	// Getters e setters omitidos
+
+	@Override
+	public String toString() {
+		return "Parrot : " + name;
+	}
+}
+```
+
+Dessa forma, você pode observar quantas vezes a mensagem "Parrot created" será impressa no console, indicando a criação de uma instância da classe Parrot.
+
+### 3.1.2 Wiring the beans using the *@Bean* annotated method's paramteres
+Nesta seção, iremos mostrar uma abordagem alternativa para chamar diretamente o método *@Bean*. Em vez de chamar diretamente o método que define o *bean* ao qual desejamos nos referir, adicionamos um parâmetro ao método do tipo correspondente ao objeto e contamos com o Spring para nos fornecer um valor através desse parâmetro. Essa abordagem é um pouco mais flexível do que a que discutimos na seção 3.1.1. Com essa abordagem, não importa se o bean ao qual queremos nos referir é definido com um método anotado com *@Bean* ou usando uma anotação de esteriótipo como *@Component*.
+
+Em minha experiência, porém, observei que não é necessariamente essa flexibilidade que faz os desenvolvedores usarem essa abordagem; é principalmente o gosto de cada desenvolvedor que determina qual abordagem eles usam ao trabalhar com beans. Eu não diria que uma é melhor que a outra, mas encontraremos ambas as abordagens em cenários do mundo real, então precisamos entender e ser capaz de usá-las.
+
+Para demonstrar essa abordagem onde usamos um parâmetro em vez de chamar diretamente o método *@Bean*, vamos pegar o código que desenvolvemos no projeto, e alterálo para estabelecer a ligação entre as duas instâncias no contexto. Eu separei o novo exemplo em um projeto chamado *ch3-ex3*.
+
+Dessa forma podemos observar como o Spring consegue gerenciar dependências automaticamente, fornecendo a instância adequada através do parâmetro do método. Essa prática torna o código mais flexível e desacoplado das implementações.
+
+```java
+@Bean
+public Person person(Parrot parrot) {
+	Person p = new Person();
+	p.setName("Davidson");
+	p.setParrot(parrot);
+	return p;
+}
+```
+
+We instruct Spring to provide (fornecer) a bean from its context by defining a paramter for the method.
+
+*p.setParrot(parrot);* - We set the value of the pseron's attribute with the reference Spring provided.
+
+O resultado que temos é a relação entre dois beans. The person has-A (owns) the parrot.
+
+A classe person tem-A (contém) um *parrot*.
+
+---
+**Resumo**
+O Spring permite duas formas de injeção de dependência ao definir um Bean:
+1. **Injeção de método diretamente:** aqui, criamos uma instância de *Person* e, dentro do método *person()*, definimos o atributo *parrot* chamando o método *parrot()*, que retorna a instância do *Parrot*. É uma forma de obter a dependência de dentro do mesmo contêiner de Spring:
+```java
+@Bean
+public Person person() {
+	Person p = new Person();
+	p.setName("Davidson");
+	p.setParrot(parrot()); // set the reference of the parrot bean to the person's parrot attribute
+	return p;
+
+}
+```
+
+1. **Injeção por argumento:** neste caso, o método *person()* recebe um parâmetro do tipo *Parrot*, que é injetado automaticamente pelo Spring. **Esta abordagem é útil quando desejamos que o Spring resolva e injete a dependência diretamente**:
+```java
+@Bean
+public Person person(Parrot parrot) {
+	Person p = new Person();
+	p.setName("Davidson");
+	// set the reference of the parrot bean to the person's parrot attribute
+	p.setParrot(parrot);
+	return p; 
+}
+```
+
+---
+No parágrafo anterior, usei a palavra "injetar". Refiro-me aqui ao que chamamos de agora em diante de injeção de dependência *DI*. Como o nome sugere, <span style="background:#d4b106">DI é uma técnica que envolve o framework definir um valor em um campo ou parâmetro específico</span>. No nosso caso, o Spring define um valor particular no parâmetro do método *person()* ao chamá-lo e resolve uma dependência desse método. DI é uma aplicação do princípio de inversão de controle IoC, e IoC implica que o framework controla a aplicação durante a execução. Repito a figura 3.8, que vimos, como lembrete para nossa discussão sobre IoC.
+
+Logo, o Spring está injetando um valor automaticamente no parâmetro do método *person(Parrot parrot)*. Isso acontece porque o Spring gerencia os *beans* da aplicação e resolve as dependências para nós:
+
+```java
+@Bean
+public Person person(Parrot parrot) {
+	Person p = new Person();
+	p.setName("Davidson");
+	p.setParrot(parrot);
+	return p;
+}
+```
+Quando o Spring encontra esse método anotado com *@Bean*, ele precisa criar um *bean* do tipo *Person*. Para isso, ele vê que o método recebe um parâmetro do tipo *Parrot*. Mas, de onde vem esse *Parrot*?
+
+Aqui entra a *Injeção de Dependência (DI)*. Se houver um bean do tipo *Parrot* já registrado no contexto do Spring, ele automaticamente passa esse bean como argumento para o método *person()*. Ou seja, não precisamos criar manualmente um objeto *Parrot* dentro desse método; o Spring já faz isso para nós. 
+
+Portanto, se *Parrot* não estivesse registrado como um *bean*, o Spring não conseguiria injetá-lo e daria um erro de inicialização.
+
+Isso faz parte do conceito de **Inversão de Controle (IoC)**, onde o próprio framework gerencia a criação e injeção dos objetos, em vez de nós instanciá-los manualmente.
+
+
+
+---
+**Método chamando outro método diretamente vs *Método que recebe a dependência como parâmetro***
+
+**Desvantagens chamando outro método**:
+1. O método *parrot()* pode ser chamado duas vezes, uma para o *bean* *Parrot* e outra dentro de *person()*, gerando instâncias diferentes de *Parrot*. Isso pode quebrar a injeção esperada.
+2. O Spring tenta evitar isso usando CGLIB proxying, mas esse comportamento pode variar conforme o escopo do bean.
+3. *person()* depende diretamente de *parrot()*, o que significa que se *parrot()* mudar (por exemplo, passar a vir de outro *bean* ou serviço externo), *person()* precisa ser alterado manualmente.
+4. Se *parrot()* não estivesse na mesma classe, teríamos que criar uma instância de *ProjectConfig* para chamar *parrot()*, o que não faz sentido dentro do contexto Spring.
+
+
+A principal diferença entre essas duas abordagens está na forma como o Spring gerencia os _beans_ e suas dependências. Vamos analisar as vantagens e desvantagens de cada uma.
+
+| Critério                      | **Passagem via parâmetro (`public Person person(Parrot parrot)`)** | **Chamada direta do método (`public Person person()`)**     |
+| ----------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------- |
+| **Gerenciamento pelo Spring** | ✅ Melhor, pois Spring injeta automaticamente                       | ❌ Pode criar instâncias duplicadas                          |
+| **Menos acoplamento**         | ✅ Sim, o método não precisa conhecer a implementação               | ❌ Sim, pois chama diretamente `parrot()`                    |
+| **Facilidade de testes**      | ✅ Sim, mais fácil injetar mocks                                    | ❌ Mais difícil substituir `parrot()` sem alterar o código   |
+| **Escalabilidade**            | ✅ Melhor para projetos grandes                                     | ❌ Pode gerar comportamento inesperado em escopos diferentes |
+
+💡 **Conclusão:**  
+A abordagem com injeção via parâmetro (`public Person person(Parrot parrot)`) é a mais recomendada no Spring porque evita dependências diretas e garante que o Spring sempre controle as instâncias.
+
+Se quiser garantir que `parrot()` retorne a mesma instância ao chamar diretamente `parrot()`, você poderia usar `@Lazy` ou `@DependsOn`, mas o ideal é deixar o Spring gerenciar as dependências corretamente. 🚀
+
+Você frequentemente usará DI (e não apenas no Spring) porque é uma maneira muito confortável de gerenciar instâncias de objetos que são criadas e nos ajudam a minimizar o código que escrevemos ao desenvolver nossos aplicativos.
+
+## 3.2 Using the @Autowired annotation to inject beans
+Nesta seção, nós vamos discutir uma outra abordagem utilizada para criar links entre beans no Spring context. Frequentemente encontraremos essa técnica, que se refere a uma anotação chamada *@Autowired*, quando você pode mudar a classe para a qual definimos o bean (quando essa classe não faz parte de uma dependência). Usando a anotação *@Autowired*, marcamos a propriedade de um objeto onde queremos que o Spring injete um valor do contexto, e marcamos essa intenção diretamente na classe que define o objeto que precisa de dependência. Esta abordagem torna mais fácil ver a relação entre o dois objetos do que as alternativas que discutimos na seção 3.1. Como veremos, existem três maneiras de usar a anotação *@Autowired:*
+- Injetando o valor no campo da classe, que geralmente encontramos em exemplos e provas de conceito;
+- Injetando o valor através dos parâmetros do construtor da classe, uma abordagem que usaremos com mais frequência em cenários do mundo real;
+- Injetando o valor através do setter, que raramente usaremos em código pronto para produção. 
+
+### 3.2.1 Using *@Autowired* to inject the values through the class fields
+Nesta seção, começamos discutindo a mais simples das três possibilidades de uso do *@Autowired*, que também é a que os desenvolvedores frequentemente usam em exemplos: usando a anotação sobre o campo figura 3.9. Como aprenderemos, mesmo que essa abordagem seja muito direta, ela tem seus pecados, e é por isso que evitamos usá-la ao escrever código de produção. No entanto, veremos essa abordagem sendo usada frequentemente em exemplos, provas de conceito e na escrita de testes, como discutiremos no capítulo 15, então precisaremos saber como usar essa abordagem.
+
+Vamos desenvolver o projeto no qual anotamos o campo *parrot* da classe *Person* com a anotação *@Autowired* para informar ao Spring que queremos injetar um valor ali a partir  do seu contexto. Vamos começar com as classes que definem nossos dois objetos: *Person* e *Parrot*. Aqui está a definição da classe *Parrot*:
+```java
+@Component
+public class Parrot {
+	private String name = "Koko";
+
+	// Omitted getters and setters
+	
+	@Override
+	public String toString() {
+		return "Parrot : " + name;
+	}
+}
+```
+
+```java
+@Component
+public class Person {
+	private String name = "Davidson";
+
+	@Autowired
+	private Parrot parrot;
+}
+```
+- *@Component* - The stereotype annotation instruí o Spring a criar e adicionar um bean ao context de um tipo da classe *Person*; 
+- *@Autowired* - We instruct Spring to provide a bean from its context and set it directly as the value of the field, annotated with *@Autowired*. This way we establish a relationship between the two beans.
+
+**NOTA:** Usei anotações de estereótipo para adicionar os beans no contexto do Spring para este exemplo. Eu poderia ter definido os beans usando *@Bean*, mas, na maioria das vezes, em cenários do mundo real, encontraremos o *@Autowired* usado junto com anotações de estereótipo. Portanto, vamos focar nessa abordagem
+
+Para continuar nosso exemplo, definimos uma classe de configuração. Vamos nomear a classe de configuração como *ProjectConfig*. Sobre essa classe, usarei a anotação *@ComponentScan* para informar ao Spring onde encontrar as classes que anotei com *@Component*, como aprendemos no capítulo 2. 
+[[Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/src/main/java/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.java|ProjectConfig]]
+
+Vamos adicionar a classe principal (main class) para provar que o Spring injetou corretamente a referência do bean *parrot*:
+[[Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex4/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class|Main]]
+
+Neste exemplo, usamos a classe ProjectConfig para configurar o contexto do Spring e, em seguida, obtemos o bean *Person* a partir desse contexto. Quando executamos o código, o Spring deve injetar a instância de Parrot no campo parrot da classe Person, e a saída deve mostrar que a injeção foi bem sucedida.
+
+Por qual motivo essa abordagem não é desejada em código de produção? Não é totalmente errado usá-la, mas precisamos garantir que o nosso aplicativo seja mantenível e testável em código de produção. Ao injetar o valor diretamente no campo:
+- não temos a opção de tornar o campo *final* (veja o próximo trecho de código), e desta forma, garantir que ninguém possa alterar seu valor após a inicialização;
+```java
+@Component
+public class Person {
+	private String name = "Ella";
+
+	@Autowired
+	private final Parrot parrot; 
+	// This doesn't compile. You cannot define a final dield without an initial value;
+}
+```
+
+### 3.2.2 Using *@Autowired* to Inject the values through the constructor
