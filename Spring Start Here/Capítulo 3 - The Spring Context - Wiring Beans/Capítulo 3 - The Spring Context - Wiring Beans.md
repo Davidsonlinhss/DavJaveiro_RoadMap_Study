@@ -363,8 +363,25 @@ classes specified by the exception and eliminate the circular dependency.*
 Com essa exceção, o Spring tenta informar o problema que encontrou. A mensagem de exceção é bastante clara: o Spring está lidando com uma dependência circular e as classes que causaram a situação. Sempre que você encontrar tal exceção, <span style="background:#d4b106">precisa ir até as classes especificadas pela exceção e eliminar a dependência circular</span>.
 
 ## 3.4 Choosing from multiple beans in the Spring context
-Nesta seção, discutiremos o cenário em que o Spring precisa injetar um valor em um parâmetro ou campo de classe, mas possui vários beans do mesmo tipo para escolher. Suponha que tenhamos três beans de Parrot no Spring Context. Configuramos o Spring para injetar um valor do tipo Parrot em um parâmetro. Como o Spring se comportará? Qual dos beans do mesmo tipo o framework escolheria para injetar nesse cenário?
+Nesta seção, discutiremos o cenário em que o Spring precisa injetar um valor em um parâmetro ou campo de classe, <span style="background:#d4b106">mas possui vários beans do mesmo tipo para escolher</span>. Suponha que tenhamos três beans de Parrot no Spring Context. Configuramos o Spring para injetar um valor do tipo Parrot em um parâmetro. Como o Spring se comportará? Qual dos beans do mesmo tipo o framework escolheria para injetar nesse cenário?
 Dependendo da nossa implementação, temos os seguintes casos:
-1. O identificador do parâmetro coincide com o nome de um dos beans do contexto (que é o mesmo nome do método anotado com @Bean que retorna seu valor). Nesse caso, o Spring escolherá o bean cujo nome é o mesmo que o do parâmetro;
-2. O identificador do parâmetro não coincide com nenhum dos nomes dos beans do contexto. Então, temos as seguintes opções: a. marcamos um dos beans como primary (usando a annotation *@Primary*). Nesse caso, o Spring selecionará o bean primário para a injeção. **b**. Precisamos selecionar explicitamente um bean especifico usando a anotação *@Qualifier*, que discutimos. **C.** Se nenhum dos beans for primário e não usarmos @Qualifier, o aplicativo falhará com uma exceção, reclamando que o contexto contém mais beans do mesmo tipo e o Spring não sabe qual escolher.
+1. O identificador do parâmetro coincide com o nome de um dos beans do contexto (que é o mesmo nome do método anotado com @Bean que retorna seu valor). Nesse caso, <span style="background:#d4b106">o Spring escolherá o bean cujo nome é o mesmo que o do parâmetro</span>;
+2. O identificador do parâmetro não coincide com nenhum dos nomes dos beans do contexto. Então, temos as seguintes opções: a. <span style="background:#d4b106">marcamos um dos beans como primary</span> (usando a annotation *@Primary*). Nesse caso, o Spring selecionará o bean primário para a injeção. **b**. <span style="background:#d4b106">Precisamos selecionar explicitamente um bean especifico usando a anotação</span> *@Qualifier*, que discutimos. **C.** Se nenhum dos beans for primário e não usarmos @Qualifier, o aplicativo falhará com uma exceção, reclamando que o contexto contém mais beans do mesmo tipo e o Spring não sabe qual escolher.
 
+Vamos simular uma situação em que temos mais de uma instância de um tipo no Spring Context.
+
+Em um cenário do mundo real, prefiro evitar confiar no nome do parâmetro, que pode ser facilmente refatorado e alterado por engano por outro desenvolvedor. Para me sentir mais confortável, geralmente escolho uma abordagem mais visível para expressar minha intenção de injetar um bean específico: usando a anotação *@Qualifier*. Novamente, na minha experiência, encontrei desenvolvedores argumentando a favor e contra o uso da anotação *@Qualifier*. 
+
+```java
+@Bean
+public Person person(@Qualifier("parrot2") Parrot parrot) {
+	Person p = new Person();
+	p.setName("Ela");
+	p.setParrot(parrot);
+	return p;
+}
+```
+
+- *@Qualifier* - Using the @Qualifier annotation, you clearly mark your intention to inject a specif bean from the context.
+
+Uma situação semelhante também pode acontecer ao usar a anotação *@Autowired*. 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
+                "file": "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/Capítulo 4 - The Spring Context - Using Abstractions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 3 - The Spring Context - Wiring Beans"
+              "title": "Capítulo 4 - The Spring Context - Using Abstractions"
             }
           }
         ]
@@ -214,19 +214,20 @@
   },
   "active": "56eb034947dd3072",
   "lastOpenFiles": [
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/main/Person.class",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/main/Main.class",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/main",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.class",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA/configuration",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro/helloWorldJPA",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com/DavJaveiro",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/target/classes/com",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/src/main/java/com/DavJaveiro/helloWorldJPA/main/Person.java",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
-    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/SpringStartHere3Ex6/src/main/java/com/DavJaveiro/helloWorldJPA/main/Parrot.java",
+    "CND.md",
+    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/Capítulo 4 - The Spring Context - Using Abstractions.md",
     "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
+    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/target/classes/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.class",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/target/classes/com/DavJaveiro/helloWorldJPA/configuration",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/src/main/java/com/DavJaveiro/helloWorldJPA/configuration/ProjectConfig.java~",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/target/classes/com/DavJaveiro/helloWorldJPA/main/Person.class",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/src/main/java/com/DavJaveiro/helloWorldJPA/main/Person.java~",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/src/main/java/com/DavJaveiro/helloWorldJPA/main/Parrot.java~",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/target/classes/target/classes/SpringStartHere.iml",
+    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/target/classes/target/classes/pom.xml",
+    "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
     "Capítulo 3 - The Spring Context - Wiring Beans-2.png",
     "Capítulo 3 - The Spring Context - Wiring Beans-1.png",
     "Capítulo 3 - The Spring Context - Wiring Beans.png",
@@ -259,7 +260,6 @@
     "The SaaS/Introduction.md",
     "RoadMap do DavJaveiro/RoadMap.canvas",
     "Exerc Prompt.md",
-    "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md",
-    "Artigos/Papers for Science and Technology for Dummies.md"
+    "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md"
   ]
 }
