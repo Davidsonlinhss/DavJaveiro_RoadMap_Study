@@ -18,3 +18,60 @@ Quando eu era criança, meu pai me deu um rádio antigo que eu poderia desmontar
 Essa seção discute o que são contratos e como podemos defini-los em um aplicativo Java usando *interfaces*. Vamos começar com uma analogia. 
 
 **Analogia**: suponha que usemos um aplicativo de compartilhamento de viagens porque precisamos ir a algum lugar. Quando solicitamos uma viagem, geralmente não nos importamos com a aparência do carro ou quem é o motorista. Só precisamos chegar a algum lugar. No meu caso, não me importo se um carro ou uma nave espacial vem me buscar, desde que eu chegue ao destino a tempo. 
+
+
+
+
+
+
+
+
+
+----
+**MERGE**
+Agora, podemos implementar o objeto em si com as duas dependências do objeto **CommentService** (o **CommentRepository** e o **ComentNotificationProxy**). 
+
+**Definindo duas dependências como atributos da classe**
+```java
+public class CommentService {
+	private final CommentRepository commentRepository;
+	private final CommentNotificationProxy commentNotificationProxy;
+}
+```
+
+```java
+public commentService(CommentRepository commentRepository, CommentNotificationProxy commentNotificationProxy) {
+	this.commentRepositroy = commentRepository;
+	this.commentNotificationProxy = commentNotificationProxy;
+}
+```
+
+---
+**Por qual motivo não passamos as implementações concretas para a classe *CommentService***?
+
+É para aderirmos ao **Princípio da Inversão de Dependência DIP**, um dos princípios #SOLID.
+
+Motivos para utilizar *interfaces* (**CommentRepository** e **CommentNotificationProxy**):
+1. Baixo acoplamento
+- Se **CommentService** dependesse diretamente das implementações concretas (**DBCommentRepository** e **EmailCommentNotificationProxy**), qualquer mudança nessas classes exigiria alterações diretas no *CommentService*.
+- Com interfaces, *CommentService* não precisa se preocupar com detalhes de implementação, apenas com a funcionalidade exposta pelas interfaces.
+
+2. Facilidade de substituição e testes
+- Podemos substituir as implementações facilmente, por exemplo, mudar **DBCommentRepository** para um **FileCommentRepository** sem modificar *CommentService*.
+- Nos testes, podemos passar um repositório fake ou mock sem precisar criar um banco de dados real.
+
+No código *main*, é o momento em que passamos as implementações concretas **DBCommentRepository** e **EmailCommentNotificationProxy** como argumentos para o **CommentService**. 
+
+Isso acontece por **CommentService** depende de abstrações, e só na hora da execução decidimos quais implementações concretas usar.
+
+---
+
+## 4.2 Using dependency injection with abstractions
+Nesta seção, aplicaremos o framework Spring sobre o design de classes que implementamos na seção 4.1. Usando este exemplo, podemos discutir como o Spring gerencia a injeção de dependências ao usar abstrações. Este tópico é essencial pois, na maioria dos projetos, implementaremos dependências entre objetos usando *abstrações.* No capítulo 3, discutimos a injeção de dependências e usamos classes concretas para declarar as variáveis onde queríamos que o Spring definisse os valores dos beans em seu contexto. Mas, como aprenderemos neste capítulo, o Spring também entende abstrações.
+
+Começaremos adicionando a dependência do Spring ao nosso projeto e, em seguida, decidiremos quais dos objetos desta aplicação precisam ser gerenciados pelo Spring. Aprenderemos a decidir quais objetos precisemos que o Spring tenha conhecimento sobre a sua existência. 
+
+Descobriremos que a *@Component* não é a única anotação de estereótipo que podemos usar e quando deve usar outras anotações.
+
+
+

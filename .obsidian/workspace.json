@@ -214,6 +214,8 @@
   },
   "active": "56eb034947dd3072",
   "lastOpenFiles": [
+    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/src/main/java/repository/CommentRepository.java~",
+    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1.iml",
     "CND.md",
     "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/Capítulo 4 - The Spring Context - Using Abstractions.md",
     "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
@@ -226,7 +228,6 @@
     "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/target/classes/com/DavJaveiro/helloWorldJPA/main/Parrot.class",
     "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/src/main/java/com/DavJaveiro/helloWorldJPA/main/Parrot.java~",
     "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/target/classes/target/classes/SpringStartHere.iml",
-    "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/SpringStartHere3Ex7/target/classes/target/classes/pom.xml",
     "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
     "Capítulo 3 - The Spring Context - Wiring Beans-2.png",
     "Capítulo 3 - The Spring Context - Wiring Beans-1.png",
@@ -259,7 +260,6 @@
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Post Method Reference.md",
     "The SaaS/Introduction.md",
     "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Exerc Prompt.md",
-    "Introduction to Java Programming and Data STRUCTURES/Chapter 13 - Abstract Classes and Interfaces/Chapter 13 - Abstract Classes and Interfaces.md"
+    "Exerc Prompt.md"
   ]
 }
