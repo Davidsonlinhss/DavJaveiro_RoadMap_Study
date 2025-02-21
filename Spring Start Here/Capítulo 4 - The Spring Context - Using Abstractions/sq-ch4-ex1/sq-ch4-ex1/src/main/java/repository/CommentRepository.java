@@ -1,5 +1,7 @@
 package repository;
 
-public interface CommentRepository {
+import model.Comment;
 
+public interface CommentRepository {
+    void storeComment(Comment comment);
 }
