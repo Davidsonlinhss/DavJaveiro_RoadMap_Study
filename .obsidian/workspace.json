@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d17f1ee6dce4cbf3",
+        "id": "72b399e3095bcfd7",
         "type": "tabs",
         "children": [
           {
-            "id": "56eb034947dd3072",
+            "id": "ec90a0d72a45c6d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/Capítulo 4 - The Spring Context - Using Abstractions.md",
+                "file": "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/The Spring context - Bean scopes and life cycle.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capítulo 4 - The Spring Context - Using Abstractions"
+              "title": "The Spring context - Bean scopes and life cycle"
             }
           }
         ]
@@ -212,8 +212,16 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "56eb034947dd3072",
+  "active": "ec90a0d72a45c6d1",
   "lastOpenFiles": [
+    "The Spring context - Bean scopes and life cycle.png",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/The Spring context - Bean scopes and life cycle.md",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle",
+    "Inglês Tarik Becker/Seção 3 - Intensivo de 15 dias/Cronograma.md",
+    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/Capítulo 4 - The Spring Context - Using Abstractions.md",
+    "(B)+Cronograma+do+Curso.pdf",
+    "Inglês Tarik Becker/Seção 3 - Intensivo de 15 dias",
+    "Inglês Tarik Becker",
     "Capítulo 4 - The Spring Context - Using Abstractions-3.png",
     "Capítulo 4 - The Spring Context - Using Abstractions-2.png",
     "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/services/CommentService.class",
@@ -222,14 +230,9 @@
     "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/proxies/EmailCommentNotificationProxy.class",
     "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/main/main.class",
     "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/main",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/src/main/java/services/CommentService.java~",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/src/main/java/proxies/CommentPushNotificationProxy.java~",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/repository/DBCommentRepository.class",
     "Capítulo 4 - The Spring Context - Using Abstractions-1.png",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/src/main/java/proxies/CommentPushNotificationProxy.java",
     "Capítulo 4 - The Spring Context - Using Abstractions.png",
     "CND.md",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/Capítulo 4 - The Spring Context - Using Abstractions.md",
     "Spring Start Here/Capítulo 3 - The Spring context - Wiring beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
     "Spring Start Here/Capítulo 3 - The Spring Context - Wiring Beans/Capítulo 3 - The Spring Context - Wiring Beans.md",
     "Capítulo 3 - The Spring Context - Wiring Beans-2.png",
@@ -243,7 +246,6 @@
     "The Spring Context - Defining beans-4.png",
     "The Spring Context - Defining beans-3.png",
     "The Spring Context - Defining beans-2.png",
-    "The Spring Context - Defining beans-1.png",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/gsws_ap_b_ex1/HELP.md",
     "Spring Start Here/Capítulo 1 - Spring in the real world/Chapter 1 - Spring in the real world.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 2/Chapter 2 - Sring Concepts and REST APIs.md",
@@ -258,8 +260,6 @@
     "E.md",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
     "Modern Java In Action/Capítulo 3 - Lambda Expressions/Post Method Reference.md",
-    "The SaaS/Introduction.md",
-    "RoadMap do DavJaveiro/RoadMap.canvas",
-    "Exerc Prompt.md"
+    "RoadMap do DavJaveiro/RoadMap.canvas"
   ]
 }
