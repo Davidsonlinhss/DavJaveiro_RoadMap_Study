@@ -1,23 +1,23 @@
 package main;
 
+import configuration.ProjectConfiguration;
 import model.Comment;
-import proxies.EmailCommentNotificationProxy;
-import repository.DBCommentRepository;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import services.CommentService;
 
 public class main {
     public static void main(String[] args) {
+        var context = new AnnotationConfigApplicationContext(
+                ProjectConfiguration.class
+        );
 
-        // creates the isntances for the dependencies
-        var commentRepository = new DBCommentRepository();
-        var commentNotificationProxy = new EmailCommentNotificationProxy();
+        Comment comment = new Comment();
+        comment.setAuthor("David");
+        comment.setText("Demo comment");
 
-        // creates the instances of the service class and providing the dependencies
-        var commentService = new CommentService(commentRepository, commentNotificationProxy);
-
-        var comment = new Comment("Davidson", "Demo Comment");
+        CommentService commentService = context.getBean(CommentService.class);
 
         commentService.publishComment(comment);
-        
+
     }
 }

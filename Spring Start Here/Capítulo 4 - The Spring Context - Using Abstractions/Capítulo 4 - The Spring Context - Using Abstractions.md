@@ -153,8 +153,121 @@ Motivos para utilizar interfaces (CommentRepository e CommentNotificationProxy):
 No código main, é o momento em que passamos as implementações concretas DBCommentRepository e EmailCommentNotificationProxy como argumentos para o CommentService.
 Isso acontece por CommentService depende de abstrações, e só na hora da execução decidimos quais implementações concretas usar.
 ________________________________________
-4.2 Using dependency injection with abstractions
+## 4.2 Using dependency injection with abstractions
 Nesta seção, aplicaremos o framework Spring sobre o design de classes que implementamos na seção 4.1. Usando este exemplo, podemos discutir como o Spring gerencia a injeção de dependências ao usar abstrações. Este tópico é essencial pois, na maioria dos projetos, implementaremos dependências entre objetos usando abstrações. No capítulo 3, discutimos a injeção de dependências e usamos classes concretas para declarar as variáveis onde queríamos que o Spring definisse os valores dos beans em seu contexto. Mas, como aprenderemos neste capítulo, o Spring também entende abstrações.
-Começaremos adicionando a dependência do Spring ao nosso projeto e, em seguida, decidiremos quais dos objetos desta aplicação precisam ser gerenciados pelo Spring. Aprenderemos a decidir quais objetos precisemos que o Spring tenha conhecimento sobre a sua existência.
-Descobriremos que a @Component não é a única anotação de estereótipo que podemos usar e quando deve usar outras anotações.
+Começaremos adicionando a dependência do Spring ao nosso projeto e, em seguida, decidiremos quais dos objetos desta aplicação precisam ser gerenciados pelo Spring. Aprenderemos a decidir quais objetos vamos precisar que o Spring tenha conhecimento sobre a sua existência.
+<span style="background:#d4b106">Descobriremos que a @Component não é a única anotação de estereótipo que podemos usar e quando deve usar outras anotações.</span>
 
+### 4.2.1 Deciding which objects should be part of the Spring context
+When we discussed Spring in chapters 2 and 3, we focused on syntax, and we didn't have a use case to mirror something you can find in a real-world scenario. Isso também é por que não discutimos se precisamos adicionar um objeto ao Spring context. Com base na nossa discussão, você pode pensar que precisa adicionar todos os objetos do aplicativo no Spring context, mas não é o caso. Lembre-se, <span style="background:#d4b106">a principal razão para adicionar um objeto ao Spring Context é permitir que o Spring o controle e o aumente ainda mais com as funcionalidades que o framework fornece.</span> Portanto, a decisão deve ser fácil e baseada na pergunta: *Este objeto precisa ser gerenciado pelo framework?*
+- *CommentService:* possui duas dependências, o *CommentRepository* e o *CommentNotificationProxy*;
+- *DBCommentRepository:* implementa a interface *CommentRepository* e é uma dependência do *CommentService*.
+
+- *EmailCommentNotificationProxy:* implementa a interface *CommentNotificationProxy* e é uma dependência do *CommentService*.
+
+Mas por que não adicionar as instâncias de Comment também? Muitas vezes me fazem essa perguntas quando ensino cursos de Spring. **Adicionar objetos ao Spring context sem precisar que o framework os gerencie adiciona complexidade desnecessária ao nosso aplicativo**, tornando-o mais desafiador de manter e menos eficiente. Quando adicionamos um objeto ao Spring Context, nós permitimos que o framework o gerencie com algumas funcionalidades específicas que ele fornece. <span style="background:#d4b106">Se adicionamos o objeto para ser gerenciado pelo Spring sem obter nenhum benefício do framework, estamos apenas superprojetando sua implementação</span>. #Over-engineer
+
+No capítulo 2, discutimos que usar anotações de estereótipo *@Component* é a maneira mais confortável de adicionar beans ao contexto do Spring quando as classes pertencem ao seu projeto e você pode alterá-las. Vamos usar essa abordagem aqui também. Observamos que as duas interfaces permanecem brancas (não as marcamos com *@Component*). Eu frequentemente vejo alunos confusos sobre onde devem usar as anotações de estereótipo quando também usam interfaces em suas implementações. Usamos anotações de estereótipos para as classes que o <span style="background:#b1ffff">Spring precisa criar instâncias e adicionar essas instâncias ao seu contexto</span>. <span style="background:#d4b106">Não faz sentido adicionar anotações de estereótipo em interfaces ou classes abstratas porque estas não podem ser instanciadas. </span>
+
+```java
+@Component
+public class DBCommentRepository implements CommentRepository {
+	@Override
+	public void storeComment(Comment comment) {
+		System.out.println("Storing comment: " + comment.getText());
+	}
+}
+```
+
+@Component marking the class para instruir o Spring a instanciar a classe e adicionar ao seu contexto como um bean.
+
+![[Capítulo 4 - The Spring Context - Using Abstractions.png]]
+
+Change the *CommentService* class
+
+A classe *CommentService* declara as dependências para os outros dois componentes por meio das interfaces *CommentRepository* e *CommentNotificationProxy*. O Spring vê que os atributos são definidos com tipos de interface e é inteligente o suficiente para procurar em seu contexto por beans criados com classes que implementam essas interfaces. Como discutido no capítulo 2, devido ao fato de termos apenas um construtor na classe, a anotação *@Autowired* é opcional.
+
+We only need to tell Spring where to find the classes annotated with stereotype annotations and test the app. The next listing presents the project's configuration class where we use the *@ComponentScan* annotation to tell Spring where to find the classes annotated with *@Component*. We discussed *@ComponentScan* in chapter 2.
+
+```java
+@Configuration
+@ComponentScan(
+	basePackages = {"proxies", "services", "repositores"}
+)
+public class ProjectConfiguration {
+	
+}
+```
+
+- The **@Configuration** annotation marks the configuration class;
+- We use the **@ComponentScan** annotation to tell Spring in which packages to search for the classes annotated with stereotype annotation. Observe that the model packages is not specified because it doesn't contain classes annotated with stereotype annotations.
+
+**NOTE** In this example, I use the *basePackages* attribute of the *@ComponentScan* annotation. Spring also offers the feature of directly specifying the classes (by using the *basePackageClasses* attribute of the same annotation). <span style="background:#d4b106">The advantage of defining the packages is that you only have to mention the package name</span>. In case it contains 20 components classes, you write only one line (the name of the package) instead of 20. The disavantage is that if a developer renames the package, they might not realize they also have to change the value of the *@ComponentScan* annotation. Mentioning the classes directly, you might write more, but when someone changes the code, they immediately see they also need to change the @ComponentScan annotation; In a production application, you might find both approaches, and, in my experience, one is not better than the other.
+
+To test my setup, let's create a new main method, as presented in the following listing. We'll spin the Spring context, grab the bean of type *CommentService* out of it, and call the publishComment(Comment comment) method.
+
+Este é um exemplo pequeno, e pode não parecer que o Spring melhor muito a aparência. Ao usar o recurso de injeção de dependência DI, não criamos a instância do objeto *CommentService* e suas dependências nós mesmos, e não precisamos fazer explicitamente a relação entre eles. Em um cenário real, onde temos mais de três classes, deixar o Spring gerenciar os objetos e as dependências entre eles faz uma enorme diferença. Isso elimina o código que pode ser implícito (o que os desenvolvedores também chamam de código boilerplate), permitindo que nos concentremos no que a aplicação faz.  
+
+### 4.2.2 Choosing what to auto-wire from multiple implementations of an abstraction
+Até agora, focamos no comportamento do Spring ao utilizar Injeção de Dependência (DI) com abstrações. No entanto, usamos um exemplo no qual garantimos que <span style="background:#d4b106">apenas uma instância de cada tipo de abstração</span> solicitada para injeção fosse adicionada.
+
+Agora, vamos avançar um passo e discutir o que acontece quando o contexto do Spring contém múltiplas **instâncias que correspondem a uma abstração solicitada**. Esse cenário é comum em projetos do mundo real, e é essencial saber como lidar com ele para garantir que sua aplicação funcione corretamente.
+
+Suponhamos que tenhamos dois beans criados a partir de duas classes diferentes que implementam a interface *CommentNotificationProxy*. Felizmente, o Spring adota um mecanismo para decidir qual bean escolher. 
+
+Quando há mais de um bean do mesmo tipo no contexto do Spring, é necessário especificar qual deles deve ser injetado. Além disso, já conhecemos algumas abordagens para resolver esse problema:
+- Using the @Primary annotation to mark one of the beans for implementation as the default;
+- Using the @Qualifier annotation to name a bean and then refer to it by its name for DI;
+
+![[Capítulo 4 - The Spring Context - Using Abstractions-1.png]]
+
+If you run this application as-is, you’ll get an exception because Spring doesn’t know
+which of the two beans in its context to choose for injection. As you can see, it’s a NoUniqueBean- DefinitionException with the message “expected single matching but found 2.” This is how the framework tells us it needs guidance regarding the existing beans it should inject from the context: 
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException:
+
+*No qualifying bean of type 'proxies.CommentNotificationProxy' available:*
+*expected single matching bean but found 2:*
+*commentPushNotificationProxy,emailCommentNotificationProxy*
+
+**Marking An Implementation as Default for Injection With *@Primary***
+The first solution is using *@Primary*. The only thing you need to do is add *@Primary* near the @Component annotation to mark the implementation provided by this class as the default for implementation, as show in the following listing. 
+```java
+@Component
+@Primary
+public class CommentPushNotificationProxy implements CommentNotificationProxy {
+	@Override
+	public void sendComment(Comment comment) {
+		System.out.println(
+			"Sending push notification for comment: " + comment.getText());
+		)
+	}
+}
+```
+
+Spring injected the new implementation because we marked it as primary. 
+
+A pergunta que sempre fazem é a seguinte, Agora temos duas implementações, mas o Spring sempre injetará apenas uma delas? Então, por que ter ambas as classes nesse caso?
+
+Vamos explorar como essa situação pode surgir em um cenário do mundo real. Como você já sabe, as aplicações são complexas e dependem de diversas bibliotecas. Em algum momento, pode acontecer de você utilizar uma dependência que fornece uma implementação para uma determinada interface (figura 4.10), mas essa implementação não atender às necessidades da sua aplicação. Diante disso, você pode optar por definir sua própria implementação personalizada.
+
+Nessa situação, a anotação `@Primary` é a solução mais simples para indicar qual implementação o Spring deve priorizar na injeção de dependências.
+
+**Naming Implementation for Dependency Injection With @Qualifier**
+Em algumas aplicações em produção, pode ser necessário definir múltiplas implementações para a mesma interface, sendo que diferentes objetos utilizarão essas implementações.
+
+Imagine, por exemplo, que precisamos de duas formas de notificação de comentários: por e-mail ou por push notification (figura 4.11). Ambas ainda são implementações da mesma interface, mas cada uma depende de objetos distintos dentro da aplicação.
+
+Vamos modificar o código para testar essa abordagem. Você pode encontrar essa implementação no projeto **“sq-ch4-ex6”**. Os trechos de código a seguir demonstram como utilizar a anotação `@Qualifier` para especificar qual implementação deve ser injetada em cada caso.
+
+![[Capítulo 4 - The Spring Context - Using Abstractions-2.png]]
+
+## 4.3 Focusing on object responsibilities with stereotype annotations
+Até agora, ao discutir as anotações de estereótipo, usamos apenas `@Component` em nossos exemplos. No entanto, em implementações do mundo real, você perceberá que os desenvolvedores frequentemente utilizam outras anotações para o mesmo propósito. Nesta seção, vou mostrar como usar mais duas anotações de estereótipo: `@Service` e `@Repository`.
+
+Em projetos reais, é uma prática comum definir explicitamente a finalidade de um componente por meio de uma anotação de estereótipo. O uso do `@Component` é genérico e não fornece detalhes sobre a responsabilidade do objeto que está sendo implementado. No entanto, os desenvolvedores geralmente trabalham com objetos que possuem responsabilidades bem definidas. Duas dessas responsabilidades são `service` e `repository`.
+
+Os #Services são responsáveis por implementar os casos de uso da aplicação, enquanto os #repositorys gerenciam a persistência dos dados. Como essas responsabilidades são comuns e desempenham um papel importante no design das classes, ter uma maneira distinta de marcá-las ajuda os desenvolvedores a compreender melhor a arquitetura da aplicação.
+
+Todas as três (`@Component`, `@Service` e `@Repository`) são anotações de estereótipo e instruem o Spring a criar e gerenciar uma instância da classe anotada dentro do seu contexto.
+
+![[Capítulo 4 - The Spring Context - Using Abstractions-3.png]]
