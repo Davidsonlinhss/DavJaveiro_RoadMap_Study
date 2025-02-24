@@ -194,4 +194,35 @@ Unlike the first example in this section, the configuration class remain empty i
 Because the dependency (CommentRepository) is singleton, both services contain the same reference, so this line always prints "true";
 
 ## 5.1.2 Singleton beans in real-world scenarios
-Thus far we've discussed how Spring manages singleton beans. It's time to also discuss things you need to be aware of when working with singleton beans. 
+Thus far we've discussed how Spring manages singleton beans. It's time to also discuss things you need to be aware of when working with singleton beans. Let's start by considering some scnearios where you should or shoudn't use singleton beans.
+
+Como o escopo do singleton bean assume que múltiplos componentes do aplicativo podem compartilhar uma instância de objeto, <span style="background:#d4b106">a coisa mais importante a considerar é que esses beans devem ser imutáveis</span>. Na maioria das vezes, um aplicativo do mundo real executa ações em múltiplas threads (por exemplo, qualquer aplicativo web). Em tal cenário, múltiplas threads compartilham a mesma instância de objeto. Se essas threads alterarem a instância, você encontrará um cenário de condição de corrida.
+
+Uma condição de corrida *race-condition* é uma situação que pode ocorrer em arquiteturas multithread quando múltiplas threads tentam alterar um recurso compartilhado. Em caso de uma condição de corrida, o desenvolvedor precisa sincronizar adequadamente as threads para evitar resultados de execução inesperados ou erros.
+
+Se você deseja obter singleton beans mutáveis (cujos atributo mudam), você precisa tornar esses beans concorrentes por conta própria (principalmente empregando a sincronização de threads). Mas singleton beans não são projetados para serem sincronizados. Eles são comumente usados para definir o design de classe backbone de um aplicativo e delegar responsabilidades uns aos outros. Tecnicamente, a sincronização é possível, mas não é uma boa prática. Sincronizar a thread em uma instância concorrente pode afetar drasticamente o desempenho do aplicativo. Na maioria dos casos, encontraremos outros meios de resolver o mesmo problema e evitar a concorrência de threads.
+
+![[Chapter 5 -The Spring context - Bean scopes and life cycle.png]]
+
+No capítulo 3, foi mencionado que a injeção de dependência via construtor é uma boa prática e preferível à injeção de campo? Uma das vantagens da injeção de construtor é que ela permite tornar a instância imutável (definir os campos do bean como final). No nosso exemplo anterior, podemos aprimorar a definição da classe *CommentService* substituindo a injeção de campo pela injeção via construtor. Um design melhor da classe, seria:
+[[Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/src/main/java/org/example/sqch5ex1/comment/services/CommentService.java|CommentService]]
+
+Tornar a instância imutável tem vantagens:
+1. **Thread Safety**: instâncias imutáveis são inerentemente seguras para serem compartilhadas entre múltiplas threads, <span style="background:rgba(205, 244, 105, 0.55)">pois seus estados não podem ser alterados após a criação</span>. Isso elimina a necessidade de sincronização explícita, reduzindo o risco de condições de corrida. #race-condition
+2. **Simplicidade e Previsibilidade:** objeto imutáveis são mais fáceis de entender e prever, já que seu estado não muda. Isso facilita o rastreamento do fluxo de dados e da lógica do programa.
+3. **Evita Erros Acidentais:** com a imutabilidade, podemos evitar erros acidentais que podem ocorrer devido a modificações inesperadas nos objetos. Uma vez que o objeto é criado, sabemos que ele permanecerá o mesmo.
+4. **Facilidade de Testes:** objetos imutáveis são mais fáceis de testar, já que eles não possuem efeitos colaterais. Podemos criar instâncias e ter certeza de que elas não serão alteradas durante os testes.
+5. **Caching e Reuso:** como instância imutáveis não mudam, elas podem ser facilmente armazenadas em cache e reutilizadas, melhorando o desempenho do aplicativo.
+
+*private **final** CommentRepository commentRepository;*
+Marcar o campo final destaca que esse campo não pode ser intencionalmente modificado. 
+
+### 5.1.3 Using eager and lazy instantiation
+
+**Resume**
+Singleton é um padrão de projeto (design pattern) que garante que uma classe tenha apenas uma única instância durante toda a execução do programa e fornece um ponto de acesso global a essa instância.
+
+No Spring, os beans são singleton por padrão, ou seja, o framework já implementa o padrão Singleton automaticamente para nós. Logo, quando injetamos um bean, ele continua sendo a mesma instância em todos os locais da nossa aplicação.
+
+---
+Na maioria dos casos, o Spring cria todos os singleton beans quando inicializa o contexto - este é o comportamento padrão do Spring. 
