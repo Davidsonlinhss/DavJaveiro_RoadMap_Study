@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/The Spring context - Bean scopes and life cycle.md",
+                "file": "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/Chapter 5 -The Spring context - Bean scopes and life cycle.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Spring context - Bean scopes and life cycle"
+              "title": "Chapter 5 -The Spring context - Bean scopes and life cycle"
             }
           }
         ]
@@ -214,22 +214,32 @@
   },
   "active": "ec90a0d72a45c6d1",
   "lastOpenFiles": [
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/sq-ch5-ex1-0.0.1-SNAPSHOT.jar.original",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/sq-ch5-ex1-0.0.1-SNAPSHOT.jar",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/maven-status/maven-compiler-plugin/compile/default-compile",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/maven-status/maven-compiler-plugin/testCompile",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/maven-status/maven-compiler-plugin/compile",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/maven-status/maven-compiler-plugin",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/HELP.md",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/target/classes/target/classes/HELP.md",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex21/HELP.md",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex1 - Copia/HELP.md",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex2/HELP.md",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex1/HELP.md",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/sq-ch5-ex1 1/HELP.md",
+    "The Spring context - Bean scopes and life cycle-2.png",
+    "The Spring context - Bean scopes and life cycle-1.png",
     "The Spring context - Bean scopes and life cycle.png",
-    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/The Spring context - Bean scopes and life cycle.md",
-    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle",
+    "Spring Start Here/Capítulo 5 - The Spring context Bean Scopes and life cycle/Chapter 5 -The Spring context - Bean scopes and life cycle.md",
     "Inglês Tarik Becker/Seção 3 - Intensivo de 15 dias/Cronograma.md",
     "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/Capítulo 4 - The Spring Context - Using Abstractions.md",
-    "(B)+Cronograma+do+Curso.pdf",
-    "Inglês Tarik Becker/Seção 3 - Intensivo de 15 dias",
-    "Inglês Tarik Becker",
     "Capítulo 4 - The Spring Context - Using Abstractions-3.png",
     "Capítulo 4 - The Spring Context - Using Abstractions-2.png",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/services/CommentService.class",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/services",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/proxies/CommentPushNotificationProxy.class",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/proxies/EmailCommentNotificationProxy.class",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/main/main.class",
-    "Spring Start Here/Capítulo 4 - The Spring Context - Using Abstractions/sq-ch4-ex1/sq-ch4-ex1/target/classes/main",
     "Capítulo 4 - The Spring Context - Using Abstractions-1.png",
     "Capítulo 4 - The Spring Context - Using Abstractions.png",
     "CND.md",
@@ -243,9 +253,6 @@
     "Como ser um programador melhor/Capítulo 2 - Mantendo as aparências.md",
     "Sem título 2.md",
     "Como ser um programador melhor/Capítulo 1 - Importar-se com o código.md",
-    "The Spring Context - Defining beans-4.png",
-    "The Spring Context - Defining beans-3.png",
-    "The Spring Context - Defining beans-2.png",
     "Spring Start Here/Capítulo 2 - The Spring context - Defining beans/gsws_ap_b_ex1/HELP.md",
     "Spring Start Here/Capítulo 1 - Spring in the real world/Chapter 1 - Spring in the real world.md",
     "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 2/Chapter 2 - Sring Concepts and REST APIs.md",
@@ -253,13 +260,6 @@
     "The SaaS/Repository.md",
     "Git/Feature Branch Workflow.md",
     "The SaaS/SpringSecurityTest/HELP.md",
-    "Mastering Git/Parte 1 - Exploring Project History and Managing Your Own Work/Chapter 1 - Git Basics in Practice.md",
-    "Spring Boot DDD/Visão Geral do Projeto.md",
-    "Sem título 1.md",
-    "Modern API Development with SPring 6 and Spring Boot 3/Part 1 - Restful Web Service Fundamentals/Capítulo 4/Capítulo 4 - Writing Business Logic for APIs.md",
-    "E.md",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Capítulo 3 - Lambda Expressions.md",
-    "Modern Java In Action/Capítulo 3 - Lambda Expressions/Post Method Reference.md",
     "RoadMap do DavJaveiro/RoadMap.canvas"
   ]
 }
